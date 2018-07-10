@@ -12,7 +12,7 @@ import requests
 
 S = requests.Session()
 
-URL = "https://en.wikipedia.org/w/api.php"
+URL = "https://mediawiki.org/w/api.php"
 
 # Retrieve login token first
 PARAMS_0 = {
