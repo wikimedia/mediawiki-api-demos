@@ -39,7 +39,7 @@ def show_form():
         password = request.form['password']
         start_client_login(name, password)
 
-    return render_template('form.html', form=form)
+    return render_template('clientlogin_form.html', form=form)
 
 def start_client_login(name, password):
     """ Fetch login token and send a request to client login
