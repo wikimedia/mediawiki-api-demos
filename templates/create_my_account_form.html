@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <title>MediaWiki Create Account</title>
+  <!-- Bootstrap latest compiled and minified CSS -->
+  <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- Bootstrap optional theme -->
+  <link rel="stylesheet" href="bootstrap/3.3.7/css/bootstrap-theme.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<div class="container">
+  <h2>MediaWiki Create Account</h2>
+  <form action="" method="post" role="form">
+    {{ form.csrf }}
+    <div class="form-group">
+      <label for="name">Username</label>
+      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your username">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+      <br>
+      <label for="password">retype</label>
+      <input type="password" class="form-control" id="retype" name="retype" placeholder="Enter your password again ">
+      <br>
+      <label for="Email">Email</label>
+      <input type="password" class="form-control" id="email" name="email" placeholder="Enter your email address">
+    </div>
+    <button type="submit" class="btn btn-success">Create your account</button>
+  </form>
+  <br>
+ {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for message in messages %}
+  {% if "Error" not in message[1]: %}
+  <div class="alert alert-info">
+    {{ message[1] }}
+  </div>
+  {% endif %}
+  {% if "Error" in message[1]: %}
+  <div class="alert alert-warning">
+    {{ message[1] }}
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+<br>
+</div>
+</div>
