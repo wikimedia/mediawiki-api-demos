@@ -1,0 +1,14 @@
+.form-field
+{
+    margin-top: 5px;
+}
+
+label
+{
+    font-weight: 400;
+}
+
+input
+{
+    width: 30%;
+}
