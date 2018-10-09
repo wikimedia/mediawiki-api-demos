@@ -12,9 +12,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [parse.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/parse.py): parse content of a page
   *  [parse_wikitable.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/search.py): parse a section of its page and fetch its table data
 * [API:Categorymembers](https://www.mediawiki.org/wiki/API:Categorymembers)
-  *  [get_category_items.py]()
-  *  [get_recent_category_items.py]()
-  *  [get_subcategories.py]()
+  *  [get_category_items.py](): list twenty items in a category
+  *  [get_recent_category_items.py](): get the ten articles most recently added to a category 
+  *  [get_subcategories.py](): get ten subcategories of a category
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
