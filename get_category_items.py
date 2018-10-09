@@ -2,8 +2,7 @@
 
 """
     MediaWiki Action API Code Samples
-    Demo of `get_category_list` module : Sending get request to list pages that belong to a
-    given category
+    Demo of `Categorymembers` module : List 20 items in a category.
     MIT license
     """
 
