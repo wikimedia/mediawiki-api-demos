@@ -6,8 +6,7 @@
     
     
     MediaWiki Action API Code Samples
-    Demo of `get_category_list` module : Sending get request to list pages that belong to a
-    given category
+    Demo of `Categorymembers` module : Get ten subcategories of a category.
     MIT license
 """
 

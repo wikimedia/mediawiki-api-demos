@@ -6,8 +6,8 @@
     
     
     MediaWiki Action API Code Samples
-    Demo of `get_category_list` module : Sending get request to list pages that belong to a
-    given category
+    Demo of `Categorymembers` module : Get the ten articles most recently added to a 
+    category.
     MIT license
 """
 

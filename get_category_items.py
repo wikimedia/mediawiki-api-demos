@@ -6,7 +6,7 @@
 	
 
     MediaWiki Action API Code Samples
-    Demo of `Categorymembers` module : List 20 items in a category.
+    Demo of `Categorymembers` module : List twenty items in a category.
     MIT license
 """
 
