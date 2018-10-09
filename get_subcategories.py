@@ -1,11 +1,15 @@
 #!/usr/bin/python3
 
 """
+    
+    get_subcategories.py
+    
+    
     MediaWiki Action API Code Samples
     Demo of `get_category_list` module : Sending get request to list pages that belong to a
     given category
     MIT license
-    """
+"""
 
 import requests
 
