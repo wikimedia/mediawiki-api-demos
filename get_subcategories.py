@@ -15,10 +15,10 @@ URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
     'action': "query",
-    'list' : "categorymembers",
-    'cmtitle' : "Category:Wikipedia",
-    'cmtype' : "subcat",
-    'format':"json"
+    'list': "categorymembers",
+    'cmtitle': "Category:Wikipedia",
+    'cmtype': "subcat",
+    'format': "json"
 }
 
 R = S.get(url=URL, params=PARAMS)
