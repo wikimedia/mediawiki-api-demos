@@ -1,10 +1,8 @@
 #!/usr/bin/python3
 
 """
-    
     get_subcategories.py
-    
-    
+
     MediaWiki Action API Code Samples
     Demo of `Categorymembers` module : Get ten subcategories of a category.
     MIT license

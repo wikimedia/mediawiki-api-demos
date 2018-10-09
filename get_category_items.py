@@ -1,9 +1,7 @@
 #!/usr/bin/python3
 
 """
-
 	get_category_items.py
-	
 
     MediaWiki Action API Code Samples
     Demo of `Categorymembers` module : List twenty items in a category.
