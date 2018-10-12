@@ -4,10 +4,9 @@
     purge_two_pages.py
 
     MediaWiki Action API Code Samples
-    Demo of `purge` module: Sending post request to purge Sending post request to purge two or more pages
+    Demo of `purge` module: Sending post request to purge two or more pages
     MIT license
 """
-
 import requests
 
 S = requests.Session()
@@ -20,5 +19,7 @@ PARAMS = {
     "format": "json"
 }
 
-R = requests.post(url=URL, data=PARAMS)
-print(R.text)
+R = S.post(url=URL, params=PARAMS)
+DATA = R.text
+
+print(DATA)
