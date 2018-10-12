@@ -1,4 +1,4 @@
-# API:Search demo
+# Article Suggestion
 A sample app that uses MediaWiki Action [API:Search](https://www.mediawiki.org/wiki/API:Search) allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and [WTForms](https://wtforms.readthedocs.io/en/stable/) for rendering form.
 
 Articles in the `articles.json` file are taken from the link below:
