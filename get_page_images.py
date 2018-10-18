@@ -1,21 +1,21 @@
 #!/usr/bin/python3
 
 """
-    images.py
+    get_page_images.py
 
     MediaWiki Action API Code Samples
-    Demo of `Images` module: Sending GET request to images
+    Demo of `Images` module: Send a GET request to obtain a JSON
+    object listing all of the image files embedded on a single
+    page.
+
     MIT license
 """
-# Note: This code relies on the third party library, requests. 
-# Be sure to install it via your favorite package manager!
+
 import requests
 
 S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
-
-# Send a GET request to the images endpoint.
 
 PARAMS = {
   'action':'query',
