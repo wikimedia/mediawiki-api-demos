@@ -15,6 +15,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_category_items.py](get_category_items.py): list twenty items in a category
   *  [get_recent_category_items.py](get_recent_category_items.py): get the ten articles most recently added to a category 
   *  [get_subcategories.py](get_subcategories.py): get ten subcategories of a category
+* [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
+  *  [purge_two_pages.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/purge_two_pages.py): purge cache of two or more pages
+  *  [purge_namespace_pages.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/purge_namespace_pages.py): purge cache of the first 10 pages in the main namespace
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
