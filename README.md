@@ -18,6 +18,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
   *  [purge_two_pages.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/purge_two_pages.py): purge cache of two or more pages
   *  [purge_namespace_pages.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/purge_namespace_pages.py): purge cache of the first 10 pages in the main namespace
+* [API:Random](https://www.mediawiki.org/wiki/API:Purge)
+  *  [random_page.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/random_page.py): get list of one random page
+  *  [random_pages.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/random_pages.py): get list of two or more random pages by specifying rnlimit
+
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
