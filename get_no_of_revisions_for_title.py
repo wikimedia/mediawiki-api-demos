@@ -9,10 +9,10 @@
 """
 import requests
 
-req_ssn = requests.Session()
+S = requests.Session()
 
 
-api_url = 'https://www.mediawiki.org/w/api.php'
+URL = 'https://www.mediawiki.org/w/api.php'
 rvprop = 'timestamp|user|comment|content'
 
 search_params = {
@@ -29,7 +29,7 @@ search_params = {
     'formatversion': 2
 }
 
-data_req = req_ssn.get(url=api_url, params=search_params)
+data_req = S.get(url=URL, params=search_params)
 data = data_req.json()
 
 title_data = data["query"]["pages"] # Gives a list containing the page requested and its revisions
