@@ -4,7 +4,7 @@
     get_no_of_revisions_for_title.py
 
     MediaWiki Action API Code Samples
-    Demo of `Revisions` module: Get data including content of last 5 revision of the title [[API:Geosearch]]
+    Demo of `Revisions` module: Get data including content of last 5 revisions of the title [[API:Geosearch]] made after the 1st of July 2018 i.e 2018-07-01 excluding changes made by the user MichelleACodes
     MIT license
 """
 import requests
@@ -22,6 +22,9 @@ search_params = {
     'rvlimit': 5,
     'rvprop': rvprop,
     'rvslots':'main',
+    'rvdir': 'newer',
+    'rvstart': '2018-07-01T00:00:00Z',
+    'rvexcludeuser': 'MichelleACodes',
     'format': 'json',
     'formatversion': 2
 }
