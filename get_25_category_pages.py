@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    get_10_category_pages.py
+    get_25_category_pages.py
     MediaWiki Action API Code Samples
     Demo of `Lists` module
     MIT license
