@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 """
-    get_random_pages.py
+    get_random_set_of_pages.py
 
     MediaWiki Action API Code Samples
-    Demo of `Random` module: get list of two or more random pages by specifying rnlimit
+    Demo of `Random` module: get random set of pages including information such as titles, content, images, etc.
     MIT license
 """
 
