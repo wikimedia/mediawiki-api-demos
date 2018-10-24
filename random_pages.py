@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    random_page.py
+    get_random_pages.py
 
     MediaWiki Action API Code Samples
     Demo of `Random` module: get list of two or more random pages by specifying rnlimit
@@ -17,8 +17,8 @@ URL = "https://en.wikipedia.org/w/api.php"
 PARAMS = {
     "action": "query",
     "format": "json",
-    "list": "random",
-    "rnlimit": "5"
+    "prop": "revisions|images",
+    "generator": "random"
 }
 
 R = S.get(url=URL, params=PARAMS)
