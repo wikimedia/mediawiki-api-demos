@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    random_page.py
+   get_two_random_pages.py
 
     MediaWiki Action API Code Samples
     Demo of `Random` module: get two random pages
