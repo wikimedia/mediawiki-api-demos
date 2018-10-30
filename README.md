@@ -7,6 +7,11 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Login](https://www.mediawiki.org/wiki/API:Login)
   * [login.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/login.py) & [clientlogin.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/clientlogin.py): login
 
+### Accounts and users 
+* [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
+  *  [create_account.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/create_account.py): create an account on a wiki without any special authentication extensions
+  *  [create_account_with_captcha.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/create_account_with_captcha.py): Create an account on a wiki with a captcha enabling extension installed
+
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
   *  [parse.py](https://github.com/srish/MediaWiki_Action_API_Code_Samples/blob/master/parse.py): parse content of a page
