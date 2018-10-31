@@ -1,20 +1,19 @@
 <!DOCTYPE html>
   <title>MediaWiki Log in</title>
-  <!-- Bootstrap latest compiled and minified CSS -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Bootstrap optional theme -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+
 <div class="container">
   <h2>MediaWiki Log in</h2>
   <form action="" method="post" role="form">
-    {{ form.csrf }}
     <div class="form-group">
-      <label for="name">Username</label>
-      <input type="text" class="form-control" id="name" name="name" placeholder="Enter your username">
-      <br>
-      <label for="password">Password</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+      <div class="form-field">
+        <div class="label-field">Username</div>
+        <input name="username">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Password</div>
+        <input type="password" name="password">
+      </div>
     </div>
     <button type="submit" class="btn btn-success">Log in</button>
   </form>
@@ -22,16 +21,9 @@
   {% with messages = get_flashed_messages(with_categories=true) %}
   {% if messages %}
   {% for message in messages %}
-  {% if "Error" not in message[1]: %}
   <div class="alert alert-info">
     {{ message[1] }}
   </div>
-  {% endif %}
-  {% if "Error" in message[1]: %}
-  <div class="alert alert-warning">
-    {{ message[1] }}
-  </div>
-  {% endif %}
   {% endfor %}
   {% endif %}
   {% endwith %}
