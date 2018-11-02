@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Languagesearch` module: Search for a language in any language
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -14,12 +17,10 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-LANG_NAME = "Gu" #Could be name of the language, its iso code or native name
-
 PARAMS = {
-    'action':"languagesearch",
-    'search':LANG_NAME,
-    'format':"json"
+    "action": "languagesearch",
+    "search": "Gu", #Could be name of the language, its iso code or native name
+    "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS)

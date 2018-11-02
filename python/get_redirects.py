@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -6,7 +8,7 @@
     MediaWiki Action API Code Samples
     Demo of `Redirects` module: Get all redirects to the given page(s)
 
-    MIT license
+    MIT License
 """
 
 import requests
@@ -16,10 +18,10 @@ S = requests.Session()
 URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
-    'action': "query",
-    'format': "json",
-    'titles': "Jacques Kallis",
-    'prop': "redirects"
+    "action": "query",
+    "format": "json",
+    "titles": "Jacques Kallis",
+    "prop": "redirects"
 }
 
 R = S.get(url=URL, params=PARAMS)

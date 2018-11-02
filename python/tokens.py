@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Token` module: Fetch token of type `login`
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -15,10 +18,10 @@ S = requests.Session()
 URL = "https://mediawiki.org/w/api.php"
 
 PARAMS = {
-    'action':"query",
-    'meta':"tokens",
-    'type':"login",
-    'format':"json"
+    "action": "query",
+    "meta": "tokens",
+    "type": "login",
+    "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS)
