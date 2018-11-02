@@ -1,24 +1,161 @@
-[
-	{
-		"filename": "tokens.py", 
-		"docstring": "Demo of `Token` module: Fetch token of type `login`", 
+[{
+		"filename": "tokens.py",
+		"docstring": "Demo of `Token` module: Fetch token of type `login`",
 		"endpoint": "https://mediawiki.org/w/api.php",
 		"params": {
-	    	"action": "query",
-	    	"meta": "tokens",
-	    	"type": "login",
-	    	"format": "json"
+			"action": "query",
+			"meta": "tokens",
+			"type": "login",
+			"format": "json"
 		}
 	},
 	{
-		"filename": "geocoordinates.py", 
-		"docstring": "Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby", 
+		"filename": "geocoordinates.py",
+		"docstring": "Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
-	    	"action": "query",
-	    	"prop": "coordinates",
-	    	"titles": "Wikimedia Foundation",
-	    	"format": "json"
+			"action": "query",
+			"prop": "coordinates",
+			"titles": "Wikimedia Foundation",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "geoimagesearch.py",
+		"docstring": "Demo of `Geosearch` module: Use generator module\n\tto get search results for pages near Wikimedia HQ\n\twith images",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"generator": "geosearch",
+			"prop": "coordinates|pageimages",
+			"ggscoord": "37.7891838|-122.4033522",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "geosearch.py",
+		"docstring": "Demo of `Geosearch` module: Search for wiki pages nearby",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "geosearch",
+			"gscoord": "37.7891838|-122.4033522",
+			"gsradius": "10000",
+			"gslimit": "10",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_category_items.py",
+		"docstring": "Demo of `Categorymembers` module : List twenty items in a category",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "categorymembers",
+			"cmtitle": "Category:Physics",
+			"cmlimit": "20",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_page_images.py",
+		"docstring": "Demo of `Images` module: Send a GET request to obtain a JSON\n\tobject listing all of the image files embedded on a single page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"prop": "images",
+			"titles": "Albert Einstein",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_recent_category_items.py",
+		"docstring": "Demo of `Categorymembers` module : Get the ten articles most recently added to a category",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "categorymembers",
+			"cmtitle": "Category:Physics",
+			"cmsort": "timestamp",
+			"cmdir": "desc",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_redirects.py",
+		"docstring": "Demo of `Redirects` module: Get all redirects to the given page(s)",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Jacques Kallis",
+			"prop": "redirects",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_subcategories.py",
+		"docstring": "Demo of `Categorymembers` module : Get ten subcategories of a category",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "categorymembers",
+			"cmtitle": "Category:Wikipedia",
+			"cmtype": "subcat",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "languagesearch.py",
+		"docstring": "Demo of `Languagesearch` module: Search for a language in any language",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "languagesearch",
+			"search": "Gu",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "search.py",
+		"docstring": "Demo of `Search` module: Search for a text or title",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "search",
+			"srsearch": "Nelson Mandela",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "opensearch.py",
+		"docstring": "Demo of `Opensearch` module: Search the wiki and obtain\n\tresults in an OpenSearch (http://www.opensearch.org) format",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "OpenSearch",
+			"search": "Hampi",
+			"limit": "5",
+			"namespace": "0",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "prefixsearch.py",
+		"docstring": "Demo of `Prefixsearch` module: Perform a prefix search for page titles",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "prefixsearch",
+			"pssearch": "Star Wars",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "parse.py",
+		"docstring": "Demo of `Parse` module: Parse content of a page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "parse",
+			"page": "Pet door",
+			"format": "json"
 		}
 	}
 ]

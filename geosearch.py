@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Geosearch` module: Search for wiki pages nearby
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -14,15 +17,13 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-COORDS = '37.7891838|-122.4033522'
-
 PARAMS = {
-    'action':"query",
-    'list':"geosearch",
-    'gscoord': COORDS,
-    'gsradius':10000,
-    'gslimit':10,
-    'format':"json"
+    "format": "json",
+    "list": "geosearch",
+    "gscoord": "37.7891838|-122.4033522",
+    "gslimit": "10",
+    "gsradius": "10000",
+    "action": "query"
 }
 
 R = S.get(url=URL, params=PARAMS)
