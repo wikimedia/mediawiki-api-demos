@@ -55,12 +55,11 @@ $ python3 name_of_the_file.py #Enter any credentials if required in the file
 ```
 
 ### Contributing code samples
-* First, propose an idea for a code sample, demo app, etc. by creating an issue around it in the repository. After discussing your idea with the repo contributors, start working, and then send a pull request, when you've your changes ready to be accepted/ merged!  
-* You can autogenerate python files for GET Requests demos where feasible by following the instructions below:
-  ```
-  * $ cd MediaWiki-Action-API-Code-Samples
-  * $ cd python
-  * $ Add module information to `modules.json`
-  * $ python autogenerate.py # This will autogenerate new files
-  * $ Make additional changes to the new file such as printing output in a desired format
-  ```
+First, propose an idea for a code sample, demo app, etc. by creating an issue around it in the repository. After discussing your idea with the repo contributors, start working, and then send a pull request, when you've your changes ready to be accepted/ merged! You can autogenerate python files for GET Requests demos where feasible by following the instructions below:
+```
+  $ cd MediaWiki-Action-API-Code-Samples
+  $ Add module information to `modules.json`
+  $ cd python
+  $ python autogenerate.py
+  $ Make desired changes to the newly generated file(s)
+```
