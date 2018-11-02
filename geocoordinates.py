@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -14,13 +17,11 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-TITLE = 'Wikimedia Foundation'
-
 PARAMS = {
-    'action':"query",
-    'prop':"coordinates",
-    'titles': TITLE,
-    'format':"json"
+    "action": "query",
+    "format": "json",
+    "titles": "Wikimedia Foundation",
+    "prop": "coordinates"
 }
 
 R = S.get(url=URL, params=PARAMS)

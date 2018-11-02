@@ -1,0 +1,24 @@
+[
+	{
+		"filename": "tokens.py", 
+		"docstring": "Demo of `Token` module: Fetch token of type `login`", 
+		"endpoint": "https://mediawiki.org/w/api.php",
+		"params": {
+	    	"action": "query",
+	    	"meta": "tokens",
+	    	"type": "login",
+	    	"format": "json"
+		}
+	},
+	{
+		"filename": "geocoordinates.py", 
+		"docstring": "Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby", 
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+	    	"action": "query",
+	    	"prop": "coordinates",
+	    	"titles": "Wikimedia Foundation",
+	    	"format": "json"
+		}
+	}
+]
