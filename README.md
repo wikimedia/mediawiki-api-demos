@@ -27,6 +27,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [purge_namespace_pages.py](python/purge_namespace_pages.py): purge cache of the first 10 pages in the main namespace
 * [API:Redirects](https://www.mediawiki.org/wiki/API:Redirects)
   *  [redirects.py](python/redirects.py): return redirects to the given page(s)
+* [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
+  *  [delete.py](python/delete.py): delete a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
