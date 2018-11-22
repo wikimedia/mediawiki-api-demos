@@ -53,14 +53,14 @@ DATA = R.json()
 CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
 # Step 4: Send a post request to delete a page
-PARAMS_1 = {
+PARAMS_3 = {
     'action':"delete",
     'title':"enter_a_page_title",
     'token':CSRF_TOKEN,
     'format':"json"
 }
 
-R = S.post(URL, data=PARAMS_1)
+R = S.post(URL, data=PARAMS_3)
 DATA = R.json()
 
 print(DATA)
