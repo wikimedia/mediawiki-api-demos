@@ -157,5 +157,37 @@
 			"page": "Pet door",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "get_pages_revisions.py",
+		"docstring": "Demo of `Revisions` module: Get revision data with content for pages with titles [[API]] and [[Main Page]]",
+		"endpoint": "https://mediawiki.org/w/api.php",
+		"params": {
+		    "action": "query",
+		    "prop": "revisions",
+		    "titles": "API|Main Page",
+		    "rvprop": "timestamp|user|comment|content",
+		    "rvslots": "main",
+		    "formatversion": "2",
+		    "format": "json"
+		}
+	},
+	{
+		"filename": "get_filtered_page_revisions.py",
+		"docstring": "Demo of `Revisions` module: Get data including content of last 5 revisions of the title [[API:Geosearch]] made after July 1st 2018 excluding changes made by the user SSethi (WMF)",
+		"endpoint": "https://mediawiki.org/w/api.php",
+		"params": {
+		    "action": "query",
+		    "prop": "revisions",
+		    "titles": "API:Geosearch",
+		    "rvlimit": "5",
+		    "rvprop": "timestamp|user|comment|content",
+		    "rvdir": "newer",
+		    "rvstart": "2018-07-01T00:00:00Z",
+    		"rvexcludeuser": "SSethi (WMF)",
+		    "rvslots": "main",
+		    "formatversion": "2",
+		    "format": "json"
+		}
 	}
 ]

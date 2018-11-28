@@ -43,7 +43,7 @@ def make_file():
     """ Generate a file... """
     code = CodeGeneratorBackend(tab="    ")
 
-    file = open('modules.json', 'r')
+    file = open('../modules.json', 'r')
     modules = json.load(file)
     file.close()
 
