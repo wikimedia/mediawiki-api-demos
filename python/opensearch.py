@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,8 +7,9 @@
 
     MediaWiki Action API Code Samples
     Demo of `Opensearch` module: Search the wiki and obtain
-    results in an OpenSearch (http://www.opensearch.org) format
-    MIT license
+	results in an OpenSearch (http://www.opensearch.org) format
+
+    MIT License
 """
 
 import requests
@@ -15,14 +18,12 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-SEARCHTERM = "Hampi"
-
 PARAMS = {
-    'action':"opensearch",
-    'search':SEARCHTERM,
-    'limit': 5,
-    'namespace':0,
-    'format':"json"
+    "action": "OpenSearch",
+    "namespace": "0",
+    "search": "Hampi",
+    "limit": "5",
+    "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS)

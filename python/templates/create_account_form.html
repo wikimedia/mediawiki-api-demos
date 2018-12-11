@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+  <title>MediaWiki Create Account</title>
+
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/account_form.css">
+
+<div class="container">
+  <h2>Create MediaWiki Account</h2>
+  <form method="POST">
+    <div class="form-group">
+      <div class="form-field">
+        <div class="label-field">Enter your username</div>
+        <input name="username">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Password</div>
+        <input type="password" name="password">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Confirm password</div>
+        <input type="password" name="confirm-password">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Enter address (optional)</div>
+        <input name="email">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Enter the text you see on the image below</div>
+        <input name="captcha-word">
+      </div>
+      <img src="{{ captcha }}">
+    </div>
+    <button type="submit" class="btn btn-success">Create your account</button>
+  </form>
+
+  <br>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-info">
+    {{ message[1] }}
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+<br>
+</div>
+</div>

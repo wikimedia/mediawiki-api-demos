@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+  <title>MediaWiki Log in</title>
+  <link rel="stylesheet" href="static/bootstrap/css/bootstrap.min.css">
+
+<div class="container">
+  <h2>MediaWiki Log in</h2>
+  <form action="" method="post" role="form">
+    <div class="form-group">
+      <div class="form-field">
+        <div class="label-field">Username</div>
+        <input name="username">
+      </div>
+      <div class="form-field">
+        <div class="label-field">Password</div>
+        <input type="password" name="password">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success">Log in</button>
+  </form>
+  <br>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+  {% for message in messages %}
+  <div class="alert alert-info">
+    {{ message[1] }}
+  </div>
+  {% endfor %}
+  {% endif %}
+  {% endwith %}
+</div>
+<br>
+</div>
+</div>

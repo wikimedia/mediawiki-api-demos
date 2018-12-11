@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Search` module: Search for a text or title
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -17,10 +20,10 @@ URL = "https://en.wikipedia.org/w/api.php"
 SEARCHPAGE = "Nelson Mandela"
 
 PARAMS = {
-    'action':"query",
-    'list':"search",
-    'srsearch': SEARCHPAGE,
-    'format':"json"
+    "action": "query",
+    "format": "json",
+    "list": "search",
+    "srsearch": SEARCHPAGE
 }
 
 R = S.get(url=URL, params=PARAMS)

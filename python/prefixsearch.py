@@ -1,3 +1,5 @@
+#This file is partly auto-generated
+
 #!/usr/bin/python3
 
 """
@@ -5,7 +7,8 @@
 
     MediaWiki Action API Code Samples
     Demo of `Prefixsearch` module: Perform a prefix search for page titles
-    MIT license
+
+    MIT License
 """
 
 import requests
@@ -14,13 +17,11 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-SEARCHTERM = "Star Wars"
-
 PARAMS = {
-    'action':"query",
-    'list':"prefixsearch",
-    'pssearch':SEARCHTERM,
-    'format':"json"
+    "action": "query",
+    "format": "json",
+    "list": "prefixsearch",
+    "pssearch": "Star Wars"
 }
 
 R = S.get(url=URL, params=PARAMS)
