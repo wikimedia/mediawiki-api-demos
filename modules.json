@@ -189,5 +189,17 @@
 		    "formatversion": "2",
 		    "format": "json"
 		}
-	}
+    },
+    {
+        "filename": "get_users.py",
+        "docstring": "Demo of `Users` module: Get information about several users: [[1.2.3.4]], [[Catrope]], [[Vandal01]], and [[Bob]]",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "users",
+            "ususers": "1.2.3.4|Catrope|Vandal01|Bob",
+            "usprop": "blockinfo|groups|editcount|registration|emailable|gender"
+        }
+    }
 ]
