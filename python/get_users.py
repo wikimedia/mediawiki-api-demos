@@ -6,7 +6,7 @@
     get_users.py
 
     MediaWiki Action API Code Samples
-    Demo of `Users` module: Get information about several users: 
+    Demo of `Users` module: Get information about several users:
     [[1.2.3.4]], [[Catrope]], [[Vandal01]], and [[Bob]]
 
     MIT License
