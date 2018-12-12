@@ -12,18 +12,18 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): Create an account on a wiki with a captcha enabling extension installed
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
-  *  [get_users.py](python/get_users): get information about a list of users
+  *  [get_users.py](python/get_users.py): get information about a list of users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
   *  [parse.py](python/parse.py): parse content of a page
   *  [parse_wikitable.py](python/search.py): parse a section of its page and fetch its table data
 * [API:Categorymembers](https://www.mediawiki.org/wiki/API:Categorymembers)
-  *  [get_category_items.py](get_category_items.py): list twenty items in a category
-  *  [get_recent_category_items.py](get_recent_category_items.py): get the ten articles most recently added to a category 
-  *  [get_subcategories.py](get_subcategories.py): get ten subcategories of a category
+  *  [get_category_items.py](python/get_category_items.py): list twenty items in a category
+  *  [get_recent_category_items.py](python/get_recent_category_items.py): get the ten articles most recently added to a category
+  *  [get_subcategories.py](python/get_subcategories.py): get ten subcategories of a category
 * [API:Images](https://www.mediawiki.org/wiki/API:Images) 
-  * [get_page_images.py](get_page_images.py): get page images embedded on a page
+  * [get_page_images.py](python/get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
   *  [purge_two_pages.py](python/purge_two_pages.py): purge cache of two or more pages
   *  [purge_namespace_pages.py](python/purge_namespace_pages.py): purge cache of the first 10 pages in the main namespace
@@ -35,7 +35,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
 * [API:Links](https://www.mediawiki.org/wiki/API:Links)
-  *  [get_links.py](python/get_links): get links embedded on a page
+  *  [get_links.py](python/get_links.py): get links embedded on a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
