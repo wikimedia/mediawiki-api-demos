@@ -11,6 +11,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): Create an account on a wiki with a captcha enabling extension installed
+* [API:Users](https://www.mediawiki.org/wiki/API:Users)
+  *  [get_users.py](python/get_users): get information about a list of users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -32,6 +34,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
+* [API:Links](https://www.mediawiki.org/wiki/API:Revisions)
+  *  [get_links.py](python/get_links): get links embedded on a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

@@ -6,7 +6,7 @@
     get_links.py
 
     MediaWiki Action API Code Samples
-    Demo of `Links` module: Get all links to the given page(s)
+    Demo of `Links` module: Get all links on the given page(s)
 
     MIT License
 """
