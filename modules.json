@@ -192,7 +192,7 @@
     },
     {
         "filename": "get_links.py",
-        "docstring": "Demo of `Links` module: Get all links to the given page(s)",
+        "docstring": "Demo of `Links` module: Get all links on the given page(s)",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
