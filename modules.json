@@ -211,7 +211,17 @@
             "titles": "Albert Einstein",
             "prop": "info",
             "inprop": "url|talkid"
-
+        }
+    },
+    {
+        "filename": "get_allpages.py",
+        "docstring": "Demo of `Allpages` module: Get all pages whose title contains the text \"Jungle,\" in whole or part.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "allpages",
+            "apfrom": "jungle"
         }
     }
 ]
