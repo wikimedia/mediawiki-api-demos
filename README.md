@@ -36,6 +36,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
 * [API:Links](https://www.mediawiki.org/wiki/API:Links)
   *  [get_links.py](python/get_links.py): get links embedded on a page
+* [API:Allpages](https://www.mediawiki.org/wiki/API:Allpages):
+    [get_allpages.py](python/get_allpages.py) get all pages which fit a certain criteria, within a namespace
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
