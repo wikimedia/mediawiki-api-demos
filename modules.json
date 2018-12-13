@@ -200,5 +200,18 @@
             "titles": "Albert Einstein",
             "prop": "links"
         }
+    },
+    {
+        "filename": "get_info.py",
+        "docstring": "Demo of `Info` module: Send a GET request to display information about a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "titles": "Albert Einstein",
+            "prop": "info",
+            "inprop": "url|talkid"
+
+        }
     }
 ]
