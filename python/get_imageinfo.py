@@ -21,7 +21,7 @@ PARAMS = {
     "action": "query",
     "format": "json",
     "prop": "imageinfo",
-    "titles": "File:Albert Einstein Head.jpg"
+    "titles": "File:Billy_Tipton.jpg"
 }
 
 R = S.get(url=URL, params=PARAMS)
