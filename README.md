@@ -40,6 +40,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_info.py](python/get_info.py): get basic information about a page
 * [API:Allpages](https://www.mediawiki.org/wiki/API:Allpages):
     [get_allpages.py](python/get_allpages.py) get all pages which fit a certain criteria, within a namespace
+* [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages):
+    [get_allimages_by_date.py](python/get_allimages_by_date.py) list all images in a namespace, starting from a certain timestamp 
+    [get_allimages_by_name.py](python/get_allimages_by_name.py) list all images in a namespace, starting from a certain filename
+
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
