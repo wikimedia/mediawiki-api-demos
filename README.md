@@ -39,7 +39,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Info](https://www.mediawiki.org/wiki/API:Info)
   * [get_info.py](python/get_info.py): get basic information about a page
 * [API:Allpages](https://www.mediawiki.org/wiki/API:Allpages):
-    [get_allpages.py](python/get_allpages.py) get all pages which fit a certain criteria, within a namespace
+    [get_allpages.py](python/get_allpages.py): get all pages which fit a certain criteria, within a namespace
+* [API:Edit](https://www.mediawiki.org/wiki/API:Edit):
+    [edit.py](python/edit.py): edit a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
