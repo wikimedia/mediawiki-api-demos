@@ -226,13 +226,13 @@
     },
     {
         "filename": "get_allimages_by_name.py",
-        "docstring": "List all images in the namespace, starting from files that begin with 'I'. Limit the initial response to just the first three images. ",
+        "docstring": "List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. ",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
             "format": "json",
             "list": "allimages",
-            "aifrom": "I",
+            "aifrom": "Graffiti_000",
             "ailimit": "3"
         }
     },
