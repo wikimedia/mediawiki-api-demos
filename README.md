@@ -45,6 +45,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages):
     [get_allimages_by_date.py](python/get_allimages_by_date.py) list all images in a namespace, starting from a certain timestamp 
     [get_allimages_by_name.py](python/get_allimages_by_name.py) list all images in a namespace, starting from a certain filename
+* [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo):
+    [get_imageinfo.py](python/get_imageinfo.py) get information about an image file
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
