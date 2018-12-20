@@ -232,7 +232,7 @@
             "action": "query",
             "format": "json",
             "prop": "imageinfo",
-            "titles": "File:Billy_Tipton.jpg"
+            "titles": "File:Billy Tipton.jpg"
         }
     }
 ]
