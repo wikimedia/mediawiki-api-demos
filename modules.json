@@ -247,5 +247,15 @@
             "aisort": "timestamp",
             "aistart": "2010-01-01T18:05:46Z"
         }
+    },
+    {
+    	"filename": "get_imageinfo.py",
+        "docstring": "Demo of `Imageinfo` module: Get information about an image file.",
+        "params": {
+	        "action": "query",
+	    	"format": "json",
+	        "prop": "imageinfo",
+	        "titles": "File:Billy Tipton.jpg"
+    	}
     }
 ]
