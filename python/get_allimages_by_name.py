@@ -6,7 +6,8 @@
     get_allimages_by_name.py
 
     MediaWiki Action API Code Samples
-    List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. 
+    List all images in the namespace, starting from files that begin with
+    'Graffiti_000'. Limit the initial response to just the first three images.
 
     MIT License
 """
