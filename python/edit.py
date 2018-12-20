@@ -27,22 +27,24 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-# Step 2: POST Request to log in
+# Step 2: POST Request to log in. Use of main account for login is not
+# supported. Obtain credentials via Special:BotPasswords
+# (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 PARAMS_1 = {
-    "action":"login",
-    "lgname":"bot's_user_name",
-    "lgpassword":"bot's_password",
-    "lgtoken":LOGIN_TOKEN,
-    "format":"json"
+    "action": "login",
+    "lgname": "bot_user_name",
+    "lgpassword": "bot_password",
+    "lgtoken": LOGIN_TOKEN,
+    "format": "json"
 }
 
 R = S.post(URL, data=PARAMS_1)
 
 # Step 3: GET request to fetch CSRF token
 PARAMS_2 = {
-    "action":"query",
-    "meta":"tokens",
-    "format":"json"
+    "action": "query",
+    "meta": "tokens",
+    "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS_2)
@@ -52,11 +54,11 @@ CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
 # Step 4: POST request to edit a page
 PARAMS_3 = {
-    "action":"edit",
-    "title":"Sandbox",
-    "token":CSRF_TOKEN,
-    "format":"json",
-    "appendtext": "Hello" 
+    "action": "edit",
+    "title": "Sandbox",
+    "token": CSRF_TOKEN,
+    "format": "json",
+    "appendtext": "Hello"
 }
 
 R = S.post(URL, data=PARAMS_3)
