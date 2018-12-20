@@ -223,5 +223,29 @@
             "list": "allpages",
             "apfrom": "jungle"
         }
+    },
+    {
+        "filename": "get_allimages_by_name.py",
+        "docstring": "List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. ",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "allimages",
+            "aifrom": "Graffiti_000",
+            "ailimit": "3"
+        }
+    },
+    {
+        "filename": "get_allimages_by_date.py",
+        "docstring": "List all images in the namespace, starting from January 1, 2010, at 18:05:46 UTC.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "allimages",
+            "aisort": "timestamp",
+            "aistart": "2010-01-01T18:05:46Z"
+        }
     }
 ]
