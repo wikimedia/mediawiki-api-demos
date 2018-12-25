@@ -249,13 +249,25 @@
         }
     },
     {
-    	"filename": "get_imageinfo.py",
+        "filename": "get_imageinfo.py",
         "docstring": "Demo of `Imageinfo` module: Get information about an image file.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-	        "action": "query",
-	    	"format": "json",
-	        "prop": "imageinfo",
-	        "titles": "File:Billy Tipton.jpg"
+            "action": "query",
+        	"format": "json",
+            "prop": "imageinfo",
+            "titles": "File:Billy Tipton.jpg"
+    	}
+    },
+    {
+        "filename": "get_allcategories.py",
+        "docstring": "Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "allcategories",
+            "acfrom": "15th-century caliphs"
     	}
     }
 ]

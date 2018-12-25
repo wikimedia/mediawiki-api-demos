@@ -31,22 +31,25 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [redirects.py](python/redirects.py): return redirects to the given page(s)
 * [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
   *  [delete.py](python/delete.py): delete a page
-* [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
+* [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions):
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
-* [API:Links](https://www.mediawiki.org/wiki/API:Links)
+* [API:Links](https://www.mediawiki.org/wiki/API:Links):
   *  [get_links.py](python/get_links.py): get links embedded on a page
-* [API:Info](https://www.mediawiki.org/wiki/API:Info)
+* [API:Info](https://www.mediawiki.org/wiki/API:Info):
   * [get_info.py](python/get_info.py): get basic information about a page
 * [API:Allpages](https://www.mediawiki.org/wiki/API:Allpages):
-  * [get_allpages.py](python/get_allpages.py) get all pages which fit a certain criteria, within a namespace
+  * [get_allpages.py](python/get_allpages.py): get all pages which fit a certain criteria, within a namespace
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit):
   * [edit.py](python/edit.py): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages):
-  * [get_allimages_by_date.py](python/get_allimages_by_date.py) list all images in a namespace, starting from a certain timestamp 
-  * [get_allimages_by_name.py](python/get_allimages_by_name.py) list all images in a namespace, starting from a certain filename
+  * [get_allimages_by_date.py](python/get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_name.py](python/get_allimages_by_name.py): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo):
-  * [get_imageinfo.py](python/get_imageinfo.py) get information about an image file
+  * [get_imageinfo.py](python/get_imageinfo.py): get information about an image file
+* [API:Allcategories](https://www.mediawiki.org/wiki/API:Allcategories):
+  * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles. 
+
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
