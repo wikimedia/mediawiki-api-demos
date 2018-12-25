@@ -249,13 +249,25 @@
         }
     },
     {
-    	"filename": "get_imageinfo.py",
+        "filename": "get_imageinfo.py",
         "docstring": "Demo of `Imageinfo` module: Get information about an image file.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-	        "action": "query",
-	    	"format": "json",
-	        "prop": "imageinfo",
-	        "titles": "File:Billy Tipton.jpg"
-    	}
+            "action": "query",
+        	"format": "json",
+            "prop": "imageinfo",
+            "titles": "File:Billy Tipton.jpg"
+        }
+    },
+    {
+        "filename": "get_categories.py",
+        "docstring": "Demo of `Categories` module: Get categories associated with a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "prop": "categories",
+            "titles":"Janelle Monáe"
+        }
     }
 ]

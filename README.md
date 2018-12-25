@@ -39,14 +39,16 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Info](https://www.mediawiki.org/wiki/API:Info)
   * [get_info.py](python/get_info.py): get basic information about a page
 * [API:Allpages](https://www.mediawiki.org/wiki/API:Allpages):
-  * [get_allpages.py](python/get_allpages.py) get all pages which fit a certain criteria, within a namespace
+  * [get_allpages.py](python/get_allpages.py): get all pages which fit a certain criteria, within a namespace
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit):
   * [edit.py](python/edit.py): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages):
-  * [get_allimages_by_date.py](python/get_allimages_by_date.py) list all images in a namespace, starting from a certain timestamp 
-  * [get_allimages_by_name.py](python/get_allimages_by_name.py) list all images in a namespace, starting from a certain filename
+  * [get_allimages_by_date.py](python/get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_name.py](python/get_allimages_by_name.py): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo):
   * [get_imageinfo.py](python/get_imageinfo.py) get information about an image file
+* [API:Categories](https://www.mediawiki.org/wiki/API:Categories):
+  * [get_categories.py](python/get_categories.py): get categories associated with a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
