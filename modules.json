@@ -269,5 +269,16 @@
             "prop": "categories",
             "titles":"Janelle Monáe"
         }
+    },
+    {
+        "filename": "get_allcategories.py",
+        "docstring": "Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "allcategories",
+            "acfrom": "15th-century caliphs"
+    	}
     }
 ]
