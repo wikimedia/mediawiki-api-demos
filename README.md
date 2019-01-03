@@ -50,7 +50,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Categories](https://www.mediawiki.org/wiki/API:Categories):
   * [get_categories.py](python/get_categories.py): get categories associated with a page
 * [API:Allcategories](https://www.mediawiki.org/wiki/API:Allcategories):
-  * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles. 
+  * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles
+* [API:Allusers](https://www.mediawiki.org/wiki/API:Allusers):
+  * [get_allusers.py](python/get_allusers.py): get a list of all registered users, as ordered by username
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
