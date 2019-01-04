@@ -6,7 +6,8 @@
     get_allusers.py
 
     MediaWiki Action API Code Samples
-    Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.
+    Demo of `Allusers` module: Get all users, starting from those whose name
+    begins with the string, 'Drov'.
 
     MIT License
 """

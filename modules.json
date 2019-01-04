@@ -286,10 +286,10 @@
         "docstring": "Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-            "action":"query",
-            "format":"json",
-            "list":"allusers",
-            "auprefix":"Drov"
+            "action": "query",
+            "format": "json",
+            "list": "allusers",
+            "auprefix": "Drov"
     	}
     }
 ]
