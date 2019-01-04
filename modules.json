@@ -290,6 +290,17 @@
             "format": "json",
             "list": "allusers",
             "auprefix": "Drov"
+        }
+    },
+    {
+        "filename": "get_backlinks.py",
+        "docstring": "Demo of `Backlinks` module: Get request to list pages which link to a certain page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "backlinks",
+            "bltitle": "philosophy"
     	}
     }
 ]
