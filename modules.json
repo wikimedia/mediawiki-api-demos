@@ -254,7 +254,7 @@
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
-        	"format": "json",
+            "format": "json",
             "prop": "imageinfo",
             "titles": "File:Billy Tipton.jpg"
         }
@@ -265,7 +265,7 @@
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
-        	"format": "json",
+            "format": "json",
             "prop": "categories",
             "titles":"Janelle Monáe"
         }
@@ -276,9 +276,20 @@
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
-        	"format": "json",
+            "format": "json",
             "list": "allcategories",
             "acfrom": "15th-century caliphs"
+    	}
+    },
+    {
+        "filename": "get_allusers.py",
+        "docstring": "Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "allusers",
+            "auprefix": "Drov"
     	}
     }
 ]
