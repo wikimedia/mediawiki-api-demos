@@ -302,5 +302,16 @@
             "list": "backlinks",
             "bltitle": "philosophy"
     	}
+    },
+    {
+        "filename": "get_random.py",
+        "docstring": "Demo of `Random` module: Get request to list 5 random pages.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "random",
+            "rnlimit": "5"
+    	}
     }
 ]
