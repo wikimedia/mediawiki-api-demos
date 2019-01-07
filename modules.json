@@ -302,5 +302,14 @@
             "list": "backlinks",
             "bltitle": "philosophy"
     	}
+    },
+    {
+        "filename": "logout.py",
+        "docstring": "Demo of `Logout` module: Log out and clear session data.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "logout",
+            "format": "json"
+    	}
     }
 ]
