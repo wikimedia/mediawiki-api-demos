@@ -6,6 +6,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [tokens.py](python/tokens.py): get tokens for data modifying operations
 * [API:Login](https://www.mediawiki.org/wiki/API:Login)
   * [login.py](python/login.py) & [clientlogin.py](python/clientlogin.py): login
+* [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
+  * [logout.py](python/logout.py): logout
 
 ### Accounts and users 
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
