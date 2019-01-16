@@ -15,23 +15,51 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-# Step 1: Obtain Userrights token
-
+# Step 1: Retrieve a login token
 PARAMS_1 = {
+    "action": "query",
+    "meta": "tokens",
+    "type": "login",
+    "format": "json"
+}
+
+R = S.get(url=URL, params=PARAMS_1)
+DATA = R.json()
+
+LOGIN_TOKEN = DATA["query"]["tokens"]["logintoken"]
+
+# Step 2: Send a post request to log in. See
+# https://www.mediawiki.org/wiki/Manual:Bot_passwords
+# for a special note on logging in using a simplified
+# interface when accessing wikis via an application,
+# rather than the GUI
+PARAMS_2 = {
+    "action": "login",
+    "lgname": "user_name",
+    "lgpassword": "password",
+    "lgtoken": LOGIN_TOKEN,
+    "format": "json"
+}
+
+R = S.post(URL, data=PARAMS_2)
+
+# Step 3: Obtain a Userrights token
+PARAMS_3 = {
     "action":"query",
     "format":"json",
     "meta":"tokens",
     "type":"userrights"
 }
 
-R = S.get(url=URL, params=PARAMS_1)
+R = S.get(url=URL, params=PARAMS_3)
 DATA = R.json()
+
+print(DATA)
 
 USERRIGHTS_TOKEN = DATA["query"]["tokens"]["userrightstoken"]
 
-# Step 2: Request user has group membership added and removed
-
-PARAMS_2 = {
+# Step 4: Request user has group membership added and removed
+PARAMS_4 = {
     "action":"userrights",
     "format":"json",
     "user":"Bob",
@@ -43,7 +71,7 @@ PARAMS_2 = {
 
 HEADERS = {"token":USERRIGHTS_TOKEN}
 
-R = S.post(URL, data=PARAMS_2, headers=HEADERS)
+R = S.post(URL, data=PARAMS_4, headers=HEADERS)
 
 DATA = R.json()
 
