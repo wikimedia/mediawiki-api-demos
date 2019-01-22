@@ -77,7 +77,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
   * [languagesearch.py](python/languagesearch.py): search for a language 
 
-### Meta
+### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
