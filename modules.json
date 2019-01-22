@@ -322,5 +322,15 @@
             "list": "random",
             "rnlimit": "5"
     	}
+    },
+    {
+        "filename": "paraminfo.py",
+        "docstring": "Demo of `Paraminfo` module: Get information about other action API modules and their parameters.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "paraminfo",
+            "format": "json",
+            "modules": "parse|query+info|query+blah"
+        }
     }
 ]

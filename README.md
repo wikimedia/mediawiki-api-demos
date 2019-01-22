@@ -53,15 +53,16 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_imageinfo.py](python/get_imageinfo.py) get information about an image file
 * [API:Categories](https://www.mediawiki.org/wiki/API:Categories)
   * [get_categories.py](python/get_categories.py): get categories associated with a page
-* [API:Allcategories](https://www.mediawiki.org/wiki/API:Allcategories):
+* [API:Allcategories](https://www.mediawiki.org/wiki/API:Allcategories)
   * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles
 * [API:Allusers](https://www.mediawiki.org/wiki/API:Allusers)
   * [get_allusers.py](python/get_allusers.py): get a list of all registered users, as ordered by username
-  * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles.
+  * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles
 * [API:Backlinks](https://www.mediawiki.org/wiki/API:Backlinks)
   * [get_backlinks.py](python/get_backlinks.py): list pages which link to a certain page
 * [API:Random](https://www.mediawiki.org/wiki/API:Backlinks)
   * [get_random.py](python/get_random.py): get a list of random pages
+
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
@@ -75,6 +76,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [prefixsearch.py](python/prefixsearch.py): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
   * [languagesearch.py](python/languagesearch.py): search for a language 
+
+### Basics
+* [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
+  * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
 * [Article suggestion](python/demos/article%20suggestion): 
