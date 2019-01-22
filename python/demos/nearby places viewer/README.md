@@ -6,7 +6,7 @@ Install
 -------
 ```
 $ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
-$ cd MediaWiki-Action-API-Code-Samples/python/demos/article suggestion
+$ cd MediaWiki-Action-API-Code-Samples/python/demos/nearby places viewer
 Install the necessary python modules with pip
 $ python3 nearby.py
 ```
