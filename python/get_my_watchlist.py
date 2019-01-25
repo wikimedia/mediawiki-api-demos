@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    feedwatchlist_self.py
+    get_my_watchlist.py
 
     MediaWiki Action API Code Samples
     Demo of `Feedwatchlist` module: Get the watchlist feed 
@@ -30,7 +30,7 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
 # Step 2: Send a post request to log in. For this login 
 # method, Obtain credentials by first visiting
-# https://www.test.wikipedia.org/wiki/Manual:Bot_passwords
+# https://en.wikipedia.org/wiki/Special:BotPasswords/
 # See https://www.mediawiki.org/wiki/API:Login for more
 # information on log in methods.
 PARAMS_2 = {
@@ -42,7 +42,6 @@ PARAMS_2 = {
 }
 
 R = S.post(URL, data=PARAMS_2)
-DATA = R.json()
 
 # Step 3: Request the account's own watchlist feed
 PARAMS_3 = {
