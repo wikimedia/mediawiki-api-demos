@@ -19,7 +19,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [userrights.py](python/userrights): add and remove user rights
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
-    * [get_other_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of another user's watchlist
+    * [get_other_watchlist_feed](python/get_other_watchlist_feed.py): access an RSS feed of another user's watchlist
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
