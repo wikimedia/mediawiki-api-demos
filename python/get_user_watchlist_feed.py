@@ -3,7 +3,7 @@
 #!/usr/bin/python3
 
 """
-    feedwatchlist_other.py
+    get_user_watchlist_feed.py
 
     MediaWiki Action API Code Samples
     Demo of `Feedwatchlist` module: Get a watchlist feed from another user.

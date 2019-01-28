@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    get_my_watchlist.py
+    get_my_watchlist_feed.py
 
     MediaWiki Action API Code Samples
     Demo of `Feedwatchlist` module: Get the watchlist feed 
