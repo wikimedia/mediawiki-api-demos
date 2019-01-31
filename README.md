@@ -12,11 +12,14 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 ### Accounts and users 
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
-  *  [create_account_with_captcha.py](python/create_account_with_captcha.py): Create an account on a wiki with a captcha enabling extension installed
+  *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](python/get_users.py): get information about a list of users
 * [API:User group membership](https://www.mediawiki.org/wiki/API:User_group_membership)
   *  [userrights.py](python/userrights): add and remove user rights
+* [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
+  * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
+    * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
