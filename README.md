@@ -65,6 +65,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_backlinks.py](python/get_backlinks.py): list pages which link to a certain page
 * [API:Random](https://www.mediawiki.org/wiki/API:Backlinks)
   * [get_random.py](python/get_random.py): get a list of random pages
+* [API:Move](https://www.mediawiki.org/wiki/API:Move)
+  * [move.py](python/move.py): move a page 
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
