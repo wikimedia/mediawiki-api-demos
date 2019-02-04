@@ -332,5 +332,15 @@
             "format": "json",
             "modules": "parse|query+info|query+blah"
         }
+    },
+    {
+        "filename": "get_user_watchlist_feed.py",
+        "docstring": "Demo of `Feedwatchlist` module: Get a watchlist feed from another user.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "feedwatchlist",
+            "wlowner": "sample_user",
+            "wltoken": "sample_watchlist_token"
+        }
     }
 ]
