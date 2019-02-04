@@ -4,8 +4,8 @@
     move.py
 
     MediaWiki Action API Code Samples
-    Demo of `Move` module: Move a page, with 
-    redirect and discussion.
+    Demo of `Move` module: Move a page with its
+    talk page, without a redirect.
     MIT license
 """
 
