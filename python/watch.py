@@ -27,7 +27,7 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA["query"]["tokens"]["logintoken"]
 
-# Step 2: Send a post request to log in. For this login 
+# Step 2: Send a post request to log in. For this login
 # method, Obtain credentials by first visiting
 # https://www.en.wikipedia.org/wiki/Special:BotPasswords
 # See https://www.mediawiki.org/wiki/API:Login for more
