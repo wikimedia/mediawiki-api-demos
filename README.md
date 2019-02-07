@@ -69,6 +69,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [move.py](python/move.py): move a page
 * [API:Watch](https://www.mediawiki.org/wiki/API:Watch)
   * [watch.py](python/watch.py): add a page to your watchlist 
+* [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
+  * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
