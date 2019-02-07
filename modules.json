@@ -342,5 +342,16 @@
             "wlowner": "sample_user",
             "wltoken": "sample_watchlist_token"
         }
+    },
+    {
+        "filename": "get_usercontribs.py",
+        "docstring": "Demo of `Usercontribs` module: List user contributions.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "usercontribs",
+            "ucuser": "Jimbo Wales"
+    	}
     }
 ]
