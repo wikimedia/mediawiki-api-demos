@@ -342,5 +342,17 @@
             "wlowner": "sample_user",
             "wltoken": "sample_watchlist_token"
         }
+    },
+    {
+        "filename": "get_alllinks.py",
+        "docstring": "Demo of `Alllinks` module: List links pointing to the given namespace.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "alllinks",
+            "alnamespace": "0",
+            "alunique": "1"
+        }
     }
 ]
