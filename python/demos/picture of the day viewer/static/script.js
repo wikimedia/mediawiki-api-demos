@@ -2,37 +2,9 @@ document.addEventListener("DOMContentLoaded", function() {
     const linksDiv = document.querySelector(".links");
     let xmlHttp = new XMLHttpRequest();
 
-    // Helper functions
-
-    const prepItemUrlHtml = function(url) {
-        return "<a href = ".concat(url).concat(" target = \"blank\">");
+    const prepHtml = function(openingTag, content, closingTag) {
+        return openingTag.concat(content).concat(closingTag);
     }
-
-    const prepItemTitleHtml = function(title, url) {
-        const openLinkTag = prepItemUrlHtml(url);
-
-        return "<h2>".concat(openLinkTag).concat(title).concat("</a>").concat("</h2>");
-    }
-
-    const prepItemImageHtml = function(image) {
-        return "<img src =".concat(image).concat(" width = 500>");
-    }
-
-    const prepContainerDivHtml = function(...args) {
-        let divContainer = "<div>";
-
-        for (let item of args) {
-            divContainer += item;
-        }
-
-        return divContainer.concat('</div>')
-    }
-
-    const prepLinkItemHtml = function(item) {
-        return "<li>".concat(item).concat("</li>"); 
-    }
-
-    // The actual call
 
     xmlHttp.onreadystatechange = function() {
         if (this.readyState == 4) {
@@ -44,13 +16,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     const title = item["title"];
                     const image = item["image"];
 
-                    const itemTitleHtml = prepItemTitleHtml(title, image);
-                    const itemImageHtml = prepItemImageHtml(image);
+                    const itemLinkTag = prepHtml("<a href = \"", image, "\" target = \"blank\">");
+                    const itemTitleLink = prepHtml(itemLinkTag, title, "</a>")
+                    const fullItemTitleHtml = prepHtml("<h2>", itemTitleLink, "</h2>");
+                    const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
 
-                    const container = prepContainerDivHtml(itemTitleHtml, itemImageHtml);
-                    const fullItemHtml = prepLinkItemHtml(container);
-
-                    linksDiv.innerHTML += "".concat(fullItemHtml);
+                    linksDiv.innerHTML += "".concat(fullItemImageHtml).concat(fullItemTitleHtml);
                 }
             }
             else {
