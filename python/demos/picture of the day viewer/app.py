@@ -33,7 +33,8 @@ def fetch_potd(date):
     results = [{
         "title": file_name,
         "image": fetch_image_url(file_name),
-        "description": fetch_description(params["titles"])
+        "description": fetch_description(params["titles"]),
+        "date": date
     }]
 
     return results

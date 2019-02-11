@@ -49,3 +49,11 @@ img {
 p {
     margin: 12px;
 }
+
+.date {
+    text-align: center;
+    color: #72777d;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 16px auto;
+}
