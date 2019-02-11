@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const linksDiv = document.querySelector(".links");
-    let xmlHttp = new XMLHttpRequest();
+    const potdDiv = document.querySelector(".potd");
+    const xmlHttp = new XMLHttpRequest();
 
     const prepHtml = function(openingTag, content, closingTag) {
         return openingTag.concat(content).concat(closingTag);
-    }
+    };
 
     xmlHttp.onreadystatechange = function() {
         if (this.readyState == 4) {
@@ -21,13 +21,13 @@ document.addEventListener("DOMContentLoaded", function() {
                     const fullItemTitleHtml = prepHtml("<h2>", itemTitleLink, "</h2>");
                     const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
 
-                    linksDiv.innerHTML += "".concat(fullItemImageHtml).concat(fullItemTitleHtml);
-                }
+                    potdDiv.innerHTML += fullItemImageHtml.concat(fullItemTitleHtml);
+                };
             }
             else {
-                linkDiv.innerHTML += xmlHttp.status.concat(": ").concat(xmlHttp.statusText);
-            }
-         }
+                potdDiv.innerHTML += xmlHttp.status.concat(": ").concat(xmlHttp.statusText);
+            };
+         };
     };
 
     xmlHttp.open("POST", "/", true);

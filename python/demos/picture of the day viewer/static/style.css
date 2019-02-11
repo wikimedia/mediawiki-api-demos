@@ -6,7 +6,7 @@ body {
     background-color: #f8f9fa;
 }
 
-h1, a {
+h1, h2 {
     padding: 12px;
     background-color: #eaecf0;
     border-top: 1px solid #72777d;
@@ -17,7 +17,18 @@ h1 {
     color: #2a4b8d;
 }
 
-.links {
+h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    size: 0.8em;
+}
+
+h2, a {
+    color: #36c;
+}
+
+.card {
     background-color: #fff;
     border-radius: 8px;
     border: 1px solid #72777d;
@@ -33,13 +44,4 @@ img {
     border: 1px solid #72777d;
     min-width: 100px;
     max-width: 675px;
-}
-
-a {
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #36c;
-    size: 0.8em;
 }
