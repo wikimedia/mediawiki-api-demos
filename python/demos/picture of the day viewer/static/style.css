@@ -8,9 +8,9 @@ body {
 
 h1, h2 {
     padding: 12px;
-    background-color: #eaecf0;
-    border-top: 1px solid #72777d;
-    border-bottom: 1px solid #72777d;
+    background-color: #F3F9FF;
+    border-top: 1px solid #2a4b8d;
+    border-bottom: 1px solid #2a4b8d;
 }
 
 h1 {
@@ -24,17 +24,17 @@ h2 {
     size: 0.8em;
 }
 
-h2, a {
+a {
     color: #36c;
 }
 
 .card {
     background-color: #fff;
     border-radius: 8px;
-    border: 1px solid #72777d;
+    border: 1px solid #2a4b8d;
     min-width: 200px;
     max-width: 775px;
-    margin: auto auto;
+    margin: auto;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
 }
 
@@ -43,5 +43,9 @@ img {
     margin: 12px auto;
     border: 1px solid #72777d;
     min-width: 100px;
-    max-width: 675px;
+    max-width: 90%;
+}
+
+p {
+    margin: 12px;
 }

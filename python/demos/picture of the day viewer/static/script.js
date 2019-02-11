@@ -15,13 +15,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 for (let item of results) {
                     const title = item["title"];
                     const image = item["image"];
+                    const description = item["description"];
 
                     const itemLinkTag = prepHtml("<a href = \"", image, "\" target = \"blank\">");
-                    const itemTitleLink = prepHtml(itemLinkTag, title, "</a>")
-                    const fullItemTitleHtml = prepHtml("<h2>", itemTitleLink, "</h2>");
+                    const itemTitleLink = prepHtml("<h2>", title, "</h2>")
+                    const fullItemTitleHtml = prepHtml(itemLinkTag, itemTitleLink, "</a>");
                     const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
+                    const descriptionHtml = prepHtml("<p>", description, "</p>");
 
-                    potdDiv.innerHTML += fullItemImageHtml.concat(fullItemTitleHtml);
+                    potdDiv.innerHTML += fullItemImageHtml.concat(fullItemTitleHtml).concat(descriptionHtml);
                 };
             }
             else {
