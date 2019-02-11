@@ -14,14 +14,14 @@ h1, h2 {
 }
 
 h1 {
-    color: #2a4b8d;
+    background-color: #2a4b8d;
+    color: white;
 }
 
-h2 {
+h2, p {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    size: 0.8em;
 }
 
 a {
