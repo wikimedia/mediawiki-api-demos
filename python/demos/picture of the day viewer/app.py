@@ -1,15 +1,18 @@
 from flask import Flask, request, jsonify, render_template
+from datetime import date
 import requests
 
 APP = Flask(__name__)
 SESSION = requests.Session()
-ENDPOINT = "https://commons.wikimedia.org/w/api.php"
+ENDPOINT = "https://en.wikipedia.org/w/api.php"
 
 @APP.route("/", methods = ["GET", "POST"])
 
 def index():
     if (request.method == "POST"):
-        results = fetch_potd()
+        todays_date = str(date.today())
+        print(todays_date)
+        results = fetch_potd(todays_date)
 
         return jsonify(results = results)
 
@@ -26,23 +29,25 @@ def fetch_image_url(file_name):
 
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
+    print(data)
     page = next(iter(data["query"]["pages"].values()))
     image_info = page['imageinfo'][0]
     url = image_info['url']
 
     return url
 
-def fetch_potd():
+def fetch_potd(date):
     params = {
         "action": "query",
         "format": "json",
         "formatversion": "2",
         "prop": "images",
-        "titles": "Template:Potd"
+        "titles": "Template:POTD protected/" + date
     }
 
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
+    print(data)
     file_name = data["query"]["pages"][0]['images'][0]['title']
     
     results = [{
