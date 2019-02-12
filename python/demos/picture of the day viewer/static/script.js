@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     const potdDiv = document.querySelector(".potd");
-    const dateDiv = document.querySelector(".date");
+    const dateDiv = document.querySelector(".current-date");
     const xmlHttp = new XMLHttpRequest();
 
     const prepHtml = function(openingTag, content, closingTag) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const itemTitleLink = prepHtml("<h2>", title, "</h2>")
                 const fullItemTitleHtml = prepHtml(itemLinkTag, itemTitleLink, "</a>");
                 const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
-                const descriptionHtml = prepHtml("<p>", description, "</p>");
+                const descriptionHtml = prepHtml("<p class = \"description\">", description, "</p>");
 
                 potdDiv.innerHTML += fullItemImageHtml.concat(fullItemTitleHtml).concat(descriptionHtml);
                 dateDiv.innerHTML += date;

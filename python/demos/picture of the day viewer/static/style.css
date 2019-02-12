@@ -9,8 +9,7 @@ body {
 h1, h2 {
     padding: 12px;
     background-color: #F3F9FF;
-    border-top: 1px solid #2a4b8d;
-    border-bottom: 1px solid #2a4b8d;
+    border: 1px solid #2a4b8d;
 }
 
 h1 {
@@ -18,7 +17,7 @@ h1 {
     color: white;
 }
 
-h2, p {
+h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -31,7 +30,6 @@ a {
 .card {
     background-color: #fff;
     border-radius: 8px;
-    border: 1px solid #2a4b8d;
     min-width: 200px;
     max-width: 775px;
     margin: auto;
@@ -46,14 +44,47 @@ img {
     max-width: 90%;
 }
 
-p {
+.description {
     margin: 12px;
+    padding: 12px;
 }
 
-.date {
+.date-container {
     text-align: center;
+    font-weight: bold;
+}
+
+.current-date {
     color: #72777d;
     font-size: 3em;
-    font-weight: bold;
     margin: 16px auto;
+}
+
+.date-picker {
+    background-color: #36c;
+    color: white;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin: 16px auto;
+    text-align: center;
+    width: 95%;
+}
+
+.date-picker button {
+    background-color: inherit;
+    color: inherit;
+    font-size: 0.67em;
+    font-weight: inherit;
+    text-transform: none;
+    margin: 16px;
+    border: 1px solid white;
+    padding: 20px;
+    width: 33%;
+    box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.date-picker button:active {
+    background-color: #2a4b8d;
+    box-shadow: none;
 }
