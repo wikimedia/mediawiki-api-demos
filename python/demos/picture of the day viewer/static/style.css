@@ -9,7 +9,6 @@ body {
 h1, h2 {
     padding: 12px;
     background-color: #F3F9FF;
-    border: 1px solid #2a4b8d;
 }
 
 h1 {
@@ -21,6 +20,7 @@ h2 {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    border: 1px solid #2a4b8d;
 }
 
 a {
@@ -55,6 +55,7 @@ img {
 }
 
 .current-date {
+    display: block;
     color: #72777d;
     font-size: 3em;
     margin: 16px auto;

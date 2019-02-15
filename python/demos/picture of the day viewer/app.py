@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, render_template, request, jsonify
 from datetime import date
 import requests
 
@@ -51,8 +51,8 @@ def fetch_image_url(file_name):
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
     page = next(iter(data["query"]["pages"].values()))
-    image_info = page['imageinfo'][0]
-    url = image_info['url']
+    image_info = page["imageinfo"][0]
+    url = image_info["url"]
 
     return url
 
@@ -70,5 +70,5 @@ def fetch_description(page_title):
 
     return results
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     APP.run()

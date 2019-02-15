@@ -20,8 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 const date = item["date"];
 
                 const itemLinkTag = prepHtml("<a href = \"", image, "\" target = \"blank\">");
-                const itemTitleLink = prepHtml("<h2>", title, "</h2>")
-                const fullItemTitleHtml = prepHtml(itemLinkTag, itemTitleLink, "</a>");
+                const itemTitle = prepHtml("<h2>", title, "</h2>")
+                const fullItemTitleHtml = prepHtml(itemLinkTag, itemTitle, "</a>");
                 const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
                 const descriptionHtml = prepHtml("<p class = \"description\">", description, "</p>");
 
