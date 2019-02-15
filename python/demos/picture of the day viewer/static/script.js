@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     xmlHttp.onreadystatechange = function() {
+        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!S")
         if (this.readyState == 4) {
             if (xmlHttp.status == 200) {
                 const response = JSON.parse(xmlHttp.response);

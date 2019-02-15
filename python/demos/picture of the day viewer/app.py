@@ -1,21 +1,41 @@
 from flask import Flask, render_template, request, jsonify
-from datetime import date
+from datetime import date, timedelta
 import requests
 
 APP = Flask(__name__)
 SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
 
+current_date = date.today()
+
 @APP.route("/", methods = ["GET", "POST"])
 
 def index():
+    print(request.form)
     if (request.method == "POST"):
-        todays_date = str(date.today())
+        try:
+            change_date = request.form["change_date"]
+
+            if (change_date == "← Back"):
+                new_date = decrement_date()
+            elif (change_date == "Next →"):
+                new_date = increment_date()
+        except:
+            new_date = date.today()
+
+        current_date = new_date
+        todays_date = str(current_date)
         results = fetch_potd(todays_date)
 
         return jsonify(results = results)
 
     return render_template("index.html")
+
+def increment_date():
+    return current_date + timedelta(days = 1)
+
+def decrement_date():
+    return current_date - timedelta(days = 1)
 
 def fetch_potd(date):
     params = {
@@ -28,7 +48,7 @@ def fetch_potd(date):
 
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
-    file_name = data["query"]["pages"][0]['images'][0]['title']
+    file_name = data["query"]["pages"][0]["images"][0]["title"]
     
     results = [{
         "title": file_name,

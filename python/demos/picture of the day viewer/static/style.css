@@ -71,7 +71,7 @@ img {
     width: 95%;
 }
 
-.date-picker button {
+.date-picker input {
     background-color: inherit;
     color: inherit;
     font-size: 0.67em;
@@ -85,7 +85,7 @@ img {
     cursor: pointer;
 }
 
-.date-picker button:active {
+.date-picker input:active {
     background-color: #2a4b8d;
     box-shadow: none;
 }

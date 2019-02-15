@@ -15,9 +15,11 @@
         <div class = "date-container">
             <time class = "current-date"></time>
             <div class = "date-picker">
-                <button type = "button" name = "back">&larr; Back</button>
-                Change date
-                <button type = "button" name = "next">Next &rarr;</button>
+                <form action="/" method="POST">
+                    <input type = "submit" name = "change_date" value = "&larr; Back" />
+                    Change date
+                    <input type = "submit" name = "change_date" value = "Next &rarr;" />
+                </form>
             </div>
         </div>
     </main>
