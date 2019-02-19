@@ -54,14 +54,22 @@ def fetch_potd(date):
 
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
-    file_name = data["query"]["pages"][0]["images"][0]["title"]
+    try:
+        file_name = data["query"]["pages"][0]["images"][0]["title"]
     
-    results = [{
-        "title": file_name,
-        "image": fetch_image_url(file_name),
-        "description": fetch_description(params["titles"]),
-        "date": date
-    }]
+        results = [{
+            "title": file_name,
+            "image": fetch_image_url(file_name),
+            "description": fetch_description(params["titles"]),
+            "date": date
+        }]
+    except:
+        results = [{
+            "title": "No Image For This Date",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/404_Not_Found.png",
+            "description": "Wikipedia does not currently have an image associated with this date.",
+            "date": date
+        }]
 
     return results
 
