@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 from datetime import date, timedelta
 import requests
 
@@ -8,24 +8,30 @@ ENDPOINT = "https://en.wikipedia.org/w/api.php"
 
 current_date = date.today()
 
+@APP.route("/change_date", methods = ["POST"])
+def test():
+    global current_date
+
+    try:
+        change_date = request.form["change_date"]
+
+        if (change_date == "← Back"):
+            new_date = decrement_date()
+        elif (change_date == "Next →"):
+                new_date = increment_date()
+    except:
+        new_date = date.today()
+
+    current_date = new_date
+
+    return redirect("/")
+
 @APP.route("/", methods = ["GET", "POST"])
 
 def index():
-    print(request.form)
     if (request.method == "POST"):
-        try:
-            change_date = request.form["change_date"]
-
-            if (change_date == "← Back"):
-                new_date = decrement_date()
-            elif (change_date == "Next →"):
-                new_date = increment_date()
-        except:
-            new_date = date.today()
-
-        current_date = new_date
-        todays_date = str(current_date)
-        results = fetch_potd(todays_date)
+        date_to_fetch = str(current_date)
+        results = fetch_potd(date_to_fetch)
 
         return jsonify(results = results)
 

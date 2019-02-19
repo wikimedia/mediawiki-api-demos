@@ -41,7 +41,7 @@ img {
     margin: 12px auto;
     border: 1px solid #72777d;
     min-width: 100px;
-    max-width: 90%;
+    max-width: 50%;
 }
 
 .description {
@@ -68,7 +68,6 @@ img {
     text-transform: uppercase;
     margin: 16px auto;
     text-align: center;
-    width: 95%;
 }
 
 .date-picker input {
