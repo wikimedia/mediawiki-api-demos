@@ -9,7 +9,7 @@ ENDPOINT = "https://en.wikipedia.org/w/api.php"
 current_date = date.today()
 
 @APP.route("/change_date", methods = ["POST"])
-def test():
+def change_date():
     global current_date
 
     try:
