@@ -366,5 +366,18 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
+
+    },
+    {
+        "filename": "get_red_links.py",
+        "docstring": "Demo of `Links` module: List red links in a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "generator": "links",
+		    "titles": "Wikipedia:Most-wanted_articles",
+		    "gpllimit": "20"
+        }
     }
 ]
