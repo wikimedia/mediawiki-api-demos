@@ -6,7 +6,7 @@
     get_alllinks_red.py
 
     MediaWiki Action API Code Samples
-    Demo of `Alllinks_red` module: List all the links 
+    Demo of `Alllinks_red`: List all the links 
     and check if the link is a red link or 
     not.
 
