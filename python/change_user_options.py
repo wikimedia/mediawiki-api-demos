@@ -32,8 +32,8 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 # (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 PARAMS_1 = {
     "action": "login",
-    "lgname": "Areefat@testBlock",
-    "lgpassword": "ivgssjllrmmi3m4hgfeoma8pgqikbvm3",
+    "lgname": "bot_user_name",
+    "lgpassword": "bot_password",
     "lgtoken": LOGIN_TOKEN,
     "format": "json"
 }
