@@ -11,15 +11,14 @@
         <div class = "card">
             <h1>Picture of the day:</h1>
             <div class = "potd"></div>
-        </div>
-        <div class = "date-container">
-            <time class = "current-date"></time>
-            <div class = "date-picker">
-                <form action="/change_date" method="POST">
-                    <input type = "submit" name = "change_date" value = "&larr; Back" />
-                    Change date
-                    <input type = "submit" name = "change_date" value = "Next &rarr;" />
-                </form>
+            <div class = "date-container">
+                <time class = "current-date"></time>
+                <div class = "date-navigator">
+                    <form action="/change_date" method="POST">
+                        <input type = "submit" name = "change_date" value = "&larr; Back" />
+                        <input type = "submit" name = "change_date" value = "Next &rarr;" />
+                    </form>
+                 </div>
             </div>
         </div>
     </main>

@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     xmlHttp.onreadystatechange = function() {
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!S")
         if (this.readyState == 4) {
             if (xmlHttp.status == 200) {
                 const response = JSON.parse(xmlHttp.response);
@@ -20,14 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
                 const description = item["description"];
                 const date = item["date"];
 
-                const itemLinkTag = prepHtml("<a href = \"", image, "\" target = \"blank\">");
-                const itemTitle = prepHtml("<h2>", title, "</h2>")
-                const fullItemTitleHtml = prepHtml(itemLinkTag, itemTitle, "</a>");
-                const fullItemImageHtml = prepHtml("<img src = \"", image, "\" />");
-                const descriptionHtml = prepHtml("<p class = \"description\">", description, "</p>");
+                const prettyDate = new Date(date).toLocaleDateString();
 
-                potdDiv.innerHTML += fullItemImageHtml.concat(fullItemTitleHtml).concat(descriptionHtml);
-                dateDiv.innerHTML += date;
+                const titleHtml = prepHtml("<h2>", title, "</h2>");
+                const linkTag = prepHtml("<a href = \"", description, "\" target = \"blank\">");
+                const linkBoilerplate = "View on Wikimedia Commons";
+                const linkHtml = prepHtml(linkTag, linkBoilerplate, "</a>");
+                const linkWrapper = prepHtml("<figcaption>", linkHtml.concat(titleHtml), "</figcaption>");
+                const imageHtml = prepHtml("<img src = \"", image, "\" />");
+                const fullFigureHtml = prepHtml("<figure>", imageHtml.concat(linkWrapper), "</figure>")
+
+                potdDiv.innerHTML = fullFigureHtml;
+                dateDiv.innerHTML = prettyDate;
             }
             else {
                 potdDiv.innerHTML += xmlHttp.status.concat(": ").concat(xmlHttp.statusText);

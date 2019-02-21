@@ -1,22 +1,28 @@
+html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    margin: 0;
-    padding: 0;
     background-color: #f8f9fa;
 }
 
-h1, h2 {
-    padding: 12px;
-    background-color: #F3F9FF;
-}
-
 h1 {
+    margin: 0;
+    padding: 12px;
     background-color: #2a4b8d;
     color: white;
 }
 
 h2 {
+    margin: 0;
+    padding: 12px;
+    background-color: #F3F9FF;
+    font-size: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -27,41 +33,61 @@ a {
     color: #36c;
 }
 
+p {
+    margin: 8px;
+}
+
 .card {
+    position: relative;
     background-color: #fff;
-    border-radius: 8px;
     min-width: 200px;
-    max-width: 775px;
+    max-width: 67vw;
+    height: 90vh;
     margin: auto;
+    border-radius: 8px;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
+}
+
+.potd {
+    width: inherit;
+    height: 60vh;
+}
+
+figure {
+    width: 100%;
+    margin: auto;
+    text-align: center;
 }
 
 img {
     display: block;
     margin: 12px auto;
     border: 1px solid #72777d;
-    min-width: 100px;
-    max-width: 80%;
+    min-height: 100px; 
+    max-width: 64vw;
+    max-height: 50vh;
 }
 
-.description {
-    margin: 12px;
-    padding: 12px;
+figure a {
+    margin: 8px;
 }
 
 .date-container {
+    position: absolute;
     text-align: center;
     font-weight: bold;
+    bottom: 0;
+    left: 0;
+    right:0;
 }
 
 .current-date {
-    display: block;
     color: #72777d;
-    font-size: 3em;
     margin: 16px auto;
+    font-size: 2em;
 }
 
-.date-picker {
+.date-navigator {
     background-color: #36c;
     color: white;
     font-size: 2em;
@@ -70,21 +96,21 @@ img {
     text-align: center;
 }
 
-.date-picker input {
+.date-navigator input {
     background-color: inherit;
     color: inherit;
     font-size: 0.67em;
     font-weight: inherit;
     text-transform: none;
-    margin: 16px;
+    margin: 8px;
     border: 1px solid white;
-    padding: 20px;
-    width: 33%;
+    min-height: 44px;
+    width: 45%;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 }
 
-.date-picker input:active {
+.date-navigator input:active {
     background-color: #2a4b8d;
     box-shadow: none;
 }

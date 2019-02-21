@@ -9,6 +9,7 @@ ENDPOINT = "https://en.wikipedia.org/w/api.php"
 current_date = date.today()
 
 @APP.route("/change_date", methods = ["POST"])
+
 def change_date():
     global current_date
 
@@ -18,13 +19,19 @@ def change_date():
         if (change_date == "← Back"):
             new_date = decrement_date()
         elif (change_date == "Next →"):
-                new_date = increment_date()
+            new_date = increment_date()
     except:
         new_date = date.today()
 
     current_date = new_date
 
     return redirect("/")
+
+def increment_date():
+    return current_date + timedelta(days = 1)
+
+def decrement_date():
+    return current_date - timedelta(days = 1)
 
 @APP.route("/", methods = ["GET", "POST"])
 
@@ -37,12 +44,6 @@ def index():
 
     return render_template("index.html")
 
-def increment_date():
-    return current_date + timedelta(days = 1)
-
-def decrement_date():
-    return current_date - timedelta(days = 1)
-
 def fetch_potd(date):
     params = {
         "action": "query",
@@ -54,26 +55,23 @@ def fetch_potd(date):
 
     response = SESSION.get(url = ENDPOINT, params = params)
     data = response.json()
+
     try:
         file_name = data["query"]["pages"][0]["images"][0]["title"]
+        image_info = fetch_image_info(file_name)
     
         results = [{
             "title": file_name,
-            "image": fetch_image_url(file_name),
-            "description": fetch_description(params["titles"]),
+            "image": image_info["image_url"],
+            "description": image_info["description_url"],
             "date": date
         }]
     except:
-        results = [{
-            "title": "No Image For This Date",
-            "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/404_Not_Found.png",
-            "description": "Wikipedia does not currently have an image associated with this date.",
-            "date": date
-        }]
+        return
 
     return results
 
-def fetch_image_url(file_name):
+def fetch_image_info(file_name):
     params = {
         "action": "query",
         "format": "json",
@@ -86,23 +84,10 @@ def fetch_image_url(file_name):
     data = response.json()
     page = next(iter(data["query"]["pages"].values()))
     image_info = page["imageinfo"][0]
-    url = image_info["url"]
+    image_url = image_info["url"]
+    description_url = image_info["descriptionurl"]
 
-    return url
-
-def fetch_description(page_title):
-    params = {
-        "action": "query",
-        "format": "json",
-        "list": "search",
-        "srsearch": page_title
-    }
-
-    response = SESSION.get(url = ENDPOINT, params = params)
-    data = response.json()
-    results = data["query"]["search"][1]["snippet"]
-
-    return results
+    return {"image_url": image_url, "description_url": description_url}
 
 if __name__ == "__main__":
     APP.run()
