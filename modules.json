@@ -367,4 +367,19 @@
             "ucuser": "Jimbo Wales"
     	}
     }
+
+    {
+
+        "filename": "get_alllinks_red.py",
+        "docstring": "List all the links and check if the link is a red link or not.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+                "format": "json",
+    		"action": "query",
+    		"generator":"links",
+    		"titles": "Title",
+    		"gpllimit": "max",
+    		"prop": "links"
+    	}
+    }
 ]
