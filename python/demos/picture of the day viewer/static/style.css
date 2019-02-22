@@ -73,6 +73,7 @@ figure a {
 }
 
 .date-container {
+    display:block;
     position: absolute;
     text-align: center;
     font-weight: bold;
@@ -83,6 +84,7 @@ figure a {
 
 .current-date {
     color: #72777d;
+    background: #fff;
     margin: 16px auto;
     font-size: 2em;
 }
