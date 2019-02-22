@@ -3,18 +3,25 @@
     <meta charset="utf-8">
     <title>Picture of the Day</title>
     <link rel = "stylesheet" href = "/static/style.css">
-    <script src = "/static/script.js"></script>
 </head>
 
 <body>
     <main>
         <div class = "card">
             <h1>Picture of the day:</h1>
-            <div class = "potd"></div>
+            <div class = "potd">
+                <h2>{{data.title}}</h2>
+                <figure>
+                    <img src = "{{data.image}}" />
+                    <figcaption>
+                        <a href = "{{data.description}}" target = "blank">View on Wikimedia Commons</a>
+                    </figcaption>
+                </figure>
+            </div>
             <div class = "date-container">
-                <time class = "current-date"></time>
+                <time class = "current-date">{{data.date}}</time>
                 <div class = "date-navigator">
-                    <form action="/change_date" method="POST">
+                    <form action = "/" method = "POST">
                         <input type = "submit" name = "change_date" value = "&larr; Back" />
                         <input type = "submit" name = "change_date" value = "Next &rarr;" />
                     </form>

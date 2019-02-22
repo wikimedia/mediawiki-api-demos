@@ -7,11 +7,10 @@
 
     Attributes
     ----------
-        change_date(): Alter current date displayed
+        change(current_date): Alter current date displayed
         increment(date_object): Next date
         decrement(date_object): Previous date
         index(): Render web page with current POTD
-        potd_json(date_object): Create JSON from fetch_potd(day)
         fetch_potd(day): Fetch data about current picture from POTD endpoint
         fetch_image_info(file_name): Fetchs image & description url
 
@@ -29,44 +28,6 @@ SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
 CURRENT_DATE = date.today()
 
-@APP.route("/change_date", methods=["POST"])
-
-def change_date():
-    """
-    Alter CURRENT_DATE in response to user input, thus changing the POTD
-    being displayed on the webpage.
-
-    Returns
-    -------
-    Response object
-        A redirect to the index path, forcing the page to re-render with
-        the POTD for the updated CURRENT_DATE.
-    """
-
-    global CURRENT_DATE
-
-    user_input = request.form["change_date"]
-    new_date = CURRENT_DATE
-
-    if user_input == "← Back":
-        new_date = decrement(new_date)
-    elif user_input == "Next →":
-        new_date = increment(new_date)
-
-    CURRENT_DATE = new_date
-
-    return redirect("/")
-
-def increment(date_object):
-    """Returns the next date for a date object (i.e. tomorrow)"""
-
-    return date_object + timedelta(days=1)
-
-def decrement(date_object):
-    """Returns the previous date for a date object (i.e. yesterday)"""
-
-    return date_object - timedelta(days=1)
-
 @APP.route("/", methods=["GET", "POST"])
 
 def index():
@@ -79,17 +40,43 @@ def index():
     JSON data related to the current POTD, if POST request.
     Renders the webpage, templates/index.html, otherwise.
     """
+
+    global CURRENT_DATE
+
     if request.method == "POST":
-        return potd_json(CURRENT_DATE)
+        CURRENT_DATE = change(CURRENT_DATE)
+    
+    data = fetch_potd(CURRENT_DATE)
 
-    return render_template("index.html")
+    return render_template("index.html", data=data)
 
-def potd_json(date_object):
-    """Returns JSON formated data for the current POTD"""
 
-    results = fetch_potd(date_object)
+def change(current_date):
+    """
+    Return new date in response to user input, thus changing the POTD
+    being displayed on the webpage.
+    """
+    
+    user_input = request.form["change_date"]
+    new_date = current_date
 
-    return jsonify(results=results)
+    if user_input == "← Back":
+        new_date = decrement(new_date)
+    elif user_input == "Next →":
+        new_date = increment(new_date)
+
+    return new_date
+
+def increment(date_object):
+    """Returns the next date for a date object (i.e. tomorrow)"""
+
+    return date_object + timedelta(days=1)
+
+def decrement(date_object):
+    """Returns the previous date for a date object (i.e. yesterday)"""
+
+    return date_object - timedelta(days=1)
+
 
 def fetch_potd(date_object):
     """
@@ -125,12 +112,12 @@ def fetch_potd(date_object):
     image_info = fetch_image_info(file_name)
     formatted_day = date_object.strftime("%x")
 
-    results = [{
+    results = {
         "title": file_name,
         "image": image_info["image_url"],
         "description": image_info["description_url"],
         "date": formatted_day
-    }]
+    }
 
     return results
 
