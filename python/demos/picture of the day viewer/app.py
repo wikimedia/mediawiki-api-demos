@@ -59,10 +59,12 @@ def change(current_date):
     
     user_input = request.form["change_date"]
     new_date = current_date
+    last_date = date.today()
+    first_date = date(year=2004, month=5, day=14)
 
-    if user_input == "← Back":
+    if user_input == "← Back" and decrement(new_date) > first_date:
         new_date = decrement(new_date)
-    elif user_input == "Next →":
+    elif user_input == "Next →" and increment(new_date) <= last_date:
         new_date = increment(new_date)
 
     return new_date

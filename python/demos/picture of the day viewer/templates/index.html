@@ -12,10 +12,12 @@
             <div class = "potd">
                 <h2>{{data.title}}</h2>
                 <figure>
-                    <img src = "{{data.image}}" />
-                    <figcaption>
-                        <a href = "{{data.description}}" target = "blank">View on Wikimedia Commons</a>
-                    </figcaption>
+                    <a href = "{{data.description}}" target = "blank">
+                        <img src = "{{data.image}}" />
+                        <figcaption>
+                        View on Wikimedia Commons
+                        </figcaption>
+                    </a>
                 </figure>
             </div>
             <div class = "date-container">
