@@ -12,8 +12,8 @@
             <div class = "potd">
                 <h2>{{data.title}}</h2>
                 <figure>
-                    <a href = "{{data.description}}" target = "blank">
-                        <img src = "{{data.image}}" />
+                    <a href = "{{data.image_page}}" target = "blank">
+                        <img src = "{{data.image_src}}" />
                         <figcaption>
                         View on Wikimedia Commons
                         </figcaption>
@@ -21,11 +21,19 @@
                 </figure>
             </div>
             <div class = "date-container">
-                <time class = "current-date">{{data.date}}</time>
+                <time class = "current-date">{{data.date.strftime("%d %B %Y")}}</time>
                 <div class = "date-navigator">
                     <form action = "/" method = "POST">
-                        <input type = "submit" name = "change_date" value = "&larr; Back" />
-                        <input type = "submit" name = "change_date" value = "Next &rarr;" />
+                        {% if data.date.strftime("%d %B %Y") == "14 May 2004" %}
+                            <input type = "submit" name = "change_date" value = "&larr; Back" disabled />
+                        {% else %}
+                            <input type = "submit" name = "change_date" value = "&larr; Back" />
+                        {% endif %}
+                        {% if data.date == data.date.today() %}
+                            <input type = "submit" name = "change_date" value = "Next &rarr;" disabled />
+                        {% else %}
+                            <input type = "submit" name = "change_date" value = "Next &rarr;" />
+                        {% endif %}
                     </form>
                  </div>
             </div>

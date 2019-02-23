@@ -8,20 +8,20 @@ html {
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background-color: #f8f9fa;
+    background: #f8f9fa;
 }
 
 h1 {
     margin: 0;
     padding: 12px;
-    background-color: #2a4b8d;
+    background: #2a4b8d;
     color: white;
 }
 
 h2 {
     margin: 0;
     padding: 12px;
-    background-color: #F3F9FF;
+    background: #F3F9FF;
     font-size: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -73,7 +73,7 @@ figure a {
 }
 
 .date-container {
-    display:block;
+    display: block;
     position: absolute;
     text-align: center;
     font-weight: bold;
@@ -83,14 +83,14 @@ figure a {
 }
 
 .current-date {
-    color: #72777d;
     background: #fff;
+    color: #72777d;
     margin: 16px auto;
     font-size: 2em;
 }
 
 .date-navigator {
-    background-color: #36c;
+    background: #36c;
     color: white;
     font-size: 2em;
     text-transform: uppercase;
@@ -99,20 +99,36 @@ figure a {
 }
 
 .date-navigator input {
-    background-color: inherit;
+    background: #36c;
     color: inherit;
     font-size: 0.67em;
     font-weight: inherit;
     text-transform: none;
     margin: 8px;
-    border: 1px solid white;
+    border: 1px solid #fff;
     min-height: 44px;
     width: 45%;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 }
 
+.date-navigator input:hover {
+    background: #447FF5;
+}
+
 .date-navigator input:active {
-    background-color: #2a4b8d;
+    background: #2a4b8d;
     box-shadow: none;
+    border: none;
+}
+
+.date-navigator input:disabled:hover {
+    background: #36c;
+}
+
+.date-navigator input:disabled {
+    color: #ccf;
+    box-shadow: none;
+    border: 1px solid #ccf;
+    cursor: default;
 }

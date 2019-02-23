@@ -20,7 +20,7 @@
 #!/usr/bin/python3
 
 from datetime import date, timedelta
-from flask import Flask, render_template, request, jsonify, redirect
+from flask import Flask, render_template, request
 import requests
 
 APP = Flask(__name__)
@@ -45,7 +45,7 @@ def index():
 
     if request.method == "POST":
         CURRENT_DATE = change(CURRENT_DATE)
-    
+
     data = fetch_potd(CURRENT_DATE)
 
     return render_template("index.html", data=data)
@@ -56,7 +56,7 @@ def change(current_date):
     Return new date in response to user input, thus changing the POTD
     being displayed on the webpage.
     """
-    
+
     user_input = request.form["change_date"]
     new_date = current_date
     last_date = date.today()
@@ -112,13 +112,12 @@ def fetch_potd(date_object):
 
     file_name = data["query"]["pages"][0]["images"][0]["title"]
     image_info = fetch_image_info(file_name)
-    formatted_day = date_object.strftime("%x")
 
     results = {
         "title": file_name,
-        "image": image_info["image_url"],
-        "description": image_info["description_url"],
-        "date": formatted_day
+        "image_src": image_info["image_url"],
+        "image_page": image_info["description_url"],
+        "date": date_object
     }
 
     return results
@@ -135,7 +134,7 @@ def fetch_image_info(file_name):
     Returns
     -------
     list[dict]
-        Data detailing the POTD's image url and description url.
+        The POTD's image url and description url.
     """
 
     params = {
