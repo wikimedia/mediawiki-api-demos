@@ -6,31 +6,31 @@ html {
 }
 
 body {
+    background: #f8f9fa; /* light grey */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    background: #f8f9fa;
 }
 
 h1 {
     margin: 0;
     padding: 12px;
-    background: #2a4b8d;
-    color: white;
+    background: #2a4b8d; /* dark blue */
+    color: #ffffff;
 }
 
 h2 {
     margin: 0;
     padding: 12px;
-    background: #F3F9FF;
     font-size: 1em;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    border: 1px solid #2a4b8d;
+    background: #f3f9ff; /* very light blue */
+    border: 1px solid #2a4b8d; /* dark blue */
 }
 
 a {
-    color: #36c;
+    color: #3366cc; /* blue */
 }
 
 p {
@@ -39,11 +39,11 @@ p {
 
 .card {
     position: relative;
-    background-color: #fff;
+    margin: auto;
     min-width: 200px;
     max-width: 67vw;
     height: 90vh;
-    margin: auto;
+    background: #ffffff;
     border-radius: 8px;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
 }
@@ -59,13 +59,13 @@ figure {
     text-align: center;
 }
 
-img {
+figure img {
     display: block;
     margin: 12px auto;
-    border: 1px solid #72777d;
     min-height: 100px; 
     max-width: 64vw;
     max-height: 50vh;
+    border: 1px solid #72777d; /* grey */
 }
 
 figure a {
@@ -75,60 +75,60 @@ figure a {
 .date-container {
     display: block;
     position: absolute;
-    text-align: center;
-    font-weight: bold;
     bottom: 0;
     left: 0;
     right:0;
+    text-align: center;
+    font-weight: bold;
 }
 
 .current-date {
-    background: #fff;
-    color: #72777d;
     margin: 16px auto;
     font-size: 2em;
+    background: #ffffff;
+    color: #72777d; /* grey */
 }
 
 .date-navigator {
-    background: #36c;
-    color: white;
+    margin: 16px auto;
     font-size: 2em;
     text-transform: uppercase;
-    margin: 16px auto;
     text-align: center;
+    background: #3366cc; /* blue */
+    color: #ffffff;
 }
 
 .date-navigator input {
-    background: #36c;
-    color: inherit;
+    margin: 8px;
+    min-height: 44px;
+    width: 45%;
     font-size: 0.67em;
     font-weight: inherit;
     text-transform: none;
-    margin: 8px;
-    border: 1px solid #fff;
-    min-height: 44px;
-    width: 45%;
+    background: #3366cc; /* blue */
+    color: inherit;
+    border: 1px solid #ffffff;
     box-shadow: 3px 6px 10px rgba(0, 0, 0, 0.16);
     cursor: pointer;
 }
 
 .date-navigator input:hover {
-    background: #447FF5;
+    background: #447FF5; /* light blue */
 }
 
 .date-navigator input:active {
-    background: #2a4b8d;
-    box-shadow: none;
+    background: #2a4b8d; /* dark blue */
     border: none;
-}
-
-.date-navigator input:disabled:hover {
-    background: #36c;
+    box-shadow: none;
 }
 
 .date-navigator input:disabled {
-    color: #ccf;
+    color: #ccccff; /* grey */
+    border: 1px solid #ccccff; /* grey */
     box-shadow: none;
-    border: 1px solid #ccf;
     cursor: default;
+}
+
+.date-navigator input:disabled:hover {
+    background: #3366cc; /* blue */
 }
