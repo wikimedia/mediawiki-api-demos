@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    margin: 0;
     background: #f8f9fa; /* light grey */
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
@@ -19,7 +20,7 @@ h1 {
 }
 
 h2 {
-    margin: 0;
+    margin-top: 8px;
     padding: 12px;
     font-size: 1em;
     overflow: hidden;
@@ -61,11 +62,10 @@ figure {
 
 figure img {
     display: block;
-    margin: 12px auto;
-    min-height: 100px; 
+    margin: 12px auto; 
     max-width: 64vw;
     max-height: 50vh;
-    border: 1px solid #72777d; /* grey */
+    border: 1px solid#3366cc; /* blue */
 }
 
 figure a {
@@ -123,8 +123,8 @@ figure a {
 }
 
 .date-navigator input:disabled {
-    color: #ccccff; /* grey */
-    border: 1px solid #ccccff; /* grey */
+    color: #c8cdff; /* grey */
+    border: 1px solid #c8cdff; /* grey */ 
     box-shadow: none;
     cursor: default;
 }

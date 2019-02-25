@@ -7,7 +7,7 @@
 
     Attributes
     ----------
-        change(current_date): Alter current date displayed
+        change(_current_date): Alter current date displayed
         increment(date_object): Next date
         decrement(date_object): Previous date
         index(): Render web page with current POTD
@@ -26,14 +26,14 @@ import requests
 APP = Flask(__name__)
 SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
-CURRENT_DATE = date.today()
+_current_date = date.today()
 
 @APP.route("/", methods=["GET", "POST"])
 
 def index():
     """
     Requests data from the WikiMedia Action API, related to the POTD for
-    the CURRENT_DATE, and renders it on a webpage located at the index path.
+    the _current_date, and renders it on a webpage located at the index path.
 
     Returns
     -------
@@ -41,24 +41,24 @@ def index():
     Renders the webpage, templates/index.html, otherwise.
     """
 
-    global CURRENT_DATE
+    global _current_date
 
     if request.method == "POST":
-        CURRENT_DATE = change(CURRENT_DATE)
+        _current_date = change(_current_date)
 
-    data = fetch_potd(CURRENT_DATE)
+    data = fetch_potd(_current_date)
 
     return render_template("index.html", data=data)
 
 
-def change(current_date):
+def change(_current_date):
     """
     Return new date in response to user input, thus changing the POTD
     being displayed on the webpage.
     """
 
     user_input = request.form["change_date"]
-    new_date = current_date
+    new_date = _current_date
     last_date = date.today()
     first_date = date(year=2004, month=5, day=14)
 
@@ -97,14 +97,14 @@ def fetch_potd(date_object):
         date it was featured as Picture of the Day.
     """
 
-    day = date_object.isoformat()
+    date_string = date_object.isoformat()
 
     params = {
         "action": "query",
         "format": "json",
         "formatversion": "2",
         "prop": "images",
-        "titles": "Template:POTD protected/" + day
+        "titles": "Template:POTD protected/" + date_string
     }
 
     response = SESSION.get(url=ENDPOINT, params=params)
@@ -115,8 +115,8 @@ def fetch_potd(date_object):
 
     results = {
         "title": file_name,
-        "image_src": image_info["image_url"],
-        "image_page": image_info["description_url"],
+        "image_src": image_info,
+        "image_page": "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string,
         "date": date_object
     }
 
@@ -150,12 +150,8 @@ def fetch_image_info(file_name):
     page = next(iter(data["query"]["pages"].values()))
     image_info = page["imageinfo"][0]
     image_url = image_info["url"]
-    description_url = image_info["descriptionurl"]
 
-    results = {
-        "image_url": image_url,
-        "description_url": description_url
-    }
+    results = image_url
 
     return results
 
