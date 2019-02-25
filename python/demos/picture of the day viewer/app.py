@@ -7,7 +7,7 @@
 
     Attributes
     ----------
-        change(_current_date): Alter current date displayed
+        change(date_object): Alter current date displayed
         increment(date_object): Next date
         decrement(date_object): Previous date
         index(): Render web page with current POTD
@@ -51,7 +51,7 @@ def index():
     return render_template("index.html", data=data)
 
 
-def change(_current_date):
+def change(date_object):
     """
     Return new date in response to user input, thus changing the POTD
     being displayed on the webpage.
