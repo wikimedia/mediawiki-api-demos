@@ -112,11 +112,12 @@ def fetch_potd(date_object):
 
     file_name = data["query"]["pages"][0]["images"][0]["title"]
     image_info = fetch_image_info(file_name)
+    potd_page = "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string
 
     results = {
         "title": file_name,
         "image_src": image_info,
-        "image_page": "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string,
+        "image_page": potd_page,
         "date": date_object
     }
 
