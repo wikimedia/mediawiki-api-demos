@@ -366,5 +366,18 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
+
+    },
+    {
+        "filename": "query_pages.py",
+        "docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "querypage",
+            "qppage":"Uncategorizedpages",
+            "qplimit": "10"
+        }
     }
 ]
