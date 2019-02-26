@@ -99,7 +99,7 @@ def fetch_potd(date_object):
 
     date_string = date_object.isoformat()
 
-    params = {
+    parameters = {
         "action": "query",
         "format": "json",
         "formatversion": "2",
@@ -107,7 +107,7 @@ def fetch_potd(date_object):
         "titles": "Template:POTD protected/" + date_string
     }
 
-    response = SESSION.get(url=ENDPOINT, params=params)
+    response = SESSION.get(url=ENDPOINT, params=parameters)
     data = response.json()
 
     file_name = data["query"]["pages"][0]["images"][0]["title"]
@@ -138,7 +138,7 @@ def fetch_image_info(file_name):
         The POTD's image url and description url.
     """
 
-    params = {
+    parameters = {
         "action": "query",
         "format": "json",
         "prop": "imageinfo",
@@ -146,7 +146,7 @@ def fetch_image_info(file_name):
         "titles": file_name
     }
 
-    response = SESSION.get(url=ENDPOINT, params=params)
+    response = SESSION.get(url=ENDPOINT, params=parameters)
     data = response.json()
     page = next(iter(data["query"]["pages"].values()))
     image_info = page["imageinfo"][0]
