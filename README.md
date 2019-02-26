@@ -73,6 +73,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Compare](https://www.mediawiki.org/wiki/API:Compare)
+  * [get_compare.py](python/get_compare.py): action used to compare between two titles.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

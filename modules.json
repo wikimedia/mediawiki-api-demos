@@ -366,5 +366,19 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
+    },
+    {
+
+        "filename": "get_compare.py",
+        "docstring": "Demo of `Compare` module: A revision number, user and title is given to compare.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+    		"action": "query",
+    		"format": "json",
+    		"action": "compare",
+   			"fromtitle":"Jungle",
+   			"totitle":"JunglePup",
+   			"prop":"ids|user|title"
+		}
     }
 ]
