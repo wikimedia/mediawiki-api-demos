@@ -367,4 +367,16 @@
             "ucuser": "Jimbo Wales"
     	}
     }
+    {
+        "filename": "get_allrevisions.py",
+        "docstring": "Demo of `AllRevisions` module: List All Revisions of all pages and all users.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params":{
+    		"action": "query",
+    		"format": "json",
+    		"list": "allrevisions",
+    		"arvprop":"ids|user|userid|tags"
+    }
+    },
+
 ]
