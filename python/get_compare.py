@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    get_allpages.py
+    get_compare.py
 
     MediaWiki Action API Code Samples
     Demo of `Allpages` module: Get all pages whose title contains
