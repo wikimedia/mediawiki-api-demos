@@ -366,5 +366,30 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
-    }
+    },
+	{
+		"filename": "blocks.py",
+		"docstring": "Demo of `Blocks` module: GET requst to list recent blocks",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "blocks",
+			"bklimit": "3",
+			"bkprop": "id|user|by|timestamp|expiry|reason|range|flags"
+		}	
+	
+	},
+	{
+		"filename": "setlanguage.py",
+		"docstring": "Demo of `SetPageLanguage` module: POST requst to change the language of a page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "setpagelanguage",
+			"format": "json",
+			"title": "Help:Starting_a_new_page",
+			"lang": "default",
+			"token": "+\\\\"
+		}
+	}
 ]

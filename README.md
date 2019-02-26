@@ -22,6 +22,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [blocks.py](python/blocks.py): get information about recent user blocks
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -73,7 +75,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
-
+* [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
+  *  [setlanguage.py](python/setlanguage.py): change the language of a page
+  
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
