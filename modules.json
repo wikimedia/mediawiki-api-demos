@@ -387,9 +387,9 @@
 		"params": {
 			"action": "setpagelanguage",
 			"format": "json",
-			"title": "Help:Starting_a_new_page",
-			"lang": "default",
-			"token": "+\\\\"
+			"pageid": "123",
+			"lang": "eu",
+			"token": "e17ac3bb8d7dd0c4f5e4fd1f84cd21095c76c2cc+\\"
 		}
 	}
 ]
