@@ -61,7 +61,7 @@ PARAMS_3 = {
     "token": CSRF_TOKEN,
     "change": "language=en|skin=vector",
     "optionname": "nickname",
-	"optionvalue": "custom-signa|ture"
+    "optionvalue": "custom-signa|ture"
 }
 
 R = S.post(URL, data=PARAMS_3)
