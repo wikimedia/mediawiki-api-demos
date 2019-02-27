@@ -369,7 +369,7 @@
     },
 	{
 		"filename": "blocks.py",
-		"docstring": "Demo of `Blocks` module: GET requst to list recent blocks",
+		"docstring": "Demo of `Blocks` module: GET request to list recent blocks",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "query",
@@ -382,7 +382,7 @@
 	},
 	{
 		"filename": "setlanguage.py",
-		"docstring": "Demo of `SetPageLanguage` module: POST requst to change the language of a page",
+		"docstring": "Demo of `SetPageLanguage` module: POST request to change the language of a page",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "setpagelanguage",
