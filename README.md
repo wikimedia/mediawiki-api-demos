@@ -76,7 +76,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 * [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
-  *  [setlanguage.py](python/setlanguage.py): change the language of a page
+  *  [setlanguage.py](python/setlanguage.py): change page language
   
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
