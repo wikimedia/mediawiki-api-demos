@@ -27,12 +27,11 @@ PARAMS = {
 
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
-pages = DATA['query']['pages']
-missing_pages = {}
+PAGES = DATA['query']['pages']
+MISSING_PAGES = []
 
-for page in pages:
-	if int(page) < 0:
-		missing_page = pages[page]
-		missing_pages.update({page:missing_page})
+for page in PAGES:
+    if int(page) < 0:
+        MISSING_PAGES.append(PAGES[page]['title'])
 
-print(missing_pages)
+print(MISSING_PAGES)

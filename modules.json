@@ -376,8 +376,8 @@
             "action": "query",
             "format": "json",
             "generator": "links",
-		    "titles": "Wikipedia:Most-wanted_articles",
-		    "gpllimit": "20"
+            "titles": "Wikipedia:Most-wanted_articles",
+            "gpllimit": "20"
         }
     }
 ]
