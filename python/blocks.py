@@ -4,7 +4,7 @@
     blocks.py
 
     MediaWiki Action API Code Samples
-    Demo of `Blocks` module: GET requst to list recent blocks
+    Demo of `Blocks` module: GET request to list recent blocks
 
     MIT License
 """
