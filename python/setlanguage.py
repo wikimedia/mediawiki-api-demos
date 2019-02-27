@@ -4,7 +4,7 @@
     setlanguage.py
 
     MediaWiki Action API Code Samples
-    Demo of `SetPageLanguage` module: POST requst to change the language of a page
+    Demo of `SetPageLanguage` module: POST request to change the language of a page
 
     MIT License
 """
