@@ -367,4 +367,15 @@
             "ucuser": "Jimbo Wales"
     	}
     }
+    {
+
+        "filename": "purge_two_pages.js",
+        "docstring":  "Demo of `purge` module: Sending post request to purge two or more pages",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "purge",
+    		"format": "json",
+    		"titles":"Main_Page|Nonexistent",
+    	}
+    }
 ]

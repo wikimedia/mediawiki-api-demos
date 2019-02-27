@@ -74,6 +74,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 
+
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
