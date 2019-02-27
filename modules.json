@@ -369,13 +369,26 @@
     }
     {
 
-        "filename": "purge_two_pages.js",
+       "filename": "purge_two_pages.js",
         "docstring":  "Demo of `purge` module: Sending post request to purge two or more pages",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "purge",
     		"format": "json",
     		"titles":"Main_Page|Nonexistent",
+    	}
+    }
+     {
+
+       "filename": "purge_namespace_pages.js",
+        "docstring":  "Demo of `purge` module: Sending post request to purge first 10 pages in the main namespace",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "purge",
+    		"format": "json",
+    		"generator":"allpages",
+    		"gapnamespace":"0",
+    		"gaplimit":"10"
     	}
     }
 ]
