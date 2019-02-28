@@ -1,18 +1,9 @@
 """
-    App.py
+    app.py
     MediaWiki Action API Code Samples
 
-    Fetches the current Wikipedia Picture of the Day (POTD) and displays it on
-    a webpage. Also allows for user to change the date displayed.
-
-    Attributes
-    ----------
-        change(date_object): Alter current date displayed
-        increment(date_object): Next date
-        decrement(date_object): Previous date
-        index(): Render web page with current POTD
-        fetch_potd(day): Fetch data about current picture from POTD endpoint
-        fetch_image_info(file_name): Fetchs image & description url
+    Fetches Wikipedia Picture of the Day (POTD) and displays it on
+    a webpage. Also allows to go backward or foward a date to view other Pictures of the Day in the Wikipedia archives.
 
     MIT License
 """
@@ -23,22 +14,16 @@ from datetime import date, timedelta
 from flask import Flask, render_template, request
 import requests
 
+
 APP = Flask(__name__)
 SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
 _current_date = date.today()
 
 @APP.route("/", methods=["GET", "POST"])
-
 def index():
     """
-    Requests data from the WikiMedia Action API, related to the POTD for
-    the _current_date, and renders it on a webpage located at the index path.
-
-    Returns
-    -------
-    JSON data related to the current POTD, if POST request.
-    Renders the webpage, templates/index.html, otherwise.
+    Requests data from the Action API & renders it on a webpage.
     """
 
     global _current_date
@@ -53,8 +38,7 @@ def index():
 
 def change(date_object):
     """
-    Return new date in response to user input, thus changing the POTD
-    being displayed on the webpage.
+    Return new date in response to input from the web form.
     """
 
     user_input = request.form["change_date"]
@@ -62,99 +46,71 @@ def change(date_object):
     last_date = date.today()
     first_date = date(year=2004, month=5, day=14)
 
-    if user_input == "← Back" and decrement(new_date) > first_date:
-        new_date = decrement(new_date)
-    elif user_input == "Next →" and increment(new_date) <= last_date:
-        new_date = increment(new_date)
+    if user_input == "← Back":
+        new_date = new_date - timedelta(days=1)
+    elif user_input == "Next →":
+        new_date = new_date + timedelta(days=1)
+
+    if new_date > last_date or new_date < first_date:
+        return _current_date
 
     return new_date
-
-def increment(date_object):
-    """Returns the next date for a date object (i.e. tomorrow)"""
-
-    return date_object + timedelta(days=1)
-
-def decrement(date_object):
-    """Returns the previous date for a date object (i.e. yesterday)"""
-
-    return date_object - timedelta(days=1)
 
 
 def fetch_potd(date_object):
     """
     Returns image data related to the current POTD.
-
-    Parameters
-    ----------
-    date_object: date
-        A datetime.date object, used to construct a title in order to find the
-        correct POTD in the POTD archives.
-
-    Returns
-    -------
-    list[dict]
-        JSON detailing the POTD's filename, image url, description url, and the
-        date it was featured as Picture of the Day.
     """
 
     date_string = date_object.isoformat()
+    title = "Template:POTD protected/" + date_string
 
-    parameters = {
+    params = {
         "action": "query",
         "format": "json",
         "formatversion": "2",
         "prop": "images",
-        "titles": "Template:POTD protected/" + date_string
+        "titles": title
     }
 
-    response = SESSION.get(url=ENDPOINT, params=parameters)
+    response = SESSION.get(url=ENDPOINT, params=params)
     data = response.json()
 
-    file_name = data["query"]["pages"][0]["images"][0]["title"]
-    image_info = fetch_image_info(file_name)
-    potd_page = "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string
+    filename = data["query"]["pages"][0]["images"][0]["title"]
+    image_src = fetch_image_src(filename)
+    image_page_url = "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string
 
     results = {
-        "title": file_name,
-        "image_src": image_info,
-        "image_page": potd_page,
+        "filename": filename,
+        "image_src": image_src,
+        "image_page_url": image_page_url,
         "date": date_object
     }
 
     return results
 
-def fetch_image_info(file_name):
+
+def fetch_image_src(filename):
     """
-    Returns the POTD's image url & image description.
-
-    Parameters
-    ----------
-    File_name: String
-        The name of the image file for the POTD.
-
-    Returns
-    -------
-    list[dict]
-        The POTD's image url and description url.
+    Returns the POTD's image url.
     """
 
-    parameters = {
+    params = {
         "action": "query",
         "format": "json",
         "prop": "imageinfo",
         "iiprop": "url",
-        "titles": file_name
+        "titles": filename
     }
 
-    response = SESSION.get(url=ENDPOINT, params=parameters)
+    response = SESSION.get(url=ENDPOINT, params=params)
     data = response.json()
     page = next(iter(data["query"]["pages"].values()))
     image_info = page["imageinfo"][0]
-    image_url = image_info["url"]
-
-    results = image_url
+    results = image_info["url"]
 
     return results
+
 
 if __name__ == "__main__":
     APP.run()
