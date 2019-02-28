@@ -112,6 +112,6 @@ First, propose an idea for a code sample, demo app, etc. by creating an issue ar
 $ cd MediaWiki-Action-API-Code-Samples
 $ Add module information to `modules.json`
 $ cd python
-$ python autogenerate.py
+$ python autogenerator.py
 $ Make desired changes to the newly generated file(s)
 ```
