@@ -97,6 +97,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 A sample app that uses MediaWiki Action API:Search allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and WTForms for rendering form.
 * [Nearby places viewer](python/demos/nearby%20places%20viewer): 
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
+* [User Contributions](python/demos/UserContributions):
+A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask framework as backend and Bootstrap as frontend.
 
 ### Installation
 ```
