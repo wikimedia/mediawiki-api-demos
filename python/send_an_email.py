@@ -53,14 +53,15 @@ EMAIL_TOKEN = DATA['query']['tokens']['csrftoken']
 
 # Step 4: POST request to send an email
 PARAMS_3 = {
-    'action':"emailuser",
-    'target':"user to sent email to",
-    'subject':"subject of the message",
-    'text':"the message",
-    'token':EMAIL_TOKEN
+    "action": "emailuser",
+    "target": "Catrope",
+    "subject": "Hi",
+    "text": "Just wanted to say hi",
+    "token": EMAIL_TOKEN
 }
 
 R = S.post(URL, data=PARAMS_3)
-DATA = R.json()
+DATA = R.text()
 
 print(DATA)
+

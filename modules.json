@@ -362,9 +362,22 @@
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
-        	"format": "json",
+            "format": "json",
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
+    },
+    {       
+        "filename": "send_an_email.py",
+        "docstring": "Demo of `Emailuser` module: Email a user.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "emailuser",
+            "format": "json",
+            "target": "Catrope",
+            "subject": "Hi",
+            "text": "Just wanted to say hi",
+            "token": "EMAIL_TOKEN"
+        }
     }
 ]
