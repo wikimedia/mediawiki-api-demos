@@ -3,7 +3,7 @@
     MediaWiki Action API Code Samples
 
     Fetches Wikipedia Picture of the Day (POTD) and displays it on a webpage.
-    Also allows users to go backward or foward a date to view other POTD.
+    Also allows users to go backward or forward a date to view other POTD.
 
     MIT License
 """
