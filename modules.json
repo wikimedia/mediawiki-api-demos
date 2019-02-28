@@ -366,18 +366,16 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
-    }
-
+    },
     {
-
-        "filename": "get_alllinks_red.py",
-        "docstring": "List all the links and check if the link is a red link or not.",
+        "filename": "get_red_links.py",
+        "docstring": "Demo of `Links` module: List all missing links from all links on given page(s).",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
                 "format": "json",
     		"action": "query",
     		"generator":"links",
-    		"titles": "Title",
+    		"titles": "Wikipedia:Requested articles/Arts and entertainment",
     		"gpllimit": "max",
     		"prop": "links"
     	}
