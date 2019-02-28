@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <title>Picture of the Day</title>
@@ -10,8 +11,8 @@
         <h1>Picture of the day:</h1>
         <div class="card">
             <div class="potd">
-                <h2>{{ data.title }}</h2>
-                <a href="{{ data.image_page }}" target="blank">
+                <h2>{{ data.filename }}</h2>
+                <a href="{{ data.image_page_url }}" target="blank">
                     <figure>
                         <img src="{{ data.image_src }}" />
                         <figcaption>View on Wikipedia</figcaption>
