@@ -2,8 +2,8 @@
     app.py
     MediaWiki Action API Code Samples
 
-    Fetches Wikipedia Picture of the Day (POTD) and displays it on
-    a webpage. Also allows to go backward or foward a date to view other Pictures of the Day in the Wikipedia archives.
+    Fetches Wikipedia Picture of the Day (POTD) and displays it on a webpage.
+    Also allows users to go backward or foward a date to view other POTD.
 
     MIT License
 """
@@ -18,7 +18,7 @@ import requests
 APP = Flask(__name__)
 SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
-_current_date = date.today()
+CURRENT_DATE = date.today()
 
 @APP.route("/", methods=["GET", "POST"])
 def index():
@@ -26,23 +26,23 @@ def index():
     Requests data from the Action API & renders it on a webpage.
     """
 
-    global _current_date
-
     if request.method == "POST":
-        _current_date = change(_current_date)
+        change_date()
 
-    data = fetch_potd(_current_date)
+    data = fetch_potd(CURRENT_DATE)
 
     return render_template("index.html", data=data)
 
 
-def change(date_object):
+def change_date():
     """
-    Return new date in response to input from the web form.
+    Returns new date in response to input from the web form.
     """
 
+    global CURRENT_DATE
+
     user_input = request.form["change_date"]
-    new_date = _current_date
+    new_date = CURRENT_DATE
     last_date = date.today()
     first_date = date(year=2004, month=5, day=14)
 
@@ -52,9 +52,9 @@ def change(date_object):
         new_date = new_date + timedelta(days=1)
 
     if new_date > last_date or new_date < first_date:
-        return _current_date
+        return
 
-    return new_date
+    CURRENT_DATE = new_date
 
 
 def fetch_potd(date_object):
