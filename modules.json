@@ -366,5 +366,30 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
+    },
+    {
+        "filename": "blocking_user.py",
+        "docstring": "Demo of `Block` module: Block a user.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "block",
+            "user": "Example",
+            "expiry": "2015-02-25T07:27:50Z",
+            "reason": "Time out",
+            "token": "CSRF_TOKEN",
+            "format": "json"
+        }
+    },
+    {
+        "filename": "unblocking_user.py",
+        "docstring": "Demo of `Block` module: Unblock a user.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "unblock",
+            "user": "Example",
+            "reason": "Sorry Example",
+            "token": "CSRF_TOKEN",
+            "format": "json"
+        }
     }
 ]

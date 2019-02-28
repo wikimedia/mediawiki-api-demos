@@ -51,14 +51,13 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-# Step 4: POST request to block user
+# Step 4: POST request to unblock user
 PARAMS_3 = {
-    "action": "block",
-    "user": "Example",
-    "expiry": "2015-02-25T07:27:50Z",
-    "reason": "Time out",
-    "token": CSRF_TOKEN,
-    "format": "json"
+    'action': "unblock",
+    'user': "Example",
+    'reason': "Sorry Example",
+    'token': CSRF_TOKEN,
+    'format': "json"
 }
 
 R = S.post(URL, data=PARAMS_3)
