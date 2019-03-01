@@ -20,10 +20,12 @@ SESSION = requests.Session()
 ENDPOINT = "https://en.wikipedia.org/w/api.php"
 CURRENT_DATE = date.today()
 
+
 @APP.route("/", methods=["GET", "POST"])
 def index():
     """
-    Requests data from the Action API & renders it on a webpage.
+    Requests data from Action API via 'fetch_potd' function & renders it on the
+    index page accessible at '/'
     """
 
     if request.method == "POST":
@@ -36,7 +38,7 @@ def index():
 
 def change_date():
     """
-    Returns new date in response to input from the web form.
+    Changes current date in response to input from the web form
     """
 
     global CURRENT_DATE
@@ -57,13 +59,13 @@ def change_date():
     CURRENT_DATE = new_date
 
 
-def fetch_potd(date_object):
+def fetch_potd(cur_date):
     """
-    Returns image data related to the current POTD.
+    Returns image data related to the current POTD
     """
 
-    date_string = date_object.isoformat()
-    title = "Template:POTD protected/" + date_string
+    date_iso = cur_date.isoformat()
+    title = "Template:POTD protected/" + date_iso
 
     params = {
         "action": "query",
@@ -78,21 +80,21 @@ def fetch_potd(date_object):
 
     filename = data["query"]["pages"][0]["images"][0]["title"]
     image_src = fetch_image_src(filename)
-    image_page_url = "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_string
+    image_page_url = "https://en.wikipedia.org/wiki/Template:POTD_protected/" + date_iso
 
-    results = {
+    image_data = {
         "filename": filename,
         "image_src": image_src,
         "image_page_url": image_page_url,
-        "date": date_object
+        "date": cur_date
     }
 
-    return results
+    return image_data
 
 
 def fetch_image_src(filename):
     """
-    Returns the POTD's image url.
+    Returns the POTD's image url
     """
 
     params = {
@@ -107,9 +109,9 @@ def fetch_image_src(filename):
     data = response.json()
     page = next(iter(data["query"]["pages"].values()))
     image_info = page["imageinfo"][0]
-    results = image_info["url"]
+    image_url = image_info["url"]
 
-    return results
+    return image_url
 
 
 if __name__ == "__main__":
