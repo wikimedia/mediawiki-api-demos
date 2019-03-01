@@ -2,10 +2,8 @@
 
 """
     setlanguage.py
-
     MediaWiki Action API Code Samples
     Demo of `SetPageLanguage` module: POST request to change the language of a page
-
     MIT License
 """
 
@@ -53,17 +51,16 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-# Step 4: POST request to edit a page
+# Step 4: POST request to change page language
 PARAMS_3 = {
     "action": "setpagelanguage",
-    "format": "json",
     "pageid": "123",
     "token": CSRF_TOKEN,
+    "format": "json",
     "lang": "eu"
-    
 }
 
-R = S.get(url=URL, params=PARAMS_3)
+R = S.post(URL, data=PARAMS_3)
 DATA = R.json()
 
 print(DATA)
