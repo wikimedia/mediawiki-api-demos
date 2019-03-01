@@ -11,3 +11,6 @@ $ python3 app.py
 ```
 
 ## Screenshot
+<table><tr><td>
+<img src="screenshot.png" width="300" style="border 5px solid black">
+</td></tr></table>
