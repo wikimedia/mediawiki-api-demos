@@ -369,6 +369,18 @@
 
     },
     {
+        "filename": "get_red_links.py",
+        "docstring": "Demo of `Links` module: List red links in a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "generator": "links",
+            "titles": "Wikipedia:Most-wanted_articles",
+            "gpllimit": "20"
+        }
+    },
+    {
         "filename": "get_recent_changes.py",
         "docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
         "endpoint": "https://en.wikipedia.org/w/api.php",
