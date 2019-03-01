@@ -6,7 +6,7 @@
     get_red_links.py
 
     MediaWiki Action API Code Samples
-    Demo of `Links` module: List red links in a page.
+    Demo of `Links` module to identify red or missing links on a page.
 
     MIT License
 """
@@ -28,10 +28,9 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 PAGES = DATA['query']['pages']
-MISSING_PAGES = []
+LINKS = []
 
-for page in PAGES:
-    if int(page) < 0:
-        MISSING_PAGES.append(PAGES[page]['title'])
+for page in PAGES.itervalues():
+    LINKS.append(page['title'])
 
-print(MISSING_PAGES)
+print(LINKS)
