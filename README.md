@@ -74,7 +74,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 * [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
-  * [query_pages.py](python/query_pages.py): List first 10 pages which are uncategorized
+  * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

@@ -3,7 +3,7 @@
 #!/usr/bin/python3
 
 """
-    query_pages.py
+    get_querypage_list.py
 
     MediaWiki Action API Code Samples
     Demo of `Querypage` module: List first 10 pages which are uncategorized
