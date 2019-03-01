@@ -6,7 +6,7 @@
     get_red_links.py
 
     MediaWiki Action API Code Samples
-    Demo of `Links` module: List all missing links from all links on given page(s).
+    Demo of `Links` module: List first 20 missing links from all links on given page(s).
 
     MIT License
 """
@@ -18,7 +18,7 @@ S = requests.Session()
 URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
-    "gpllimit": "max",
+    "gpllimit": "20",
     "generator": "links",
     "format": "json",
     "prop": "links",

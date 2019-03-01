@@ -369,14 +369,14 @@
     },
     {
         "filename": "get_red_links.py",
-        "docstring": "Demo of `Links` module: List all missing links from all links on given page(s).",
+        "docstring": "Demo of `Links` module: List first 20 missing links from all links on given page(s).",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
                 "format": "json",
     		"action": "query",
     		"generator":"links",
     		"titles": "Wikipedia:Requested articles/Arts and entertainment",
-    		"gpllimit": "max",
+    		"gpllimit": "20",
     		"prop": "links"
     	}
     }

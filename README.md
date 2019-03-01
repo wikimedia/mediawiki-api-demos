@@ -73,6 +73,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Links](https://www.mediawiki.org/wiki/API:Links)
+  * [get_red_links.py](python/get_red_links.py): List first 20 missing links from all links on given page(s).
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
