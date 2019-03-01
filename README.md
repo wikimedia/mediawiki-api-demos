@@ -74,6 +74,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
+  * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed the given title
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
