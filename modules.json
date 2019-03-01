@@ -379,5 +379,17 @@
             "titles": "Wikipedia:Most-wanted_articles",
             "gpllimit": "20"
         }
+    },
+    {
+        "filename": "get_embedded_pages.py",
+        "docstring": "Demo of `Embeddedin` module: Get all page(s) that embed the given title.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "embeddedin",
+            "eititle": "Computer",
+            "eilimit": "20"
+        }
     }
 ]
