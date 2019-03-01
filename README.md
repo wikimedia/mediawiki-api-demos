@@ -73,6 +73,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Logevents](https://www.mediawiki.org/wiki/API:Logevents)
+  * [get_logevents.py](python/get_logevents.py): list log events
+  * [get_logevents_moves.py](python/get_logevents_moves.py): list log events of 3 most recent page moves
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

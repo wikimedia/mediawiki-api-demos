@@ -366,5 +366,27 @@
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
     	}
-    }
+    },
+    {
+        "filename": "get_logevents.py",
+        "docstring": "Demo of `Logevents` module: List the recent log events.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "logevents"
+		}
+	},
+    {
+        "filename": "get_logevents_moves.py",
+        "docstring": "Demo of `Logevents` module: List the 3 most recent page moves.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "logevents",
+			"letype": "move",
+			"lelimit": "3"
+		}
+	}
 ]
