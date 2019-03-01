@@ -97,6 +97,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 A sample app that uses MediaWiki Action API:Search allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and WTForms for rendering form.
 * [Nearby places viewer](python/demos/nearby%20places%20viewer): 
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
+* [Picture of the day viewer](python/demos/picture%20of%20the%20day%20viewer):
+Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
 
 ### Installation
 ```
