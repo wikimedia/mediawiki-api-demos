@@ -379,17 +379,5 @@
 			"bkprop": "id|user|by|timestamp|expiry|reason|range|flags"
 		}	
 	
-	},
-	{
-		"filename": "setlanguage.py",
-		"docstring": "Demo of `SetPageLanguage` module: POST request to change the language of a page",
-		"endpoint": "https://en.wikipedia.org/w/api.php",
-		"params": {
-			"action": "setpagelanguage",
-			"format": "json",
-			"pageid": "123",
-			"lang": "eu",
-			"token": "e17ac3bb8d7dd0c4f5e4fd1f84cd21095c76c2cc+\\"
-		}
 	}
 ]
