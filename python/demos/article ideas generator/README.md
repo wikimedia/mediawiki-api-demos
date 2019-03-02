@@ -1,23 +1,35 @@
-# Article Suggestion
-A sample app that uses MediaWiki Action [API:Search](https://www.mediawiki.org/wiki/API:Search) allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and [WTForms](https://wtforms.readthedocs.io/en/stable/) for rendering form.
-
-Articles in the `articles.json` file are taken from the link below:
-https://en.wikipedia.org/wiki/Wikipedia:Requested_articles/Biography/By_profession
+# Article ideas generator
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module and fetches data from this resource:	
+https://en.wikipedia.org/wiki/Wikipedia:Requested_articles
 
 Install
 -------
 
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
-$ cd MediaWiki-Action-API-Code-Samples/python/demos/article suggestion
-$ pip install flask flask-WTF flask-bootstrap
+$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples
+$ cd MediaWiki-Action-API-Code-Samples/python/demos/article ideas generator
+$ pip install flask
 Install the necessary python modules with pip
-$ python3 app.py
+$ python3 articles.py
 ```
 
-Screenshot
-----------
-
-<table><tr><td>
-<img src="screenshot.png" width="300" style="border 5px solid black">
-</td></tr></table>
+Screenshots
+-----------
+<table>
+	<tr>
+		<td>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/b/bf/Article_ideas_generator_demo_app_screenshot_%282%29.png" width="300" style="border 5px solid black">
+		</td>
+		<td>
+		<img src="https://upload.wikimedia.org/wikipedia/commons/f/f7/Article_ideas_generator_demo_app_screenshot_%283%29.png" width="300" style="border 5px solid black">
+		</td>
+		<td>
+			<img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Article_ideas_generator_demo_app_screenshot_%284%29.png" width="300" style="border 5px solid black">
+		</td>
+	</tr>
+	<tr>
+		<td>1. Choose a category</td>
+		<td>2. Choose a subcategory</td>
+		<td>3. View missing links</td>
+	</tr>
+</table>
