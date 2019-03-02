@@ -21,7 +21,10 @@
     {% for pagename in results %}
     <button name="{{ pagetype }}" class="{{ pagetype }}" value="{{ pagename }}">{{ pagename }}</button>
   {% endfor %}
-  {% endif %}
+  {% else %}
+  <p>Ooooops! We couldn't find any results.</p>
+  <button onclick="location.href='/'">Start over</button>
   </form>
+  {% endif %}
   {% endif %}
 </div>

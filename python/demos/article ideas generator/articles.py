@@ -61,6 +61,10 @@ def get_page_sections(page):
 
     res = SESSION.get(url=API_ENDPOINT, params=params)
     data = res.json()
+
+    if 'error' in data:
+        return
+
     parsed_sections = data and data['parse'] and data['parse']['sections']
     sections = []
 
@@ -87,7 +91,7 @@ def get_red_links(title):
     pages = data and data['query'] and data['query']['pages']
     links = []
 
-    for page in pages.itervalues():
+    for page in pages.values():
         links.append(page['title'])
 
     return links
