@@ -93,10 +93,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
-* [Article suggestion](python/demos/article%20suggestion): 
-A sample app that uses MediaWiki Action API:Search allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and WTForms for rendering form.
+* [Article ideas generator](python/demos/article%20ideas%20generator): 
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
 * [Nearby places viewer](python/demos/nearby%20places%20viewer): 
-Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
+Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
 
 ### Installation
 ```
