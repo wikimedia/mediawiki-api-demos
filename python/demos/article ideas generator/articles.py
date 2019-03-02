@@ -92,7 +92,8 @@ def get_red_links(title):
     links = []
 
     for page in pages.values():
-        links.append(page['title'])
+        if 'missing' in page:
+            links.append(page['title'])
 
     return links
 
