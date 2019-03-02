@@ -16,9 +16,9 @@ Screenshots
 -----------
 <table>
   <tr>
-    <td><img src="://upload.wikimedia.org/wikipedia/commons/b/bf/Article_ideas_generator_demo_app_screenshot_%282%29.png" width="300" style="border 5px solid black">
-    <td><img src="://upload.wikimedia.org/wikipedia/commons/f/f7/Article_ideas_generator_demo_app_screenshot_%283%29.png" width="300" style="border 5px solid black">
-    <td><img src="://upload.wikimedia.org/wikipedia/commons/7/7e/Article_ideas_generator_demo_app_screenshot_%284%29.png" width="300" style="border 5px solid black">
+    <td><img src="http://upload.wikimedia.org/wikipedia/commons/b/bf/Article_ideas_generator_demo_app_screenshot_%282%29.png" width="300">
+    <td><img src="http://upload.wikimedia.org/wikipedia/commons/f/f7/Article_ideas_generator_demo_app_screenshot_%283%29.png" width="300">
+    <td><img src="http://upload.wikimedia.org/wikipedia/commons/7/7e/Article_ideas_generator_demo_app_screenshot_%284%29.png" width="300">
 
   <tr>
     <td>1. Choose a category
