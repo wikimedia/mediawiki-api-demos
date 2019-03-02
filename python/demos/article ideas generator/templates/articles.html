@@ -1,0 +1,30 @@
+<title>Article ideas generator</title>
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Amatic+SC:700">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans">
+<link rel="stylesheet" href="/static/style.css">
+
+<div>
+  <h1>Article ideas generator</h1>
+  {% if 'links' in pagetype %}
+    <p>Some ideas for topics to write articles on:</p>
+    {% for link in results %}
+      <a href="//en.wikipedia.org/w/index.php?title={{ link }}&action=edit&redlink=1">{{ link }}
+    </a>
+    <br>
+  {% endfor %}
+  <button onclick="location.href='/'">Take me to the homepage</button>
+  {% else %}
+  {% if results %}
+  <p>Choose a {{ pagetype }}</p>
+  <form method="POST">
+    {% for pagename in results %}
+    <button name="{{ pagetype }}" class="{{ pagetype }}" value="{{ pagename }}">{{ pagename }}</button>
+  {% endfor %}
+  {% else %}
+  <p>Ooooops! We couldn't find any results.</p>
+  <button onclick="location.href='/'">Start over</button>
+  </form>
+  {% endif %}
+  {% endif %}
+</div>

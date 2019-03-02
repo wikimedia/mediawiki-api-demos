@@ -1,0 +1,39 @@
+h1 {
+    color: black;
+    font-family: 'Amatic SC', cursive;
+    font-size: 4.5em;
+    font-weight: normal;
+}
+
+div {
+    left: 10%;
+    position: absolute;
+    right: 10%;
+    text-align: center;
+    top: 5%;
+}
+
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.4em;
+}
+
+button {
+    background-color: #06b6c9;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2em;
+    margin: 5px;
+    padding: 20px;
+}
+
+.subcategory {
+    background-color: #EE6352;
+}
+
+a {
+    color: red;
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
