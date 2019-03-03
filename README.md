@@ -74,6 +74,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
+  * [rollback.py](python/rollback.py): roll back the last edits made to the given page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
