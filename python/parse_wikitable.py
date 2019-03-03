@@ -44,7 +44,7 @@ def get_table():
             entry = table[0].split("|")[0].strip("'''[[]]\n"), table[0].split("|")[1].strip("\n")
             entries.append(entry)
 
-    file = open("places_and_infrastructure.csv", "wb")
+    file = open("places_and_infrastructure.csv", "w")
     writer = csv.writer(file)
     writer.writerows(entries)
     file.close()
