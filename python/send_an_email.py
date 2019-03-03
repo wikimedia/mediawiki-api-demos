@@ -58,10 +58,11 @@ PARAMS_3 = {
     "subject": "Hi",
     "text": "Just wanted to say hi",
     "token": EMAIL_TOKEN
+    "format": "json"
 }
 
 R = S.post(URL, data=PARAMS_3)
-DATA = R.text()
+DATA = R.text
 
 print(DATA)
 
