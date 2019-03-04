@@ -379,5 +379,17 @@
             "titles": "Wikipedia:Most-wanted_articles",
             "gpllimit": "20"
         }
+    },
+    {
+        "filename": "get_recent_changes.py",
+        "docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "recentchanges",
+            "rcprop": "title|ids|sizes|flags|user",
+            "rclimit": "3"
+        }
     }
 ]
