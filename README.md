@@ -104,11 +104,11 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
-* [Article ideas generator](python/demos/article%20ideas%20generator): 
+* [Article ideas generator](python/demos/article-ideas-generator): 
 Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
-* [Nearby places viewer](python/demos/nearby%20places%20viewer): 
+* [Nearby places viewer](python/demos/nearby-places-viewer): 
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
-* [Picture of the day viewer](python/demos/picture%20of%20the%20day%20viewer):
+* [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
 
 ### Installation
