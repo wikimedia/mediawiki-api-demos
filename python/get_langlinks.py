@@ -17,7 +17,7 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-#list of first 20 lanuage links with the localised language name.
+#list of first 20 language links with the localised language name.
 
 PARAMS = {
     "llprop" : "langname",
