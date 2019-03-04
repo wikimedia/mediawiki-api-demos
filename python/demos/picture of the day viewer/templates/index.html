@@ -1,27 +1,37 @@
 <!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <title>Picture of the Day</title>
-    <link rel = "stylesheet" href = "/static/style.css">
-    <script src = "/static/script.js"></script>
-</head>
+<html lang="en">
+  <meta charset="utf-8">
+  <title>Picture of the Day</title>
+  <link rel="stylesheet" href="/static/style.css">
 
-<body>
-    <main>
-        <div class = "card">
-            <h1>Picture of the day:</h1>
-            <div class = "potd"></div>
+  <main>
+    <h1>Picture of the day:</h1>
+    <div class="card">
+      <div class="potd">
+        <h2>{{ data.filename }}</h2>
+        <a href="{{ data.image_page_url }}" target="blank">
+        <figure>
+          <img src="{{ data.image_src }}">
+          <figcaption>View on Wikipedia</figcaption>
+        </figure>
+        </a>
+      </div>
+      <div class="date-container">
+        <time class="current-date">{{ data.date.strftime("%d %B %Y") }}</time>
+        <div class="date-navigator">
+          <form action="/" method="POST">
+            {% if data.date.strftime("%d %B %Y") == "14 May 2004" %}
+            <input type="submit" name="change_date" value="← Back" disabled>
+            {% else %}
+            <input type="submit" name="change_date" value="← Back">
+            {% endif %}
+            {% if data.date == data.date.today() %}
+            <input type="submit" name="change_date" value="Next →" disabled>
+            {% else %}
+            <input type="submit" name="change_date" value="Next →">
+            {% endif %}
+          </form>
         </div>
-        <div class = "date-container">
-            <time class = "current-date"></time>
-            <div class = "date-picker">
-                <form action="/change_date" method="POST">
-                    <input type = "submit" name = "change_date" value = "&larr; Back" />
-                    Change date
-                    <input type = "submit" name = "change_date" value = "Next &rarr;" />
-                </form>
-            </div>
-        </div>
-    </main>
-</body>
-</html>
+      </div>
+    </div>
+</main>
