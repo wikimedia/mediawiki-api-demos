@@ -22,6 +22,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -78,7 +80,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
 * [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
   * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
-
+* [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
+  *  [set_page_language.py](python/set_page_language.py): change page language
+  
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
