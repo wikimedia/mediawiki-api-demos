@@ -391,5 +391,17 @@
             "rcprop": "title|ids|sizes|flags|user",
             "rclimit": "3"
         }
+    },
+    {
+        "filename": "get_querypage_list.py",
+        "docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "querypage",
+            "qppage":"Uncategorizedpages",
+            "qplimit": "10"
+        }
     }
 ]
