@@ -31,8 +31,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_category_items.py](python/get_category_items.py): list twenty items in a category
   *  [get_recent_category_items.py](python/get_recent_category_items.py): get the ten articles most recently added to a category
   *  [get_subcategories.py](python/get_subcategories.py): get ten subcategories of a category
-*[API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
-  * [categoryinfo.py](python/categoryinfo.py): get information about a few categories.
 * [API:Images](https://www.mediawiki.org/wiki/API:Images) 
   * [get_page_images.py](python/get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
@@ -42,6 +40,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [redirects.py](python/redirects.py): return redirects to the given page(s)
 * [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
   *  [delete.py](python/delete.py): delete a page
+* [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
+  *  [get_deleted_revisions.py](python/get_deleted_revisions.py): To get a list of deleted revisions.
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
