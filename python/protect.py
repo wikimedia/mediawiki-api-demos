@@ -16,27 +16,27 @@ import requests
 S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
-
-# Step 1: Retrieve a login token using GET request
+# To change a page's protection level, a CSRF token is required. 
+# Step 1: Retrieve a CSRF token using GET request
 PARAMS_1 = {
     "action": "query",
     "meta": "tokens",
-    "type": "login",
+    "type": "csrf",
     "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS_1)
 DATA = R.json()
 
-LOGIN_TOKEN = DATA["query"]["tokens"]["logintoken"]
+CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 
-# Step 1: Changing edit protection level of a page using POST request
+# Step 2: Changing 'edit protection level' of a page using POST request
 PARAMS = {
     "title": "Main Page",
     "edit": "autoconfirmed",
     "move": "sysop",
     "expiry": "infinite",
-    "token": LOGIN_TOKEN,
+    "token": CSRF_TOKEN,
     "action": "protect"
 }
 
