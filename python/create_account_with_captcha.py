@@ -75,6 +75,98 @@ def get_captcha_fields():
             return k and k['fields']
     return None
 
+def get_password_fields():
+    """ Fetch the MediaWiki\\Auth\\Password fields from `authmanagerinfo` module """
+
+    response = S.get(
+        url=API_ENDPOINT,
+        params={
+            'action': 'query',
+            'meta': 'authmanagerinfo',
+            'amirequestsfor': 'create',
+            'format': 'json'})
+
+    data = response.json()
+    query = data and data['query']
+    authmanagerinfo = query and query['authmanagerinfo']
+    fields = authmanagerinfo and authmanagerinfo['requests']
+
+    for k in fields:
+        if k['account'] == '':
+            return k and k['fields']
+    return None
+
+
+def get_campaigns_fields():
+    """ Fetch the Campaigns fields from `authmanagerinfo` module """
+
+    response = S.get(
+        url=API_ENDPOINT,
+        params={
+            'action': 'query',
+            'meta': 'authmanagerinfo',
+            'amirequestsfor': 'create',
+            'format': 'json'})
+
+    data = response.json()
+    query = data and data['query']
+    authmanagerinfo = query and query['authmanagerinfo']
+    fields = authmanagerinfo and authmanagerinfo['requests']
+
+    for k in fields:
+        if k['account'] == 'CampaignsAuthenticationRequest':
+            return k and k['fields']
+    return None
+
+
+def get_username_fields():
+    """ Fetch the MediaWiki\\Auth\\Username fields from `authmanagerinfo` module """
+
+    response = S.get(
+        url=API_ENDPOINT,
+        params={
+            'action': 'query',
+            'meta': 'authmanagerinfo',
+            'amirequestsfor': 'create',
+            'format': 'json'})
+
+    data = response.json()
+    query = data and data['query']
+    authmanagerinfo = query and query['authmanagerinfo']
+    fields = authmanagerinfo and authmanagerinfo['requests']
+
+    for k in fields:
+        if k['account'] == 'MediaWiki\\Auth\\UsernameAuthenticationRequest':
+            return k and k['fields']
+    return None
+
+
+def get_userdata_fields():
+    """ Fetch the MediaWiki\\Auth\\UserData fields from `authmanagerinfo` module """
+
+    response = S.get(
+        url=API_ENDPOINT,
+        params={
+            'action': 'query',
+            'meta': 'authmanagerinfo',
+            'amirequestsfor': 'create',
+            'format': 'json'})
+
+    data = response.json()
+    query = data and data['query']
+    authmanagerinfo = query and query['authmanagerinfo']
+    fields = authmanagerinfo and authmanagerinfo['requests']
+
+    for k in fields:
+        if k['account'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest':
+            return k and k['fields']
+    return None
+
+
+
+
+"""edited part"""
+
 def create_account(details):
     """ Send a post request along with create account token, user information
     and return URL to the API to create an account on a wiki """
