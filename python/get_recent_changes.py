@@ -3,10 +3,11 @@
 #!/usr/bin/python3
 
 """
-    blocks.py
+    get_recent_changes.py
 
     MediaWiki Action API Code Samples
-    Demo of `Blocks` module: GET request to list recent blocks
+    Demo of `RecentChanges` module: Get the three most recent changes with
+    sizes and flags
 
     MIT License
 """
@@ -18,11 +19,11 @@ S = requests.Session()
 URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
+    "format": "json",
+    "rcprop": "title|ids|sizes|flags|user",
+    "list": "recentchanges",
     "action": "query",
-    "bklimit": "3",
-    "list": "blocks",
-    "bkprop": "id|user|by|timestamp|expiry|reason|range|flags",
-    "format": "json"
+    "rclimit": "3"
 }
 
 R = S.get(url=URL, params=PARAMS)

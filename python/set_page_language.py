@@ -1,9 +1,12 @@
 #!/usr/bin/python3
 
 """
-    setlanguage.py
+    set_page_language.py
+
     MediaWiki Action API Code Samples
-    Demo of `SetPageLanguage` module: POST request to change the language of a page
+    Demo of `SetPageLanguage` module: POST request to change
+    the language of a page
+
     MIT License
 """
 

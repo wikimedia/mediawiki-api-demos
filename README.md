@@ -23,7 +23,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
 * [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
-  *  [blocks.py](python/blocks.py): get information about recent user blocks
+  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -76,8 +76,12 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
+  * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
+* [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
+  * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 * [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
-  *  [setlanguage.py](python/setlanguage.py): change page language
+  *  [set_page_language.py](python/set_page_language.py): change page language
   
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -100,10 +104,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [allfileusage.py](python/paraminfo.py): get list of all file usages
 
 ### Demo apps
-* [Article suggestion](python/demos/article%20suggestion): 
-A sample app that uses MediaWiki Action API:Search allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and WTForms for rendering form.
+* [Article ideas generator](python/demos/article%20ideas%20generator): 
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
 * [Nearby places viewer](python/demos/nearby%20places%20viewer): 
-Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
+Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
 * [Picture of the day viewer](python/demos/picture%20of%20the%20day%20viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
 
