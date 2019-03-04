@@ -76,6 +76,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 * [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
   * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
+* [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
+  * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
