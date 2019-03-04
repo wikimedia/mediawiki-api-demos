@@ -379,5 +379,18 @@
     		"gpllimit": "20",
     		"prop": "links"
     	}
+    },
+    {
+        "filename": "protect.py",
+        "docstring": "Demo of `Protect` module: Demo to change the edit protection level of a given page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+                "action": "protect",
+    		"title": "Main Page",
+    		"edit": "autoconfirmed",
+    		"move": "sysop",
+    		"expiry" : "infinite",
+    		"token" : ""
+    	}
     }
 ]
