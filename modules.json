@@ -58,23 +58,6 @@
 		}
 	},
 	{
-
-        "filename": "get_deleted_revisions.py",
-        "docstring": "Demo of `Deletedrevs` module: List deleted revisions.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-        	"format": "json",
-            "list": "deletedrevs",
-            "drstart":"20070904235959",
-            "drend": "20070904000000",
-            "drprop": "revid |user|minor|len|token",
-            "drlimit": "6",
-            "druser": "Catrope"
-         
-    	}
-    },
-	{
 		"filename": "get_page_images.py",
 		"docstring": "Demo of `Images` module: Send a GET request to obtain a JSON\n\tobject listing all of the image files embedded on a single page",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
