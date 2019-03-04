@@ -63,6 +63,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Allusers](https://www.mediawiki.org/wiki/API:Allusers)
   * [get_allusers.py](python/get_allusers.py): get a list of all registered users, as ordered by username
   * [get_allcategories.py](python/get_allcategories.py): get all categories that fit certain criteria relating to their titles
+* [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
+  * [categoryinfo.py](python/categoryinfo.py): get information about a few categories.
 * [API:Backlinks](https://www.mediawiki.org/wiki/API:Backlinks)
   * [get_backlinks.py](python/get_backlinks.py): list pages which link to a certain page
 * [API:Random](https://www.mediawiki.org/wiki/API:Backlinks)

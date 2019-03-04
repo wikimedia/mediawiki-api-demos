@@ -115,6 +115,19 @@
 		}
 	},
 	{
+
+        "filename":"categoryinfo.py",
+        "docstring": "Demo of 'Categoryinfo' module: Get info about a few categories",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "titles":"Albert|Category:Foo|Category:Infobox",
+            "prop":"categoryinfo",
+            "format":"json"
+        }
+
+	},
+	{
 		"filename": "search.py",
 		"docstring": "Demo of `Search` module: Search for a text or title",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
@@ -270,6 +283,7 @@
             "titles":"Janelle Monáe"
         }
     },
+    
     {
         "filename": "get_allcategories.py",
         "docstring": "Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.",
