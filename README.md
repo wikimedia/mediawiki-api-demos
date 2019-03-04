@@ -8,6 +8,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [login.py](python/login.py) & [clientlogin.py](python/clientlogin.py): login
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.py](python/logout.py): logout
+* [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
+  * [protect.py](python/protect.py): Change the protection level of a given page.
 
 ### Accounts and users 
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
