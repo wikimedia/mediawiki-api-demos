@@ -57,22 +57,16 @@
 			"format": "json"
 		}
 	},
-	{
-
-        "filename": "get_deleted_revisions.py",
-        "docstring": "Demo of `Deletedrevs` module: List deleted revisions.",
+    {
+        "filename":"categoryinfo.py",
+        "docstring": "Demo of 'Categoryinfo' module: Get info about a few categories",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
             "action": "query",
-        	"format": "json",
-            "list": "deletedrevs",
-            "drstart":"20070904235959",
-            "drend": "20070904000000",
-            "drprop": "revid |user|minor|len|token",
-            "drlimit": "6",
-            "druser": "Catrope"
-         
-    	}
+            "titles":"Albert|Category:Foo|Category:Infobox",
+            "prop":"categoryinfo"
+            "format": "json"
+        }
     },
 	{
 		"filename": "get_page_images.py",
