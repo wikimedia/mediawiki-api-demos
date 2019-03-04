@@ -48,17 +48,18 @@ def make_file():
     file.close()
 
     for module in modules:
-        file = pathlib.Path(module['filename'])
+        python_file_name = module['filename'] + '.py'
+        file = pathlib.Path(python_file_name)
 
         if file.exists():
-            print('`' + module['filename'] + "`: already exists, cannot re-write!")
+            print('`' + python_file_name + "`: already exists, cannot re-write!")
         else:
             code.code = []
             code.write('#This file is auto-generated. See modules.json and autogenerator.py for details\n\n')
             code.write('#!/usr/bin/python3\n\n')
             code.write('"""\n')
             code.indent()
-            code.write(module['filename'] + '\n\n')
+            code.write(python_file_name + '\n\n')
             code.write('MediaWiki Action API Code Samples\n')
             code.write(module['docstring'] + '\n\n')
             code.write('MIT License\n')
@@ -83,11 +84,11 @@ def make_file():
             code.write('DATA = R.json()\n\n')
             code.write('print(DATA)\n')
 
-            file = open(module['filename'], 'w')
+            file = open(python_file_name, 'w')
             file.write(code.end())
             file.close()
 
-            print('`' + module['filename'] + "`: generated")
+            print('`' + python_file_name + "`: generated")
 
 if __name__ == '__main__':
     make_file()
