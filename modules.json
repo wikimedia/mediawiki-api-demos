@@ -148,6 +148,18 @@
 			"format": "json"
 		}
 	},
+    {
+
+        "filename": "categoryinfo.py",
+        "docstring": "Demo of `Categoryinfo` module: Get info about a few categories",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action":"query",
+            "format":"json",
+            "titles":"Albert|Category:Foo|Category:Infobox",
+            "prop":"categoryinfo"
+        }
+    },
 	{
 		"filename": "parse.py",
 		"docstring": "Demo of `Parse` module: Parse content of a page",
