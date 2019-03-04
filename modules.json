@@ -1,5 +1,6 @@
-[{
-		"filename": "tokens.py",
+[
+	{
+		"filename": "tokens",
 		"docstring": "Demo of `Token` module: Fetch token of type `login`",
 		"endpoint": "https://mediawiki.org/w/api.php",
 		"params": {
@@ -10,7 +11,7 @@
 		}
 	},
 	{
-		"filename": "geocoordinates.py",
+		"filename": "geocoordinates",
 		"docstring": "Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -21,7 +22,7 @@
 		}
 	},
 	{
-		"filename": "geoimagesearch.py",
+		"filename": "geoimagesearch",
 		"docstring": "Demo of `Geosearch` module: Use generator module\n\tto get search results for pages near Wikimedia HQ\n\twith images",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -48,7 +49,7 @@
         }
     },
 	{
-		"filename": "geosearch.py",
+		"filename": "geosearch",
 		"docstring": "Demo of `Geosearch` module: Search for wiki pages nearby",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -61,7 +62,7 @@
 		}
 	},
 	{
-		"filename": "get_category_items.py",
+		"filename": "get_category_items",
 		"docstring": "Demo of `Categorymembers` module : List twenty items in a category",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -73,7 +74,7 @@
 		}
 	},
 	{
-		"filename": "get_page_images.py",
+		"filename": "get_page_images",
 		"docstring": "Demo of `Images` module: Send a GET request to obtain a JSON\n\tobject listing all of the image files embedded on a single page",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -84,7 +85,7 @@
 		}
 	},
 	{
-		"filename": "get_recent_category_items.py",
+		"filename": "get_recent_category_items",
 		"docstring": "Demo of `Categorymembers` module : Get the ten articles most recently added to a category",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -97,7 +98,7 @@
 		}
 	},
 	{
-		"filename": "get_redirects.py",
+		"filename": "get_redirects",
 		"docstring": "Demo of `Redirects` module: Get all redirects to the given page(s)",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -108,7 +109,7 @@
 		}
 	},
 	{
-		"filename": "get_subcategories.py",
+		"filename": "get_subcategories",
 		"docstring": "Demo of `Categorymembers` module : Get ten subcategories of a category",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -120,7 +121,7 @@
 		}
 	},
 	{
-		"filename": "languagesearch.py",
+		"filename": "languagesearch",
 		"docstring": "Demo of `Languagesearch` module: Search for a language in any language",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -130,7 +131,7 @@
 		}
 	},
 	{
-		"filename": "search.py",
+		"filename": "search",
 		"docstring": "Demo of `Search` module: Search for a text or title",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -141,7 +142,7 @@
 		}
 	},
 	{
-		"filename": "opensearch.py",
+		"filename": "opensearch",
 		"docstring": "Demo of `Opensearch` module: Search the wiki and obtain\n\tresults in an OpenSearch (http://www.opensearch.org) format",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -153,7 +154,7 @@
 		}
 	},
 	{
-		"filename": "prefixsearch.py",
+		"filename": "prefixsearch",
 		"docstring": "Demo of `Prefixsearch` module: Perform a prefix search for page titles",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -164,7 +165,7 @@
 		}
 	},
 	{
-		"filename": "parse.py",
+		"filename": "parse",
 		"docstring": "Demo of `Parse` module: Parse content of a page",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
@@ -174,259 +175,211 @@
 		}
 	},
 	{
-		"filename": "get_pages_revisions.py",
+		"filename": "get_pages_revisions",
 		"docstring": "Demo of `Revisions` module: Get revision data with content for pages with titles [[API]] and [[Main Page]]",
 		"endpoint": "https://mediawiki.org/w/api.php",
 		"params": {
-		    "action": "query",
-		    "prop": "revisions",
-		    "titles": "API|Main Page",
-		    "rvprop": "timestamp|user|comment|content",
-		    "rvslots": "main",
-		    "formatversion": "2",
-		    "format": "json"
+			"action": "query",
+			"prop": "revisions",
+			"titles": "API|Main Page",
+			"rvprop": "timestamp|user|comment|content",
+			"rvslots": "main",
+			"formatversion": "2",
+			"format": "json"
 		}
 	},
 	{
-		"filename": "get_filtered_page_revisions.py",
+		"filename": "get_filtered_page_revisions",
 		"docstring": "Demo of `Revisions` module: Get data including content of last 5 revisions of the title [[API:Geosearch]] made after July 1st 2018 excluding changes made by the user SSethi (WMF)",
 		"endpoint": "https://mediawiki.org/w/api.php",
 		"params": {
-		    "action": "query",
-		    "prop": "revisions",
-		    "titles": "API:Geosearch",
-		    "rvlimit": "5",
-		    "rvprop": "timestamp|user|comment|content",
-		    "rvdir": "newer",
-		    "rvstart": "2018-07-01T00:00:00Z",
-    		"rvexcludeuser": "SSethi (WMF)",
-		    "rvslots": "main",
-		    "formatversion": "2",
-		    "format": "json"
+			"action": "query",
+			"prop": "revisions",
+			"titles": "API:Geosearch",
+			"rvlimit": "5",
+			"rvprop": "timestamp|user|comment|content",
+			"rvdir": "newer",
+			"rvstart": "2018-07-01T00:00:00Z",
+			"rvexcludeuser": "SSethi (WMF)",
+			"rvslots": "main",
+			"formatversion": "2",
+			"format": "json"
 		}
-    },
-    {
-        "filename": "get_links.py",
-        "docstring": "Demo of `Links` module: Get all links on the given page(s)",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "titles": "Albert Einstein",
-            "prop": "links"
-        }
-    },
-    {
-        "filename": "get_info.py",
-        "docstring": "Demo of `Info` module: Send a GET request to display information about a page.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "titles": "Albert Einstein",
-            "prop": "info",
-            "inprop": "url|talkid"
-        }
-    },
-    {
-        "filename": "get_allpages.py",
-        "docstring": "Demo of `Allpages` module: Get all pages whose title contains the text \"Jungle,\" in whole or part.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "allpages",
-            "apfrom": "jungle"
-        }
-    },
-    {
-        "filename": "get_allimages_by_name.py",
-        "docstring": "List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. ",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "allimages",
-            "aifrom": "Graffiti_000",
-            "ailimit": "3"
-        }
-    },
-    {
-        "filename": "get_allimages_by_date.py",
-        "docstring": "List all images in the namespace, starting from January 1, 2010, at 18:05:46 UTC.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "allimages",
-            "aisort": "timestamp",
-            "aistart": "2010-01-01T18:05:46Z"
-        }
-    },
-    {
-        "filename": "get_imageinfo.py",
-        "docstring": "Demo of `Imageinfo` module: Get information about an image file.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "prop": "imageinfo",
-            "titles": "File:Billy Tipton.jpg"
-        }
-    },
-    {
-        "filename": "get_categories.py",
-        "docstring": "Demo of `Categories` module: Get categories associated with a page.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "prop": "categories",
-            "titles":"Janelle Monáe"
-        }
-    },
-    {
-        "filename": "get_allcategories.py",
-        "docstring": "Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "allcategories",
-            "acfrom": "15th-century caliphs"
-    	}
-    },
-    {
-        "filename": "get_allusers.py",
-        "docstring": "Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "allusers",
-            "auprefix": "Drov"
-        }
-    },
-    {
-        "filename": "get_backlinks.py",
-        "docstring": "Demo of `Backlinks` module: Get request to list pages which link to a certain page.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-        	"format": "json",
-            "list": "backlinks",
-            "bltitle": "philosophy"
-    	}
-    },
-    {
-        "filename": "logout.py",
-        "docstring": "Demo of `Logout` module: Log out and clear session data.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "logout",
-            "format": "json"
-        }
-    },
-    {
-        "filename": "get_random.py",
-        "docstring": "Demo of `Random` module: Get request to list 5 random pages.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-        	"format": "json",
-            "list": "random",
-            "rnlimit": "5"
-    	}
-    },
-    {
-        "filename": "paraminfo.py",
-        "docstring": "Demo of `Paraminfo` module: Get information about other action API modules and their parameters.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "paraminfo",
-            "format": "json",
-            "modules": "parse|query+info|query+blah"
-        }
-    },
-    {
-        "filename": "get_user_watchlist_feed.py",
-        "docstring": "Demo of `Feedwatchlist` module: Get a watchlist feed from another user.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "feedwatchlist",
-            "wlowner": "sample_user",
-            "wltoken": "sample_watchlist_token"
-        }
-    },
-    {
-        "filename": "get_alllinks.py",
-        "docstring": "Demo of `Alllinks` module: List links pointing to the given namespace.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "alllinks",
-            "alnamespace": "0",
-            "alunique": "1"
-        }
-    },
-    {
-        "filename": "get_usercontribs.py",
-        "docstring": "Demo of `Usercontribs` module: List user contributions.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "usercontribs",
-            "ucuser": "Jimbo Wales"
-    	}
-    },
-    {
-	"filename": "get_blocked_users.py",
-	"docstring": "Demo of `Blocks` module: GET request to list recent blocked users",
-	"endpoint": "https://en.wikipedia.org/w/api.php",
-    	"params": {
-    	    "action": "query",
-            "format": "json",
-    	    "list": "blocks",
-    	    "bklimit": "3",
-    	    "bkprop": "id|user|by|timestamp|expiry|reason|range|flags"
-    	}
-    },
-    {
-        "filename": "get_red_links.py",
-        "docstring": "Demo of `Links` module: List red links in a page.",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "generator": "links",
-            "titles": "Wikipedia:Most-wanted_articles",
-            "gpllimit": "20"
-        }
-    },
-    {
-        "filename": "get_recent_changes.py",
-        "docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "recentchanges",
-            "rcprop": "title|ids|sizes|flags|user",
-            "rclimit": "3"
-        }
-    },
-    {
-        "filename": "get_querypage_list.py",
-        "docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "querypage",
-            "qppage":"Uncategorizedpages",
-            "qplimit": "10"
-        }
-    }
+	},
+	{
+		"filename": "get_links",
+		"docstring": "Demo of `Links` module: Get all links on the given page(s)",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"titles": "Albert Einstein",
+			"prop": "links"
+		}
+	},
+	{
+		"filename": "get_info",
+		"docstring": "Demo of `Info` module: Send a GET request to display information about a page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"titles": "Albert Einstein",
+			"prop": "info",
+			"inprop": "url|talkid"
+		}
+	},
+	{
+		"filename": "get_allpages",
+		"docstring": "Demo of `Allpages` module: Get all pages whose title contains the text \"Jungle,\" in whole or part.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allpages",
+			"apfrom": "jungle"
+		}
+	},
+	{
+		"filename": "get_allimages_by_name",
+		"docstring": "List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. ",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allimages",
+			"aifrom": "Graffiti_000",
+			"ailimit": "3"
+		}
+	},
+	{
+		"filename": "get_allimages_by_date",
+		"docstring": "List all images in the namespace, starting from January 1, 2010, at 18:05:46 UTC.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allimages",
+			"aisort": "timestamp",
+			"aistart": "2010-01-01T18:05:46Z"
+		}
+	},
+	{
+		"filename": "get_imageinfo",
+		"docstring": "Demo of `Imageinfo` module: Get information about an image file.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"prop": "imageinfo",
+			"titles": "File:Billy Tipton.jpg"
+		}
+	},
+	{
+		"filename": "get_categories",
+		"docstring": "Demo of `Categories` module: Get categories associated with a page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"prop": "categories",
+			"titles": "Janelle Monáe"
+		}
+	},
+	{
+		"filename": "get_allcategories",
+		"docstring": "Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allcategories",
+			"acfrom": "15th-century caliphs"
+		}
+	},
+	{
+		"filename": "get_allusers",
+		"docstring": "Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allusers",
+			"auprefix": "Drov"
+		}
+	},
+	{
+		"filename": "get_backlinks",
+		"docstring": "Demo of `Backlinks` module: Get request to list pages which link to a certain page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "backlinks",
+			"bltitle": "philosophy"
+		}
+	},
+	{
+		"filename": "logout",
+		"docstring": "Demo of `Logout` module: Log out and clear session data.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "logout",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_random",
+		"docstring": "Demo of `Random` module: Get request to list 5 random pages.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "random",
+			"rnlimit": "5"
+		}
+	},
+	{
+		"filename": "paraminfo",
+		"docstring": "Demo of `Paraminfo` module: Get information about other action API modules and their parameters.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "paraminfo",
+			"format": "json",
+			"modules": "parse|query+info|query+blah"
+		}
+	},
+	{
+		"filename": "get_user_watchlist_feed",
+		"docstring": "Demo of `Feedwatchlist` module: Get a watchlist feed from another user.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "feedwatchlist",
+			"wlowner": "sample_user",
+			"wltoken": "sample_watchlist_token"
+		}
+	},
+	{
+		"filename": "get_alllinks",
+		"docstring": "Demo of `Alllinks` module: List links pointing to the given namespace.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "alllinks",
+			"alnamespace": "0",
+			"alunique": "1"
+		}
+	},
+	{
+		"filename": "get_usercontribs",
+		"docstring": "Demo of `Usercontribs` module: List user contributions.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "usercontribs",
+			"ucuser": "Jimbo Wales"
+		}
+	}
 ]
