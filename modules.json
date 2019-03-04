@@ -372,12 +372,25 @@
         "docstring": "Demo of `Protect` module: Demo to change the edit protection level of a given page.",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-                "action": "protect",
-    		"title": "Main Page",
-    		"edit": "autoconfirmed",
-    		"move": "sysop",
+                "action" : "protect",
+    		"title"  : "Main Page",
+    		"edit"   : "autoconfirmed",
+    		"move"   : "sysop",
     		"expiry" : "infinite",
-    		"token" : ""
+    		"token"  : ""
+    	}
+    },
+    {
+        "filename": "get_langlinks.py",
+        "docstring": "Demo of `Langlinks` module: Demo to gets a list of first 20 language links from the provided pages to other languages.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+                "action" : "query",
+    		"format" : "json",
+    		"titles" : "Main Page",
+    		"prop"   : "langlinks",
+    		"lllimit": "20",
+    		"llprop" : "langname"
     	}
     }
 ]

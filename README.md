@@ -75,6 +75,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Langlinks](https://www.mediawiki.org/wiki/API:Langlinks)
+  * [get_langlinks.py](python/get_langlinks.py): Gets a list of all language links from the provided pages to other languages.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
