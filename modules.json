@@ -34,17 +34,17 @@
 	},
     {
         "filename": "get_deleted_revisions.py",
-        "docstring": "Demo of `Deletedrevs` module: List the six most recent deleted revisions from the user Catrope",
+        "docstring": "Demo of `Deletedrevs` module: List the six most recent deleted revisions from User:Catrope",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-            "action":"query",
-            "drstart":"20070904235959",
-            "drend":"20070904000000",
-            "list":"deletedrevs",
-            "drprop":"revid|user|minor|len|token",
-            "drlimit":"6",
+            "action": "query",
+            "drstart": "20070904235959",
+            "drend": "20070904000000",
+            "list": "deletedrevs",
+            "drprop": "revid|user|minor|len|token",
+            "drlimit": "6",
             "druser": "Catrope",
-            "format":"json"
+            "format": "json"
         }
     },
 	{

@@ -43,7 +43,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
   *  [delete.py](python/delete.py): delete a page
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
-  *  [get_deleted_revisions.py](python/get_deleted_revisions.py): list deleted revisions
+  *  [get_deleted_revisions.py](python/get_deleted_revisions.py): list deleted revisions from a user
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
