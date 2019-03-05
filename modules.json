@@ -381,5 +381,16 @@
 			"list": "usercontribs",
 			"ucuser": "Jimbo Wales"
 		}
+	},
+	{
+		"filename": "get_pagepropnames",
+		"docstring": "Demo of `Pagepropnames` module: List all page property names in use on the wiki.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "pagepropnames",
+			"ppnlimit": "5"	
+		}
 	}
 ]
