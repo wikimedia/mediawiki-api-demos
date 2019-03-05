@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 """
-    blocking_users.py
+    set_page_language.py
+
     MediaWiki Action API Code Samples
-    Demo of `Block` module: sending POST request to block user
-    MIT license
+    Demo of `SetPageLanguage` module: POST request to change
+    the language of a page
+
+    MIT License
 """
 
 import requests
@@ -31,8 +34,8 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 # (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 PARAMS_1 = {
     "action": "login",
-    "lgname": "your_bot_username",
-    "lgpassword": "your_bot_password",
+    "lgname": "bot_user_name",
+    "lgpassword": "bot_password",
     "lgtoken": LOGIN_TOKEN,
     "format": "json"
 }
@@ -51,17 +54,16 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-# Step 4: POST request to unblock user
+# Step 4: POST request to change page language
 PARAMS_3 = {
-    'action': "unblock",
-    'user': "Example",
-    'reason': "Sorry Example",
-    'token': CSRF_TOKEN,
-    'format': "json"
+    "action": "setpagelanguage",
+    "pageid": "123",
+    "token": CSRF_TOKEN,
+    "format": "json",
+    "lang": "eu"
 }
 
 R = S.post(URL, data=PARAMS_3)
 DATA = R.json()
 
 print(DATA)
-
