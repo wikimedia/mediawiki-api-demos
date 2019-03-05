@@ -22,6 +22,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -40,6 +42,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [redirects.py](python/redirects.py): return redirects to the given page(s)
 * [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
   *  [delete.py](python/delete.py): delete a page
+* [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
+  *  [get_deleted_revisions.py](python/get_deleted_revisions.py): list deleted revisions from a user
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
@@ -77,6 +81,13 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
   * [rollback.py](python/rollback.py): roll back the last edits made to the given page
 
+* [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
+  * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
+* [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
+  * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
+* [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
+  *  [set_page_language.py](python/set_page_language.py): change page language
+  
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
@@ -96,11 +107,11 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
-* [Article ideas generator](python/demos/article%20ideas%20generator): 
+* [Article ideas generator](python/demos/article-ideas-generator): 
 Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
-* [Nearby places viewer](python/demos/nearby%20places%20viewer): 
+* [Nearby places viewer](python/demos/nearby-places-viewer): 
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
-* [Picture of the day viewer](python/demos/picture%20of%20the%20day%20viewer):
+* [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
 
 ### Installation
