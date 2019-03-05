@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 
 """
-    send_an_email.py
+    set_page_language.py
+
     MediaWiki Action API Code Samples
-    Demo of `Emailuser` module: sending POST request to send an email
-    MIT license
+    Demo of `SetPageLanguage` module: POST request to change
+    the language of a page
+
+    MIT License
 """
 
 import requests
@@ -31,15 +34,15 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 # (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 PARAMS_1 = {
     "action": "login",
-    "lgname": "your_bot_username",
-    "lgpassword": "your_bot_password",
+    "lgname": "bot_user_name",
+    "lgpassword": "bot_password",
     "lgtoken": LOGIN_TOKEN,
     "format": "json"
 }
 
 R = S.post(URL, data=PARAMS_1)
 
-# Step 3: GET request to fetch Email token
+# Step 3: GET request to fetch CSRF token
 PARAMS_2 = {
     "action": "query",
     "meta": "tokens",
@@ -49,20 +52,18 @@ PARAMS_2 = {
 R = S.get(url=URL, params=PARAMS_2)
 DATA = R.json()
 
-EMAIL_TOKEN = DATA['query']['tokens']['csrftoken']
+CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-# Step 4: POST request to send an email
+# Step 4: POST request to change page language
 PARAMS_3 = {
-    "action": "emailuser",
-    "target": "Test_user",
-    "subject": "Hi",
-    "text": "Just wanted to say hi",
-    "token": EMAIL_TOKEN
-    "format": "json"
+    "action": "setpagelanguage",
+    "pageid": "123",
+    "token": CSRF_TOKEN,
+    "format": "json",
+    "lang": "eu"
 }
 
 R = S.post(URL, data=PARAMS_3)
-DATA = R.text
+DATA = R.json()
 
 print(DATA)
-

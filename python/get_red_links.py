@@ -30,7 +30,8 @@ DATA = R.json()
 PAGES = DATA['query']['pages']
 LINKS = []
 
-for page in PAGES.itervalues():
-    LINKS.append(page['title'])
+for page in PAGES.values():
+    if 'missing' in page:
+        LINKS.append(page['title'])
 
 print(LINKS)
