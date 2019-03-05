@@ -1,40 +1,41 @@
-/*
-    get_my_watchlist_feed.js
-    MediaWiki Action API Code Samples
-    Demo of `Feedwatchlist` module: Get the watchlist feed 
-    for the account making the request.
-    MIT license
-*/
+"use strict";
+
+/** 
+ * get_my_watchlist_feed.js
+ *
+ * MediaWiki Action API Code Samples
+ * Demo of `Feedwatchlist` module: Get the watchlist feed 
+ * for the account making the request.
+ * MIT license
+ */
+const fetch = require("node-fetch");
 
 let URL = "https://test.wikipedia.org/w/api.php"
 
-function get_query(url, params) {
-   let query = Object.keys(params).map(key => key + "=" + params[key]).join("&");
-   return url + "?" + query;
-}
-
-async function get_my_watchlist_feed() {
+async function main() {
    // Step 1: GET Request to fetch login token
    const PARAMS_1 = {
-       'action': "query",
-       'meta': "tokens",
-       'type': "login",
-       'format': "json"
+       action: "query",
+       meta: "tokens",
+       type: "login",
+       format: "json"
    }
-
-   let response = await fetch(get_query(URL, PARAMS_1));
+   
+   let query = URL + '?' + Object.keys(PARAMS_1).map(key => key + "=" + PARAMS_1[key]).join("&");
+   let response = await fetch(query);
    let data = await response.json();
-   let LOGIN_TOKEN = data['query']['tokens']['logintoken'];
+
+   let LOGIN_TOKEN = data.query.tokens.logintoken;
 
    // Step2: Send a post request to login. Use of main account for login is not
    //  supported. Obtain credentials via Special:BotPasswords
    // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
    const PARAMS_2 = {
-       'action': "login",
-       'lgname': "your_bot_username",
-       'lgpassword': "your_bot_password",
-       'lgtoken': LOGIN_TOKEN,
-       'format': "json"
+       action: "login",
+       lgname: "your_bot_username",
+       lgpassword: "your_bot_password",
+       lgtoken: LOGIN_TOKEN,
+       format: "json"
    }
 
     response = await fetch(URL, {
@@ -47,13 +48,14 @@ async function get_my_watchlist_feed() {
 
     // Step 3: Request the account's own watchlist feed
    const PARAMS_3 = {
-       "action": "feedwatchlist"
+       action: "feedwatchlist"
    }
 
-    response = await fetch(get_query(URL, PARAMS_3));
-   data = await response.text;
+   query = URL + '?' + Object.keys(PARAMS_3).map(key => key + "=" + PARAMS_3[key]).join("&");
+   response = await fetch(query);
+   data = await response.text();
 
     console.log(data);
 }    
 
-get_my_watchlist_feed();
+main();
