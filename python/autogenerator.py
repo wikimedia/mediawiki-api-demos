@@ -55,7 +55,8 @@ def make_file():
             print('`' + python_file_name + "`: already exists, cannot re-write!")
         else:
             code.code = []
-            code.write('#This file is auto-generated. See modules.json and autogenerator.py for details\n\n')
+            code.write('#This file is auto-generated. See modules.json and '\
+                'autogenerator.py for details\n\n')
             code.write('#!/usr/bin/python3\n\n')
             code.write('"""\n')
             code.indent()
