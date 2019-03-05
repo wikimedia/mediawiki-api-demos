@@ -381,5 +381,15 @@
 			"list": "usercontribs",
 			"ucuser": "Jimbo Wales"
 		}
+	},
+        {
+		"filename": "watchlist",
+		"docstring": "Demo of `Watchlist` module: List of pages on the current user's watchlist.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "watchlist"
+		}
 	}
 ]
