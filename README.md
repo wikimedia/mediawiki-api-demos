@@ -84,6 +84,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 * [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
   *  [set_page_language.py](python/set_page_language.py): change page language
+* [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
+  *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
   
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
