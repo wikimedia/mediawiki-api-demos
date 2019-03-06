@@ -416,5 +416,38 @@
             "list": "exturlusage",
             "euquery": "slashdot.org"
     	}
-    }
+    },
+	{
+		"filename": "compare_page_revisions",
+        "docstring": "Demo of `Compare` module: Compare two revisions from the same page",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "compare",
+            "format": "json",
+            "fromrev": "139992",
+            "torev": "139993"
+        }
+	},
+	{
+		"filename": "compare_pages",
+        "docstring": "Demo of `Compare` module: Compare the current revisions of two different pages",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "compare",
+            "format": "json",
+			"fromtitle": "Template:Unsigned",
+			"totitle": "Template:UnsignedIP"
+		}
+	},
+	{
+		"filename": "compare_page_with_text",
+        "docstring": "Demo of `Compare` module: Compare a revision of a page to some text",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "compare",
+            "format": "json",
+			"fromrev": "829678781",
+			"totext": "test%20edit,%20please%20ignore"
+		}
+	}
 ]

@@ -94,6 +94,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [set_page_language.py](python/set_page_language.py): change page language
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
+* [API:Compare](https://www.mediawiki.org/wiki/API:Compare)
+  * [compare_page_revisions.py](python/compare_page_revisions.py): Compare two revisions from the same page
+  * [compare_pages.py](python/compare_pages.py): Compare the current revisions of two different pages
+  * [compare_page_with_text.py](python/compare_page_with_text.py): Compare a revision of a page to some text
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
