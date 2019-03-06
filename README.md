@@ -84,7 +84,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 * [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
   *  [set_page_language.py](python/set_page_language.py): change page language
-  
+* [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
+  * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
+
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
