@@ -13,6 +13,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
+* [API:Block](https://www.mediawiki.org/wiki/API:Block)
+  *  [block_user.py](python/block_user.py): block a user
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/get_blocked_users.py): get information about recent blocked users
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](python/get_users.py): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
@@ -22,8 +26,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
-* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
-  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
 * [API:Emailuser](https://www.mediawiki.org/wiki/API:Emailuser)
   *  [send_an_email.py](python/send_an_email.py): send an email to user
 
@@ -86,7 +88,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
 * [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
   *  [set_page_language.py](python/set_page_language.py): change page language
-  
+* [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
+  * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
+
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text

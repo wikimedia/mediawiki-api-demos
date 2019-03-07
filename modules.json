@@ -382,18 +382,17 @@
 			"ucuser": "Jimbo Wales"
 		}
 	},
-        {       
-                "filename": "send_an_email",
-                "docstring": "Demo of `Emailuser` module: Email a user.",
-                "endpoint": "https://en.wikipedia.org/w/api.php",
-                "params": {
-                "action": "emailuser",
-                "format": "json",
-                "target": "Test_user",
-                "subject": "Hi",
-                "text": "Just wanted to say hi",
-                "token": "EMAIL_TOKEN"
-         }
-     }
+    {
+        "filename": "get_embedded_pages",
+        "docstring": "Demo of `Embeddedin` module: Get all page(s) that embed a given page",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "embeddedin",
+            "eititle": "Computer",
+            "eilimit": "20"
+        }
+    }
 ]
 

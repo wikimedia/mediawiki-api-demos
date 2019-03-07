@@ -1,7 +1,12 @@
 #!/usr/bin/python3
 
 """
+<<<<<<< HEAD:python/send_an_email.py
     send_an_email.py
+=======
+    block_user.py
+
+>>>>>>> baa3ef63fa17fd2edac980386d0b7a383026d6e6:python/block_user.py
     MediaWiki Action API Code Samples
     Demo of `Emailuser` module: sending POST request to send an email
     MIT license
@@ -53,11 +58,19 @@ EMAIL_TOKEN = DATA['query']['tokens']['csrftoken']
 
 # Step 4: POST request to send an email
 PARAMS_3 = {
+<<<<<<< HEAD:python/send_an_email.py
     "action": "emailuser",
     "target": "Test_user",
     "subject": "Hi",
     "text": "Just wanted to say hi",
-    "token": EMAIL_TOKEN,
+    "token": EMAIL_TOKEN
+=======
+    "action": "block",
+    "user": "Example",
+    "expiry": "2015-02-25T07:27:50Z",
+    "reason": "Time out",
+    "token": CSRF_TOKEN,
+>>>>>>> baa3ef63fa17fd2edac980386d0b7a383026d6e6:python/block_user.py
     "format": "json"
 }
 
