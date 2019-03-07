@@ -4,7 +4,9 @@
     change_user_options.py
 
     MediaWiki Action API Code Samples
-    Demo of `Options` module: POST request change user options
+    Demo of `Options` module: POST request to change three options
+    for current user
+    
     MIT license
 """
 
@@ -54,7 +56,7 @@ CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
 # Step 4: POST request to change user options
 # You can check out the large list of options you can change
-# at https://www.mediawiki.org/wiki/API:Options 
+# at https://www.mediawiki.org/wiki/API:Options
 PARAMS_3 = {
     "action": "options",
     "format": "json",
