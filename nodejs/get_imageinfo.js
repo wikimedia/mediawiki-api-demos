@@ -10,7 +10,7 @@ let request = require('request');
 
 let URL = "https://en.wikipedia.org/w/api.php";
 
-PARAMS = {
+let PARAMS = {
     "action": "query",
     "format": "json",
     "prop": "imageinfo",
