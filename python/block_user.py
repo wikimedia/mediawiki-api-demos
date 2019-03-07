@@ -1,14 +1,9 @@
 #!/usr/bin/python3
 
 """
-<<<<<<< HEAD:python/send_an_email.py
-    send_an_email.py
-=======
     block_user.py
-
->>>>>>> baa3ef63fa17fd2edac980386d0b7a383026d6e6:python/block_user.py
     MediaWiki Action API Code Samples
-    Demo of `Emailuser` module: sending POST request to send an email
+    Demo of `Block` module: sending POST request to block user
     MIT license
 """
 
@@ -44,7 +39,7 @@ PARAMS_1 = {
 
 R = S.post(URL, data=PARAMS_1)
 
-# Step 3: GET request to fetch Email token
+# Step 3: GET request to fetch CSRF token
 PARAMS_2 = {
     "action": "query",
     "meta": "tokens",
@@ -54,28 +49,19 @@ PARAMS_2 = {
 R = S.get(url=URL, params=PARAMS_2)
 DATA = R.json()
 
-EMAIL_TOKEN = DATA['query']['tokens']['csrftoken']
+CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-# Step 4: POST request to send an email
+# Step 4: POST request to block user
 PARAMS_3 = {
-<<<<<<< HEAD:python/send_an_email.py
-    "action": "emailuser",
-    "target": "Test_user",
-    "subject": "Hi",
-    "text": "Just wanted to say hi",
-    "token": EMAIL_TOKEN
-=======
     "action": "block",
     "user": "Example",
     "expiry": "2015-02-25T07:27:50Z",
     "reason": "Time out",
     "token": CSRF_TOKEN,
->>>>>>> baa3ef63fa17fd2edac980386d0b7a383026d6e6:python/block_user.py
     "format": "json"
 }
 
 R = S.post(URL, data=PARAMS_3)
-DATA = R.text
+DATA = R.json()
 
 print(DATA)
-
