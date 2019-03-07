@@ -13,6 +13,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
+* [API:Block](https://www.mediawiki.org/wiki/API:Block)
+  *  [block_user.py](python/block_user.py): block a user
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/get_blocked_users.py): get information about recent blocked users
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](python/get_users.py): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
@@ -22,8 +26,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
-* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
-  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
