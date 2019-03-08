@@ -4,7 +4,7 @@
     categoryinfo.py
 
     MediaWiki Action API Code Samples
-    Demo of `...` module
+    Demo of `Categoryinfo` module: Get information about few categories
     MIT license
 """
 
