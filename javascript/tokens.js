@@ -9,7 +9,7 @@
     MIT License
 */
 
-var url = "https://test.wikipedia.org/w/api.php";
+var url = "https://mediawiki.org/w/api.php"; 
 
 var params = {
     action: "query",
@@ -18,20 +18,10 @@ var params = {
     format: "json"
 };
 
-//url = url + "?origin=*";
-url = url + "?"
-Object.keys(params).forEach(function (key) { url += "&" + key + "=" + params[key]; });
+url = url + "?origin=*";
+Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];});
 
-fetch(url, {
-    method: 'GET', headers: new Headers(
-        {
-            "Access-Control-Allow-Origin": '*',
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-
-        }
-    ),
-})
-    .then(function (response) { return response.json(); })
-    .then(function (response) { console.log(response); })
-    .catch(function (error) { console.log(error); });
+fetch(url)
+    .then(function(response){return response.json();})
+    .then(function(response) {console.log(response);})
+    .catch(function(error){console.log(error);});
