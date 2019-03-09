@@ -38,7 +38,6 @@ def show_form():
     captcha_fields = get_captcha_fields()
     captcha_url = TEST_WIKI_URL + captcha_fields['captchaInfo']['value']
 
-
     if request.method == 'POST':
         details = {
             'name': request.form['username'],
@@ -46,39 +45,36 @@ def show_form():
             'confirm_password': request.form['retype'],
             'email': request.form['email'],
             'captcha_word': request.form['captcha-word'],
-            'captcha_id': captcha_fields['captchaId']['value']
-        }
+            'captcha_id': captcha_fields['captchaId']['value']}
 
         create_account(details)
-    
+
     register_fields = list()
     registration_fields = get_registration_fields()
     for x in registration_fields:
         field = {
             'name': x,
             'type': registration_fields[x]['type'],
-            'label': registration_fields[x]['label'],
-        }
+            'label': registration_fields[x]['label']}
         register_fields.append(field)
+
     register_fields.append({
         'name': 'captcha-word',
         'type': 'text',
-        'label': 'Enter the text you see on the image below'
-        })
+        'label': 'Enter the text you see on the image below'})
 
     return render_template(
         'create_account_form.html',
-        captcha=captcha_url,
-        fields=register_fields
-    )
+        captcha = captcha_url,
+        fields = register_fields)
 
 
 def get_captcha_fields():
     """ Fetch the captcha fields from `authmanagerinfo` module """
 
     response = S.get(
-        url=TEST_API_ENDPOINT,
-        params={
+        url = TEST_API_ENDPOINT,
+        params = {
             'action': 'query',
             'meta': 'authmanagerinfo',
             'amirequestsfor': 'create',
@@ -118,14 +114,14 @@ def get_registration_fields():
             k_field = k and k['fields']
             for x in k_field:
                 ret_field[x] = k_field[x]
+
     if not ret_field:
         return None
     return ret_field
 
 
 def create_account(details):
-    """ Send a post request along with create account token, user information
-    and return URL to the API to create an account on a wiki """
+    """ Send a post request along with create account token, user information and return URL to the API to create an account on a wiki """
 
     createtoken = fetch_create_token()
 
@@ -139,11 +135,9 @@ def create_account(details):
         'createreturnurl': 'http://127.0.0.1:5000/',
         'captchaId': details['captcha_id'],
         'captchaWord': details['captcha_word'],
-        'format': 'json',
-    })
+        'format': 'json'})
 
     data = response.json()
-    print (data)
     createaccount = data['createaccount']
 
     if createaccount['status'] == "PASS":
@@ -159,12 +153,12 @@ def fetch_create_token():
     """ Fetch create account token via `tokens` module """
 
     response = S.get(
-        url=TEST_API_ENDPOINT,
-        params={
+        url = TEST_API_ENDPOINT,
+        params = {
             'action': 'query',
             'meta': 'tokens',
             'type': 'createaccount',
-            'format': 'json', })
+            'format': 'json'})
 
     data = response.json()
     return data['query']['tokens']['createaccounttoken']
