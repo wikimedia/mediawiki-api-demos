@@ -18,8 +18,11 @@ import requests
 from flask import Flask, render_template, flash, request
 
 S = requests.Session()
-WIKI_URL = "https://test.wikipedia.org"
-API_ENDPOINT = WIKI_URL + "/w/api.php"
+TEST_WIKI_URL = "https://test.wikipedia.org"
+TEST_API_ENDPOINT = TEST_WIKI_URL + "/w/api.php"
+
+MEDIA_WIKI_URL = "https://test.wikipedia.org"
+MEDIA_API_ENDPOINT = MEDIA_WIKI_URL + "/w/api.php"
 
 # App config.
 DEBUG = True
@@ -30,35 +33,51 @@ APP.config['SECRET_KEY'] = 'enter_your_secret_key'
 
 @APP.route("/", methods=['GET', 'POST'])
 def show_form():
-    """ Render form template and handle form submission request
-    """
+    """ Render form template and handle form submission request """
 
     captcha_fields = get_captcha_fields()
-    captcha_url = WIKI_URL + captcha_fields['captchaInfo']['value']
+    captcha_url = TEST_WIKI_URL + captcha_fields['captchaInfo']['value']
+
 
     if request.method == 'POST':
         details = {
             'name': request.form['username'],
             'password': request.form['password'],
-            'confirm_password': request.form['confirm-password'],
+            'confirm_password': request.form['retype'],
             'email': request.form['email'],
             'captcha_word': request.form['captcha-word'],
             'captcha_id': captcha_fields['captchaId']['value']
         }
 
         create_account(details)
+    
+    register_fields = list()
+    registration_fields = get_registration_fields()
+    for x in registration_fields:
+        field = {
+            'name': x,
+            'type': registration_fields[x]['type'],
+            'label': registration_fields[x]['label'],
+        }
+        register_fields.append(field)
+    register_fields.append({
+        'name': 'captcha-word',
+        'type': 'text',
+        'label': 'Enter the text you see on the image below'
+        })
 
     return render_template(
         'create_account_form.html',
-        captcha=captcha_url
-        )
+        captcha=captcha_url,
+        fields=register_fields
+    )
 
 
 def get_captcha_fields():
     """ Fetch the captcha fields from `authmanagerinfo` module """
 
     response = S.get(
-        url=API_ENDPOINT,
+        url=TEST_API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'authmanagerinfo',
@@ -75,11 +94,12 @@ def get_captcha_fields():
             return k and k['fields']
     return None
 
-def get_password_fields():
-    """ Fetch the MediaWiki\\Auth\\Password fields from `authmanagerinfo` module """
+
+def get_registration_fields():
+    """ Fetch the registration form fields from `authmanagerinfo` module """
 
     response = S.get(
-        url=API_ENDPOINT,
+        url=MEDIA_API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'authmanagerinfo',
@@ -91,81 +111,17 @@ def get_password_fields():
     authmanagerinfo = query and query['authmanagerinfo']
     fields = authmanagerinfo and authmanagerinfo['requests']
 
-    for k in fields:
-        if k['account'] == '':
-            return k and k['fields']
-    return None
-
-
-def get_campaigns_fields():
-    """ Fetch the Campaigns fields from `authmanagerinfo` module """
-
-    response = S.get(
-        url=API_ENDPOINT,
-        params={
-            'action': 'query',
-            'meta': 'authmanagerinfo',
-            'amirequestsfor': 'create',
-            'format': 'json'})
-
-    data = response.json()
-    query = data and data['query']
-    authmanagerinfo = query and query['authmanagerinfo']
-    fields = authmanagerinfo and authmanagerinfo['requests']
+    ret_field = dict()
 
     for k in fields:
-        if k['account'] == 'CampaignsAuthenticationRequest':
-            return k and k['fields']
-    return None
+        if k['id'] == 'MediaWiki\\Auth\\PasswordAuthenticationRequest' or k['id'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest':
+            k_field = k and k['fields']
+            for x in k_field:
+                ret_field[x] = k_field[x]
+    if not ret_field:
+        return None
+    return ret_field
 
-
-def get_username_fields():
-    """ Fetch the MediaWiki\\Auth\\Username fields from `authmanagerinfo` module """
-
-    response = S.get(
-        url=API_ENDPOINT,
-        params={
-            'action': 'query',
-            'meta': 'authmanagerinfo',
-            'amirequestsfor': 'create',
-            'format': 'json'})
-
-    data = response.json()
-    query = data and data['query']
-    authmanagerinfo = query and query['authmanagerinfo']
-    fields = authmanagerinfo and authmanagerinfo['requests']
-
-    for k in fields:
-        if k['account'] == 'MediaWiki\\Auth\\UsernameAuthenticationRequest':
-            return k and k['fields']
-    return None
-
-
-def get_userdata_fields():
-    """ Fetch the MediaWiki\\Auth\\UserData fields from `authmanagerinfo` module """
-
-    response = S.get(
-        url=API_ENDPOINT,
-        params={
-            'action': 'query',
-            'meta': 'authmanagerinfo',
-            'amirequestsfor': 'create',
-            'format': 'json'})
-
-    data = response.json()
-    query = data and data['query']
-    authmanagerinfo = query and query['authmanagerinfo']
-    fields = authmanagerinfo and authmanagerinfo['requests']
-
-    for k in fields:
-        if k['account'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest':
-            return k and k['fields']
-    return None
-
-
-
-
-"""edited part"""
 
 def create_account(details):
     """ Send a post request along with create account token, user information
@@ -173,7 +129,7 @@ def create_account(details):
 
     createtoken = fetch_create_token()
 
-    response = S.post(url=API_ENDPOINT, data={
+    response = S.post(url=TEST_API_ENDPOINT, data={
         'action': 'createaccount',
         'createtoken': createtoken,
         'username': details['name'],
@@ -187,6 +143,7 @@ def create_account(details):
     })
 
     data = response.json()
+    print (data)
     createaccount = data['createaccount']
 
     if createaccount['status'] == "PASS":
@@ -202,7 +159,7 @@ def fetch_create_token():
     """ Fetch create account token via `tokens` module """
 
     response = S.get(
-        url=API_ENDPOINT,
+        url=TEST_API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'tokens',
