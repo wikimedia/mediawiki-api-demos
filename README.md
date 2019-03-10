@@ -84,6 +84,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
+  * [get_exturlusage.py](python/get_exturlusage.py): enumerate pages that contain a given URL
 * [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
   * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
 * [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
