@@ -26,6 +26,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
     * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
+  *  [upload_directly.py](python/upload_directly.py): upload a file directly from the system
+  *  [upload_from_url.py](python/upload_from_url.py): upload a copy of a file elsewhere on the Web given by a URL 
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
