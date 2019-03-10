@@ -1,11 +1,12 @@
+#This file is auto-generated. See modules.json and autogenerator.py for details
+
 #!/usr/bin/python3
 
 """
     get_exturlusage.py
 
     MediaWiki Action API Code Samples
-    Demo of `Exturlusage` module: Enumerate pages that contain a given URL:
-    [slashdot.org]
+    Demo of `Exturlusage` module: Enumerate pages that contain a given URL.
 
     MIT License
 """
