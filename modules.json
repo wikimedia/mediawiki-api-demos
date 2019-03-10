@@ -393,5 +393,29 @@
             "eititle": "Computer",
             "eilimit": "20"
         }
+    },
+    {
+
+        "filename": "get_usercontribs.py",
+        "docstring": "Demo of `Usercontribs` module: List user contributions.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "usercontribs",
+            "ucuser": "Jimbo Wales"
+    	}
+    },
+	 {
+
+        "filename": "get_exturlusage.py",
+        "docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+        	"format": "json",
+            "list": "exturlusage",
+            "euquery": "slashdot.org"
+    	}
     }
 ]
