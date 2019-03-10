@@ -13,6 +13,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
+* [API:Block](https://www.mediawiki.org/wiki/API:Block)
+  *  [block_user.py](python/block_user.py): block a user
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/get_blocked_users.py): get information about recent blocked users
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](python/get_users.py): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
@@ -20,10 +24,12 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:User group membership](https://www.mediawiki.org/wiki/API:User_group_membership)
   *  [userrights.py](python/userrights): add and remove user rights
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
-  * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
-    * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
-* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
-  *  [get_blocked_users.py](python/blocks.py): get information about recent blocked users
+  * [get_my_watchlist_feed.py](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
+  * [get_user_watchlist_feed.py](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Options](https://www.mediawiki.org/wiki/API:Options)
+  * [change_user_options.py](python/change_user_options.py): change preferences of current user
+* [API:Emailuser](https://www.mediawiki.org/wiki/API:Emailuser)
+  *  [send_an_email.py](python/send_an_email.py): send an email to user
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -78,6 +84,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
+  * [get_exturlusage.py](python/get_exturlusage.py): enumerate pages that contain a given URL
 * [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
   * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
 * [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
