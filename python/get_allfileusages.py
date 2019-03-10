@@ -3,10 +3,10 @@
 #!/usr/bin/python3
 
 """
-    allfileusage.py
+    get_allfileusages.py
 
     MediaWiki Action API Code Samples
-    Demo of `allfileusage` module: GET list all file usages, including non-existing.
+    Demo of `allfileusage` module: List all file usages, including non-existing
 
     MIT License
 """

@@ -84,7 +84,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
-<<<<<<< HEAD
 * [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
   * [get_exturlusage.py](python/get_exturlusage.py): enumerate pages that contain a given URL
 * [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
@@ -97,6 +96,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
 * [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
   * [rollback.py](python/rollback.py): rollback the last edits made to a given page
+* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
+  * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -115,8 +116,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
-* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
-  * [allfileusage.py](python/paraminfo.py): get list of all file usages
 
 ### Demo apps
 * [Article ideas generator](python/demos/article-ideas-generator): 
