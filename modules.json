@@ -382,7 +382,19 @@
 			"ucuser": "Jimbo Wales"
 		}
 	},
-    {
+  {
+	   "filename": "allfileusage",
+	   "docstring": "Demo of `allfileusage` module: GET list all file usages, including non-existing.",
+		 "endpoint": "https://en.wikipedia.org/w/api.php",
+	   "params": {
+		   "action": "query",
+	     "format": "json",
+		   "list": "allfileusages",
+ 	     "afprefix": "Icon",
+			 "afprop": "ids|title"
+		}
+	},
+  {
         "filename": "get_embedded_pages",
         "docstring": "Demo of `Embeddedin` module: Get all page(s) that embed a given page",
         "endpoint": "https://en.wikipedia.org/w/api.php",
@@ -393,8 +405,8 @@
             "eititle": "Computer",
             "eilimit": "20"
         }
-    },
-    {
+   },
+   {
 
         "filename": "get_usercontribs.py",
         "docstring": "Demo of `Usercontribs` module: List user contributions.",
@@ -404,8 +416,8 @@
         	"format": "json",
             "list": "usercontribs",
             "ucuser": "Jimbo Wales"
-    	}
-    },
+    	 }
+  },
 	{
         "filename": "get_exturlusage.py",
         "docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
@@ -415,6 +427,7 @@
         	"format": "json",
             "list": "exturlusage",
             "euquery": "slashdot.org"
-    	}
-    }
+    	  }
+   }
 ]
+    

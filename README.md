@@ -115,6 +115,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
+* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
+  * [allfileusage.py](python/paraminfo.py): get list of all file usages
 
 ### Demo apps
 * [Article ideas generator](python/demos/article-ideas-generator): 
