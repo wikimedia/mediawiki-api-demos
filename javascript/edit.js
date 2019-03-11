@@ -1,75 +1,94 @@
-"use strict";
+/**  
+ edit.js
+ 
+ MediaWiki Action API Code Samples
+ Demo of `Edit` module: POST request to edit a page
+ MIT license
+*/
 
-/** 
- * edit.js
- * 
- * MediaWiki Action API Code Samples
- * Demo of `Edit` module: POST request to edit a page
- * MIT license
- */
+var fetch = require("node-fetch");
 
-let URL = "https://test.wikipedia.org/w/api.php";
+var url = "https://test.wikipedia.org/w/api.php";
 
-async function main() {
-    // Step 1: GET Request to fetch login token
-    const PARAMS_0 = {
+// Step 1: GET Request to fetch login token
+function getLoginToken() {
+    var params_0 = {
         action: "query",
         meta: "tokens",
         type: "login",
         format: "json"
-    }
+    };
 
-    let query = URL + '?' + Object.keys(PARAMS_0).map(key => key + "=" + PARAMS_0[key]).join("&");
-    let response = await fetch(query);
-    let data = await response.json();
+    var query = url + "?";
+    Object.keys(params_0).forEach(function(key){query += "&" + key + "=" + params_0[key];});
 
-    let LOGIN_TOKEN = data.query.tokens.logintoken;
+    fetch(query)
+    .then(function(response){return response.json();})
+    .then(function (json){loginRequest(json.query.tokens.logintoken);})
+    .catch(function(error){console.log(error);});
+}
 
-    // Step2: Send a post request to login. Use of main account for login is not
-    //  supported. Obtain credentials via Special:BotPasswords
-    // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
-    const PARAMS_1 = {
+// Step 2: POST Request to log in. 
+// Use of main account for login is not
+// supported. Obtain credentials via Special:BotPasswords
+// (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
+function loginRequest(login_token) {
+    var params_1 = {
         action: "login",
-        lgname: "your_bot_username",
-        lgpassword: "your_bot_password",
-        lgtoken: LOGIN_TOKEN,
+        lgname: "bot_user_name",
+        lgpassword: "bot_password",
+        lgtoken: login_token,
         format: "json"
-    }
-    
-    response = await fetch(URL, {
-        method: 'POST',
-        body: JSON.stringify(PARAMS_1),
-    });
+    };
+    return fetch(url, {
+        method: "POST",
+        body: JSON.stringify(params_1),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(function(response){getCsrfToken();})
+    .catch(function(error){console.log(error);});
+}
 
-    // Step 3: GET request to fetch CSRF token
-    const PARAMS_2 = {
+// Step 3: GET request to fetch CSRF token
+function getCsrfToken() {
+    var params_2 = {
         action: "query",
         meta: "tokens",
         format: "json"
-    }
+    };
 
-    query = URL + '?' + Object.keys(PARAMS_2).map(key => key + "=" + PARAMS_2[key]).join("&");
-    response = await fetch(query);
-    data = await response.json();
+    var query = url + "?";
+    Object.keys(params_2).forEach(function(key){query += "&" + key + "=" + params_2[key];});
 
-    let CSRF_TOKEN = data.query.tokens.csrftoken;
-
-    // Step 4: POST request to edit a page
-    const PARAMS_3 = {
-        action: "edit",
-        title: "Sandbox",
-        token: CSRF_TOKEN,
-        format: "json",
-        appendtext: "Hello"
-    }
-
-    response = await fetch(URL, {
-        method: 'POST',
-        body: JSON.stringify(PARAMS_3),
-    });
-    data = await response.json();
-
-    // console.log(data);
+    return fetch(query)
+    .then(function(response){return response.json();})
+    .then(function (json){editRequest(json.query.tokens.csrftoken);})
+    .catch(function(error){console.log(error);});
 }
 
-main();
+// Step 4: POST request to edit a page
+function editRequest(csrf_token) {
+    var params_3 = {
+        action: "edit",
+        title: "Sandbox",
+        token: csrf_token,
+        format: "json",
+        appendtext: "Hello"
+    };
+
+    return fetch(url, {
+        method: "POST",
+        body: JSON.stringify(params_3),
+        headers: {
+            "Content-Type": "application/json"
+        }
+    })
+    .then(function(response){return response.json();})
+    .then(function (json){console.log(json);})
+    .catch(function(error){console.log(error);});
+}
+
+// Start From Step 1
+getLoginToken();
