@@ -20,12 +20,20 @@ function getLoginToken() {
     };
 
     var query = url + "?";
-    Object.keys(params_0).forEach(function(key){query += "&" + key + "=" + params_0[key];});
+    Object.keys(params_0).forEach(function (key) {
+        query += "&" + key + "=" + params_0[key];
+    });
 
     fetch(query)
-    .then(function(response){return response.json();})
-    .then(function (json){loginRequest(json.query.tokens.logintoken);})
-    .catch(function(error){console.log(error);});
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            loginRequest(data.query.tokens.logintoken);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 // Step 2: POST Request to log in. 
@@ -40,15 +48,19 @@ function loginRequest(login_token) {
         lgtoken: login_token,
         format: "json"
     };
-    return fetch(url, {
-        method: "POST",
-        body: JSON.stringify(params_1),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(function(response){getCsrfToken();})
-    .catch(function(error){console.log(error);});
+    fetch(url, {
+            method: "POST",
+            body: JSON.stringify(params_1),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(function () {
+            getCsrfToken();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 // Step 3: GET request to fetch CSRF token
@@ -60,12 +72,20 @@ function getCsrfToken() {
     };
 
     var query = url + "?";
-    Object.keys(params_2).forEach(function(key){query += "&" + key + "=" + params_2[key];});
+    Object.keys(params_2).forEach(function (key) {
+        query += "&" + key + "=" + params_2[key];
+    });
 
-    return fetch(query)
-    .then(function(response){return response.json();})
-    .then(function (json){editRequest(json.query.tokens.csrftoken);})
-    .catch(function(error){console.log(error);});
+    fetch(query)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            editRequest(data.query.tokens.csrftoken);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 // Step 4: POST request to edit a page
@@ -78,16 +98,22 @@ function editRequest(csrf_token) {
         appendtext: "Hello"
     };
 
-    return fetch(url, {
-        method: "POST",
-        body: JSON.stringify(params_3),
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(function(response){return response.json();})
-    .then(function (json){console.log(json);})
-    .catch(function(error){console.log(error);});
+    fetch(url, {
+            method: "POST",
+            body: JSON.stringify(params_3),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 // Start From Step 1
