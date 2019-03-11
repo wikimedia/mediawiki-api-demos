@@ -1,61 +1,83 @@
-"use strict";
+/* 
+ get_my_watchlist_feed.js
+ 
+ MediaWiki Action API Code Samples
+ Demo of `Feedwatchlist` module: Get the watchlist feed 
+ for the account making the request.
+ MIT license
+*/
 
-/** 
- * get_my_watchlist_feed.js
- *
- * MediaWiki Action API Code Samples
- * Demo of `Feedwatchlist` module: Get the watchlist feed 
- * for the account making the request.
- * MIT license
- */
-const fetch = require("node-fetch");
+var url = "https://test.wikipedia.org/w/api.php";
 
-let URL = "https://test.wikipedia.org/w/api.php"
+// Step 1: GET Request to fetch login token
+function getLoginToken() {
+    var params_1 = {
+        action: "query",
+        meta: "tokens",
+        type: "login",
+        format: "json"
+    };
 
-async function main() {
-   // Step 1: GET Request to fetch login token
-   const PARAMS_1 = {
-       action: "query",
-       meta: "tokens",
-       type: "login",
-       format: "json"
-   }
-   
-   let query = URL + '?' + Object.keys(PARAMS_1).map(key => key + "=" + PARAMS_1[key]).join("&");
-   let response = await fetch(query);
-   let data = await response.json();
+    var query = url + '?';
 
-   let LOGIN_TOKEN = data.query.tokens.logintoken;
+    Object.keys(params_1).forEach(function (key) {
+        query += "&" + key + "=" + params_1[key];
+    });
 
-   // Step2: Send a post request to login. Use of main account for login is not
-   //  supported. Obtain credentials via Special:BotPasswords
-   // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
-   const PARAMS_2 = {
-       action: "login",
-       lgname: "your_bot_username",
-       lgpassword: "your_bot_password",
-       lgtoken: LOGIN_TOKEN,
-       format: "json"
-   }
+    fetch(query)
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            loginRequest(data.query.tokens.logintoken);
+        });
 
-    response = await fetch(URL, {
-       method: 'POST',
-       body: JSON.stringify(PARAMS_2),
-       headers: {
-           'Content-Type': 'application/json'
-       }
-   });
+}
 
-    // Step 3: Request the account's own watchlist feed
-   const PARAMS_3 = {
-       action: "feedwatchlist"
-   }
+// Step2: Send a post request to login. Use of main account for login is not
+//  supported. Obtain credentials via Special:BotPasswords
+// (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
+function loginRequest(login_token) {
+    var params_2 = {
+        action: "login",
+        lgname: "bot_user_name",
+        lgpassword: "bot_password",
+        lgtoken: login_token,
+        format: "json"
+    };
+    fetch(url, {
+            method: "POST",
+            body: JSON.stringify(params_2),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(function () {
+            getAccountFeed();
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
 
-   query = URL + '?' + Object.keys(PARAMS_3).map(key => key + "=" + PARAMS_3[key]).join("&");
-   response = await fetch(query);
-   data = await response.text();
+// Step 3: Request the account's own watchlist feed
+function getAccountFeed() {
+    var params_3 = {
+        action: "feedwatchlist"
+    };
 
-    console.log(data);
-}    
+    query = url + '?';
+    Object.keys(params_3).forEach(function (key) {
+        query += "&" + key + "=" + params_3[key];
+    });
+    fetch(query)
+        .then(function (response) {
+            return response.text();
+        })
+        .then(function (data) {
+            console.log(data);
+        });
+}
 
-main();
+// Start From Step 1
+getLoginToken();
