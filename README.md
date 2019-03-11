@@ -29,6 +29,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
   *  [upload_directly.py](python/upload_directly.py): upload a file directly from the system
   *  [upload_from_url.py](python/upload_from_url.py): upload a copy of a file elsewhere on the Web given by a URL 
+  *  [chunked_uploading.py](python/upload_from_url.py): upload a file in chunks
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
