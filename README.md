@@ -96,6 +96,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [set_page_language.py](python/set_page_language.py): change page language
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
+* [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
+  * [rollback.py](python/rollback.py): rollback the last edits made to a given page
+* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
+  * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -114,8 +118,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
-* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
-  * [allfileusage.py](python/paraminfo.py): get list of all file usages
 
 ### Demo apps
 * [Article ideas generator](python/demos/article-ideas-generator): 
