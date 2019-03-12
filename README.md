@@ -92,8 +92,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [set_page_language.py](python/set_page_language.py): change page language
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
-* [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
-  *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
 
 
 ### Search 
