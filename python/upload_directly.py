@@ -55,7 +55,6 @@ CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 PARAMS_4 = {
     "action": "upload",
     "filename": "file_1.jpg",
-    "file": ('f.jpg',open('f.jpg','rb'),'multipart/form-data'),
     "format": "json",
     "token": CSRF_TOKEN,
     "ignorewarnings": 1
