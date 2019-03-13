@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <!-- Page title -->
+    <title>User Contributions - Demo app</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+</head>
+<body>
+<div class="jumbotron">
+    <h1>User Contributions - Demo</h1>
+</div>
+<div class="container">
+
+    <!-- Display a error message if user is not exist -->
+    {% if data == [] %}
+    <div class="alert alert-danger">
+        User <strong>{{username}}</strong> not found.
+    </div>
+    {% endif %}
+
+    <!-- Form to get username -->
+    <form action="{{ url_for('index') }}" method="get">
+        <div class="form-group">
+            <label class="control-label">Username:</label>
+            <input class="form-control" name="username" required type="text" {% if username is not none %} value="{{username}}" {% endif %}>
+        </div>
+        <button class="btn btn-info" type="submit">Submit</button>
+    </form>
+
+    <br/>
+
+    <!-- Check whether the data is defined or not -->
+    {% if data is not none %}
+    <h2>Edits</h2>
+    <hr/>
+    <ul class="list-group">
+
+        <!-- Iterate the data list -->
+        {% for edits in data %}
+
+        <li class="list-group-item">
+
+            <!-- Create diff link -->
+            (<a href="{{wikiurl}}/w/index.php?title={{edits['title'] }}&diff={{ edits['revid'] }}&oldid={{ edits['parentid'] }}">Diff</a>)
+            . .
+
+            <!-- Put diff changes size -->
+            ( {{ edits['sizediff'] }} ) . .
+
+            <!-- Create page link -->
+            <a href="{{wikiurl}}/wiki/{{edits['title'] }}">{{ edits["title"] }}</a>
+        </li>
+
+        {% endfor %}
+    </ul>
+
+    {%endif %}
+</div>
+</body>
+</html>
