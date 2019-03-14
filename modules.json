@@ -427,6 +427,19 @@
             "list": "exturlusage",
             "euquery": "slashdot.org"
     	}
+    },
+    {
+        "filename": "get_langlinks.py",
+        "docstring": "Demo of `Langlinks` module: Demo to gets a list of first 20 language links from the provided pages to other languages.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+                "action" : "query",
+    		"format" : "json",
+    		"titles" : "Main Page",
+    		"prop"   : "langlinks",
+    		"lllimit": "20",
+    		"llprop" : "langname"
+    	}
     }
 ]
     

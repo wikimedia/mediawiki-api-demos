@@ -98,6 +98,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [rollback.py](python/rollback.py): rollback the last edits made to a given page
 * [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
   * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
+* [API:Langlinks](https://www.mediawiki.org/wiki/API:Langlinks)
+  * [get_langlinks.py](python/get_langlinks.py): Gets a list of first 20 language links with the localised language name.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
