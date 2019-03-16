@@ -98,6 +98,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [rollback.py](python/rollback.py): rollback the last edits made to a given page
 * [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
   * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
+* [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
+  * [protect.py](python/protect.py): Change the protection level of a given page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
