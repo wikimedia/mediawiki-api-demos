@@ -383,17 +383,6 @@
 		}
 	},
 	{
-        "filename": "get_exturlusage",
-        "docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
-         "endpoint": "https://en.wikipedia.org/w/api.php",
-        "params": {
-            "action": "query",
-            "format": "json",
-            "list": "exturlusage",
-            "euquery": "slashdot.org"
-    	}
-    },
-	{
 		"filename": "get_allfileusages",
 	    "docstring": "Demo of `allfileusage` module: List all file usages, including non-existing.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
@@ -416,6 +405,17 @@
             "eititle": "Computer",
             "eilimit": "20"
         }
+    },
+    {
+        "filename": "get_exturlusage",
+        "docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
+         "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "exturlusage",
+            "euquery": "slashdot.org"
+    	}
     },
     {
         "filename": "get_pagepropnames",
