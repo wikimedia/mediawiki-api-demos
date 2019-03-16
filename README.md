@@ -94,7 +94,12 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
 * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
   *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
-
+* [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
+  * [rollback.py](python/rollback.py): rollback the last edits made to a given page
+* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
+  * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
+* [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
+  * [protect.py](python/protect.py): Change the protection level of a given page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -121,10 +126,12 @@ Demo app that suggests articles from various categories that don't yet exist on 
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
 * [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
+* [User Contributions](python/demos/UserContributions)
+A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
 ### Installation
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
+$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
 $ cd MediaWiki-Action-API-Code-Samples
 Install the necessary python modules with pip
 $ python3 name_of_the_file.py #Enter any credentials if required in the file
