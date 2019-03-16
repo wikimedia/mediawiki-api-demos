@@ -131,7 +131,7 @@ A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki
 
 ### Installation
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
+$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
 $ cd MediaWiki-Action-API-Code-Samples
 Install the necessary python modules with pip
 $ python3 name_of_the_file.py #Enter any credentials if required in the file
