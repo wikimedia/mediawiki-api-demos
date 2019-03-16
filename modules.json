@@ -427,6 +427,16 @@
             "list": "exturlusage",
             "euquery": "slashdot.org"
     	}
+    },
+       {
+        "filename": "get_pagepropnames",
+        "docstring": "Demo of `Pagepropnames` module: List page property names on the given wiki.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "pagepropnames",
+            "format": "json"
+        }
     }
 ]
     

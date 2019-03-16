@@ -100,6 +100,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
 * [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
   * [protect.py](python/protect.py): Change the protection level of a given page
+* [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
+  *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
