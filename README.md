@@ -84,6 +84,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
+  * [get_exturlusage.py](python/get_exturlusage.py): enumerate pages that contain a given URL
 * [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
   * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
 * [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
@@ -93,7 +95,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
   * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
 * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
-  *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
+  *  [get_pagepropnames.py](python/pagepropnames.py): List all page property names in use on the wiki.
 * [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
   * [rollback.py](python/rollback.py): rollback the last edits made to a given page
 * [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
