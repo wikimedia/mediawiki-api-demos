@@ -38,14 +38,14 @@ def fetch_login_token():
     data = res.json()
     return data["query"]["tokens"]["logintoken"]
 
-def user_login(login_token):
+def user_login(login_token, bot_username, bot_password):
     """Send a post request to login."""
     #Use of main account for login is not supported. Obtain credentials via Special:BotPasswords
     #(https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
     params = {
         "action":"login",
-        "lgname": "bot_username",
-        "lgpassword":"bot_password",
+        "lgname": bot_username,
+        "lgpassword": bot_password,
         "format":"json",
         "lgtoken": login_token
     }
@@ -124,7 +124,7 @@ def upload_file_in_chunks(csrf_token):
 def main():
     """ Login to a user account and upload a file in chunks."""
     login_token = fetch_login_token()
-    user_login(login_token)
+    user_login(login_token, "bot_username", "bot_password")
     csrf_token = fetch_csrf_token()
     upload_file_in_chunks(csrf_token)
 
