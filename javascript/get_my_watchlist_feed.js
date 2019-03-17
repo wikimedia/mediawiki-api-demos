@@ -24,7 +24,10 @@ function getLoginToken() {
         query += "&" + key + "=" + params_1[key];
     });
 
-    fetch(query)
+    fetch(query, {
+            method: "GET",
+            credentials: "include",
+        })
         .then(function (response) {
             return response.json();
         })
@@ -48,6 +51,7 @@ function loginRequest(login_token) {
     fetch(url, {
             method: "POST",
             body: JSON.stringify(params_2),
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
@@ -70,7 +74,10 @@ function getAccountFeed() {
     Object.keys(params_3).forEach(function (key) {
         query += "&" + key + "=" + params_3[key];
     });
-    fetch(query)
+    fetch(query, {
+            method: "GET",
+            credentials: "include",
+        })
         .then(function (response) {
             return response.text();
         })

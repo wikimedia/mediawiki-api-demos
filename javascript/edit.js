@@ -9,6 +9,7 @@
 var fetch = require("node-fetch");
 
 var url = "https://test.wikipedia.org/w/api.php";
+url = url + "?";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -19,12 +20,15 @@ function getLoginToken() {
         format: "json"
     };
 
-    var query = url + "?";
+    var query = url;
     Object.keys(params_0).forEach(function (key) {
         query += "&" + key + "=" + params_0[key];
     });
 
-    fetch(query)
+    fetch(query, {
+            method: "GET",
+            credentials: "include",
+        })
         .then(function (response) {
             return response.json();
         })
@@ -48,14 +52,22 @@ function loginRequest(login_token) {
         lgtoken: login_token,
         format: "json"
     };
+
+    console.log(params_1);
+
     fetch(url, {
             method: "POST",
             body: JSON.stringify(params_1),
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
         })
-        .then(function () {
+        .then(function (response) {
+            return response.json();
+        })
+        .then(function (data) {
+            console.log(data);
             getCsrfToken();
         })
         .catch(function (error) {
@@ -71,12 +83,15 @@ function getCsrfToken() {
         format: "json"
     };
 
-    var query = url + "?";
+    var query = url;
     Object.keys(params_2).forEach(function (key) {
         query += "&" + key + "=" + params_2[key];
     });
 
-    fetch(query)
+    fetch(query, {
+            method: "GET",
+            credentials: "include",
+        })
         .then(function (response) {
             return response.json();
         })
@@ -101,6 +116,7 @@ function editRequest(csrf_token) {
     fetch(url, {
             method: "POST",
             body: JSON.stringify(params_3),
+            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
