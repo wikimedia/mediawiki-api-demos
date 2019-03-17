@@ -6,8 +6,6 @@
  MIT license
 */
 
-var fetch = require("node-fetch");
-
 var url = "https://test.wikipedia.org/w/api.php";
 url = url + "?";
 
