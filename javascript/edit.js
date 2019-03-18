@@ -5,6 +5,7 @@
  Demo of `Edit` module: POST request to edit a page
  MIT license
 */
+var fetch = require("node-fetch");
 
 var url = "https://test.wikipedia.org/w/api.php";
 url = url + "?";
@@ -23,10 +24,7 @@ function getLoginToken() {
         query += "&" + key + "=" + params_0[key];
     });
 
-    fetch(query, {
-            method: "GET",
-            credentials: "include",
-        })
+    fetch(query)
         .then(function (response) {
             return response.json();
         })
@@ -51,12 +49,10 @@ function loginRequest(login_token) {
         format: "json"
     };
 
-    console.log(params_1);
-
     fetch(url, {
+            credentials: "include",
             method: "POST",
             body: JSON.stringify(params_1),
-            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
@@ -87,7 +83,6 @@ function getCsrfToken() {
     });
 
     fetch(query, {
-            method: "GET",
             credentials: "include",
         })
         .then(function (response) {
@@ -112,9 +107,9 @@ function editRequest(csrf_token) {
     };
 
     fetch(url, {
+            credentials: "include",
             method: "POST",
             body: JSON.stringify(params_3),
-            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
