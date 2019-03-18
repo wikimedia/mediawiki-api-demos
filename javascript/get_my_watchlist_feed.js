@@ -6,6 +6,7 @@
  for the account making the request.
  MIT license
 */
+var fetch = require("node-fetch");
 
 var url = "https://test.wikipedia.org/w/api.php";
 url = url  + '?';
@@ -25,10 +26,7 @@ function getLoginToken() {
         query += "&" + key + "=" + params_1[key];
     });
 
-    fetch(query, {
-            method: "GET",
-            credentials: "include",
-        })
+    fetch(query)
         .then(function (response) {
             return response.json();
         })
@@ -50,9 +48,9 @@ function loginRequest(login_token) {
         format: "json"
     };
     fetch(url, {
+            credentials: "include",
             method: "POST",
             body: JSON.stringify(params_2),
-            credentials: "include",
             headers: {
                 "Content-Type": "application/json"
             }
@@ -71,12 +69,11 @@ function getAccountFeed() {
         action: "feedwatchlist"
     };
 
-    query = url;
+    var query = url;
     Object.keys(params_3).forEach(function (key) {
         query += "&" + key + "=" + params_3[key];
     });
     fetch(query, {
-            method: "GET",
             credentials: "include",
         })
         .then(function (response) {
