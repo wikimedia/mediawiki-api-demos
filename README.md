@@ -102,6 +102,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
 * [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
   * [protect.py](python/protect.py): Change the protection level of a given page
+* [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
+  * [upload_file_directly.py](python/upload_file_directly.py): upload a file directly from the system
+  * [upload_file_from_url.py](python/upload_file_from_url.py): upload a file from a URL 
+  * [upload_file_in_chunks.py](python/upload_file_in_chunks.py): upload a file in chunks
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
