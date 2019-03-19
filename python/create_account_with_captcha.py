@@ -18,8 +18,11 @@ import requests
 from flask import Flask, render_template, flash, request
 
 S = requests.Session()
-WIKI_URL = "https://test.wikipedia.org"
-API_ENDPOINT = WIKI_URL + "/w/api.php"
+TEST_WIKI_URL = "https://test.wikipedia.org"
+TEST_API_ENDPOINT = TEST_WIKI_URL + "/w/api.php"
+
+MEDIA_WIKI_URL = "https://mediawiki.org"
+MEDIA_API_ENDPOINT = MEDIA_WIKI_URL + "/w/api.php"
 
 # App config.
 DEBUG = True
@@ -30,35 +33,47 @@ APP.config['SECRET_KEY'] = 'enter_your_secret_key'
 
 @APP.route("/", methods=['GET', 'POST'])
 def show_form():
-    """ Render form template and handle form submission request
-    """
+    """ Render form template and handle form submission request """
 
     captcha_fields = get_captcha_fields()
-    captcha_url = WIKI_URL + captcha_fields['captchaInfo']['value']
+    captcha_url = TEST_WIKI_URL + captcha_fields['captchaInfo']['value']
 
     if request.method == 'POST':
         details = {
             'name': request.form['username'],
             'password': request.form['password'],
-            'confirm_password': request.form['confirm-password'],
+            'confirm_password': request.form['retype'],
             'email': request.form['email'],
             'captcha_word': request.form['captcha-word'],
-            'captcha_id': captcha_fields['captchaId']['value']
-        }
+            'captcha_id': captcha_fields['captchaId']['value']}
 
         create_account(details)
 
+    register_fields = []
+    registration_fields = get_registration_fields()
+    for field_name in registration_fields:
+        field = {
+            'name': field_name,
+            'type': registration_fields[field_name]['type'],
+            'label': registration_fields[field_name]['label']}
+        register_fields.append(field)
+
+    register_fields.append({
+        'name': 'captcha-word',
+        'type': 'text',
+        'label': 'Enter the text you see on the image below'})
+
     return render_template(
         'create_account_form.html',
-        captcha=captcha_url
-        )
+        captcha=captcha_url,
+        fields=register_fields)
 
 
 def get_captcha_fields():
     """ Fetch the captcha fields from `authmanagerinfo` module """
 
     response = S.get(
-        url=API_ENDPOINT,
+        url=TEST_API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'authmanagerinfo',
@@ -68,20 +83,48 @@ def get_captcha_fields():
     data = response.json()
     query = data and data['query']
     authmanagerinfo = query and query['authmanagerinfo']
-    fields = authmanagerinfo and authmanagerinfo['requests']
+    request_attribute = authmanagerinfo and authmanagerinfo['requests']
 
-    for k in fields:
-        if k['account'] == 'CaptchaAuthenticationRequest':
-            return k and k['fields']
+    for request_name in request_attribute:
+        if request_name['account'] == 'CaptchaAuthenticationRequest':
+            return request_name and request_name['fields']
     return None
+
+
+def get_registration_fields():
+    """ Fetch the registration form fields from `authmanagerinfo` module """
+
+    response = S.get(
+        url=MEDIA_API_ENDPOINT,
+        params={
+            'action': 'query',
+            'meta': 'authmanagerinfo',
+            'amirequestsfor': 'create',
+            'format': 'json'})
+
+    data = response.json()
+    query = data and data['query']
+    authmanagerinfo = query and query['authmanagerinfo']
+    request_attribute = authmanagerinfo and authmanagerinfo['requests']
+
+    fields = {}
+
+    for request_name in request_attribute:
+        if request_name['id'] == 'MediaWiki\\Auth\\PasswordAuthenticationRequest' or request_name['id'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest':
+            field_name = request_name and request_name['fields']
+            for name in field_name:
+                fields[name] = field_name[name]
+
+    return fields
+
 
 def create_account(details):
     """ Send a post request along with create account token, user information
-    and return URL to the API to create an account on a wiki """
+     and return URL to the API to create an account on a wiki """
 
     createtoken = fetch_create_token()
 
-    response = S.post(url=API_ENDPOINT, data={
+    response = S.post(url=TEST_API_ENDPOINT, data={
         'action': 'createaccount',
         'createtoken': createtoken,
         'username': details['name'],
@@ -91,8 +134,7 @@ def create_account(details):
         'createreturnurl': 'http://127.0.0.1:5000/',
         'captchaId': details['captcha_id'],
         'captchaWord': details['captcha_word'],
-        'format': 'json',
-    })
+        'format': 'json'})
 
     data = response.json()
     createaccount = data['createaccount']
@@ -110,12 +152,12 @@ def fetch_create_token():
     """ Fetch create account token via `tokens` module """
 
     response = S.get(
-        url=API_ENDPOINT,
+        url=TEST_API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'tokens',
             'type': 'createaccount',
-            'format': 'json', })
+            'format': 'json'})
 
     data = response.json()
     return data['query']['tokens']['createaccounttoken']
