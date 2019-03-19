@@ -39,6 +39,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_category_items.py](python/get_category_items.py): list twenty items in a category
   *  [get_recent_category_items.py](python/get_recent_category_items.py): get the ten articles most recently added to a category
   *  [get_subcategories.py](python/get_subcategories.py): get ten subcategories of a category
+* [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
+  *  [get_category_info.py](python/get_category_info.py): get info about few categories
 * [API:Images](https://www.mediawiki.org/wiki/API:Images) 
   * [get_page_images.py](python/get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
