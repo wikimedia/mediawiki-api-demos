@@ -165,15 +165,14 @@
 		}
 	},
     {
-
-        "filename": "categoryinfo.py",
-        "docstring": "Demo of `Categoryinfo` module: Get info about a few categories",
+        "filename": "get_category_info.py",
+        "docstring": "Demo of `Categoryinfo` module: Get information about a few categories",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
-            "action":"query",
-            "format":"json",
-            "titles":"Albert|Category:Foo|Category:Infobox",
-            "prop":"categoryinfo"
+            "action": "query",
+            "format": "json",
+            "titles": "Albert|Category:Foo|Category:Infobox",
+            "prop": "categoryinfo"
         }
     },
 	{
