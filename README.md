@@ -106,8 +106,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [upload_file_directly.py](python/upload_file_directly.py): upload a file directly from the system
   * [upload_file_from_url.py](python/upload_file_from_url.py): upload a file from a URL
   * [upload_file_in_chunks.py](python/upload_file_in_chunks.py): upload a file in chunks
-  * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
-    *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
+* [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
+  * [get_pagepropnames.py](python/pagepropnames.py): List all page property names in use on the wiki.
+
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
