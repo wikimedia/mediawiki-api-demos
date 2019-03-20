@@ -3,10 +3,10 @@
 #!/usr/bin/python3
 
 """
-    get_red_links.py
+    get_exturlusage.py
 
     MediaWiki Action API Code Samples
-    Demo of `Links` module to identify red or missing links on a page.
+    Demo of `Exturlusage` module: Enumerate pages that contain a given URL.
 
     MIT License
 """
@@ -19,19 +19,12 @@ URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
     "action": "query",
-    "titles": "Wikipedia:Most-wanted_articles",
-    "gpllimit": "20",
     "format": "json",
-    "generator": "links"
+    "list": "exturlusage",
+    "euquery": "slashdot.org"
 }
 
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
-PAGES = DATA['query']['pages']
-LINKS = []
 
-for page in PAGES.values():
-    if 'missing' in page:
-        LINKS.append(page['title'])
-
-print(LINKS)
+print(DATA)

@@ -13,6 +13,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
+* [API:Block](https://www.mediawiki.org/wiki/API:Block)
+  *  [block_user.py](python/block_user.py): block a user
+* [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
+  *  [get_blocked_users.py](python/get_blocked_users.py): get information about recent blocked users
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](python/get_users.py): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
@@ -20,8 +24,12 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:User group membership](https://www.mediawiki.org/wiki/API:User_group_membership)
   *  [userrights.py](python/userrights): add and remove user rights
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
-  * [get_my_watchlist_feed](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
-    * [get_user_watchlist_feed](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+  * [get_my_watchlist_feed.py](python/get_my_watchlist_feed.py): access an RSS feed of your own watchlist
+  * [get_user_watchlist_feed.py](python/get_user_watchlist_feed.py): access an RSS feed of another user's watchlist
+* [API:Options](https://www.mediawiki.org/wiki/API:Options)
+  * [change_user_options.py](python/change_user_options.py): change preferences of current user
+* [API:Emailuser](https://www.mediawiki.org/wiki/API:Emailuser)
+  *  [send_an_email.py](python/send_an_email.py): send an email to user
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -31,6 +39,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_category_items.py](python/get_category_items.py): list twenty items in a category
   *  [get_recent_category_items.py](python/get_recent_category_items.py): get the ten articles most recently added to a category
   *  [get_subcategories.py](python/get_subcategories.py): get ten subcategories of a category
+* [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
+  *  [get_category_info.py](python/get_category_info.py): get info about few categories
 * [API:Images](https://www.mediawiki.org/wiki/API:Images) 
   * [get_page_images.py](python/get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
@@ -40,6 +50,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [redirects.py](python/redirects.py): return redirects to the given page(s)
 * [API:Delete](https://www.mediawiki.org/wiki/API:Delete)
   *  [delete.py](python/delete.py): delete a page
+* [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
+  *  [get_deleted_revisions.py](python/get_deleted_revisions.py): list deleted revisions from a user
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](python/get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](python/get_filtered_page_revisions.py): get revision data of a page filtered by date and user
@@ -74,6 +86,26 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [watch.py](python/watch.py): add a page to your watchlist 
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
+* [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
+  * [get_exturlusage.py](python/get_exturlusage.py): enumerate pages that contain a given URL
+* [API:RecentChanges](https://www.mediawiki.org/wiki/API:RecentChanges)
+  * [get_recent_changes.py](python/get_recent_changes.py): get the three most recent changes with sizes and flags
+* [API:Querypage](https://www.mediawiki.org/wiki/API:Querypage)
+  * [get_querypage_list.py](python/get_querypage_list.py): List first 10 pages which are uncategorized
+* [API:SetPageLanguage](https://www.mediawiki.org/wiki/API:SetPageLanguage)
+  *  [set_page_language.py](python/set_page_language.py): change page language
+* [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
+  * [get_embedded_pages.py](python/get_embedded_pages.py): get all page(s) that embed a page
+* [API:Rollback](https://www.mediawiki.org/wiki/API:Rollback)
+  * [rollback.py](python/rollback.py): rollback the last edits made to a given page
+* [API:Allfileusages](https://www.mediawiki.org/wiki/API:Allfileusages)
+  * [get_allfileusages.py](python/get_allfileusages.py): list of all file usages
+* [API:Protect](https://www.mediawiki.org/wiki/API:Protect)
+  * [protect.py](python/protect.py): Change the protection level of a given page
+* [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
+  * [upload_file_directly.py](python/upload_file_directly.py): upload a file directly from the system
+  * [upload_file_from_url.py](python/upload_file_from_url.py): upload a file from a URL 
+  * [upload_file_in_chunks.py](python/upload_file_in_chunks.py): upload a file in chunks
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -94,16 +126,18 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
-* [Article suggestion](python/demos/article%20suggestion): 
-A sample app that uses MediaWiki Action API:Search allows you to pick a category and suggest articles to write on that don't yet exist on English Wikipedia. This app uses Flask and WTForms for rendering form.
-* [Nearby places viewer](python/demos/nearby%20places%20viewer): 
-Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
-* [Picture of the day viewer](python/demos/picture%20of%20the%20day%20viewer):
+* [Article ideas generator](python/demos/article-ideas-generator): 
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
+* [Nearby places viewer](python/demos/nearby-places-viewer): 
+Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
+* [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
+* [User Contributions](python/demos/UserContributions)
+A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
 ### Installation
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
+$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
 $ cd MediaWiki-Action-API-Code-Samples
 Install the necessary python modules with pip
 $ python3 name_of_the_file.py #Enter any credentials if required in the file
