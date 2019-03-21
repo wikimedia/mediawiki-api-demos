@@ -9,7 +9,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.py](python/logout.py): logout
 
-### Accounts and users 
+### Accounts and users
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](python/create_account.py): create an account on a wiki without any special authentication extensions
   *  [create_account_with_captcha.py](python/create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
@@ -41,7 +41,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_subcategories.py](python/get_subcategories.py): get ten subcategories of a category
 * [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
   *  [get_category_info.py](python/get_category_info.py): get info about few categories
-* [API:Images](https://www.mediawiki.org/wiki/API:Images) 
+* [API:Images](https://www.mediawiki.org/wiki/API:Images)
   * [get_page_images.py](python/get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
   *  [purge_two_pages.py](python/purge_two_pages.py): purge cache of two or more pages
@@ -65,7 +65,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit)
   * [edit.py](python/edit.py): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages)
-  * [get_allimages_by_date.py](python/get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_date.py](python/get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp
   * [get_allimages_by_name.py](python/get_allimages_by_name.py): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo)
   * [get_imageinfo.py](python/get_imageinfo.py) get information about an image file
@@ -83,7 +83,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Move](https://www.mediawiki.org/wiki/API:Move)
   * [move.py](python/move.py): move a page
 * [API:Watch](https://www.mediawiki.org/wiki/API:Watch)
-  * [watch.py](python/watch.py): add a page to your watchlist 
+  * [watch.py](python/watch.py): add a page to your watchlist
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](python/get_alllinks.py): list links to a namespace
 * [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
@@ -104,12 +104,11 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [protect.py](python/protect.py): Change the protection level of a given page
 * [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
   * [upload_file_directly.py](python/upload_file_directly.py): upload a file directly from the system
-  * [upload_file_from_url.py](python/upload_file_from_url.py): upload a file from a URL 
+  * [upload_file_from_url.py](python/upload_file_from_url.py): upload a file from a URL
   * [upload_file_in_chunks.py](python/upload_file_in_chunks.py): upload a file in chunks
-* [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
-  * [get_pagepropnames.py](python/get_pagepropnames.py): List all page property names in use on the wiki
-
-### Search 
+  * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
+    *  [get_pagepropnames.py](python/pagepropnames.py): List page property names on the given wiki
+### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](python/search.py): search for a title or a text
 * [API:Geosearch](https://www.mediawiki.org/wiki/API:Geosearch)
@@ -121,16 +120,16 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Prefixsearch](https://www.mediawiki.org/wiki/API:Prefixsearch)
   * [prefixsearch.py](python/prefixsearch.py): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
-  * [languagesearch.py](python/languagesearch.py): search for a language 
+  * [languagesearch.py](python/languagesearch.py): search for a language
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](python/paraminfo.py): get information about another action API module and its parameters
 
 ### Demo apps
-* [Article ideas generator](python/demos/article-ideas-generator): 
+* [Article ideas generator](python/demos/article-ideas-generator):
 Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
-* [Nearby places viewer](python/demos/nearby-places-viewer): 
+* [Nearby places viewer](python/demos/nearby-places-viewer):
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
 * [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.

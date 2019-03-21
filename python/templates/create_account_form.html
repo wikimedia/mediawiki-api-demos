@@ -11,7 +11,7 @@
       {% for field in fields %}
       <div class="form-field">
         <div class="label-field">{{ field['label'] }}</div>
-        <input type="{{ field['type'] }}" name="{{ field['name'] }}" value="{{ field['value'] }}">
+        <input type="{{ field['type'] }}" name="{{ field['name'] }}">
       </div>
       {% endfor %}
       <img src="{{ captcha }}">
