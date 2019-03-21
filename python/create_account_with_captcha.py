@@ -35,9 +35,8 @@ APP.config['SECRET_KEY'] = 'enter_your_secret_key'
 def show_form():
     """ Render form template and handle form submission request """
 
-    captcha_fields = get_captcha_fields()
-    captcha_url = TEST_WIKI_URL + captcha_fields['captchaInfo']['value']
-
+    form_fields = get_form_fields()
+    captcha_url = TEST_WIKI_URL + form_fields['captcha']['captchaInfo']['value']
     if request.method == 'POST':
         details = {
             'name': request.form['username'],
@@ -45,32 +44,40 @@ def show_form():
             'confirm_password': request.form['retype'],
             'email': request.form['email'],
             'captcha_word': request.form['captcha-word'],
-            'captcha_id': captcha_fields['captchaId']['value']}
+            'captcha_id': request.form['captcha-id']}
 
         create_account(details)
 
     register_fields = []
-    registration_fields = get_registration_fields()
-    for field_name in registration_fields:
+
+    for field_name in form_fields['reg_details']:
         field = {
             'name': field_name,
-            'type': registration_fields[field_name]['type'],
-            'label': registration_fields[field_name]['label']}
+            'type': form_fields['reg_details'][field_name]['type'],
+            'label': form_fields['reg_details'][field_name]['label']}
         register_fields.append(field)
 
     register_fields.append({
         'name': 'captcha-word',
         'type': 'text',
         'label': 'Enter the text you see on the image below'})
-
+    register_fields.append({
+        'name':'captcha-id',
+        'type':'hidden',
+        'value':form_fields['captcha']['captchaId']['value']})
+        
     return render_template(
         'create_account_form.html',
         captcha=captcha_url,
         fields=register_fields)
 
 
-def get_captcha_fields():
-    """ Fetch the captcha fields from `authmanagerinfo` module """
+def get_form_fields():
+    """ Fetch the form fields from `authmanagerinfo` module """
+
+    fields = {}
+
+    field_attributes = {}
 
     response = S.get(
         url=TEST_API_ENDPOINT,
@@ -87,12 +94,9 @@ def get_captcha_fields():
 
     for request_name in request_attribute:
         if request_name['account'] == 'CaptchaAuthenticationRequest':
-            return request_name and request_name['fields']
-    return None
-
-
-def get_registration_fields():
-    """ Fetch the registration form fields from `authmanagerinfo` module """
+            field_name = request_name and request_name['fields']
+            for name in field_name:
+                field_attributes[name] = field_name[name]
 
     response = S.get(
         url=MEDIA_API_ENDPOINT,
@@ -107,13 +111,18 @@ def get_registration_fields():
     authmanagerinfo = query and query['authmanagerinfo']
     request_attribute = authmanagerinfo and authmanagerinfo['requests']
 
-    fields = {}
+    fields['captcha'] = field_attributes
+
+    field_attributes = {}
 
     for request_name in request_attribute:
-        if request_name['id'] == 'MediaWiki\\Auth\\PasswordAuthenticationRequest' or request_name['id'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest':
+        if (request_name['id'] == 'MediaWiki\\Auth\\PasswordAuthenticationRequest' or
+                request_name['id'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest'):
             field_name = request_name and request_name['fields']
             for name in field_name:
-                fields[name] = field_name[name]
+                field_attributes[name] = field_name[name]
+
+    fields['reg_details'] = field_attributes
 
     return fields
 
