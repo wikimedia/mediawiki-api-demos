@@ -4,9 +4,12 @@
  MediaWiki Action API Code Samples
  Demo of `Edit` module: POST request to edit a page
  MIT license
-*/
+ */
+
+var fetch = require('node-fetch');
 var url = "https://test.wikipedia.org/w/api.php";
 url = url + "?";
+var cookie;
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -56,10 +59,8 @@ function loginRequest(login_token) {
             }
         })
         .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
+            var setCookie = response.headers.get('set-cookie');
+            cookie = setCookie.substr(0, setCookie.indexOf(';'));
             getCsrfToken();
         })
         .catch(function (error) {
@@ -82,6 +83,10 @@ function getCsrfToken() {
 
     fetch(query, {
             credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+                "Cookie": cookie,
+            }
         })
         .then(function (response) {
             return response.json();
@@ -109,7 +114,8 @@ function editRequest(csrf_token) {
             method: "POST",
             body: JSON.stringify(params_3),
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Cookie": cookie,
             }
         })
         .then(function (response) {
