@@ -6,8 +6,10 @@
  for the account making the request.
  MIT license
 */
+var fetch = require('node-fetch');
 var url = "https://test.wikipedia.org/w/api.php";
 url = url  + '?';
+var cookie;
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -54,6 +56,8 @@ function loginRequest(login_token) {
             }
         })
         .then(function () {
+            var setCookie = response.headers.get('set-cookie');
+            cookie = setCookie.substr(0, setCookie.indexOf(';'));
             getAccountFeed();
         })
         .catch(function (error) {
@@ -73,6 +77,10 @@ function getAccountFeed() {
     });
     fetch(query, {
             credentials: "include",
+            headers: {
+                "Content-Type": "application/json",
+                "Cookie": cookie,
+            }
         })
         .then(function (response) {
             return response.text();
