@@ -26,7 +26,7 @@ function getLoginToken() {
         query += "&" + key + "=" + params_1[key];
     });
 
-    request.get(query, (error, res, body) => {
+    request.get(query, function(error, res, body) {
         if (error) {
             console.error(error);
             return;
@@ -48,12 +48,12 @@ function loginRequest(login_token) {
         format: "json"
     };
     request.post({
-        url, 
+        url: url, 
         form: params_2,
-    }, (error, res, body) => {
+    }, function(error, res, body) {
         if (error) {
-            console.error(error)
-            return
+            console.error(error);
+            return;
         }
         getAccountFeed();
     });
@@ -69,7 +69,7 @@ function getAccountFeed() {
     Object.keys(params_3).forEach(function (key) {
         query += "&" + key + "=" + params_3[key];
     });
-    request.get(query, (error, res, body) => {
+    request.get(query, function(error, res, body) {
         if (error) {
             console.error(error);
             return;

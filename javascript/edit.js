@@ -26,7 +26,7 @@ function getLoginToken() {
         query += "&" + key + "=" + params_0[key];
     });
 
-    request.get(query, (error, res, body) => {
+    request.get(query, function (error, res, body) {
         if (error) {
             console.error(error);
             return;
@@ -49,12 +49,12 @@ function loginRequest(login_token) {
         format: "json"
     };
     request.post({
-        url, 
+        url: url, 
         form: params_1,
-    }, (error, res, body) => {
+    }, function (error, res, body) {
         if (error) {
-            console.error(error)
-            return
+            console.error(error);
+            return;
         }
         getCsrfToken();
     });
@@ -73,7 +73,7 @@ function getCsrfToken() {
         query += "&" + key + "=" + params_2[key];
     });
 
-    request.get(query, (error, res, body) => {
+    request.get(query, function(error, res, body) {
         if (error) {
             console.error(error);
             return;
@@ -94,12 +94,12 @@ function editRequest(csrf_token) {
     };
 
     request.post({
-        url, 
+        url: url, 
         form: params_3,
-    }, (error, res, body) => {
+    }, function (error, res, body) {
         if (error) {
-            console.error(error)
-            return
+            console.error(error);
+            return;
         }
         console.log(body);
     });
