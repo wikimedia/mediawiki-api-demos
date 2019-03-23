@@ -6,10 +6,10 @@
  MIT license
  */
 
-var fetch = require('node-fetch');
+var request = require('request');
+request = request.defaults({jar: true});
 var url = "https://test.wikipedia.org/w/api.php";
 url = url + "?";
-var cookie;
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -21,20 +21,19 @@ function getLoginToken() {
     };
 
     var query = url;
+
     Object.keys(params_0).forEach(function (key) {
         query += "&" + key + "=" + params_0[key];
     });
 
-    fetch(query)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            loginRequest(data.query.tokens.logintoken);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    request.get(query, (error, res, body) => {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        var data = JSON.parse(body);
+        loginRequest(data.query.tokens.logintoken);
+    });
 }
 
 // Step 2: POST Request to log in. 
@@ -49,23 +48,16 @@ function loginRequest(login_token) {
         lgtoken: login_token,
         format: "json"
     };
-
-    fetch(url, {
-            credentials: "include",
-            method: "POST",
-            body: JSON.stringify(params_1),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(function (response) {
-            var setCookie = response.headers.get('set-cookie');
-            cookie = setCookie.substr(0, setCookie.indexOf(';'));
-            getCsrfToken();
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    request.post({
+        url, 
+        form: params_1,
+    }, (error, res, body) => {
+        if (error) {
+            console.error(error)
+            return
+        }
+        getCsrfToken();
+    });
 }
 
 // Step 3: GET request to fetch CSRF token
@@ -81,22 +73,14 @@ function getCsrfToken() {
         query += "&" + key + "=" + params_2[key];
     });
 
-    fetch(query, {
-            credentials: "include",
-            headers: {
-                "Content-Type": "application/json",
-                "Cookie": cookie,
-            }
-        })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            editRequest(data.query.tokens.csrftoken);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    request.get(query, (error, res, body) => {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        var data = JSON.parse(body);
+        editRequest(data.query.tokens.csrftoken);
+    });
 }
 
 // Step 4: POST request to edit a page
@@ -109,24 +93,16 @@ function editRequest(csrf_token) {
         appendtext: "Hello"
     };
 
-    fetch(url, {
-            credentials: "include",
-            method: "POST",
-            body: JSON.stringify(params_3),
-            headers: {
-                "Content-Type": "application/json",
-                "Cookie": cookie,
-            }
-        })
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            console.log(data);
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    request.post({
+        url, 
+        form: params_3,
+    }, (error, res, body) => {
+        if (error) {
+            console.error(error)
+            return
+        }
+        console.log(body);
+    });
 }
 
 // Start From Step 1
