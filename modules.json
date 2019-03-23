@@ -164,6 +164,17 @@
 			"format": "json"
 		}
 	},
+    {
+        "filename": "get_category_info.py",
+        "docstring": "Demo of `Categoryinfo` module: Get information about a few categories",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "titles": "Albert|Category:Foo|Category:Infobox",
+            "prop": "categoryinfo"
+        }
+    },
 	{
 		"filename": "parse",
 		"docstring": "Demo of `Parse` module: Parse content of a page",
@@ -429,6 +440,7 @@
     	}
     },
     {
+
         "filename": "get_allrevisions",
         "docstring": "Demo of `Allrevision` module: Enumerate pages that contain a given URL.",
         "endpoint": "https://en.wikipedia.org/w/api.php",
@@ -439,5 +451,16 @@
 			    "arvprop": "ids|flags|timestamp",
 			    "arvuser": "Place holder"
         }
-     }
+     },
+
+        "filename": "get_pagepropnames",
+        "docstring": "Demo of `Pagepropnames` module: List page property names on the given wiki.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "pagepropnames",
+            "format": "json"
+        }
+    }
 ]
+    

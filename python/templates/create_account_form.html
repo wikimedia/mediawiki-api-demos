@@ -8,26 +8,12 @@
   <h2>Create MediaWiki Account</h2>
   <form method="POST">
     <div class="form-group">
+      {% for field in fields %}
       <div class="form-field">
-        <div class="label-field">Enter your username</div>
-        <input name="username">
+        <div class="label-field">{{ field['label'] }}</div>
+        <input type="{{ field['type'] }}" name="{{ field['name'] }}" value="{{ field['value'] }}">
       </div>
-      <div class="form-field">
-        <div class="label-field">Password</div>
-        <input type="password" name="password">
-      </div>
-      <div class="form-field">
-        <div class="label-field">Confirm password</div>
-        <input type="password" name="confirm-password">
-      </div>
-      <div class="form-field">
-        <div class="label-field">Enter address (optional)</div>
-        <input name="email">
-      </div>
-      <div class="form-field">
-        <div class="label-field">Enter the text you see on the image below</div>
-        <input name="captcha-word">
-      </div>
+      {% endfor %}
       <img src="{{ captcha }}">
     </div>
     <button type="submit" class="btn btn-success">Create your account</button>
