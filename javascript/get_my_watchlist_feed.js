@@ -6,10 +6,10 @@
  for the account making the request.
  MIT license
 */
-var fetch = require('node-fetch');
+var request = require('request');
+request = request.defaults({jar: true});
 var url = "https://test.wikipedia.org/w/api.php";
 url = url  + '?';
-var cookie;
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -26,14 +26,14 @@ function getLoginToken() {
         query += "&" + key + "=" + params_1[key];
     });
 
-    fetch(query)
-        .then(function (response) {
-            return response.json();
-        })
-        .then(function (data) {
-            loginRequest(data.query.tokens.logintoken);
-        });
-
+    request.get(query, (error, res, body) => {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        var data = JSON.parse(body);
+        loginRequest(data.query.tokens.logintoken);
+    });
 }
 
 // Step2: Send a post request to login. Use of main account for login is not
@@ -47,22 +47,16 @@ function loginRequest(login_token) {
         lgtoken: login_token,
         format: "json"
     };
-    fetch(url, {
-            credentials: "include",
-            method: "POST",
-            body: JSON.stringify(params_2),
-            headers: {
-                "Content-Type": "application/json"
-            }
-        })
-        .then(function () {
-            var setCookie = response.headers.get('set-cookie');
-            cookie = setCookie.substr(0, setCookie.indexOf(';'));
-            getAccountFeed();
-        })
-        .catch(function (error) {
-            console.log(error);
-        });
+    request.post({
+        url, 
+        form: params_2,
+    }, (error, res, body) => {
+        if (error) {
+            console.error(error)
+            return
+        }
+        getAccountFeed();
+    });
 }
 
 // Step 3: Request the account's own watchlist feed
@@ -75,19 +69,13 @@ function getAccountFeed() {
     Object.keys(params_3).forEach(function (key) {
         query += "&" + key + "=" + params_3[key];
     });
-    fetch(query, {
-            credentials: "include",
-            headers: {
-                "Content-Type": "application/json",
-                "Cookie": cookie,
-            }
-        })
-        .then(function (response) {
-            return response.text();
-        })
-        .then(function (data) {
-            console.log(data);
-        });
+    request.get(query, (error, res, body) => {
+        if (error) {
+            console.error(error);
+            return;
+        }
+        console.log(body);
+    });
 }
 
 // Start From Step 1
