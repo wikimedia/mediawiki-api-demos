@@ -1,3 +1,9 @@
+/*
+   watch.js
+    MediaWiki Action API Code Samples
+    Demo of `Watch` module: Add a page to your watchlist
+    MIT license
+*/
 
 //Function to convert the dictionary element as an encoded URL
 
