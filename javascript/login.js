@@ -1,4 +1,9 @@
-
+/*
+    login.js
+    MediaWiki Action API Code Samples
+    Demo of `Login` module: Sending post request to login
+    MIT license
+*/
 
 //Function to convert the dictionary element as an encoded URL
 
