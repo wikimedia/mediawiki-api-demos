@@ -1,15 +1,14 @@
-/**  
- edit.js
+/*  
+    edit.js
  
- MediaWiki Action API Code Samples
- Demo of `Edit` module: POST request to edit a page
- MIT license
- */
+    MediaWiki Action API Code Samples
+    Demo of `Edit` module: POST request to edit a page
 
-var request = require('request');
-request = request.defaults({jar: true});
-var url = "https://test.wikipedia.org/w/api.php";
-url = url + "?";
+    MIT license
+*/
+
+var request = require('request').defaults({jar: true}),
+    url = "https://test.wikipedia.org/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -20,7 +19,7 @@ function getLoginToken() {
         format: "json"
     };
 
-    var query = url;
+    var query = url + "?";
 
     Object.keys(params_0).forEach(function (key) {
         query += "&" + key + "=" + params_0[key];
@@ -28,7 +27,6 @@ function getLoginToken() {
 
     request.get(query, function (error, res, body) {
         if (error) {
-            console.error(error);
             return;
         }
         var data = JSON.parse(body);
@@ -43,17 +41,17 @@ function getLoginToken() {
 function loginRequest(login_token) {
     var params_1 = {
         action: "login",
-        lgname: "bot_user_name",
+        lgname: "bot_username",
         lgpassword: "bot_password",
         lgtoken: login_token,
         format: "json"
     };
+
     request.post({
         url: url, 
         form: params_1,
     }, function (error, res, body) {
         if (error) {
-            console.error(error);
             return;
         }
         getCsrfToken();
@@ -68,14 +66,14 @@ function getCsrfToken() {
         format: "json"
     };
 
-    var query = url;
+    var query = url + "?";
+
     Object.keys(params_2).forEach(function (key) {
         query += "&" + key + "=" + params_2[key];
     });
 
     request.get(query, function(error, res, body) {
         if (error) {
-            console.error(error);
             return;
         }
         var data = JSON.parse(body);
@@ -90,7 +88,7 @@ function editRequest(csrf_token) {
         title: "Sandbox",
         token: csrf_token,
         format: "json",
-        appendtext: "Hello"
+        appendtext: "test edit"
     };
 
     request.post({
@@ -98,7 +96,6 @@ function editRequest(csrf_token) {
         form: params_3,
     }, function (error, res, body) {
         if (error) {
-            console.error(error);
             return;
         }
         console.log(body);
