@@ -20,9 +20,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.py](get_users.py): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
-  *  [get_usercontribs.py](get_usercontribs): list user contributions
+  *  [get_usercontribs.py](get_usercontribs.py): list user contributions
 * [API:User group membership](https://www.mediawiki.org/wiki/API:User_group_membership)
-  *  [userrights.py](userrights): add and remove user rights
+  *  [userrights.py](userrights.py): add and remove user rights
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed.py](get_my_watchlist_feed.py): access an RSS feed of your own watchlist
   * [get_user_watchlist_feed.py](get_user_watchlist_feed.py): access an RSS feed of another user's watchlist

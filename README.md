@@ -20,7 +20,7 @@ Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) modu
 A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
 ### Contribute!
-This project welcomes contributions, and we try to be as newbie-friendly as possible. Checkout out the CONTRIBUTING file for more details.
+This project welcomes contributions, and we try to be as newbie-friendly as possible. Checkout the CONTRIBUTING file for more details.
 <!-- ```
 $ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
 $ cd MediaWiki-Action-API-Code-Samples

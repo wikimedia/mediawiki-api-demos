@@ -20,9 +20,9 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Users](https://www.mediawiki.org/wiki/API:Users)
   *  [get_users.js](get_users.js): get information about a list of users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
-  *  [get_usercontribs.js](get_usercontribs): list user contributions
+  *  [get_usercontribs.js](get_usercontribs.js): list user contributions
 * [API:User group membership](https://www.mediawiki.org/wiki/API:User_group_membership)
-  *  [userrights.js](userrights): add and remove user rights
+  *  [userrights.js](userrights.js): add and remove user rights
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed.js](get_my_watchlist_feed.js): access an RSS feed of your own watchlist
   * [get_user_watchlist_feed.js](get_user_watchlist_feed.js): access an RSS feed of another user's watchlist
