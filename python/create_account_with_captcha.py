@@ -18,11 +18,8 @@ import requests
 from flask import Flask, render_template, flash, request
 
 S = requests.Session()
-TEST_WIKI_URL = "https://test.wikipedia.org"
-TEST_API_ENDPOINT = TEST_WIKI_URL + "/w/api.php"
-
-MEDIA_WIKI_URL = "https://mediawiki.org"
-MEDIA_API_ENDPOINT = MEDIA_WIKI_URL + "/w/api.php"
+WIKI_URL = "https://test.wikipedia.org"
+API_ENDPOINT = WIKI_URL + "/w/api.php"
 
 # App config.
 DEBUG = True
@@ -36,36 +33,31 @@ def show_form():
     """ Render form template and handle form submission request """
 
     form_fields = get_form_fields()
-    captcha_url = TEST_WIKI_URL + form_fields['captcha']['captchaInfo']['value']
+    captcha_url = WIKI_URL + form_fields['captcha']['captchaInfo']['value']
+    captcha_id = form_fields['captcha']['captchaId']['value']
     if request.method == 'POST':
         details = {
             'name': request.form['username'],
             'password': request.form['password'],
             'confirm_password': request.form['retype'],
             'email': request.form['email'],
-            'captcha_word': request.form['captcha-word'],
-            'captcha_id': request.form['captcha-id']}
+            'captcha_word': request.form['captchaWord'],
+            'captcha_id': captcha_id}
 
         create_account(details)
 
     register_fields = []
 
-    for field_name in form_fields['reg_details']:
-        field = {
-            'name': field_name,
-            'type': form_fields['reg_details'][field_name]['type'],
-            'label': form_fields['reg_details'][field_name]['label']}
-        register_fields.append(field)
+    for field_type in form_fields:
+        for field_name in form_fields[field_type]:
+            field_values = form_fields[field_type][field_name]
+            if field_values['type'] != 'null' and field_values['type'] != 'hidden':
+                field = {
+                    'name': field_name,
+                    'type': field_values['type'],
+                    'label': field_values['label']}
+                register_fields.append(field)
 
-    register_fields.append({
-        'name': 'captcha-word',
-        'type': 'text',
-        'label': 'Enter the text you see on the image below'})
-    register_fields.append({
-        'name':'captcha-id',
-        'type':'hidden',
-        'value':form_fields['captcha']['captchaId']['value']})
-        
     return render_template(
         'create_account_form.html',
         captcha=captcha_url,
@@ -80,7 +72,7 @@ def get_form_fields():
     field_attributes = {}
 
     response = S.get(
-        url=TEST_API_ENDPOINT,
+        url=API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'authmanagerinfo',
@@ -92,29 +84,7 @@ def get_form_fields():
     authmanagerinfo = query and query['authmanagerinfo']
     request_attribute = authmanagerinfo and authmanagerinfo['requests']
 
-    for request_name in request_attribute:
-        if request_name['account'] == 'CaptchaAuthenticationRequest':
-            field_name = request_name and request_name['fields']
-            for name in field_name:
-                field_attributes[name] = field_name[name]
-
-    response = S.get(
-        url=MEDIA_API_ENDPOINT,
-        params={
-            'action': 'query',
-            'meta': 'authmanagerinfo',
-            'amirequestsfor': 'create',
-            'format': 'json'})
-
-    data = response.json()
-    query = data and data['query']
-    authmanagerinfo = query and query['authmanagerinfo']
-    request_attribute = authmanagerinfo and authmanagerinfo['requests']
-
-    fields['captcha'] = field_attributes
-
-    field_attributes = {}
-
+    # Get basic registration fields
     for request_name in request_attribute:
         if (request_name['id'] == 'MediaWiki\\Auth\\PasswordAuthenticationRequest' or
                 request_name['id'] == 'MediaWiki\\Auth\\UserDataAuthenticationRequest'):
@@ -123,6 +93,18 @@ def get_form_fields():
                 field_attributes[name] = field_name[name]
 
     fields['reg_details'] = field_attributes
+
+    field_attributes = {}
+
+    # Get captcha fields
+    for request_name in request_attribute:
+        if request_name['account'] == 'CaptchaAuthenticationRequest':
+            field_name = request_name and request_name['fields']
+            for name in field_name:
+                field_attributes[name] = field_name[name]
+
+    fields['captcha'] = field_attributes
+
 
     return fields
 
@@ -133,7 +115,7 @@ def create_account(details):
 
     createtoken = fetch_create_token()
 
-    response = S.post(url=TEST_API_ENDPOINT, data={
+    response = S.post(url=API_ENDPOINT, data={
         'action': 'createaccount',
         'createtoken': createtoken,
         'username': details['name'],
@@ -161,7 +143,7 @@ def fetch_create_token():
     """ Fetch create account token via `tokens` module """
 
     response = S.get(
-        url=TEST_API_ENDPOINT,
+        url=API_ENDPOINT,
         params={
             'action': 'query',
             'meta': 'tokens',
