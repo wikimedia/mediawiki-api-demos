@@ -8,8 +8,7 @@ Code snippets in several programming languages are developed to assist developer
 Currently, they are avialable in programming languages ```Python``` and ```Javascript```. The detailed documentation and code snippets of various API modules present in these languages can be found at
 * [Python](python/)
 * [Javascript](javascript/)
-
-* [Demo apps](pyhton/demos/)
+* [Demo apps](python/demos/)
     * [Article ideas generator](python/demos/article-ideas-generator): 
     Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
     * [Nearby places viewer](python/demos/nearby-places-viewer): 
