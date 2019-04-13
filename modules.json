@@ -2,7 +2,7 @@
 	{
 		"filename": "tokens",
 		"docstring": "Demo of `Token` module: Fetch token of type `login`",
-		"endpoint": "https://mediawiki.org/w/api.php",
+		"endpoint": "https://www.mediawiki.org/w/api.php",
 		"params": {
 			"action": "query",
 			"meta": "tokens",
@@ -188,7 +188,7 @@
 	{
 		"filename": "get_pages_revisions",
 		"docstring": "Demo of `Revisions` module: Get revision data with content for pages with titles [[API]] and [[Main Page]]",
-		"endpoint": "https://mediawiki.org/w/api.php",
+		"endpoint": "https://www.mediawiki.org/w/api.php",
 		"params": {
 			"action": "query",
 			"prop": "revisions",
@@ -202,7 +202,7 @@
 	{
 		"filename": "get_filtered_page_revisions",
 		"docstring": "Demo of `Revisions` module: Get data including content of last 5 revisions of the title [[API:Geosearch]] made after July 1st 2018 excluding changes made by the user SSethi (WMF)",
-		"endpoint": "https://mediawiki.org/w/api.php",
+		"endpoint": "https://www.mediawiki.org/w/api.php",
 		"params": {
 			"action": "query",
 			"prop": "revisions",
