@@ -5,7 +5,7 @@ The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a we
 
 Code snippets in several programming languages are developed to assist developers for easy use of various modules of the MediaWiki Action API's.
 
-Currently, they are avialable in programming languages ```Python``` and ```Javascript```. The detailed documentation and code snippets of various API modules present in these languages can be found at
+Currently, they are avialable in programming languages ```Python``` and ```Javascript```:
 * [Python](python/)
 * [Javascript](javascript/)
 * [Demo apps](python/demos/)

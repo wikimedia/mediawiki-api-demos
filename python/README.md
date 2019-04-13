@@ -1,5 +1,5 @@
 # Python
-Code snippets in Python demonstrating how to use various modules of the [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page)
+Code snippets and demo apps in Python demonstrating how to use various modules of the [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page)
 
 ### Authentication
 * [API:Tokens](https://www.mediawiki.org/wiki/API:Tokens)
