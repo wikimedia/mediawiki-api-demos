@@ -1,22 +1,21 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/MediaWiki_logo_1.png" height="300px" alt="MediaWiki"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/MediaWiki_logo_1.png" height="250px" alt="MediaWiki"/>
 
 # MediaWiki Action API Code Samples
 The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a web service that allows access to some wiki-features like authentication, page operations, and search. It can provide meta information about the wiki and the logged-in user.
 
-Code snippets in several programming languages are developed to assist developers for easy use of various modules of the MediaWiki Action API's.
-
-Currently, they are avialable in programming languages ```Python``` and ```Javascript```:
+Code snippets in several programming languages are developed to assist developers for easy use of various modules of the MediaWiki Action API's. Currently, they are available in programming languages:
 * [Python](python/)
 * [Javascript](javascript/)
-* [Demo apps](python/demos/)
-    * [Article ideas generator](python/demos/article-ideas-generator): 
-    Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
-    * [Nearby places viewer](python/demos/nearby-places-viewer): 
-    Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
-    * [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
-    Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
-    * [User Contributions](python/demos/UserContributions)
-    A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
+
+### [Demo apps](python/demos/)
+* [Article ideas generator](python/demos/article-ideas-generator):
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
+* [Nearby places viewer](python/demos/nearby-places-viewer):
+Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
+* [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
+Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
+* [User Contributions](python/demos/UserContributions)
+A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
 <!-- ### Contribute!
 This project welcomes contributions, and we try to be as newbie-friendly as possible. Checkout the CONTRIBUTING file for more details. -->
