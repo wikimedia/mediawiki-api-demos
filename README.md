@@ -7,14 +7,14 @@ This repository contains demo apps and code snippets in Python and Javascript to
 * [Python](python/)
 * [Javascript](javascript/)
 
-### Demo apps
-* [Article ideas generator](python/demos/article-ideas-generator):
+### Apps
+* [Article ideas generator](apps/article-ideas-generator):
 Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
-* [Nearby places viewer](python/demos/nearby-places-viewer):
+* [Nearby places viewer](apps/nearby-places-viewer):
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
-* [Picture of the day viewer](python/demos/picture-of-the-day-viewer):
+* [Picture of the day viewer](apps/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
-* [User Contributions](python/demos/UserContributions)
+* [User Contributions](apps/UserContributions)
 A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
 ### Installation
