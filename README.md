@@ -1,13 +1,13 @@
-<img src="https://upload.wikimedia.org/wikipedia/commons/a/a3/MediaWiki_logo_1.png" height="250px" alt="MediaWiki"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/MediaWiki-notext.svg/500px-MediaWiki-notext.svg.png" height="200px" alt="MediaWiki"/>
 
 # MediaWiki Action API Code Samples
 The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a web service that allows access to some wiki-features like authentication, page operations, and search. It can provide meta information about the wiki and the logged-in user.
 
-Code snippets in several programming languages are developed to assist developers for easy use of various modules of the MediaWiki Action API's. Currently, they are available in programming languages:
+This repository contains demo apps and code snippets in Python and Javascript to assist developers for easy use of various modules of the API: 
 * [Python](python/)
 * [Javascript](javascript/)
 
-### [Demo apps](python/demos/)
+### Demo apps
 * [Article ideas generator](python/demos/article-ideas-generator):
 Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
 * [Nearby places viewer](python/demos/nearby-places-viewer):
@@ -17,8 +17,6 @@ Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) modu
 * [User Contributions](python/demos/UserContributions)
 A sample app that uses MediaWiki Action [API:Usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) allows you to see the latest top 50 edits made by a user. This app uses Flask Framework as backend.
 
-<!-- ### Contribute!
-This project welcomes contributions, and we try to be as newbie-friendly as possible. Checkout the CONTRIBUTING file for more details. -->
 ### Installation
 ```
 $ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
@@ -28,7 +26,7 @@ $ python3 name_of_the_file.py #Enter any credentials if required in the file
 ```
 
 ### Contributing code samples
-First, propose an idea for a code sample, demo app, etc. by creating an issue around it in the repository. After discussing your idea with the repo contributors, start working, and then send a pull request, when you've your changes ready to be accepted/ merged! You can autogenerate python files for GET Requests demos where feasible by following the instructions below:
+First, propose an idea for a code sample, demo app, etc. by creating an issue around it in the repository. After discussing your idea with the repo contributors, start working, and then send a pull request, when you've your changes ready to be accepted/ merged! You can autogenerate python and javascript files for GET Requests demos where feasible by following the instructions below:
 ```
 $ cd MediaWiki-Action-API-Code-Samples
 $ Add module information to `modules.json`
