@@ -43,12 +43,12 @@ def make_file():
     """ Generate a file... """
     code = CodeGeneratorBackend(tab="    ")
 
-    file = open('../modules.json', 'r')
+    file = open('modules.json', 'r')
     modules = json.load(file)
     file.close()
 
     for module in modules:
-        python_file_name = module['filename'] + '.py'
+        python_file_name = 'python/' + module['filename'] + '.py'
         file = pathlib.Path(python_file_name)
 
         if file.exists():
@@ -95,14 +95,14 @@ def make_javascript_file():
     """ Generate a file... """
     code = CodeGeneratorBackend(tab="    ")
 
-    file = open('../modules.json', 'r')
+    file = open('modules.json', 'r')
     modules = json.load(file)
     file.close()
 
     for module in modules:
         javascript_file_name = module['filename'].split('.',1)
         javascript_file_name = javascript_file_name[0] + '.js'
-        file = pathlib.Path('../javascript/'+javascript_file_name)
+        file = pathlib.Path('javascript/' + javascript_file_name)
 
         if file.exists():
             print('`' + javascript_file_name + "`: already exists, cannot re-write!")
@@ -139,7 +139,7 @@ def make_javascript_file():
             code.write('.catch(function(error){console.log(error);});\n')
             code.dedent()
 
-            file = open('../javascript/'+javascript_file_name, 'w')
+            file = open('javascript/' + javascript_file_name, 'w')
             file.write(code.end())
             file.close()
 
@@ -147,4 +147,4 @@ def make_javascript_file():
 
 if __name__ == '__main__':
     make_file()
-    make_javascript_file()
+    #make_javascript_file()
