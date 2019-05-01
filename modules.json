@@ -165,7 +165,7 @@
 		}
 	},
     {
-        "filename": "get_category_info.py",
+        "filename": "get_category_info",
         "docstring": "Demo of `Categoryinfo` module: Get information about a few categories",
         "endpoint": "https://en.wikipedia.org/w/api.php",
         "params": {
