@@ -5,14 +5,13 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Tokens](https://www.mediawiki.org/wiki/API:Tokens)
   * [tokens.py](tokens.py): get tokens for data modifying operations
 * [API:Login](https://www.mediawiki.org/wiki/API:Login)
-  * [login.py](login.py) & [clientlogin.py](clientlogin.py): login
+  * [login.py](login.py): login
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.py](logout.py): logout
 
 ### Accounts and users 
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](create_account.py): create an account on a wiki without any special authentication extensions
-  *  [create_account_with_captcha.py](create_account_with_captcha.py): create an account on a wiki with a captcha enabling extension installed
 * [API:Block](https://www.mediawiki.org/wiki/API:Block)
   *  [block_user.py](block_user.py): block a user
 * [API:Blocks](https://www.mediawiki.org/wiki/API:Blocks)
