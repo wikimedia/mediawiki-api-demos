@@ -17,7 +17,7 @@ import requests
 
 S = requests.Session()
 
-URL = "https://mediawiki.org/w/api.php"
+URL = "https://www.mediawiki.org/w/api.php"
 
 PARAMS = {
     "action": "query",

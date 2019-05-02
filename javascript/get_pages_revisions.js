@@ -9,7 +9,7 @@
     MIT License
 */
 
-var url = "https://mediawiki.org/w/api.php"; 
+var url = "https://www.mediawiki.org/w/api.php";
 
 var params = {
     action: "query",
