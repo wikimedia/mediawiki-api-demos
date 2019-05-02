@@ -35,7 +35,7 @@ Note: Install any necessary node modules with npm and enter any credentials requ
 in the file to run the sample code
 ```
 
-### Contributing code samples
+### Contributing code samples or demo apps
 If you would like to contribute a demo that you have built or a sample code that you have identified as missing for an API module documentation on MediaWiki.org, first create an issue in this repository. 
 
 If the repo contributors or maintainers agree that the proposed sample code or demo app would be a useful addition to this repository, go ahead and start working on the issue. Send a pull request when you have your changes ready to be accepted or merged! 
