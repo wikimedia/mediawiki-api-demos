@@ -429,6 +429,19 @@
     	}
     },
     {
+
+        "filename": "get_allrevisions",
+        "docstring": "Demo of `Allrevisions` module: get revision data of multiple pages and users",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+	    	"action": "query",
+		    "format": "json",
+		    "list": "allrevisions",
+		    "arvprop": "ids|flags|timestamp",
+		    "arvuser": "Place holder"
+        }
+    },
+    {
         "filename": "get_pagepropnames",
         "docstring": "Demo of `Pagepropnames` module: List page property names on the given wiki.",
         "endpoint": "https://en.wikipedia.org/w/api.php",
@@ -439,4 +452,3 @@
         }
     }
 ]
-    
