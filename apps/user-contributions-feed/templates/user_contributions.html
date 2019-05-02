@@ -1,68 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8" content="width=device-width, initial-scale=1.0" name="viewport">
+<title>User contributions feed</title>
 
-    <!-- Page title -->
-    <title>User Contributions - Demo app</title>
+<link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Amatic+SC:700">
+<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
+<div class="container feed-container col-lg-4 shadow p-3 mb-5 bg-white rounded">
+  <h1>User contributions feed</h1>
 
-    <!-- Custom CSS -->
-    <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
-</head>
-<body>
-<div class="container col-lg-4">
-
-    <div>
-        <h1 class="title-heading">User Contributions</h1>
+  <form action="{{ url_for('index') }}" method="get">
+    <div class="form-group flex-container">
+      <input class="form-control col-lg-8" placeholder="Enter a username" name="username" required type="text" {% if username is not none %} value="{{username}}" {% endif %}>
     </div>
-
-    <!-- Form to get username -->
-    <form action="{{ url_for('index') }}" method="get">
-        <div class="form-group">
-            <label class="control-label">Username:</label>
-            <input class="form-control" name="username" required type="text" {% if username is not none %} value="{{username}}" {% endif %}>
-        </div>
-        <button class="btn btn-info btn-lg" type="submit">Submit</button>
-    </form>
-
-    <br/>
-
-    <!-- Check whether the data is defined or not -->
-    {% if data is not none and data != [] %}
-    <h2>Edits</h2>
-    <hr/>
-    <ul class="list-group">
-
-        <!-- Iterate the data list -->
-        {% for edits in data %}
-
-        <li class="list-group-item">
-
-            <!-- Create diff link -->
-            (<a href="{{wikiurl}}/w/index.php?title={{edits['title'] }}&diff={{ edits['revid'] }}&oldid={{ edits['parentid'] }}">Diff</a>)
-            . .
-
-            <!-- Put diff changes size -->
-            ( {{ edits['sizediff'] }} bytes ) . .
-
-            <!-- Create page link -->
-            <a href="{{wikiurl}}/wiki/{{edits['title'] }}">{{ edits["title"] }}</a>
-        </li>
-
-        {% endfor %}
-    </ul>
-
-    {% elif data == [] %}
-
-    <!-- Display a error message if user is not exist -->
-    <div class="alert alert-danger">
-        User <strong>{{username}}</strong> not found.
+    <div class="flex-container">
+      <button class="btn-submit col-xs-5" type="submit">Submit</button>
     </div>
+  </form>
 
-    {% endif %}
+  {% if data is not none and data != [] %}
+  <ul class="list-group">
+   {% for edits in data %}
+    <li class="list-group-item">
+    (<a href="{{wikiurl}}/w/index.php?title={{edits['title'] }}&diff={{ edits['revid'] }}&oldid={{ edits['parentid'] }}">Diff</a>)
+    . . ( {{ edits['sizediff'] }} bytes ) . .
+    <a href="{{wikiurl}}/wiki/{{edits['title'] }}">{{ edits["title"] }}</a>
+    {% endfor %}
+  </ul>
+  {% elif data == [] %}
+  <div class="flex-container">
+    <h5>OOPS! User <strong>{{username}}</strong> not found</h5>
+  </div>
+  {% endif %}
 </div>
-</body>
-</html>

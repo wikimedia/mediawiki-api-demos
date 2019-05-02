@@ -1,3 +1,48 @@
-.title-heading {
+.feed-container {
+	margin-top: 50px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+h1 {
     font-family: 'Amatic SC', cursive;
+    font-size: 2.5em;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+}
+
+h5 {
+	color: #17a2b8;
+	font-size: 14px;
+}
+
+.form-group {
+	margin-top: 20px;
+}
+
+.btn-submit {
+	font-size: 16px;
+    padding: 10px 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border-radius: 4px;
+    background-color: #17a2b8;
+}
+
+.list-group {
+	font-size: 12px; 
+}
+
+.list-group a {
+	color: #17a2b8;
+}
+
+.list-group-item {
+	border: none;
 }
