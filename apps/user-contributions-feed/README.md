@@ -5,8 +5,8 @@ Install
 -------
 
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
-$ cd MediaWiki-Action-API-Code-Samples/python/demos/UserContributions
+$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples.git
+$ cd MediaWiki-Action-API-Code-Samples/apps/user-contributions-feed
 $ pip install flask requests
 $ python3 app.py
 ```
