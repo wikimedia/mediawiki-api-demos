@@ -5,8 +5,8 @@ Geo search for wiki pages near your location using the [Geolocation API](https:/
 Install
 -------
 ```
-$ git clone https://github.com/srish/MediaWiki_Action_API_Code_Samples
-$ cd MediaWiki-Action-API-Code-Samples/python/demos/nearby-places-viewer
+$ git clone https://github.com/srish/mediawiki-api-demos
+$ cd mediawiki-api-demos/python/demos/nearby-places-viewer
 Install the necessary python modules with pip
 $ python3 nearby.py
 ```

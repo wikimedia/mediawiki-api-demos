@@ -5,8 +5,8 @@ Install
 -------
 
 ```
-$ git clone https://github.com/wikimedia/MediaWiki-Action-API-Code-Samples
-$ cd MediaWiki-Action-API-Code-Samples/python/demos/article ideas generator
+$ git clone https://github.com/wikimedia/mediawiki-api-demos
+$ cd mediawiki-api-demos/python/demos/article-ideas-generator
 $ pip install flask
 Install the necessary python modules with pip
 $ python3 articles.py
