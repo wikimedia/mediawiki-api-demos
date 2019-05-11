@@ -1,0 +1,50 @@
+[
+	{
+		"title": "Nearby places viewer",
+		"thumbnail": "static/nearby_places_viewer.png",
+		"description": "Geo search for wiki pages near your location",
+		"modules": ["geosearch"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/nearby-places-viewer",
+		"owner": "srish"
+	},
+	{
+		"title": "Picture of the day viewer",
+		"thumbnail": "static/picture_of_the_day_viewer.png",
+		"description": "Display Wikipedia's picture of the day",
+		"modules": ["image", "imageinfo"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/picture-of-the-day-viewer",
+		"owner": "martyav"
+	},
+	{
+		"title": "User contributions feed",
+		"thumbnail": "static/user_contributions_feed.png",
+		"description": "Fetches top 50 edits made by a user",
+		"modules": ["usercontribs"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"owner": "Jayprakash-SE"
+	},
+	{
+		"title": "Article ideas generator",
+		"thumbnail": "static/article_ideas_generator.png",
+		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
+		"modules": ["parse", "links"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"owner": "srish"
+	},
+	{
+		"title": "Account creation",
+		"thumbnail": "static/create_account_with_captcha.png",
+		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
+		"modules": ["tokens", "authmanagerinfo", "createaccount"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/create-account-with-captcha",
+		"owner": "srish"
+	},
+	{
+		"title": "Client login",
+		"thumbnail": "static/create_login.png",
+		"description": "Allows logging-in on a wiki",
+		"modules": ["tokens", "login"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
+		"owner": "srish"
+	}
+]
