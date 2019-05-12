@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    create_account_with_captcha.py
+    app.py
 
     MediaWiki API Demos
     Demo of `createaccount` module: Create an account on a wiki with a special
@@ -98,7 +98,7 @@ def create_account(form, captcha_id):
         'password': form['password'],
         'retype': form['retype'],
         'email': form['email'],
-        'createreturnurl': 'http://127.0.0.1:5000/',
+        'createreturnurl': 'http://127.0.0.1:5000/', #Change url for production
         'captchaId': captcha_id,
         'captchaWord': form['captchaWord'],
         'format': 'json'
@@ -128,5 +128,6 @@ def fetch_create_token():
     return data['query']['tokens']['createaccounttoken']
 
 
+""" Commment these two lines for deployment in Toolforge """
 if __name__ == "__main__":
     APP.run()

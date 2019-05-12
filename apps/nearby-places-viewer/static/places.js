@@ -22,7 +22,7 @@ $( document ).ready(function() {
 		};
 
 		$.ajax({
-			url: "/",
+			url: "/", //Change this to /toolname/ for deployment in Toolforge
 			type: "POST",
 			data: JSON.stringify(data),
 			contentType: "application/json",

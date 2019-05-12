@@ -1,8 +1,10 @@
 <title>Article ideas generator</title>
 
+<!-- Download the two files locally in the static folder for deployment in Toolforge -->
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Amatic+SC:700">
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans">
-<link rel="stylesheet" href="/static/style.css">
+
+<link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
 <div>
   <h1>Article ideas generator</h1>
@@ -13,18 +15,24 @@
     </a>
     <br>
   {% endfor %}
-  <button onclick="location.href='/'">Take me to the homepage</button>
+
+  <!-- Change action url from / to /toolname/ for deployment in Toolforge -->
+  <a href="/"><button>Take me to the homepage</button></a>
   {% else %}
   {% if results %}
   <p>Choose a {{ pagetype }}</p>
-  <form method="POST">
+
+  <!-- Change action url from / to /toolname/ for deployment in Toolforge -->
+  <form action="/" method="POST">
     {% for pagename in results %}
     <button name="{{ pagetype }}" class="{{ pagetype }}" value="{{ pagename }}">{{ pagename }}</button>
   {% endfor %}
   {% else %}
   <p>Ooooops! We couldn't find any results.</p>
-  <button onclick="location.href='/'">Start over</button>
   </form>
+
+  <!-- Change action url from / to /toolname/ for deployment in Toolforge -->
+  <a href="/"><button>Start over</button></a>
   {% endif %}
   {% endif %}
 </div>

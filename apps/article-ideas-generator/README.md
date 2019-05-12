@@ -6,10 +6,10 @@ Install
 
 ```
 $ git clone https://github.com/wikimedia/mediawiki-api-demos
-$ cd mediawiki-api-demos/python/demos/article-ideas-generator
-$ pip install flask
+$ cd mediawiki-api-demos/apps/article-ideas-generator
+$ pip install -r requirements.txt
 Install the necessary python modules with pip
-$ python3 articles.py
+$ python3 app.py
 ```
 
 Screenshots

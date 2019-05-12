@@ -113,6 +113,6 @@ def fetch_image_src(filename):
 
     return image_url
 
-
+""" Commment these two lines for deployment in Toolforge """
 if __name__ == "__main__":
     APP.run()

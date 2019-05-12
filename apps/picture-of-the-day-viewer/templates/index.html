@@ -2,7 +2,7 @@
 <html lang="en">
   <meta charset="utf-8">
   <title>Picture of the Day</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
   <main>
     <h1>Picture of the day:</h1>
@@ -19,6 +19,7 @@
       <div class="date-container">
         <time class="current-date">{{ data.date.strftime("%d %B %Y") }}</time>
         <div class="date-navigator">
+          <!-- Change action url from / to /toolname/ for deployment in Toolforge -->
           <form action="/" method="POST">
             {% if data.date.strftime("%d %B %Y") == "14 May 2004" %}
             <input type="submit" name="change_date" value="← Back" disabled>

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    articles.py
+    app.py
 
     MediaWiki API Demos
 
@@ -97,6 +97,6 @@ def get_red_links(title):
 
     return links
 
-
+""" Commment these two lines for deployment in Toolforge """
 if __name__ == '__main__':
     APP.run()

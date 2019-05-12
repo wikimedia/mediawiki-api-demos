@@ -4,8 +4,9 @@ A sample app that uses MediaWiki Action API's [Image](https://www.mediawiki.org/
 ## Install
 
 ```
-$ git clone https://github.com/srish/mediawiki-api-demos
-$ cd mediawiki-api-demos/python/demos/picture-of-the-day-viewer
+$ git clone https://github.com/wikimedia/mediawiki-api-demos
+$ cd mediawiki-api-demos/apps/picture-of-the-day-viewer
+$ pip install -r requirements.txt
 Install the necessary python modules with pip 
 $ python3 app.py
 ```

@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    nearby.py
+    app.py
 
     MediaWiki API Demos
 
@@ -77,5 +77,6 @@ def fetch_places_nearby(lat, lon):
 
     return results
 
+""" Commment these two lines for deployment in Toolforge """
 if __name__ == '__main__':
     APP.run(debug=True)
