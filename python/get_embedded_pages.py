@@ -5,7 +5,7 @@
 """
     get_embedded_lists.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Embeddedin` module: Get all page(s) that
     embed a given page
 

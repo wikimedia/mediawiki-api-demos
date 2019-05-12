@@ -3,7 +3,7 @@
 """
     create_account.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `createaccount` module: Create an account on a wiki without the 
     special authentication extensions
 

@@ -3,7 +3,7 @@
 """
     edit.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Edit` module: POST request to edit a page
     MIT license
 """

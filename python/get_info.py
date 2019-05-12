@@ -5,7 +5,7 @@
 """
     get_info.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Info` module: Send a GET request to display information about a page.
 
     MIT License

@@ -3,7 +3,7 @@
 """
     send_email.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Emailuser` module: sending POST request to send email to wiki user
 
     MIT license

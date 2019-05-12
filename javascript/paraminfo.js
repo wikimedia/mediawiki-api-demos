@@ -3,7 +3,7 @@
 /*
     paraminfo.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Paraminfo` module: Get information about other action API modules and their parameters.
 
     MIT License

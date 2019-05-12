@@ -3,7 +3,7 @@
 /*
     get_deleted_revisions.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Deletedrevs` module: List the six most recent deleted revisions from User:Catrope
 
     MIT License

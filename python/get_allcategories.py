@@ -5,7 +5,7 @@
 """
     get_allcategories.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Allcategories` module: Get all categories, starting from a
     certain point, as ordered by category title.
 

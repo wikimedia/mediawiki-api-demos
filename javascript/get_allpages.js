@@ -3,7 +3,7 @@
 /*
     get_allpages.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Allpages` module: Get all pages whose title contains the text "Jungle," in whole or part.
 
     MIT License

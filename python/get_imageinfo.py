@@ -5,7 +5,7 @@
 """
     get_imageinfo.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Imageinfo` module: Get information about an image file.
 
     MIT License

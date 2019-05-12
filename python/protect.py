@@ -3,7 +3,7 @@
 """
     protect.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Protect` module: Demo to change the edit protection
     level of a given page.
 

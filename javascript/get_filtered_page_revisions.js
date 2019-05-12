@@ -3,7 +3,7 @@
 /*
     get_filtered_page_revisions.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Revisions` module: Get data including content of last 5 revisions of the title [[API:Geosearch]] made after July 1st 2018 excluding changes made by the user SSethi (WMF)
 
     MIT License

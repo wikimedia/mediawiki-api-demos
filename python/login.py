@@ -3,7 +3,7 @@
 """
     login.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Login` module: Sending post request to login
     MIT license
 """

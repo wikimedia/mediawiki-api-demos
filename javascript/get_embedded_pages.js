@@ -3,7 +3,7 @@
 /*
     get_embedded_pages.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Embeddedin` module: Get all page(s) that embed a given page
 
     MIT License

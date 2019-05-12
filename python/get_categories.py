@@ -5,7 +5,7 @@
 """
     get_categories.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Categories` module: Get categories associated with a page.
 
     MIT License

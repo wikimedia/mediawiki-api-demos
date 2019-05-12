@@ -3,7 +3,7 @@
 /*
     get_allusers.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Allusers` module: Get all users, starting from those whose name begins with the string, 'Drov'.
 
     MIT License

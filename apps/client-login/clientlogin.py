@@ -3,7 +3,7 @@
 """
     clientlogin.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `clientlogin` module: Sending post request to login
 
     This demo app uses Flask (a Python web development framework).

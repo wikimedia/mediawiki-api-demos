@@ -3,7 +3,7 @@
 /*
     geosearch.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Geosearch` module: Search for wiki pages nearby
 
     MIT License

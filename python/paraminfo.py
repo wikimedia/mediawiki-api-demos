@@ -5,7 +5,7 @@
 """
     paraminfo.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Paraminfo` module: Obtain information about other modules.
 
     MIT License

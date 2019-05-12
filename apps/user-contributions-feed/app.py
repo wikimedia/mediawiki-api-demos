@@ -3,7 +3,7 @@
 """
     app.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
 
     User contributions feed app: Demp app that uses `list=usercontribs` module
     to fetch the top 50 edits made by a user

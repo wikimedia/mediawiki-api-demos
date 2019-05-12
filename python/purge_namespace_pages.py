@@ -3,7 +3,7 @@
 """
     purge_namespace_pages.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `purge` module: Sending post request to purge first 10 pages in the main namespace
     MIT license
 """

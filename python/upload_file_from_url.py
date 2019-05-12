@@ -1,7 +1,7 @@
 """
     upload_file_from_url.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Upload` module: Post request to upload a file from a URL
 
     MIT license

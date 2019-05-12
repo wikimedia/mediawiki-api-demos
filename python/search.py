@@ -5,7 +5,7 @@
 """
     search.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Search` module: Search for a text or title
 
     MIT License

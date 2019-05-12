@@ -5,7 +5,7 @@
 """
     get_allimages_by_date.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     List all images in the namespace, starting from January 1, 2010,
     at 18:05:46 UTC.
 

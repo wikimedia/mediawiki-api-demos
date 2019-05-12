@@ -3,7 +3,7 @@
 """
     get_my_watchlist_feed.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Feedwatchlist` module: Get the watchlist feed 
     for the account making the request.
     MIT license

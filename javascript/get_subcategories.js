@@ -3,7 +3,7 @@
 /*
     get_subcategories.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Categorymembers` module : Get ten subcategories of a category
 
     MIT License

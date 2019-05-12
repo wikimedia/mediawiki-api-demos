@@ -5,7 +5,7 @@
 """
     get_redirects.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Redirects` module: Get all redirects to the given page(s)
 
     MIT License

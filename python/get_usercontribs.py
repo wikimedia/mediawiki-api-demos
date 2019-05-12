@@ -5,7 +5,7 @@
 """
     get_usercontribs.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Usercontribs` module: List user contributions.
 
     MIT License

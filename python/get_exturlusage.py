@@ -5,7 +5,7 @@
 """
     get_exturlusage.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Exturlusage` module: Enumerate pages that contain a given URL.
 
     MIT License

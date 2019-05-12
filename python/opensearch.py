@@ -5,7 +5,7 @@
 """
     opensearch.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Opensearch` module: Search the wiki and obtain
 	results in an OpenSearch (http://www.opensearch.org) format
 

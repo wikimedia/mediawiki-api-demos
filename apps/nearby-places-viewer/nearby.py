@@ -3,7 +3,7 @@
 """
     nearby.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
 
     Nearby places viewer app: Demo of geo search for wiki pages near a location using
     the Geolocation API and MediaWiki Action API's Geosearch module.

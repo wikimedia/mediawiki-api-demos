@@ -3,7 +3,7 @@
 /*
     get_recent_category_items.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Categorymembers` module : Get the ten articles most recently added to a category
 
     MIT License

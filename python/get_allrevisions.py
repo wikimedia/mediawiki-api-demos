@@ -5,7 +5,7 @@
 """
     get_allrevisions.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Allrevisions` module: get revision data of multiple pages and users
 
     MIT License

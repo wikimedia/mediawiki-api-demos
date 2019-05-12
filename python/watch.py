@@ -3,7 +3,7 @@
 """
     watch.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Watch` module: Add a page to your watchlist
     MIT license
 """

@@ -5,7 +5,7 @@
 """
     get_category_items.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Categorymembers` module : List twenty items in a category
 
     MIT License

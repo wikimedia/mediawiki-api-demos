@@ -5,7 +5,7 @@
 """
     prefixsearch.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Prefixsearch` module: Perform a prefix search for page titles
 
     MIT License

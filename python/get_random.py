@@ -5,7 +5,7 @@
 """
     get_random.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Random` module: Get request to list 5 random pages.
 
     MIT License

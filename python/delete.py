@@ -3,7 +3,7 @@
 """
     delete.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Delete` module: post request to delete a page
     MIT license
 """

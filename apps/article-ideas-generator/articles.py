@@ -3,7 +3,7 @@
 """
     articles.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
 
     Article ideas generator app: suggests articles from various categories
     that don't yet exist on English Wikipedia. The app uses action=parse module

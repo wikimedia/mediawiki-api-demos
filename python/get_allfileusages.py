@@ -5,7 +5,7 @@
 """
     get_allfileusages.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `allfileusage` module: List all file usages, including non-existing
 
     MIT License

@@ -5,7 +5,7 @@
 """
     get_red_links.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Links` module to identify red or missing links on a page.
 
     MIT License

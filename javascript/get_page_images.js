@@ -3,7 +3,7 @@
 /*
     get_page_images.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Images` module: Send a GET request to obtain a JSON
 	object listing all of the image files embedded on a single page
 

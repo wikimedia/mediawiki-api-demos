@@ -1,6 +1,6 @@
 """
     app.py
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
 
     Fetches Wikipedia Picture of the Day (POTD) and displays it on a webpage.
     Also allows users to go backward or forward a date to view other POTD.

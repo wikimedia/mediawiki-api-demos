@@ -1,7 +1,7 @@
 """
     upload_file_in_chunks.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Upload` module: Step-by-step process to upload a file in chunks
 
     MIT license

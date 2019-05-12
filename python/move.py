@@ -3,7 +3,7 @@
 """
     move.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Move` module: Move a page with its
     talk page, leaving a redirect behind.
     MIT license

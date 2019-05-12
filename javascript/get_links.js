@@ -3,7 +3,7 @@
 /*
     get_links.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Links` module: Get all links on the given page(s)
 
     MIT License

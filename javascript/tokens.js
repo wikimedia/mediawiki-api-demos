@@ -3,7 +3,7 @@
 /*
     tokens.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Token` module: Fetch token of type `login`
 
     MIT License

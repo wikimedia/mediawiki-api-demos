@@ -3,7 +3,7 @@
 /*
     languagesearch.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Languagesearch` module: Search for a language in any language
 
     MIT License

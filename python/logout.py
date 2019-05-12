@@ -5,7 +5,7 @@
 """
     logout.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Logout` module: Log out and clear session data.
 
     MIT License

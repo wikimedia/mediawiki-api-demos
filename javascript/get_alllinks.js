@@ -3,7 +3,7 @@
 /*
     get_alllinks.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Alllinks` module: List links pointing to the given namespace.
 
     MIT License

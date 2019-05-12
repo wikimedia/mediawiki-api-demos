@@ -5,7 +5,7 @@
 """
     get_backlinks.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Backlinks` module: Get request to list pages which link to a certain page.
 
     MIT License

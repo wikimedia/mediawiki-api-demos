@@ -3,7 +3,7 @@
 """
     parse_wikitable.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Parse` module: Parse a section of a page, fetch its table data and save
     it to a CSV file
 

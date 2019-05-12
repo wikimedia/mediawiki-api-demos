@@ -5,7 +5,7 @@
 """
     get_blocked_users.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Blocks` module: GET request to list recent blocked users
 
     MIT License

@@ -3,7 +3,7 @@
 /*
     get_allcategories.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Allcategories` module: Get all categories, starting from a certian point, as ordered by category title.
 
     MIT License

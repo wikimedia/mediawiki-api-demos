@@ -5,7 +5,7 @@
 """
     get_pagepropnames.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Pagepropnames` module: List page property names on the given wiki.
 
     MIT License

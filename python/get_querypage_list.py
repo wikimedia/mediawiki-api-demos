@@ -5,7 +5,7 @@
 """
     get_querypage_list.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Querypage` module: List first 10 pages which are uncategorized
 
     MIT License

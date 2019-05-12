@@ -1,7 +1,7 @@
 """
     upload_file_directly.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Upload` module: Sending post request to upload a file directly
 
     MIT license

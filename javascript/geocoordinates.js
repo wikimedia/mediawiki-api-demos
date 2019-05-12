@@ -3,7 +3,7 @@
 /*
     geocoordinates.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Geosearch` module: Obtain coordinates for wiki pages nearby
 
     MIT License

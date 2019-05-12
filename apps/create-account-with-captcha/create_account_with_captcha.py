@@ -3,7 +3,7 @@
 """
     create_account_with_captcha.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `createaccount` module: Create an account on a wiki with a special
     authentication extension installed. This example considers a case of a wiki
     where captcha is enabled through extensions like ConfirmEdit

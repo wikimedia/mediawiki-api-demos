@@ -3,7 +3,7 @@
 """
     userrights.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Userrights` module: Add and remove user rights by
     changing the user's group membership.
     MIT license

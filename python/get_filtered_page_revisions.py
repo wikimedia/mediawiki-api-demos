@@ -5,7 +5,7 @@
 """
     get_filtered_page_revisions.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Revisions` module: Get data including content of last 5 revisions
     of the title [[API:Geosearch]] made after the 1st of July 2018 i.e 2018-07-01
     excluding changes made by the user SSethi (WMF)

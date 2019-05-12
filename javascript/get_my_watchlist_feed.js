@@ -1,7 +1,7 @@
 /* 
     get_my_watchlist_feed.js
  
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Feedwatchlist` module: Get the watchlist feed 
     for the account making the request.
 

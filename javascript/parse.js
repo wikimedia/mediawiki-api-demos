@@ -3,7 +3,7 @@
 /*
     parse.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Parse` module: Parse content of a page
 
     MIT License

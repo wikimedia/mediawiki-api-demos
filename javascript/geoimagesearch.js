@@ -3,7 +3,7 @@
 /*
     geoimagesearch.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Geosearch` module: Use generator module
 	to get search results for pages near Wikimedia HQ
 	with images

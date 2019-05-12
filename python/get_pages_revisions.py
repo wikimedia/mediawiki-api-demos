@@ -5,7 +5,7 @@
 """
     get_pages_revisions.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Revisions` module: Get revision data with content for pages
     with titles [[API]] and [[Main Page]]
 

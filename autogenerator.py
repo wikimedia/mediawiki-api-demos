@@ -3,7 +3,7 @@
 """
     autogenerator.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Generates python and javascript files for all demos of MediaWiki API supported
     actions that support GET Requests only and can be easily built
     from a JSON Schema.
@@ -61,7 +61,7 @@ def make_file():
             code.write('"""\n')
             code.indent()
             code.write(python_file_name + '\n\n')
-            code.write('MediaWiki Action API Code Samples\n')
+            code.write('MediaWiki API Demos\n')
             code.write(module['docstring'] + '\n\n')
             code.write('MIT License\n')
             code.dedent()
@@ -112,7 +112,7 @@ def make_javascript_file():
             code.write('/*\n')
             code.indent()
             code.write(javascript_file_name + '\n\n')
-            code.write('MediaWiki Action API Code Samples\n')
+            code.write('MediaWiki API Demos\n')
             code.write(module['docstring'] + '\n\n')
             code.write('MIT License\n')
             code.dedent()

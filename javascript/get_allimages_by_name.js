@@ -3,7 +3,7 @@
 /*
     get_allimages_by_name.js
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     List all images in the namespace, starting from files that begin with 'Graffiti_000'. Limit the initial response to just the first three images. 
 
     MIT License

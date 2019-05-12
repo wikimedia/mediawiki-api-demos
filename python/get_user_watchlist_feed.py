@@ -5,7 +5,7 @@
 """
     get_user_watchlist_feed.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `Feedwatchlist` module: Get a watchlist feed from another user.
 
     MIT License

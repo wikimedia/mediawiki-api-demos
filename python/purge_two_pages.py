@@ -3,7 +3,7 @@
 """
     purge_two_pages.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `purge` module: Sending post request to purge two or more pages
     MIT license
 """

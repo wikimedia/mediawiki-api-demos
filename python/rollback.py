@@ -3,7 +3,7 @@
 """
     rollback.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `rollback` module: Sending post request to rollback the
     last edits made to a given page.
 

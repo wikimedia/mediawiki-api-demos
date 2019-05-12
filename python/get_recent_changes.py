@@ -5,7 +5,7 @@
 """
     get_recent_changes.py
 
-    MediaWiki Action API Code Samples
+    MediaWiki API Demos
     Demo of `RecentChanges` module: Get the three most recent changes with
     sizes and flags
 
