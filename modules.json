@@ -331,15 +331,6 @@
 		}
 	},
 	{
-		"filename": "logout",
-		"docstring": "Demo of `Logout` module: Log out and clear session data.",
-		"endpoint": "https://en.wikipedia.org/w/api.php",
-		"params": {
-			"action": "logout",
-			"format": "json"
-		}
-	},
-	{
 		"filename": "get_random",
 		"docstring": "Demo of `Random` module: Get request to list 5 random pages.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
