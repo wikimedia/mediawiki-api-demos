@@ -122,6 +122,10 @@ figure a {
     box-shadow: none;
 }
 
+.footer {
+    text-align: center;
+}
+
 .date-navigator input:disabled {
     color: #c8cdff; /* grey */
     border: 1px solid #c8cdff; /* grey */ 

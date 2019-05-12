@@ -1,5 +1,5 @@
 # Picture Of The Day Viewer
-A sample app that uses MediaWiki Action API's [Image](https://www.mediawiki.org/wiki/API:Image) and [Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo) modules to display the [Wikipedia](en.wikipedia.org) Picture of the Day. This app uses [Flask](http://flask.pocoo.org/).
+A sample app that uses MediaWiki Action API's [Image](https://www.mediawiki.org/wiki/API:Image) and [Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo) modules to display the [Wikipedia](en.wikipedia.org) Picture of the Day. This app uses [Flask](http://flask.pocoo.org/). [Browse the app here](https://tools.wmflabs.org/potd-viewer/).
 
 ## Install
 

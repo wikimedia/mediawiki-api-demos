@@ -1,6 +1,6 @@
 # Nearby Places Viewer
 
-Geo search for wiki pages near your location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. 
+Geo search for wiki pages near your location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module. [Browse the app here](https://tools.wmflabs.org/nearby-places-viewer/).
 
 Install
 -------

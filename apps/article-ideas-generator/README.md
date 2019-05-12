@@ -1,5 +1,5 @@
 # Article ideas generator
-Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module and fetches data from this resource: https://en.wikipedia.org/wiki/Wikipedia:Requested_articles
+Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module and fetches data from this resource: https://en.wikipedia.org/wiki/Wikipedia:Requested_articles. [Browse the app here](https://tools.wmflabs.org/article-ideas-generator/).
 
 Install
 -------

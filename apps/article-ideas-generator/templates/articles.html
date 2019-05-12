@@ -2,7 +2,6 @@
 
 <!-- Download the two files locally in the static folder for deployment in Toolforge -->
 <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Amatic+SC:700">
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Josefin+Sans">
 
 <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
 
@@ -26,13 +25,18 @@
   <form action="/" method="POST">
     {% for pagename in results %}
     <button name="{{ pagetype }}" class="{{ pagetype }}" value="{{ pagename }}">{{ pagename }}</button>
-  {% endfor %}
-  {% else %}
-  <p>Ooooops! We couldn't find any results.</p>
+    {% endfor %}
+    {% else %}
+    <p>Ooooops! We couldn't find any results.</p>
   </form>
 
   <!-- Change action url from / to /toolname/ for deployment in Toolforge -->
   <a href="/"><button>Start over</button></a>
   {% endif %}
   {% endif %}
+  
+  <footer>
+    <a href="https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator">
+    <p>View source on Github</p></a>
+  </footer>
 </div>
