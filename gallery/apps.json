@@ -1,6 +1,6 @@
 [
 	{
-		"title": "Nearby places viewer",
+		"title": "Nearby Places Viewer",
 		"thumbnail": "static/nearby_places_viewer.png",
 		"description": "Geo search for wiki pages near your location",
 		"modules": ["geosearch"],
@@ -8,7 +8,7 @@
 		"owner": "srish"
 	},
 	{
-		"title": "Picture of the day viewer",
+		"title": "Picture of the Day",
 		"thumbnail": "static/picture_of_the_day_viewer.png",
 		"description": "Display Wikipedia's picture of the day",
 		"modules": ["image", "imageinfo"],
@@ -16,7 +16,7 @@
 		"owner": "martyav"
 	},
 	{
-		"title": "User contributions feed",
+		"title": "User Contributions Feed",
 		"thumbnail": "static/user_contributions_feed.png",
 		"description": "Fetches top 50 edits made by a user",
 		"modules": ["usercontribs"],
@@ -24,7 +24,7 @@
 		"owner": "Jayprakash-SE"
 	},
 	{
-		"title": "Article ideas generator",
+		"title": "Article Ideas Generator",
 		"thumbnail": "static/article_ideas_generator.png",
 		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
 		"modules": ["parse", "links"],
@@ -32,7 +32,7 @@
 		"owner": "srish"
 	},
 	{
-		"title": "Account creation",
+		"title": "Account Creator",
 		"thumbnail": "static/create_account_with_captcha.png",
 		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
 		"modules": ["tokens", "authmanagerinfo", "createaccount"],
@@ -40,7 +40,7 @@
 		"owner": "srish"
 	},
 	{
-		"title": "Client login",
+		"title": "Wiki Login",
 		"thumbnail": "static/create_login.png",
 		"description": "Allows logging-in on a wiki",
 		"modules": ["tokens", "login"],

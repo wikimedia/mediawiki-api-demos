@@ -10,12 +10,17 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="../static/style.css">
 
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
   <title>MediaWiki Apps Gallery</title>
     <header>
       <div class="navbar navbar-dark bg-dark shadow-sm">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="../static/logo.svg" width="20px">
+            <img src="../static/logo.png" width="200px">
             <strong>&nbsp; Apps Gallery</strong>
           </a>
         </div>
@@ -25,9 +30,9 @@
   <main role="main">
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">MediaWiki Apps Gallery</h1>
-        <p class="lead text-muted">Explore and showcase interactive demo apps built using the <a href="//www.mediawiki.org/wiki/API:Main_page">MediaWiki Action API</a>.
-        <p><a href="#" class="btn btn-primary my-2">Submit your app</a>
+        <h1 class="jumbotron-heading">Built with ♥</h1>
+        <p class="lead text-muted">A showcase of interactive demo apps built using the <a href="//www.mediawiki.org/wiki/API:Main_page">MediaWiki Action API</a>.
+        <p><a href="#" class="btn btn-primary my-2">Submit Your App</a>
       </div>
     </section>
 
@@ -39,7 +44,9 @@
           <div class="col-md-4">
             <div class="card mb-4 shadow-sm">
               <div class="card-thumbnail">
-                <img src="{{ app.thumbnail }}" height="222px">
+                <div class="gradient-image">
+                  <img src="{{ app.thumbnail }}" height="222px">
+                </div>
               </div>
               <div class="card-body">
                 <h4>{{ app.title }}</h4>
@@ -50,11 +57,10 @@
                 {% endfor %}
 
                 <br><span class="card-text">Built by: <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
-
-                <div class="card-buttons">
-                  <button type="button" class="btn btn-sm btn-outline-secondary btn-try-app col-lg-6">Try it out</button>
-                  <a href="{{ app.source }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-view-source col-lg-6">View on Github</button></a>
-                </div>
+              </div>
+              <div class="card-buttons">
+                <button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fas fa-external-link-alt"></i> Try it out</button>
+                <a href="{{ app.source }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fab fa-github"></i> View on Github</button></a>
               </div>
             </div>
           </div>
@@ -67,7 +73,7 @@
 
   <footer class="text-muted">
     <div class="container">
-      <p class="float-right"><a href="#">Back to top</a>
+      <p class="float-right"><a href="#"><i class="fas fa-chevron-circle-up"></i> Back to top</a>
       <p>Demo apps are curated by <a href="#">@srish</a> and <a href="#">@tuxology</a>.
       <p>Source code and more information about the demo apps showcased here are <a href="#">available on Github</a>.
     </div>
