@@ -59,7 +59,7 @@
                 <br><span class="card-text">Built by: <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
               </div>
               <div class="card-buttons">
-                <button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fas fa-external-link-alt"></i> Try it out</button>
+                <a href="{{ app.url }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fas fa-external-link-alt"></i> Try it out</button></a>
                 <a href="{{ app.source }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fab fa-github"></i> View on Github</button></a>
               </div>
             </div>
@@ -74,7 +74,7 @@
   <footer class="text-muted">
     <div class="container">
       <p class="float-right"><a href="#"><i class="fas fa-chevron-circle-up"></i> Back to top</a>
-      <p>Demo apps are curated by <a href="#">@srish</a> and <a href="#">@tuxology</a>.
-      <p>Source code and more information about the demo apps showcased here are <a href="#">available on Github</a>.
+      <p>Demo apps are curated by <a href="https://github.com/srish" target="_blank">@srish</a> and <a href="https://github.com/tuxology" target="_blank">@tuxology</a>.
+      <p>Source code and more information about the demo apps showcased here are <a href="https://github.com/wikimedia/mediawiki-api-demos" target="_blank">available on Github</a>.
     </div>
   </footer>

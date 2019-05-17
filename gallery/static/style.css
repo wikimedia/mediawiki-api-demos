@@ -17,10 +17,6 @@ footer {
   color: #b08600 !important;
 }
 
-a {
-  color: #363636;
-}
-
 .btn-primary {
   border-radius: 0rem;
   box-shadow: 0 4px 10px 0 #666;
@@ -139,13 +135,3 @@ footer p {
 .bg-light {
   background-color: #ffc200 !important;
 }
-
-/* .gradient-image::after {
-  display: block;
-  position: relative;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, rgba(0, 123, 255, 0.5) 100%);
-  margin-top: -150px;
-  height: 150px;
-  width: 100%;
-  content: '';
-} */

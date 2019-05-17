@@ -5,7 +5,8 @@
 		"description": "Geo search for wiki pages near your location",
 		"modules": ["geosearch"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/nearby-places-viewer",
-		"owner": "srish"
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/nearby-places-viewer/"
 	},
 	{
 		"title": "Picture of the Day",
@@ -13,7 +14,8 @@
 		"description": "Display Wikipedia's picture of the day",
 		"modules": ["image", "imageinfo"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/picture-of-the-day-viewer",
-		"owner": "martyav"
+		"owner": "martyav",
+		"url": "https://tools.wmflabs.org/potd-viewer/"
 	},
 	{
 		"title": "User Contributions Feed",
@@ -21,7 +23,8 @@
 		"description": "Fetches top 50 edits made by a user",
 		"modules": ["usercontribs"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
-		"owner": "Jayprakash-SE"
+		"owner": "Jayprakash-SE",
+		"url": "https://tools.wmflabs.org/user-contributions-feed/"
 	},
 	{
 		"title": "Article Ideas Generator",
@@ -29,15 +32,17 @@
 		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
 		"modules": ["parse", "links"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
-		"owner": "srish"
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/article-ideas-generator/"
 	},
 	{
 		"title": "Account Creator",
 		"thumbnail": "static/create_account_with_captcha.png",
-		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
+		"description": "Creates account on a wiki with special authentication extension installed",
 		"modules": ["tokens", "authmanagerinfo", "createaccount"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/create-account-with-captcha",
-		"owner": "srish"
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/account-creator/"
 	},
 	{
 		"title": "Wiki Login",
@@ -45,6 +50,7 @@
 		"description": "Allows logging-in on a wiki",
 		"modules": ["tokens", "login"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
-		"owner": "srish"
+		"owner": "srish",
+		"url": "http://tools.wmflabs.org"
 	}
 ]
