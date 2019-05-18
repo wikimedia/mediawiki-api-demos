@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../static/style.css">
+
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <title>MediaWiki Apps Gallery</title>
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <img src="../static/logo.png" width="200px">
+            <strong>&nbsp; Apps Gallery</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+  <main role="main">
+    <section class="jumbotron text-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Built with ♥</h1>
+        <p class="lead text-muted">A showcase of interactive demo apps built using the <a href="//www.mediawiki.org/wiki/API:Main_page">MediaWiki Action API</a>.
+        <p><a href="https://github.com/wikimedia/mediawiki-api-demos/tree/master/gallery/contributing.md" target="_blank" class="btn btn-primary my-2">Submit Your App</a>
+      </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row">
+
+          {% for app in apps %}
+          <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+              <div class="card-thumbnail">
+                <div class="gradient-image">
+                  <img src="{{ app.thumbnail }}" height="222px">
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>{{ app.title }}</h4>
+                <span class="card-text description">{{ app.description }}</span><br>
+
+                {% for module in app.modules %}
+                <span class="badge badge-primary">{{ module }}</span>
+                {% endfor %}
+
+                <br><span class="card-text">Built by: <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
+              </div>
+              <div class="card-buttons">
+                <a href="{{ app.url }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fas fa-external-link-alt"></i> Try it out</button></a>
+                <a href="{{ app.source }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fab fa-github"></i> View on Github</button></a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="text-muted">
+    <div class="container">
+      <p class="float-right"><a href="#"><i class="fas fa-chevron-circle-up"></i> Back to top</a>
+      <p>Demo apps are curated by <a href="https://github.com/srish" target="_blank">@srish</a> and <a href="https://github.com/tuxology" target="_blank">@tuxology</a>.
+      <p>Source code and more information about the demo apps showcased here are <a href="https://github.com/wikimedia/mediawiki-api-demos" target="_blank">available on Github</a>.
+    </div>
+  </footer>

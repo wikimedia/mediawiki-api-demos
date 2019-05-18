@@ -1,0 +1,56 @@
+[
+	{
+		"title": "Nearby Places Viewer",
+		"thumbnail": "static/nearby_places_viewer.png",
+		"description": "Geo search for wiki pages near your location",
+		"modules": ["geosearch"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/nearby-places-viewer",
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/nearby-places-viewer/"
+	},
+	{
+		"title": "Picture of the Day",
+		"thumbnail": "static/picture_of_the_day_viewer.png",
+		"description": "Display Wikipedia's picture of the day",
+		"modules": ["image", "imageinfo"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/picture-of-the-day-viewer",
+		"owner": "martyav",
+		"url": "https://tools.wmflabs.org/potd-viewer/"
+	},
+	{
+		"title": "User Contributions Feed",
+		"thumbnail": "static/user_contributions_feed.png",
+		"description": "Fetches top 50 edits made by a user",
+		"modules": ["usercontribs"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"owner": "Jayprakash-SE",
+		"url": "https://tools.wmflabs.org/user-contributions-feed/"
+	},
+	{
+		"title": "Article Ideas Generator",
+		"thumbnail": "static/article_ideas_generator.png",
+		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
+		"modules": ["parse", "links"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/article-ideas-generator/"
+	},
+	{
+		"title": "Account Creator",
+		"thumbnail": "static/create_account_with_captcha.png",
+		"description": "Creates account on a wiki with special authentication extension installed",
+		"modules": ["tokens", "authmanagerinfo", "createaccount"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/create-account-with-captcha",
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/account-creator/"
+	},
+	{
+		"title": "Wiki Login",
+		"thumbnail": "static/create_login.png",
+		"description": "Allows logging-in on a wiki",
+		"modules": ["tokens", "login"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
+		"owner": "srish",
+		"url": "http://tools.wmflabs.org"
+	}
+]

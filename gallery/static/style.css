@@ -1,0 +1,137 @@
+.jumbotron {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  margin-bottom: 0;
+  background-color: #ffd54d;
+}
+
+body {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+footer {
+  background-color: #ffd54d;
+}
+
+.text-muted {
+  color: #b08600 !important;
+}
+
+.btn-primary {
+  border-radius: 0rem;
+  box-shadow: 0 4px 10px 0 #666;
+  background-color: #363636;
+  border-color: #363636;
+}
+
+.lead {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media (min-width: 768px) {
+  .jumbotron {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+
+.jumbotron p:last-child {
+  margin-bottom: 0;
+}
+
+.jumbotron-heading {
+  font-weight: 400;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem;
+}
+
+.jumbotron .container {
+  max-width: 40rem;
+}
+
+.card {
+  height: 440px;
+  border: transparent;
+  border-radius: 0px;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 6px 0 #666 !important;
+}
+
+.card-body {
+  text-align: center;
+  background-color: #363636;
+  color: white;
+  padding-bottom: 0px;
+}
+
+.card .description {
+  display: inline-block;
+  color: gray;
+}
+
+.card-thumbnail {
+    align-items: center; 
+    background-color: #fff;
+    background-clip: border-box;
+    border-radius: 0rem;
+    margin: 0px;
+}
+
+.card-text a:link{
+  color: #007bff;
+}
+
+.card-buttons {
+  margin-top: 0px;
+}
+
+.card-buttons .btn-card {
+  width: 50%;
+  float: right;
+  border: 0px;
+  background-color: gray;
+  border-radius: 0px;
+  color: white;
+  font-size: 1em;
+} 
+
+.card-buttons .btn-card:hover {
+  width: 50%;
+  float: right;
+  border: 0px;
+  background-color: #0069d9;
+  border-radius: 0px;
+  color: white;
+  font-size: 1em;
+}
+
+footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+footer p {
+  margin-bottom: .25rem;
+}
+
+.bd-placeholder-img {
+	font-size: 1.125rem;
+	text-anchor: middle;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	}
+
+	@media (min-width: 768px) {
+	.bd-placeholder-img-lg {
+	  font-size: 3.5rem;
+	}
+}
+
+.bg-light {
+  background-color: #ffc200 !important;
+}
