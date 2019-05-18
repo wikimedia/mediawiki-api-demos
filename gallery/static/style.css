@@ -17,11 +17,16 @@ footer {
   color: #b08600 !important;
 }
 
+.text-muted a {
+  color: #b08600;
+}
+
 .btn-primary {
   border-radius: 0rem;
   box-shadow: 0 4px 10px 0 #666;
   background-color: #363636;
   border-color: #363636;
+  font-size: 1.1em;
 }
 
 .lead {
@@ -69,7 +74,7 @@ footer {
 
 .card .description {
   display: inline-block;
-  color: gray;
+  color: darkgray;
 }
 
 .card-thumbnail {
