@@ -21,7 +21,7 @@ Learn below the criteria for a demo app we are looking to integrate into the gal
       "description": "description of the app in < 75 chars”,
       "modules": [“api module used 1", “api module used 2”, “...”], 
       "source": "link to the source code",
-      "owner": "your Github username",
+      "owner": "your GitHub username",
       “url”: “hosted app link,
   }
   ```
