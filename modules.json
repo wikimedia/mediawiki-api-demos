@@ -450,5 +450,17 @@
             "list": "pagepropnames",
             "format": "json"
         }
+    },
+    {
+        "filename": "get_protectedtitles",
+        "docstring": "Demo of `Protectedtitles` module: Get the first 2 titles which only sysops can create",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "protectedtitles",
+            "ptlevel": "sysop",
+            "ptlimit": "2"
+        }
     }
 ]

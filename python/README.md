@@ -109,6 +109,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [upload_file_in_chunks.py](upload_file_in_chunks.py): upload a file in chunks
 * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
   * [get_pagepropnames.py](get_pagepropnames.py): List all page property names in use on the wiki
+* [API:Protectedtitles](https://www.mediawiki.org/wiki/API:Protectedtitles)
+  * [get_protectedtitles.py](get_protectedtitles.py): List the first 2 titles which only sysops can create
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
