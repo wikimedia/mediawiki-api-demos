@@ -454,13 +454,25 @@
     {
         "filename": "get_imageusage",
         "docstring": "Demo of `Imageusage` module: List the first 3 pages that use a given image title",
-        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "endpoint": "https://en.wikipedia.org/w/api.php",  
         "params": {
             "action": "query",
             "format": "json",
             "list": "imageusage",
             "iutitle": "File:Wiki_logo_Nupedia.jpg",
             "iulimit": "3"
+        }
+    },
+  {         
+        "filename": "get_protectedtitles",
+        "docstring": "Demo of `Protectedtitles` module: Get the first 2 titles which only sysops can create",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "protectedtitles",
+            "ptlevel": "sysop",
+            "ptlimit": "2"
         }
     }
 ]

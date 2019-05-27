@@ -111,6 +111,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_pagepropnames.py](get_pagepropnames.py): List all page property names in use on the wiki
 * [API:Imageusage](https://www.mediawiki.org/wiki/API:Imageusage)
   * [get_imageusage.py](get_imageusage.py): List the first three pages that use a given image title.
+* [API:Protectedtitles](https://www.mediawiki.org/wiki/API:Protectedtitles)
+  * [get_protectedtitles.py](get_protectedtitles.py): List the first 2 titles which only sysops can create
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
