@@ -118,6 +118,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Import](https://www.mediawiki.org/wiki/API:Import)
   * [import_interwiki.py](import_interwiki.py): Import a page from another wiki by specifying its title
   * [import_xml.py](import_xml.py): Import a page from another wiki by uploading its xml dump
+* [API:Patrol](https://www.mediawiki.org/wiki/API:Patrol)
+  * [patrol.py](patrol.py): Patrol a recent change
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
