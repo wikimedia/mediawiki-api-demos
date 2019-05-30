@@ -29,6 +29,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [change_user_options.py](change_user_options.py): change preferences of current user
 * [API:Emailuser](https://www.mediawiki.org/wiki/API:Emailuser)
   *  [send_an_email.py](send_an_email.py): send an email to user
+* [API:Watchlist](https://www.mediawiki.org/wiki/API:Watchlist)
+  * [get_watchlist.py](get_watchlist.py): get the currently logged-in user's watchlist
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)

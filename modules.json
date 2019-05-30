@@ -465,5 +465,15 @@
             "iutitle": "File:Wiki_logo_Nupedia.jpg",
             "iulimit": "3"
         }
+    },
+    {
+        "filename": "get_watchlist",
+        "docstring": "Demo of `Watchlist` module: Get the currently logged-in user's watchlist.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "watchlist",
+            "format": "json"
+        }
     }
 ]
