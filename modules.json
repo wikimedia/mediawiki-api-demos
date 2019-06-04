@@ -475,5 +475,16 @@
             "list": "watchlist",
             "format": "json"
         }
+    },
+    {
+        "filename": "get_iwlinks",
+        "docstring": "Demo of `Iwlinks` module: Get the interwiki links from a given page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "prop": "iwlinks",
+            "titles": "Albert Einstein"
+        }
     }
 ]
