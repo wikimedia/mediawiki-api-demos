@@ -124,6 +124,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_iwlinks.py](get_iwlinks.py): get the interwiki links from a given page
 * [API:Undelete](https://www.mediawiki.org/wiki/API:Undelete)
   * [undelete.py](undelete.py): restore two revisions of a deleted page
+* [API:Logevents](https://www.mediawiki.org/wiki/API:Logevents)
+  * [get_logevents.py](get_logevents.py): get the three most recent log events
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

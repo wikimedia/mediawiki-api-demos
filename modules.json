@@ -486,5 +486,16 @@
             "prop": "iwlinks",
             "titles": "Albert Einstein"
         }
+    },
+    {
+        "filename": "get_logevents",
+        "docstring": "Demo of `Logevents` module: Get the three most recent logevents.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "logevents",
+            "lelimit": "3"
+        }
     }
 ]
