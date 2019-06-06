@@ -10,7 +10,7 @@
 var request = require('request').defaults({jar: true}),
     url = "https://en.wikipedia.org/w/api.php";
 
-// Retrieve login token first
+// Step 1: GET Request to fetch login token
 function getLoginToken() {
     var params_0 = {
         action: "query",
@@ -34,7 +34,7 @@ function getLoginToken() {
     });
 }
 
-// POST Request to login
+// Step 2: POST Request to log in.
 // Use of main account for login is not
 // supported. Obtain credentials via Special:BotPasswords
 // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
@@ -58,7 +58,7 @@ function loginRequest(login_token) {
     });
 }
 
-// GET request to fetch CSRF token
+// Step 3: GET request to fetch CSRF token
 function getCsrfToken() {
     var params_2 = {
         action: "query",
@@ -81,7 +81,7 @@ function getCsrfToken() {
     });
 }
 
-// Send a POST request to logout
+// Step 4: Send a POST request to logout
 function logoutRequest(csrf_token) {
     var params_3 = {
         action: "logout",
@@ -96,11 +96,7 @@ function logoutRequest(csrf_token) {
         if (error) {
             return;
         }
-
-        // Check weither the response is null or not
-        if ( body == '{}' ){
-            console.log("You have successfully logout.");
-        }
+        console.log(body);
     });
 }
 

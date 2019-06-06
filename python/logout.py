@@ -15,7 +15,7 @@ S = requests.Session()
 
 URL = "https://en.wikipedia.org/w/api.php"
 
-# Retrieve login token first
+# Step 1: Retrieve login token first
 PARAMS_0 = {
     'action':"query",
     'meta':"tokens",
@@ -28,9 +28,7 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-print(LOGIN_TOKEN)
-
-# Send a POST request to login. Using the main account for login is not
+# Step 2: Send a POST request to login. Using the main account for login is not
 # supported. Obtain credentials via Special:BotPasswords
 # (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 
@@ -45,9 +43,7 @@ PARAMS_1 = {
 R = S.post(URL, data=PARAMS_1)
 DATA = R.json()
 
-print(DATA)
-
-# GET request to fetch CSRF token
+# Step 3: GET request to fetch CSRF token
 PARAMS_2 = {
     "action":"query",
     "meta":"tokens",
@@ -59,9 +55,7 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA['query']['tokens']['csrftoken']
 
-print( CSRF_TOKEN )
-
-# Send a POST request to logout.
+# Step 4: Send a POST request to logout
 PARAMS_3 = {
     "action": "logout",
     "token": CSRF_TOKEN,
@@ -71,6 +65,4 @@ PARAMS_3 = {
 R = S.post(URL, data=PARAMS_3)
 DATA = R.json()
 
-# Check weither the response is null or not
-if DATA == {}:
-    print("You have successfully logout.")
+print(DATA)
