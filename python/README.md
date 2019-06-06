@@ -115,7 +115,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_protectedtitles.py](get_protectedtitles.py): List the first 2 titles which only sysops can create
 * [API:Imageusage](https://www.mediawiki.org/wiki/API:Imageusage)
   * [get_imageusage.py](get_imageusage.py): List the first three pages that use a given image title.
-<<<<<<< HEAD
 * [API:Import](https://www.mediawiki.org/wiki/API:Import)
   * [import_interwiki.py](import_interwiki.py): Import a page from another wiki by specifying its title
   * [import_xml.py](import_xml.py): Import a page from another wiki by uploading its xml dump
