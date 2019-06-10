@@ -31,6 +31,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [send_an_email.py](send_an_email.py): send an email to user
 * [API:Watchlist](https://www.mediawiki.org/wiki/API:Watchlist)
   * [get_watchlist.py](get_watchlist.py): get the currently logged-in user's watchlist
+* [API:Watchlistraw](https://www.mediawiki.org/wiki/API:Watchlistraw)
+  * [get_watchlistraw.py](get_watchlistraw.py): get three pages on the logged-in user's watchlist from the main namespace
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
