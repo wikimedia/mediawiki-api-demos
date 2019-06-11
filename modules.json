@@ -497,5 +497,17 @@
             "list": "logevents",
             "lelimit": "3"
         }
+    },
+    {
+        "filename": "get_tags",
+        "docstring": "Demo of `Tags` module: Get the first three change tags and their hitcounts.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "tags",
+            "tgprop":"hitcount",
+            "tglimit": "3"
+        }
     }
 ]
