@@ -130,6 +130,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_logevents.py](get_logevents.py): get the three most recent log events
 * [API:Tags](https://www.mediawiki.org/wiki/API:Tags)
   * [get_tags.py](get_tags.py): get the first three change tags and their hitcounts
+* [API:Allredirects](https://www.mediawiki.org/wiki/API:Allredirects)
+  * [get_allredirects.py](get_allredirects.py): get the first three unique pages containing redirects to the main namespace
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

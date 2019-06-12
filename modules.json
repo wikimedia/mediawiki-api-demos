@@ -499,5 +499,18 @@
             "tgprop":"hitcount",
             "tglimit": "3"
         }
+    },
+    {
+        "filename": "get_allredirects",
+        "docstring": "Demo of `Allredirects` module: Get the first three unique pages containing redirects to the main namespace.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "allredirects",
+            "arunique": "1",
+            "arnamespace": "0",
+            "arlimit": "3"
+        }
     }
 ]
