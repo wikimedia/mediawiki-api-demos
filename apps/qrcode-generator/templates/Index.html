@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand" href="{{ url_for('index') }}">QrCode Generator</a>
+    <!--
+    <ul class="nav navbar-nav navbar-right">
+      <li><button class="btn btn-success my-2 my-sm-0" type="submit">Login</button></li>
+    </ul>
+    -->
+</nav>
+<br>
+<div class="container col-lg-6 p-3 bg-white shadow rounded">
+    <form action="{{ url_for('index') }}" method="GET">
+        <div class="form-group">
+            <label for="urltextBox">URL:</label>
+            <input class="form-control" name="urltextBox"
+                   {% if url is not none %} value="{{url}}" {% endif %}
+                   id="urltextBox" type="text" required>
+
+            <p style="font-size: 12px;">The URL must be of any Wikimedia project</p>
+
+        </div>
+        <button class="btn btn-outline-secondary" id="submitBtn" type="submit">Submit</button>
+    </form>
+    <br>
+    <br>
+
+    {% if url|length %}
+        <div id="svg">
+            <small>QrCode for <b>{{url}}</b> URL.</small><br>
+            <!-- Append the SVG Here -->
+            {{ src }}
+        </div>
+
+        <!-- File Download Button -->
+        <form action="{{ url_for('download', filename=fileName ) }}" method="GET">
+            <button class="btn btn-info my-2 my-sm-0" type="submit">Download</button>
+        </form>
+    {% endif %}
+
+</div>
+</body>
+</html>
