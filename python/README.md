@@ -33,6 +33,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_watchlist.py](get_watchlist.py): get the currently logged-in user's watchlist
 * [API:Watchlistraw](https://www.mediawiki.org/wiki/API:Watchlistraw)
   * [get_watchlistraw.py](get_watchlistraw.py): get three pages on the logged-in user's watchlist from the main namespace
+* [API:Assert](https://www.mediawiki.org/wiki/API:Assert)
+  * [assert_user.py](assert_user.py): check whether a user is logged in
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
