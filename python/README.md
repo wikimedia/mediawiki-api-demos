@@ -132,6 +132,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_tags.py](get_tags.py): get the first three change tags and their hitcounts
 * [API:Allredirects](https://www.mediawiki.org/wiki/API:Allredirects)
   * [get_allredirects.py](get_allredirects.py): get the first three unique pages containing redirects to the main namespace
+* [API:Alltransclusions](https://www.mediawiki.org/wiki/API:Alltransclusions)
+  * [get_alltransclusions.py](get_alltransclusions.py): get three unique pages in the main namespace which contain transclusions
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

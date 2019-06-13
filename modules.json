@@ -512,5 +512,18 @@
             "arnamespace": "0",
             "arlimit": "3"
         }
+    },
+    {
+        "filename": "get_alltransclusions",
+        "docstring": "Demo of `Alltransclusions` module: Get three unique pages in the main namespace which contain transclusions.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "format": "json",
+            "list": "alltransclusions",
+            "atunique": "1",
+            "atnamespace": "0",
+            "atlimit": "3"
+        }
     }
 ]
