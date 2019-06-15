@@ -1,0 +1,6 @@
+flask==1.0.3
+flask_mwoauth
+requests_oauthlib
+requests
+qrcode
+pyyaml

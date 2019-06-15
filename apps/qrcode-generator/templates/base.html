@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  {% block head %}
+  <title>Home</title>
+
+  <!-- Stylesheets -->
+  <link href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+  <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet">
+
+  <!-- Scripts -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="{{ url_for('static', filename='qrcode-generator.js') }}"></script>
+  {% endblock head %}
+
+</head>
+<body>
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" href="{{ url_for('index') }}">QRCode Generator</a>
+
+  <!-- Check whether the user is login or not -->
+  {% if username is not none %}
+  <ul class="nav navbar-nav navbar-right">
+    <li>
+      <span class="navbar-text">
+        You're logged in as {{username}}!
+      </span>
+      <a class="btn btn-outline-light" href="{{ url_for('mwoauth.logout') }}">
+        <i class="fa fa-user"></i> Logout
+      </a>
+    </li>
+  </ul>
+  {% else %}
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <a class="btn btn-outline-light" href="{{ url_for('mwoauth.login') }}">
+          <i class="fa fa-sign-in"></i> Login
+        </a>
+      </li>
+    </ul>
+  {% endif %}
+</nav>
+<br>
+<div class="container col-lg-6 p-3 bg-white shadow rounded">
+{% if username is none %}
+<div class="alert alert-info" role="alert">
+  <a href="{{ url_for('mwoauth.login') }}">
+    Log in
+  </a>
+  to the app with your MediaWiki account to upload the generated QR Code to Wikimedia Commons!
+</div>
+{% endif %}
+{% block main %}
+{% endblock main %}
+</div>
+</body>
+</html>

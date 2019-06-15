@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<form action="{{ url_for('index') }}" method="GET">
+  <div class="form-group">
+    <input class="form-control" name="urltextBox"
+      {% if url is not none %} value="{{url}}"{% endif %}
+      placeholder="Enter a URL of an article page from any Wikimedia site."
+      type="url" required>
+  </div>
+  <button class="btn btn-outline-secondary" type="submit">Submit</button>
+</form>
+<br>
+<br>
+
+<!-- Check whether the URL is defined or not -->
+{% if url|length %}
+  <div id="svg">
+    <p id="url-para">QRCode for Wiki article: <a href="{{url}}" target="_blank">{{url}}</a>.</p>
+    <!-- Append the SVG Here -->
+    {{ src }}
+  </div>
+
+  <!-- File Download Button -->
+  <form action="{{ url_for('download', filename=fileName ) }}" method="GET">
+    <button class="btn btn-primary" id="download" type="submit">
+      <i class="fa fa-download"></i> Download
+    </button>
+
+    {% if username is not none %}
+      <!-- Anchor link to open Upload Form -->
+      <a class="btn btn-primary" href="#upload-to-commons" id="upload-btn">
+        <i class="fa fa-upload"></i> Start upload
+      </a>
+    {% endif %}
+  </form>
+  <br>
+
+  {% if username is not none %}
+    <div class="shadow-lg p-3 bg-white rounded" id="upload-to-commons">
+
+      <!-- Form for upload action -->
+      <form action="{{ url_for('upload') }}" method="POST">
+        <div class="form-group">
+          <p id="upload-to-commons-legend">
+            Modify the title and add a description for QR code file:
+          </p>
+
+          <!-- Old File Name -->
+          <input name="oldfileName" type="hidden" value="{{fileName}}">
+
+            <!-- File Name Field -->
+            <label>Filename:</label>
+            <input class="form-control" name="newfileName" type="text"
+               {% if url is not none %} value="{{fileName}}"{% endif %}
+               required>
+
+            <!-- File Description Field -->
+            <label>Description:</label>
+            <textarea class="form-control" name="description" required rows="3"></textarea>
+
+            </div>
+
+            <!-- Upload button to submit the Form -->
+            <button class="btn btn-primary" type="submit">
+              <i class="fa fa-upload"></i> Finish upload
+            </button>
+        </form>
+    </div>
+    {% endif %}
+
+{% endif %}
+
+{% endblock %}
