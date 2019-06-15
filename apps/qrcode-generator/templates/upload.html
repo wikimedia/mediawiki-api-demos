@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block main %}
+
+{% if error is not none %}
+<div class="alert alert-danger" role="alert">
+  Something went wrong while uploading your QR code :-/
+</div>
+{% else %}
+<div class="alert alert-success" role="alert">
+  Your QR code is successfully uploaded to Wikimedia Commons!
+  <a href="{{wikifileURL}}" target="_blank"> Click here to view it.</a>
+</div>
+<div>
+  <img class="img-thumbnail rounded" src="{{fileLink}}">
+  <br>
+  <br>
+  <a class="btn btn-primary" href="{{ url_for('index') }}">
+    Go back to home page
+  </a>
+</div>
+{% endif %}
+
+{% endblock %}
