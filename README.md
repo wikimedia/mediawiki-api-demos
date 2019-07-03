@@ -34,6 +34,10 @@ $ cd javascript
 $ node filename.js
 Note: Install any necessary node modules with npm and enter any credentials required
 in the file to run the sample code
+
+For running php code samples:
+$ cd php
+$ php filename.php
 ```
 
 ### Contributing code samples or demo apps
