@@ -25,5 +25,10 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        var pages = response.query.geosearch;
+        for (var place in pages) {
+            console.log(pages[place].title);
+        }
+    })
     .catch(function(error){console.log(error);});

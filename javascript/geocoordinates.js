@@ -23,5 +23,11 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        var pages = response.query.pages;
+        for (var page in pages) {
+            console.log("Latitute: " + pages[page].coordinates[0].lat);
+            console.log("Longitude: " + pages[page].coordinates[0].lon);
+        }
+    })
     .catch(function(error){console.log(error);});
