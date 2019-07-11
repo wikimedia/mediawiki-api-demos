@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGES = DATA['query']['prefixsearch']
+
+for page in PAGES:
+    print( page["title"] )

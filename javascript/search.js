@@ -23,5 +23,9 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        if (response.query.search[0].title === "Nelson Mandela"){
+            console.log("Your search page 'Nelson Mandela' exists on English Wikipedia" );
+        }
+    })
     .catch(function(error){console.log(error);});

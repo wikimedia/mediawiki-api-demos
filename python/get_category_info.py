@@ -17,11 +17,14 @@ URL = "https://en.wikipedia.org/w/api.php"
 PARAMS = {
     "action": "query",
     "format": "json",
-    "titles": "Albert|Category:Foo|Category:Infobox",
+    "titles": "Category:Foo|Category:Infobox templates",
     "prop": "categoryinfo"
 }
 
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGES = DATA["query"]["pages"]
+
+for k,v in PAGES.items():
+    print(v["title"] + " has " + str(v["categoryinfo"]["pages"]) + " pages.")
