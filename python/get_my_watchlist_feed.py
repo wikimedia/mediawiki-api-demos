@@ -4,7 +4,7 @@
     get_my_watchlist_feed.py
 
     MediaWiki API Demos
-    Demo of `Feedwatchlist` module: Get the watchlist feed 
+    Demo of `Feedwatchlist` module: Get the watchlist feed
     for the account making the request.
     MIT license
 """
@@ -28,7 +28,7 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-# Step 2: Send a post request to log in. For this login 
+# Step 2: Send a post request to log in. For this login
 # method, Obtain credentials by first visiting
 # https://en.wikipedia.org/wiki/Special:BotPasswords/
 # See https://www.mediawiki.org/wiki/API:Login for more

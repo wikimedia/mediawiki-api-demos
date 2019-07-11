@@ -25,9 +25,9 @@ fetch(url)
     .then(function(response){return response.json();})
     .then(function(response) {
         var pages = response.query.pages;
-        for (var page in pages) {
-            for (var redirects of pages[page].redirects) {
-                console.log(redirects.title + " redirect to " + pages[page].title );
+        for (var p in pages) {
+            for (var re of pages[p].redirects) {
+                console.log(re.title + " redirect to " + pages[p].title );
             }
         }
     })

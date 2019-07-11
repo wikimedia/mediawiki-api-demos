@@ -32,4 +32,4 @@ DATA = R.json()
 PAGES = DATA["query"]["categorymembers"]
 
 for page in PAGES:
-    print( page["title"] )
+    print(page["title"])

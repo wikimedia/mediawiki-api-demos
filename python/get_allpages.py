@@ -6,7 +6,8 @@
     get_allpages.py
 
     MediaWiki API Demos
-    Demo of `Allpages` module: Get all pages whose title contains the text "Jungle," in whole or part.
+    Demo of `Allpages` module: Get all pages whose title contains the text
+    "Jungle," in whole or part.
 
     MIT License
 """

@@ -30,6 +30,6 @@ DATA = R.json()
 
 PAGES = DATA['query']['pages']
 
-for k,v in PAGES.items():
-    for images in v['images']:
-        print( images["title"] )
+for k, v in PAGES.items():
+    for img in v['images']:
+        print(img["title"])

@@ -6,7 +6,7 @@
     MediaWiki API Demos
     Demo of `Options` module: POST request to change three options
     for current user
-    
+
     MIT license
 """
 

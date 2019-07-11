@@ -1,7 +1,8 @@
 <?php
 
 /*
-    edit.py
+    edit.php
+
     MediaWiki API Demos
     Demo of `Edit` module: POST request to edit a page
     MIT license
@@ -9,12 +10,12 @@
 
 $endPoint = "https://test.wikipedia.org/w/api.php";
 
-$login_Token = getLoginToken();
-loginRequest( $login_Token );
-$csrf_Token = getCSRFToken();
-editRequest($csrf_Token);
+$login_Token = getLoginToken(); // Step 1
+loginRequest( $login_Token ); // Step 2
+$csrf_Token = getCSRFToken(); // Step 3
+editRequest($csrf_Token); // Step 4
 
-// Get the Login token
+// Step 1: GET Request to fetch login token
 function getLoginToken() {
 	global $endPoint;
 
@@ -39,7 +40,7 @@ function getLoginToken() {
 	return $result["query"]["tokens"]["logintoken"];
 }
 
-// POST Request to log in. Use of main account for login is not
+// Step 2: POST Request to log in. Use of main account for login is not
 // supported. Obtain credentials via Special:BotPasswords
 // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 function loginRequest( $logintoken ) {
@@ -67,7 +68,7 @@ function loginRequest( $logintoken ) {
 
 }
 
-// Get csrf token for edit
+// Step 3: GET Request to fetch CSRF token
 function getCSRFToken() {
 	global $endPoint;
 
@@ -92,7 +93,7 @@ function getCSRFToken() {
 	return $result["query"]["tokens"]["csrftoken"];
 }
 
-// Post request for edit
+// Step 4: POST request to edit a page
 function editRequest( $csrftoken ) {
 	global $endPoint;
 

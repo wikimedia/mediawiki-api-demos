@@ -26,5 +26,5 @@ DATA = R.json()
 
 PAGES = DATA["query"]["pages"]
 
-for k,v in PAGES.items():
+for k, v in PAGES.items():
     print(v["title"] + " has " + str(v["categoryinfo"]["pages"]) + " pages.")

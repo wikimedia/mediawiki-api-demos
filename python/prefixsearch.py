@@ -30,4 +30,4 @@ DATA = R.json()
 PAGES = DATA['query']['prefixsearch']
 
 for page in PAGES:
-    print( page["title"] )
+    print(page["title"])

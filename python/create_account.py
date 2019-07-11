@@ -4,7 +4,7 @@
     create_account.py
 
     MediaWiki API Demos
-    Demo of `createaccount` module: Create an account on a wiki without the 
+    Demo of `createaccount` module: Create an account on a wiki without the
     special authentication extensions
 
     MIT license

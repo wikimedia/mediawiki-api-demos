@@ -29,6 +29,6 @@ DATA = R.json()
 
 PAGES = DATA["query"]["pages"]
 
-for k,v in PAGES.items():
-    for redirects in v["redirects"]:
-        print( redirects["title"] + " redirect to " + v["title"] )
+for k, v in PAGES.items():
+    for re in v["redirects"]:
+        print(re["title"] + " redirect to " + v["title"])

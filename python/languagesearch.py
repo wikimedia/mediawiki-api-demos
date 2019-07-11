@@ -27,5 +27,5 @@ R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
 LANG = DATA['languagesearch']
-for langcode,langname in LANG.items():
-        print( langcode + ": " + langname )
+for code, name in LANG.items():
+    print(code + ": " + name)

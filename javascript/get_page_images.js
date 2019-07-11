@@ -27,8 +27,8 @@ fetch(url)
     .then(function(response) {
         var pages = response.query.pages;
         for (var page in pages) {
-            for (var images of pages[page].images) {
-                console.log(images.title);
+            for (var img of pages[page].images) {
+                console.log(img.title);
             }
         }
     })

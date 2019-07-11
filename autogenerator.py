@@ -39,8 +39,8 @@ class CodeGeneratorBackend:
         """ Dedent a line of code """
         self.level = self.level - 1
 
-def make_file():
-    """ Generate a file... """
+def make_python_file():
+    """ Generate a Python sample code file """
     code = CodeGeneratorBackend(tab="    ")
 
     file = open('modules.json', 'r')
@@ -49,8 +49,8 @@ def make_file():
 
     for module in modules:
         python_file_name = module['filename'] + '.py'
-        python_file_withpath = 'python/' + python_file_name
-        file = pathlib.Path(python_file_withpath)
+        python_file_path = 'python/' + python_file_name
+        file = pathlib.Path(python_file_path)
 
         if file.exists():
             print('`' + python_file_name + "`: already exists, cannot re-write!")
@@ -86,14 +86,14 @@ def make_file():
             code.write('DATA = R.json()\n\n')
             code.write('print(DATA)\n')
 
-            file = open(python_file_withpath, 'w')
+            file = open(python_file_path, 'w')
             file.write(code.end())
             file.close()
 
             print('`' + python_file_name + "`: generated")
 
 def make_javascript_file():
-    """ Generate a file... """
+    """ Generate a Javascript sample code file """
     code = CodeGeneratorBackend(tab="    ")
 
     file = open('modules.json', 'r')
@@ -102,8 +102,8 @@ def make_javascript_file():
 
     for module in modules:
         javascript_file_name = module['filename'] + '.js'
-        javascript_file_withpath = 'javascript/' + javascript_file_name
-        file = pathlib.Path(javascript_file_withpath)
+        javascript_file_path = 'javascript/' + javascript_file_name
+        file = pathlib.Path(javascript_file_path)
 
         if file.exists():
             print('`' + javascript_file_name + "`: already exists, cannot re-write!")
@@ -140,14 +140,14 @@ def make_javascript_file():
             code.write('.catch(function(error){console.log(error);});\n')
             code.dedent()
 
-            file = open(javascript_file_withpath, 'w')
+            file = open(javascript_file_path, 'w')
             file.write(code.end())
             file.close()
 
             print('`' + javascript_file_name + "`: generated")
 
 def make_php_file():
-    """ Generate a file... """
+    """ Generate a PHP sample code file """
     code = CodeGeneratorBackend(tab="    ")
 
     file = open('modules.json', 'r')
@@ -156,8 +156,8 @@ def make_php_file():
 
     for module in modules:
         php_file_name = module['filename'] + '.php'
-        php_file_withpath = 'php/' + php_file_name
-        file = pathlib.Path(php_file_withpath)
+        php_file_path = 'php/' + php_file_name
+        file = pathlib.Path(php_file_path)
 
         if file.exists():
             print('`' + php_file_name + "`: already exists, cannot re-write!")
@@ -194,13 +194,13 @@ def make_php_file():
             code.write('$result = json_decode( $output, true );\n')
             code.write('var_dump( $result );\n')
 
-            file = open(php_file_withpath, 'w')
+            file = open(php_file_path, 'w')
             file.write(code.end())
             file.close()
 
             print('`' + php_file_name + "`: generated")
 
 if __name__ == '__main__':
-    make_file()
-    #make_javascript_file()
+    make_python_file()
+    make_javascript_file()
     make_php_file()

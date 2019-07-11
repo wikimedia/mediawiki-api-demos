@@ -2,7 +2,7 @@
 
 """
     block_user.py
-    
+
     MediaWiki API Demos
     Demo of `Block` module: sending POST request to block user
     MIT license
