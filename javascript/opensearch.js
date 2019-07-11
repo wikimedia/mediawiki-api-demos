@@ -13,7 +13,7 @@
 var url = "https://en.wikipedia.org/w/api.php"; 
 
 var params = {
-    action: "OpenSearch",
+    action: "opensearch",
     search: "Hampi",
     limit: "5",
     namespace: "0",

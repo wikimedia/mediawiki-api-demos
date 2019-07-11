@@ -27,4 +27,8 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGES = DATA["query"]["pages"]
+
+for k,v in PAGES.items():
+    for redirects in v["redirects"]:
+        print( redirects["title"] + " redirect to " + v["title"] )

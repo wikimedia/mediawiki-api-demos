@@ -24,5 +24,10 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        var category = response.query.categorymembers;
+        for (var cat in category) {
+            console.log(category[cat].title);
+        }
+    })
     .catch(function(error){console.log(error);});

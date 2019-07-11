@@ -19,7 +19,7 @@ S = requests.Session()
 URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
-    "action": "OpenSearch",
+    "action": "opensearch",
     "namespace": "0",
     "search": "Hampi",
     "limit": "5",
