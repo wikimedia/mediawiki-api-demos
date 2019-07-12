@@ -24,5 +24,10 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        var images = response.query.allimages;
+        for (var img in images) {
+            console.log(images[img].title);
+        }
+    })
     .catch(function(error){console.log(error);});

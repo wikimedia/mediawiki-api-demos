@@ -29,4 +29,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+IMAGES = DATA["query"]["allimages"]
+
+for img in IMAGES:
+    print(img["title"])
