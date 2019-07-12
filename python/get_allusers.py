@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+USERS = DATA["query"]["allusers"]
+
+for user in USERS:
+    print( user["name"] )

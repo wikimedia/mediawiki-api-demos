@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+CATEGORIES = DATA["query"]["allcategories"]
+
+for cat in CATEGORIES:
+    print(cat["*"])

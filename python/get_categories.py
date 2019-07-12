@@ -27,4 +27,8 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGES = DATA["query"]["pages"]
+
+for k, v in PAGES.items():
+    for cat in v['categories']:
+        print(cat["title"])
