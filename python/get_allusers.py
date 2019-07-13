@@ -31,4 +31,4 @@ DATA = R.json()
 USERS = DATA["query"]["allusers"]
 
 for user in USERS:
-    print( user["name"] )
+    print(user["name"])
