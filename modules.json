@@ -146,7 +146,7 @@
 		"docstring": "Demo of `Opensearch` module: Search the wiki and obtain\n\tresults in an OpenSearch (http://www.opensearch.org) format",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
-			"action": "OpenSearch",
+			"action": "opensearch",
 			"search": "Hampi",
 			"limit": "5",
 			"namespace": "0",
