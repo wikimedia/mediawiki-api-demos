@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    python/get_watchlist.py
+    get_watchlist.py
 
     MediaWiki API Demos
     Demo of `Watchlist` module: Get the currently logged-in user's watchlist.
