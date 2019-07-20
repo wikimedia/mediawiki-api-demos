@@ -26,4 +26,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGEPROPS = DATA["query"]["pagepropnames"]
+
+for p in PAGEPROPS:
+    print(p["propname"])

@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+LOGS = DATA["query"]["logevents"]
+
+for l in LOGS:
+    print("There is " + l["type"] + " log for page " + l["title"])

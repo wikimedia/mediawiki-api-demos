@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+RANDOMS = DATA["query"]["random"]
+
+for r in RANDOMS:
+    print(r["title"])

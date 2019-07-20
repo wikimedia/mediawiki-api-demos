@@ -23,5 +23,10 @@ Object.keys(params).forEach(function(key){url += "&" + key + "=" + params[key];}
 
 fetch(url)
     .then(function(response){return response.json();})
-    .then(function(response) {console.log(response);})
+    .then(function(response) {
+        var backlinks = response.query.backlinks;
+        for (var b in backlinks) {
+            console.log(backlinks[b].title);
+        }
+    })
     .catch(function(error){console.log(error);});

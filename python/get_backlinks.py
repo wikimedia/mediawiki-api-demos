@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+BACKLINKS = DATA["query"]["backlinks"]
+
+for b in BACKLINKS:
+    print(b["title"])

@@ -20,7 +20,7 @@ URL = "https://en.wikipedia.org/w/api.php"
 PARAMS = {
     "action": "paraminfo",
     "format": "json",
-    "modules": "parse|query+info|query+blah"
+    "modules": "parse|query+info|query"
 }
 
 R = S.get(url=URL, params=PARAMS)

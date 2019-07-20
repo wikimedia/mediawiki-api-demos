@@ -14,7 +14,7 @@ var url = "https://en.wikipedia.org/w/api.php";
 var params = {
     action: "paraminfo",
     format: "json",
-    modules: "parse|query+info|query+blah"
+    modules: "parse|query+info|query"
 };
 
 url = url + "?origin=*";
