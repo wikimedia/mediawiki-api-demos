@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+PAGES = DATA["query"]["protectedtitles"]
+
+for p in PAGES:
+    print(p["title"])

@@ -348,7 +348,7 @@
 		"params": {
 			"action": "paraminfo",
 			"format": "json",
-			"modules": "parse|query+info|query+blah"
+			"modules": "parse|query+info|query"
 		}
 	},
 	{

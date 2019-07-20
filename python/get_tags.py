@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+TAGS = DATA["query"]["tags"]
+
+for t in TAGS:
+    print(t["name"])

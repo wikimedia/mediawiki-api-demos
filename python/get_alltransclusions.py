@@ -30,4 +30,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+TRANSCLUSIONS = DATA["query"]["alltransclusions"]
+
+for t in TRANSCLUSIONS:
+    print(t["title"])

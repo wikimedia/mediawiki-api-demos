@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+USERCONTRIBS = DATA["query"]["usercontribs"]
+
+for uc in USERCONTRIBS:
+    print(uc["title"])

@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+ALLREVISIONS = DATA["query"]["allrevisions"]
+
+for rev in ALLREVISIONS:
+    print(rev)

@@ -30,4 +30,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+REDIRECTS = DATA["query"]["allredirects"]
+
+for r in REDIRECTS:
+    print(r["title"])

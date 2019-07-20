@@ -27,4 +27,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+EXTURLS = DATA["query"]["exturlusage"]
+
+for exturl in EXTURLS:
+    print("Page " + exturl["title"] + " has " + exturl["url"] + " url.")

@@ -28,4 +28,7 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+LINKS = DATA["query"]["alllinks"]
+
+for l in LINKS:
+    print(l["title"])
