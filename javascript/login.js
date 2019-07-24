@@ -2,7 +2,7 @@
     edit.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Login` module: Sending post request to login
 
     MIT license
 */
@@ -42,41 +42,6 @@ function loginRequest(login_token) {
     };
 
     request.post({ url: url, form: params_1 }, function (error, res, body) {
-        if (error) {
-            return;
-        }
-        getCsrfToken();
-    });
-}
-
-// Step 3: GET request to fetch CSRF token
-function getCsrfToken() {
-    var params_2 = {
-        action: "query",
-        meta: "tokens",
-        format: "json"
-    };
-
-    request.get({ url: url, qs: params_2 }, function(error, res, body) {
-        if (error) {
-            return;
-        }
-        var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
-    });
-}
-
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
-    var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
-        format: "json"
-    };
-
-    request.post({ url: url, form: params_3 }, function (error, res, body) {
         if (error) {
             return;
         }

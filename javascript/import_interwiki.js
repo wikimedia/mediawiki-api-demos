@@ -1,14 +1,15 @@
 /*  
-    edit.js
+    import_interwiki.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Import` module: Import a page from another wiki by
+	specifying its title
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -34,10 +35,11 @@ function getLoginToken() {
 // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 function loginRequest(login_token) {
     var params_1 = {
-        action: "login",
-        lgname: "bot_username",
-        lgpassword: "bot_password",
-        lgtoken: login_token,
+        action: "clientlogin",
+        username: "username",
+        password: "password",
+        loginreturnurl: "http://127.0.0.1:5000/",
+        logintoken: login_token,
         format: "json"
     };
 
@@ -62,16 +64,18 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        import_interwiki(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to import page from another wiki
+function import_interwiki(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "import",
+        interwikisource: "wikipedia:en",
+        interwikipage: "Pragyan (rover)",
+        namespace: "0",
+        fullhistory: "true",
         token: csrf_token,
         format: "json"
     };

@@ -1,8 +1,9 @@
 /*  
-    edit.js
+    move.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Move` module: Move a page with its
+	talk page, leaving a redirect behind.
 
     MIT license
 */
@@ -62,16 +63,19 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        move(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to move the page
+function move(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "move",
+        from: "Current title",
+        to: "Page with new title",
+        reason: "API Testing",
+        movetalk: "1",
+        noredirect: "1",
         token: csrf_token,
         format: "json"
     };

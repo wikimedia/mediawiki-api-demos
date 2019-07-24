@@ -1,14 +1,15 @@
 /*  
-    edit.js
+    protect.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Protect` module: Demo to change the edit protection
+	level of a given page.
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -62,16 +63,17 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        protect(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to change edit protection level of a page
+function protect(csrf_token) {
     var params_3 = {
-        action: "edit",
+        action: "protect",
         title: "Sandbox",
-        appendtext: "test edit",
+        protections: "edit=autoconfirmed|move=sysop",
+        expiry: "infinite",
         token: csrf_token,
         format: "json"
     };

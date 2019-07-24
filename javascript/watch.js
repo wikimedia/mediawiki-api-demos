@@ -1,8 +1,8 @@
 /*  
-    edit.js
+    watch.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Watch` module: Add a page to your watchlist
 
     MIT license
 */
@@ -49,11 +49,12 @@ function loginRequest(login_token) {
     });
 }
 
-// Step 3: GET request to fetch CSRF token
+// Step 3: GET request to fetch watch token
 function getCsrfToken() {
     var params_2 = {
         action: "query",
         meta: "tokens",
+        type: "watch",
         format: "json"
     };
 
@@ -62,17 +63,16 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        watch(data.query.tokens.watchtoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to add a page to your watchlist
+function watch(watch_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
+        action: "watch",
+        titles: "Sandbox",
+        token: watch_token,
         format: "json"
     };
 

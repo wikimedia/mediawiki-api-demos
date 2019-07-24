@@ -1,8 +1,8 @@
 /*  
-    edit.js
+    upload_file_from_url.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Upload` module: Post request to upload a file from a URL
 
     MIT license
 */
@@ -66,12 +66,13 @@ function getCsrfToken() {
     });
 }
 
-// Step 4: POST request to edit a page
+// Step 4: POST request to upload a file from a URL
 function editRequest(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "upload",
+        filename: "Test-ABCD.jpg",
+        url: "https://farm9.staticflickr.com/8213/8300206113_374c017fc5.jpg",
+        ignorewarnings: "1",
         token: csrf_token,
         format: "json"
     };

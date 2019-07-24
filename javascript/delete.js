@@ -1,14 +1,14 @@
 /*  
-    edit.js
+    delete.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Delete` module: post request to delete a page
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -62,16 +62,15 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        delete_page(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to delete a page
+function delete_page(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "delete",
+        title: "Test",
         token: csrf_token,
         format: "json"
     };

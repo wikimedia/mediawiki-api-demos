@@ -1,8 +1,9 @@
 /*  
-    edit.js
+    set_page_language.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `SetPageLanguage` module: POST request to change
+	the language of a page
 
     MIT license
 */
@@ -62,16 +63,16 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        set_page_language(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to change page language
+function set_page_language(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "setpagelanguage",
+        pageid: "66400",
+        lang: "es",
         token: csrf_token,
         format: "json"
     };

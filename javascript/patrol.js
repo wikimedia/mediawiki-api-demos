@@ -1,14 +1,14 @@
 /*  
-    edit.js
+    patrol.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Patrol` module: Patrol a recent change
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -45,15 +45,16 @@ function loginRequest(login_token) {
         if (error) {
             return;
         }
-        getCsrfToken();
+        getPatrolToken();
     });
 }
 
-// Step 3: GET request to fetch CSRF token
-function getCsrfToken() {
+// Step 3: GET request to fetch Patrol token
+function getPatrolToken() {
     var params_2 = {
         action: "query",
         meta: "tokens",
+        type: "patrol",
         format: "json"
     };
 
@@ -62,17 +63,16 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        patrol(data.query.tokens.patroltoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to patrol a recent change
+function patrol(patrol_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
+        action: "patrol",
+        rcid: "104",
+        token: patrol_token,
         format: "json"
     };
 

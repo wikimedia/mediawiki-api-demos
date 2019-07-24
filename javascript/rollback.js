@@ -1,14 +1,15 @@
 /*  
-    edit.js
+    rollback.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `rollback` module: Sending post request to rollback the
+    edits of a given page.
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -45,15 +46,16 @@ function loginRequest(login_token) {
         if (error) {
             return;
         }
-        getCsrfToken();
+        getRollbackToken();
     });
 }
 
-// Step 3: GET request to fetch CSRF token
-function getCsrfToken() {
+// Step 3: GET request to fetch Rollback token
+function getRollbackToken() {
     var params_2 = {
         action: "query",
         meta: "tokens",
+        type: "rollback",
         format: "json"
     };
 
@@ -62,17 +64,17 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        rollback(data.query.tokens.rollbacktoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to rollback a page
+function rollback(rollback_token) {
     var params_3 = {
-        action: "edit",
+        action: "rollback",
         title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
+        user: "10.0.2.2",
+        token: rollback_token,
         format: "json"
     };
 

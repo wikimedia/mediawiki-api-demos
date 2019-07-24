@@ -1,14 +1,14 @@
 /*  
-    edit.js
+    undelete.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Undelete` module: Restore two revisions of a deleted page
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -66,12 +66,12 @@ function getCsrfToken() {
     });
 }
 
-// Step 4: POST request to edit a page
+// Step 4: POST request to restore the deleted page
 function editRequest(csrf_token) {
     var params_3 = {
-        action: "edit",
+        action: "undelete",
         title: "Sandbox",
-        appendtext: "test edit",
+        reason: "Test undeleting via the API",
         token: csrf_token,
         format: "json"
     };

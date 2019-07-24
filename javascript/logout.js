@@ -19,13 +19,7 @@ function getLoginToken() {
         format: "json"
     };
 
-    var query = url + "?";
-
-    Object.keys(params_0).forEach(function (key) {
-        query += "&" + key + "=" + params_0[key];
-    });
-
-    request.get(query, function (error, res, body) {
+    request.get({ url: url, qs: params_0 }, function (error, res, body) {
         if (error) {
             return;
         }
@@ -47,10 +41,7 @@ function loginRequest(login_token) {
         format: "json"
     };
 
-    request.post({
-        url: url,
-        form: params_1,
-    }, function (error, res, body) {
+    request.post({ url: url, form: params_1 }, function (error, res, body) {
         if (error) {
             return;
         }
@@ -66,13 +57,7 @@ function getCsrfToken() {
         format: "json"
     };
 
-    var query = url + "?";
-
-    Object.keys(params_2).forEach(function (key) {
-        query += "&" + key + "=" + params_2[key];
-    });
-
-    request.get(query, function(error, res, body) {
+    request.get({ url: url, qs: params_2 }, function(error, res, body) {
         if (error) {
             return;
         }
@@ -89,10 +74,7 @@ function logoutRequest(csrf_token) {
         format: "json"
     };
 
-    request.post({
-        url: url,
-        form: params_3,
-    }, function (error, res, body) {
+    request.post({ url: url, form: params_3 }, function (error, res, body) {
         if (error) {
             return;
         }
