@@ -1,8 +1,9 @@
 /*  
-    edit.js
- 
+    get_watchlistraw.js
+
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+	Demo of `Watchlistraw` module: Get three pages on the logged-in user's
+	watchlist from the main namespace.
 
     MIT license
 */
@@ -45,34 +46,17 @@ function loginRequest(login_token) {
         if (error) {
             return;
         }
-        getCsrfToken();
+        get_watchlistraw();
     });
 }
 
-// Step 3: GET request to fetch CSRF token
-function getCsrfToken() {
-    var params_2 = {
-        action: "query",
-        meta: "tokens",
-        format: "json"
-    };
-
-    request.get({ url: url, qs: params_2 }, function(error, res, body) {
-        if (error) {
-            return;
-        }
-        var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
-    });
-}
-
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 3: POST request to get the watchlist
+function get_watchlistraw() {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
+        action: "query",
+        list: "watchlistraw",
+        wrnamespace: "0",
+		wrlimit: "3",
         format: "json"
     };
 

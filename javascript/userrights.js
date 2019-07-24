@@ -1,14 +1,15 @@
 /*  
-    edit.js
+    userrights.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Userrights` module: Add and remove user rights by
+	changing the user's group membership.
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "http://dev.wiki.local.wmftest.net:8080/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -34,10 +35,11 @@ function getLoginToken() {
 // (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 function loginRequest(login_token) {
     var params_1 = {
-        action: "login",
-        lgname: "bot_username",
-        lgpassword: "bot_password",
-        lgtoken: login_token,
+        action: "clientlogin",
+        username: "username",
+        password: "password",
+        loginreturnurl: "http://127.0.0.1:5000/",
+        logintoken: login_token,
         format: "json"
     };
 
@@ -45,15 +47,16 @@ function loginRequest(login_token) {
         if (error) {
             return;
         }
-        getCsrfToken();
+        getUserRightsToken();
     });
 }
 
-// Step 3: GET request to fetch CSRF token
-function getCsrfToken() {
+// Step 3: GET request to fetch UserRights token
+function getUserRightsToken() {
     var params_2 = {
         action: "query",
         meta: "tokens",
+        type: "userrights",
         format: "json"
     };
 
@@ -62,17 +65,19 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        userrights(data.query.tokens.userrightstoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to add or remove a user from a group
+function userrights(userrights_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
-        token: csrf_token,
+        action: "userrights",
+        user: "ABCDEFG",
+        add: "bot",
+        expiry: "infinite",
+        reason: "API Testing",
+        token: userrights_token,
         format: "json"
     };
 

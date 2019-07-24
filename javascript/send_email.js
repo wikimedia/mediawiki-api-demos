@@ -1,14 +1,14 @@
 /*  
-    edit.js
+    send_email.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Emailuser` module: sending POST request to send email to wiki user
 
     MIT license
 */
 
 var request = require('request').defaults({jar: true}),
-    url = "https://test.wikipedia.org/w/api.php";
+    url = "https://en.wikipedia.org/w/api.php";
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -62,16 +62,17 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        send_email(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to send an email
+function send_email(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "emailuser",
+        target: "ABCD",
+        subject: "API Test",
+        text: "Hello",
         token: csrf_token,
         format: "json"
     };

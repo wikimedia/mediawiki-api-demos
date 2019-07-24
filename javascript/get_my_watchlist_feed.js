@@ -19,13 +19,7 @@ function getLoginToken() {
         format: "json"
     };
 
-    var query = url + "?";
-
-    Object.keys(params_1).forEach(function (key) {
-        query += "&" + key + "=" + params_1[key];
-    });
-
-    request.get(query, function(error, res, body) {
+    request.get({ url: url, qs: params_1 }, function(error, res, body) {
         if (error) {
             return;
         }
@@ -63,13 +57,7 @@ function getWatchlistFeed() {
         action: "feedwatchlist"
     };
 
-    var query = url + "?";
-
-    Object.keys(params_3).forEach(function (key) {
-        query += "&" + key + "=" + params_3[key];
-    });
-
-    request.get(query, function(error, res, body) {
+    request.get({ url: url, qs: params_3 }, function(error, res, body) {
         if (error) {
             return;
         }

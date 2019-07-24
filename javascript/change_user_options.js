@@ -1,8 +1,9 @@
 /*  
-    edit.js
+    change_user_options.js
  
     MediaWiki API Demos
-    Demo of `Edit` module: POST request to edit a page
+    Demo of `Options` module: POST request to change two options
+    for current user
 
     MIT license
 */
@@ -62,16 +63,15 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        editRequest(data.query.tokens.csrftoken);
+        change_options(data.query.tokens.csrftoken);
     });
 }
 
-// Step 4: POST request to edit a page
-function editRequest(csrf_token) {
+// Step 4: POST request to change the user options
+function change_options(csrf_token) {
     var params_3 = {
-        action: "edit",
-        title: "Sandbox",
-        appendtext: "test edit",
+        action: "options",
+        change: "language=en|skin=timeless",
         token: csrf_token,
         format: "json"
     };
