@@ -525,5 +525,17 @@
             "atnamespace": "0",
             "atlimit": "3"
         }
+	},
+    {
+        "filename": "get_blocked_users",
+        "docstring": "Demo of `Blocks` module: GET request to list recent blocked users.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "blocks",
+            "bklimit": "3",
+			"bkprop": "id|user|by|timestamp|expiry|reason|range|flags",
+			"format": "json"
+        }
     }
 ]
