@@ -537,5 +537,53 @@
 			"bkprop": "id|user|by|timestamp|expiry|reason|range|flags",
 			"format": "json"
         }
+	},
+    {
+        "filename": "get_querypage_list",
+        "docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "querypage",
+            "qppage": "Uncategorizedpages",
+			"qplimit": "10",
+			"format": "json"
+        }
+	},
+    {
+        "filename": "get_recent_changes",
+        "docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "recentchanges",
+            "rcprop": "title|ids|sizes|flags|user",
+			"rclimit": "3",
+			"format": "json"
+        }
+	},
+	{
+        "filename": "get_red_links",
+        "docstring": "Demo of `Links` module to identify red or missing links on a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "generator": "links",
+            "titles": "Wikipedia:Most-wanted_articles",
+			"gpllimit": "20",
+			"format": "json"
+        }
+	},
+    {
+        "filename": "get_users",
+        "docstring": "Demo of `Users` module: Get information about several users: [[1.2.3.4]], [[Catrope]], [[Vandal01]], and [[Bob]]",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "list": "users",
+            "ususers": "Catrope|Bob",
+			"usprop": "blockinfo|groups|editcount|registration|emailable|gender",
+			"format": "json"
+        }
     }
 ]

@@ -22,11 +22,14 @@ PARAMS = {
     "action": "query",
     "format": "json",
     "list": "users",
-    "ususers": "1.2.3.4|Catrope|Vandal01|Bob",
+    "ususers": "Catrope|Bob",
     "usprop": "blockinfo|groups|editcount|registration|emailable|gender"
 }
 
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-print(DATA)
+USERS = DATA["query"]["users"]
+
+for u in USERS:
+    print(str(u["name"]) + " has " + str(u["editcount"]) + " edits.")

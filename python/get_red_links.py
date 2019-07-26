@@ -27,11 +27,9 @@ PARAMS = {
 
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
+
 PAGES = DATA['query']['pages']
-LINKS = []
 
 for page in PAGES.values():
     if 'missing' in page:
-        LINKS.append(page['title'])
-
-print(LINKS)
+        print(page['title'])
