@@ -5,7 +5,8 @@ Install
 -------
 
 ```
-$ git clone https://github.com/Jayprakash-SE/qrcode-generator.git
+$ git clone https://github.com/wikimedia/mediawiki-api-demos.git
+$ cd mediawiki-api-demos/apps/qrcode-generator
 $ pip3 install -r requirements.txt
 $ python3 app.py
 ```

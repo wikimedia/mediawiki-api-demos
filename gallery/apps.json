@@ -52,5 +52,14 @@
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
 		"owner": "srish",
 		"url": "http://tools.wmflabs.org"
+	},
+	{
+		"title": "QR Code Generator",
+		"thumbnail": "static/qrcode-generator.png",
+		"description": "Allows to generate and upload QR Code",
+		"modules": [ "tokens", "upload" ],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/qrcode-generator",
+		"owner": "Jayprakash12345",
+		"url": "https://tools.wmflabs.org/qrcode-generator/"
 	}
 ]
