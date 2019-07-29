@@ -1,0 +1,56 @@
+.content {
+    width:420px;
+}
+
+.card {
+    width: 25rem;
+}
+
+.holidays-html{
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+.base {
+    height:400px;
+    display: flex;
+}
+
+input, select {
+    width: 300px;
+    height:40px;
+}
+
+.btn-submit {
+    width: 300px;
+}
+
+.btn {
+    cursor:pointer;
+    align-content: center;
+    background-color: transparent;
+}
+
+.bg-primary {
+    background-color: #36c !important;
+}
+
+.bg-primary-dark {
+    background-color: #2a4b8d !important;
+}
+
+.bg-secondary {
+    background-color: #eaecf0 !important;
+}
+
+.header-bar {
+    height: 48px;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.filler {
+    flex-grow:1;
+    text-align:center
+}

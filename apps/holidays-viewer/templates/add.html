@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="instructions m-3">
+    <p>Add a new test holiday
+  </div>
+  <div class="base rounded shadow bg-white m-3">
+    <form class="m-auto" action="" method="POST">
+      <div class="form-group">
+        <div class="form-field">
+          <div class="label-field">Date( [Month Day] e.g. January 1 )</div>
+          <input class="bg-secondary border-0 mb-5" name="date">
+        </div>
+        <div class="form-field">
+          <div class="label-field">Description</div>
+          <input class="bg-secondary border-0 mb-5" name="description">
+        </div>
+      </div>
+      <button type="submit" name="add" class="bg-primary btn btn-submit text-white">Add</button>
+    </form>
+  </div>
+{% endblock %}
