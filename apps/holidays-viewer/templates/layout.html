@@ -1,0 +1,42 @@
+<title>Holidays</title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="static/style.css">
+
+<div class="content h-100 bg-secondary rounded m-auto">
+  <div class="title-bar bg-primary-dark text-white pl-2">
+    <small>Holidays and observances</small>
+  </div>
+  <div class="header-bar bg-primary text-white shadow p-2">
+    {% if request.path != url_for('list_holidays') %}
+    <a class=" btn text-white" href="{{ url_for('list_holidays') }}">
+      <i class="material-icons">arrow_back</i>
+    </a>
+    {% endif %}
+    <h5>{{header}}</h5>
+    <div class="filler"></div>
+    <a class="btn text-white" href="{{ url_for('login') }}">
+      <i class="material-icons">add</i>
+    </a>
+    <a class="btn text-white" href="{{ url_for('search') }}">
+      <i class="material-icons">search</i>
+    </a>
+  </div>
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="alert alert-primary w-100" role="alert">
+      {% for message in messages %}
+        {{ message }}
+      {% endfor %}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">×</span>
+      </button>
+    </div>
+    {% endif %}
+  {% endwith %}
+  {% block content %}{% endblock %}
+</div>
+<script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

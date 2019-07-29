@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+  <div class="instructions m-3">
+    <p>You need to login to Wikipedia in order to add a new holiday
+  </div>
+  <div class="base rounded shadow bg-white m-3">
+    <form class="m-auto" action="/login" method="POST">
+      <div class="form-group">
+        <div class="form-field">
+          <div class="label-field">Username</div>
+          <input class="bg-secondary mb-5 border-0" name="username">
+        </div>
+        <div class="form-field">
+          <div class="label-field">Password</div>
+          <input class="bg-secondary mb-5 border-0" type="password" name="password">
+        </div>
+      </div>
+      <button type="submit" name="login" class="bg-primary btn btn-submit text-white">Login</button>
+    </form>
+  </div>
+{% endblock %}
