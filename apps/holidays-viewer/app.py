@@ -6,7 +6,7 @@
     MediaWiki API Demos
 
     Holidays viewer: A demo app that fetches the day's holidays from Wikipedia
-    with options to search for holidays of other dates, and login to add new 
+    with options to search for holidays of other dates, and login to add new
     holidays.
 
     MIT license
@@ -14,7 +14,6 @@
 
 from datetime import datetime
 from flask import Flask, render_template, flash, request, url_for, redirect
-from bs4 import BeautifulSoup
 import requests
 
 
@@ -25,10 +24,11 @@ URL = "https://en.wikipedia.org/w/api.php"
 TEST_URL = "https://test.wikipedia.org/w/api.php"
 TEST_PAGE = "Sandbox/Holidays_and_observances"
 S = requests.Session()
+IS_LOGGED_IN = False
 
-@APP.route('/', defaults={'holidays_date': None}, methods=['GET', 'POST'])
+@APP.route('/', methods=['GET', 'POST'])
 @APP.route('/<holidays_date>', methods=['GET', 'POST'])
-def list_holidays(holidays_date):
+def list_holidays(holidays_date=None):
     """ Lists holidays for the current date or a custom date
     """
 
@@ -48,11 +48,11 @@ def list_holidays(holidays_date):
     holidays = get_holidays(URL, holidays_date, section_number)
     test_holidays = get_holidays(TEST_URL, TEST_PAGE, test_section_number)
 
-    holidays_text = test_holidays + holidays
-    write_holidays_file(holidays_text)
+    holidays_html = test_holidays + holidays
     flash('Holidays added through this app are in bold')
 
-    return render_template("index.html", header=holidays_date.replace('_', ' '))
+    return render_template("index.html", header=holidays_date.replace('_', ' '),
+                           holidays_html=holidays_html)
 
 
 def get_todays_date():
@@ -111,46 +111,6 @@ def get_holidays(url, page, section_number):
 
     return text
 
-def write_holidays_file(text):
-    """ Edit the html of holidays to a uniform format and write it to a file
-    """
-
-    soup = BeautifulSoup(text, "lxml")
-
-    # Remove section headings
-    for h2_tag in soup.find_all('h2'):
-        h2_tag.replaceWith('')
-
-    # Replace the parent <ul> tag with bootstrap's row class
-    wrapper = soup.new_tag('div', **{"class": "row"})
-    soup.ul.wrap(wrapper)
-    soup.ul.replaceWithChildren()
-
-    # Update links to point to English Wikipedia
-    for a_tag in soup.findAll('a'):
-        a_tag['href'] = "//en.wikipedia.org" + a_tag['href']
-
-    # Remove nested <ul> tags
-    for ul_tag in soup.find_all('ul'):
-        ul_tag.replaceWith('')
-
-    # Remove nested <ol> tags
-    for ol_tag in soup.find_all('ol'):
-        ol_tag.replaceWithChildren()
-
-    # Replace <li> tags with bootstap's cards
-    for li_tag in soup.find_all('li'):
-        wrapper = soup.new_tag('div', **{"class": "card mx-auto mb-1"})
-        li_tag.wrap(wrapper)
-        wrapper = soup.new_tag('div', **{"class": "card-body p-2"})
-        li_tag.wrap(wrapper)
-        li_tag.replaceWithChildren()
-
-    # Write the html to a file
-    html_file = open("templates/holidays.html", "w")
-    html_file.write(str(soup))
-    html_file.close()
-
 @APP.route("/search")
 def search():
     """ Search for holidays of custom dates
@@ -191,11 +151,12 @@ def login():
         if data['clientlogin']['status'] != 'PASS':
             flash('Oops! Something went wrong -- ' + data['clientlogin']['messagecode'])
         else:
+            global IS_LOGGED_IN
+            IS_LOGGED_IN = True
             flash('Login success! Welcome, ' + data['clientlogin']['username'] + '!')
             return redirect(url_for('add'))
 
     return render_template("login.html", header="Login")
-
 
 @APP.route("/add", methods=['GET', 'POST'])
 def add():
@@ -203,10 +164,13 @@ def add():
         to show the added holidays
     """
 
+    if not IS_LOGGED_IN:
+        return redirect(url_for('login'))
+
     if request.method == 'POST' and 'add' in request.form:
 
-        # Wiki markup to format the added holiday's text as a list and in bold
-        holiday_text = "\n" +"# '''"+ str(request.form.get('description') + "'''")
+        # Wiki markup to format the added holiday's text as a list item and in bold
+        holiday_text = "* '''" + str(request.form.get('description')) + "'''"
         date = str(request.form.get('date'))
 
         params_2 = {
@@ -222,13 +186,12 @@ def add():
 
         params_4 = {
             "action": "edit",
-            "title": "Sandbox/Holidays_and_observances",
+            "title": TEST_PAGE,
             "token": csrf_token,
             "format": "json",
             "section": "new",
             "sectiontitle": date,
             "text": holiday_text,
-            "assert":"user"
         }
 
         response = S.post(url=TEST_URL, data=params_4)
@@ -243,5 +206,4 @@ def add():
     return render_template("add.html", header="Add holiday")
 
 if __name__ == "__main__":
-    APP.debug = True
     APP.run()

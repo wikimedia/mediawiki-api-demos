@@ -4,7 +4,10 @@
 <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="static/style.css">
 
-<div class="content h-100 bg-secondary rounded m-auto">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="static/update-links.js"></script>
+
+<div class="content bg-secondary rounded m-auto">
   <div class="title-bar bg-primary-dark text-white pl-2">
     <small>Holidays and observances</small>
   </div>
@@ -16,7 +19,7 @@
     {% endif %}
     <h5>{{header}}</h5>
     <div class="filler"></div>
-    <a class="btn text-white" href="{{ url_for('login') }}">
+    <a class="btn text-white" href="{{ url_for('add') }}">
       <i class="material-icons">add</i>
     </a>
     <a class="btn text-white" href="{{ url_for('search') }}">
@@ -25,7 +28,7 @@
   </div>
   {% with messages = get_flashed_messages() %}
     {% if messages %}
-    <div class="alert alert-primary w-100" role="alert">
+    <div class="alert alert-primary mb-0" role="alert">
       {% for message in messages %}
         {{ message }}
       {% endfor %}
@@ -37,6 +40,4 @@
   {% endwith %}
   {% block content %}{% endblock %}
 </div>
-<script src="//code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
