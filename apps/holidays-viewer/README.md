@@ -1,5 +1,5 @@
 # Holidays-Viewer
-A demo app that fetches the day's holidays from Wikipedia with options to search for holidays of other dates, and logging in to add new holidays. The app uses [API:Parse](https://www.mediawiki.org/wiki/API:Parse) to fetch the holidays, [API:Login](https://www.mediawiki.org/wiki/API:Login) to authenticate a user and [API:Edit](https://www.mediawiki.org/wiki/API:Edit) to add a new holiday.
+A demo app that fetches the day's holidays from Wikipedia with options to search for holidays of other dates, and logging in to add new holidays. The app uses [API:Parse](https://www.mediawiki.org/wiki/API:Parse) to fetch the holidays, [API:Login](https://www.mediawiki.org/wiki/API:Login) to authenticate a user and [API:Edit](https://www.mediawiki.org/wiki/API:Edit) to add a new holiday. [Browse the app here](https://tools.wmflabs.org/holidays-viewer/).
 
 Install
 -------

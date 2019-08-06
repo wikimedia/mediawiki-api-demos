@@ -61,5 +61,14 @@
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/qrcode-generator",
 		"owner": "Jayprakash12345",
 		"url": "https://tools.wmflabs.org/qrcode-generator/"
+	},
+	{
+		"title": "Holidays Viewer",
+		"thumbnail": "static/holidays-viewer.png",
+		"description": "Lists holidays for a given date and allows logging in to add new holidays",
+		"modules": [ "tokens", "parse", "login", "edit" ],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/holidays-viewer",
+		"owner": "brendajerop",
+		"url": "https://tools.wmflabs.org/holidays-viewer/"
 	}
 ]
