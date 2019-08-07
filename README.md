@@ -38,6 +38,8 @@ in the file to run the sample code
 For running php code samples:
 $ cd php
 $ php filename.php
+Note: Install necessary modules by `apt-get install php-cli php-curl` and enter any credentials
+required in the file to run the sample code
 ```
 
 ### Contributing code samples or demo apps
