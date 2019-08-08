@@ -3,13 +3,17 @@
 # MediaWiki API Demos
 The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a web service that allows access to some wiki-features like authentication, page operations, and search. It can provide meta information about the wiki and the logged-in user.
 
-This repository contains demo apps and code snippets in various programming languages to assist developers for easy use of various modules of the API: 
+### Code snippets and demo apps
+This repository contains code snippets and demo apps in various programming languages to assist developers for easy use of various modules of the API. 
+
+Code snippets:
 * [Python](python/)
 * [Javascript](javascript/)
 * [PHP](php/)
 * [MediaWikiJS](mediawikijs/)
 
-### Apps
+
+Demo apps:
 * [Holidays viewer](apps/holidays-viewer):
 Demo app that fetches the holidays for a given date from Wikipedia, with an option to login to add new holidays. The app uses [API:Parse](https://www.mediawiki.org/wiki/API:Parse) to fetch the holidays and [API:Edit](https://www.mediawiki.org/wiki/API:Edit) to add a new holiday.
 * [Nearby places viewer](apps/nearby-places-viewer):
@@ -19,6 +23,10 @@ Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) modu
 * [User contributions feed](apps/user-contributions-feed):
 Demp app that uses [list=usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) module to fetch the top 50 edits made by a user.
 * [View more demo apps](apps/)
+
+### Gallery
+View a showcase of interactive demo apps built using the API on Wikimedia Toolforge: https://tools.wmflabs.org/apps-gallery/
+
 
 ### Installation
 ```
