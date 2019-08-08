@@ -3,7 +3,7 @@
 # MediaWiki API Demos
 The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a web service that allows access to some wiki-features like authentication, page operations, and search. It can provide meta information about the wiki and the logged-in user.
 
-This repository contains demo apps and code snippets in Python, PHP, Javascript and MediaWiki Javascript to assist developers for easy use of various modules of the API: 
+This repository contains demo apps and code snippets in various programming languages to assist developers for easy use of various modules of the API: 
 * [Python](python/)
 * [Javascript](javascript/)
 * [PHP](php/)
