@@ -10,8 +10,8 @@ This repository contains demo apps and code snippets in various programming lang
 * [MediaWikiJS](mediawikijs/)
 
 ### Apps
-* [Article ideas generator](apps/article-ideas-generator):
-Demo app that suggests articles from various categories that don't yet exist on English Wikipedia. The app uses [Parse](https://www.mediawiki.org/wiki/API:Parse) and [Links](https://www.mediawiki.org/wiki/API:Links) module.
+* [Holidays viewer](apps/holidays-viewer):
+Demo app that fetches the holidays for a given date from Wikipedia, with an option to login to add new holidays. The app uses [API:Parse](https://www.mediawiki.org/wiki/API:Parse) to fetch the holidays and [API:Edit](https://www.mediawiki.org/wiki/API:Edit) to add a new holiday.
 * [Nearby places viewer](apps/nearby-places-viewer):
 Demo of geo search for wiki pages near a location using the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) and MediaWiki Action API's [Geosearch](https://www.mediawiki.org/wiki/API:Geosearch) module.
 * [Picture of the day viewer](apps/picture-of-the-day-viewer):
