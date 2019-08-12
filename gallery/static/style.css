@@ -140,3 +140,7 @@ footer p {
 .bg-light {
   background-color: #ffc200 !important;
 }
+
+.img-responsive {
+  max-width: 100%;
+}

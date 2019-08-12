@@ -41,11 +41,11 @@
         <div class="row">
 
           {% for app in apps %}
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card shadow-sm h-100">
               <div class="card-thumbnail">
                 <div class="gradient-image">
-                  <img src="{{ app.thumbnail }}" height="222px">
+                  <img src="{{ app.thumbnail }}" height="222px" class="img-responsive">
                 </div>
               </div>
               <div class="card-body">
@@ -59,7 +59,7 @@
                 <br><span class="card-text">Built by: <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
               </div>
               <div class="card-buttons">
-                <a href="{{ app.url }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fas fa-external-link-alt"></i> Try it out</button></a>
+                <a href="{{ app.url }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6 h-100"><i class="fas fa-external-link-alt"></i> Try it out</button></a>
                 <a href="{{ app.source }}" target="_blank"><button type="button" class="btn btn-sm btn-outline-secondary btn-card col-lg-6"><i class="fab fa-github"></i> View on GitHub</button></a>
               </div>
             </div>
