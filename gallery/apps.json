@@ -70,5 +70,140 @@
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/holidays-viewer",
 		"owner": "brendajerop",
 		"url": "https://tools.wmflabs.org/holidays-viewer/"
+	},
+	{
+		"title": "Quote Mashup",
+		"thumbnail": "static/quote-mashup.png",
+		"description": "Creates a quote mashup by searching for random quotes from two famous people.",
+		"modules": [ "opensearch", "parse" ],
+		"source": "https://github.com/natetyler/natetyler.github.io",
+		"owner": "natetyler",
+		"url": "http://natetyler.github.io/"
+	},
+	{
+		"title": "Wikipedia Viewer",
+		"thumbnail": "static/wikipedia-viewer.png",
+		"description": "Allows searching on Wikipedia",
+		"modules": [ "search", "info" ],
+		"source": "https://github.com/sunilsj99/WikipediaViewer",
+		"owner": "sunilsj99",
+		"url": "https://sunilsj99.github.io/WikipediaViewer/"
+	},
+	{
+		"title": "AfD Stats",
+		"thumbnail": "static/afd-stats.png",
+		"description": "Analyzes a user's voting history of Articles for Deletion.",
+		"modules": [ "revisions", "info" ],
+		"source": "https://github.com/enterprisey/afdstats",
+		"owner": "enterprisey",
+		"url": "https://tools.wmflabs.org/afdstats/"
+	},
+	{
+		"title": "MediaWiki Benchmarker",
+		"thumbnail": "static/mediawiki-benchmarker.png",
+		"description": "Benchmarks MediaWiki installations",
+		"modules": [ "purge", "parse" ],
+		"source": "https://github.com/Fannon/MediaWiki-Benchmarker",
+		"owner": "Fannon",
+		"url": "http://fannon.github.io/MediaWiki-Benchmarker/"
+	},
+	{
+		"title": "OAuth Hello World!",
+		"thumbnail": "static/oauth-hello-world.png",
+		"description": "Edits your talk page using OAuth",
+		"modules": [ "userinfo", "tokens", "edit" ],
+		"source": "https://tools.wmflabs.org/oauth-hello-world/index.php?action=download",
+		"owner": "BradJorsch",
+		"url": "https://tools.wmflabs.org/oauth-hello-world/enduser.php"
+	},
+	{
+		"title": "Wikidata Addlingue",
+		"thumbnail": "static/addlingue.png",
+		"description": "Converts Wikidata string claims to monolingual claims",
+		"modules": [ "backlinks", "wbgetentities" ],
+		"source": "https://github.com/Pascalco/addlingue",
+		"owner": "Pascalco",
+		"url": "https://tools.wmflabs.org/pltools/addlingue/"
+	},
+	{
+		"title": "Recent Acquisitions",
+		"thumbnail": "static/reccat.png",
+		"description": "Shows the newest pages in a category",
+		"modules": [ "categorymembers", "info" ],
+		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/reccat",
+		"owner": "hay",
+		"url": "https://tools.wmflabs.org/hay/reccat/"
+	},
+	{
+		"title": "Wikidata Translate",
+		"thumbnail": "static/wikidata-translate.png",
+		"description": "Translates a term between two or more languages",
+		"modules": [ "wbsearchentities", "wbgetentities" ],
+		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/wdtranslate",
+		"owner": "hay",
+		"url": "https://tools.wmflabs.org/hay/wdtranslate/"
+	},
+	{
+		"title": "Recent Deaths",
+		"thumbnail": "static/recent-deaths.png",
+		"description": "Adds missing dates of deaths",
+		"modules": [ "parse", "wbgetentities" ],
+		"source": "https://github.com/Pascalco/recentdeaths",
+		"owner": "Pascalco",
+		"url": "https://tools.wmflabs.org/pltools/recentdeaths/"
+	},
+	{
+		"title": "Wikidata Skim",
+		"thumbnail": "static/wikidata-skim.png",
+		"description": "A visual wikidata query service",
+		"modules": [ "linkshere", "wbgetentities" ],
+		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/wdskim",
+		"owner": "hay",
+		"url": "https://tools.wmflabs.org/hay/wdskim/"
+	},
+	{
+		"title": "Wikidata VizQuery",
+		"thumbnail": "static/vizquery.png",
+		"description": "Queries Wikidata visually",
+		"modules": [ "wbsearchentities", "wbgetentities" ],
+		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/vizquery",
+		"owner": "hay",
+		"url": "https://tools.wmflabs.org/hay/vizquery/"
+	},
+	{
+		"title": "Wiki Search",
+		"thumbnail": "static/wiki-search.png",
+		"description": "Allows searching on Wikipedia",
+		"modules": [ "search", "pageimages", "extracts" ],
+		"source": "https://github.com/smallbrownbike/wikisearch",
+		"owner": "smallbrownbike",
+		"url": "http://wikisearch.surge.sh/"
+	},
+	{
+		"title": "Mass mailer",
+		"thumbnail": "static/mass-mailer.png",
+		"description": "Emails wiki users en masse",
+		"modules": [ "emailuser", "tokens" ],
+		"source": "https://phabricator.wikimedia.org/source/tool-massmailer/",
+		"owner": "wikimedia",
+		"url": "https://tools.wmflabs.org/massmailer/"
+	},
+	{
+		"title": "Parliament Diagram Generator",
+		"thumbnail": "static/parliament-diagram-generator.png",
+		"description": "Returns details of memberships of parliaments",
+		"modules": [ "wbgetentities", "wbgetclaims" ],
+		"source": "https://github.com/Teester/parliament-diagram-generator",
+		"owner": "Teester",
+		"url": "https://teester.github.io/parliament-diagram-generator/"
+	},
+	{
+		"title": "Wikifeedia",
+		"thumbnail": "static/wikifeedia.png",
+		"description": "A news feed of featured articles",
+		"modules": [ "categories", "random", "categorymembers", "info", "extracts", "pageimages" ],
+		"source": "https://github.com/hackerkid/Wikifeedia",
+		"owner": "hackerkid",
+		"url": "https://wikifeedia.vishnuks.com/"
 	}
 ]
