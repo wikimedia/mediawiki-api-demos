@@ -2,30 +2,27 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   margin-bottom: 0;
-  background-color: #ffd54d;
+  background-color: #f8f9fa;
 }
 
 body {
   font-family: 'Noto Sans', sans-serif;
-}
-
-footer {
-  background-color: #ffd54d;
+  color: #222;
 }
 
 .text-muted {
-  color: #b08600 !important;
+  color: #fc3 !important;
 }
 
 .text-muted a {
-  color: #b08600;
+  color: #fc3;
 }
 
 .btn-primary {
   border-radius: 0rem;
   box-shadow: 0 4px 10px 0 #666;
-  background-color: #363636;
-  border-color: #363636;
+  background-color: #222;
+  border-color: #222;
   font-size: 1.1em;
 }
 
@@ -67,14 +64,12 @@ footer {
 
 .card-body {
   text-align: center;
-  background-color: #363636;
   color: white;
-  padding-bottom: 0px;
 }
 
 .card .description {
   display: inline-block;
-  color: darkgray;
+  color: #a2a9b1;
 }
 
 .card-thumbnail {
@@ -86,7 +81,7 @@ footer {
 }
 
 .card-text a:link{
-  color: #007bff;
+  color: #36c;
 }
 
 .card-buttons {
@@ -97,17 +92,7 @@ footer {
   width: 50%;
   float: right;
   border: 0px;
-  background-color: gray;
-  border-radius: 0px;
-  color: white;
-  font-size: 1em;
-} 
-
-.card-buttons .btn-card:hover {
-  width: 50%;
-  float: right;
-  border: 0px;
-  background-color: #0069d9;
+  background-color: #72777d;
   border-radius: 0px;
   color: white;
   font-size: 1em;
@@ -137,10 +122,14 @@ footer p {
 	}
 }
 
-.bg-light {
-  background-color: #ffc200 !important;
-}
-
 .img-responsive {
   max-width: 100%;
+}
+
+.bg-dark {
+  background-color: #222 !important;
+}
+
+.badge-primary, .btn-primary:hover, .btn-card:hover {
+  background-color: #36c !important;
 }
