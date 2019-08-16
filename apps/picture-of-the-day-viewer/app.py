@@ -31,7 +31,7 @@ def index():
     if request.method == "POST":
         change_date()
 
-    data = fetch_potd(CURRENT_DATE)
+    data=fetch_potd(CURRENT_DATE)
 
     return render_template("index.html", data=data)
 
