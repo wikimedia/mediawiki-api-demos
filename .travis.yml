@@ -1,0 +1,32 @@
+env:
+  global:
+    # Command to get the list of files changed in the latest commit
+    - CHANGED_FILES="git diff --name-only HEAD~1"
+matrix:
+  include:
+    - language: node_js
+      node_js:
+        - "node"
+      install:
+        - npm i -g jshint
+        - npm i -g csslint
+      script:
+        # Check if there are any changed .js files then run jshint on them if they exist
+        - if $CHANGED_FILES | grep -q .js; then $CHANGED_FILES | grep .js | xargs jshint; fi
+        - if $CHANGED_FILES | grep -q .css; then $CHANGED_FILES | grep .css | xargs csslint; fi
+        
+    - language: php
+      php:
+        - "7"
+      script:
+        - if $CHANGED_FILES | grep -q .php; then $CHANGED_FILES | grep .php | xargs -n1 -P8 php -l; fi
+        
+    - language: python
+      python:
+        - "3.7"
+      install:
+        - pip install pylint
+        - pip install html-linter
+      script:
+        - if $CHANGED_FILES | grep -q .py; then $CHANGED_FILES | grep .py | xargs pylint --disable=E0401,R0801; fi
+        - if $CHANGED_FILES | grep -q .html; then $CHANGED_FILES | grep .html | xargs html_lint.py --printfilename; fi
