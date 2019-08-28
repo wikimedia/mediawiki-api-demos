@@ -18,7 +18,25 @@
 		"url": "https://tools.wmflabs.org/potd-viewer/"
 	},
 	{
-		"title": "User Contributions Feed",
+		"title": "Holidays Viewer",
+		"thumbnail": "static/holidays-viewer.png",
+		"description": "Allows viewing and adding new holidays for a given date",
+		"modules": [ "tokens", "parse", "login", "edit" ],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/holidays-viewer",
+		"owner": "brendajerop",
+		"url": "https://tools.wmflabs.org/holidays-viewer/"
+	},
+	{
+		"title": "QR Code Generator",
+		"thumbnail": "static/qrcode-generator.png",
+		"description": "Allows generating and uploading QR code to Wikimedia Commons",
+		"modules": [ "tokens", "upload" ],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/qrcode-generator",
+		"owner": "Jayprakash12345",
+		"url": "https://tools.wmflabs.org/qrcode-generator/"
+	},
+	{
+		"title": "User Contributions",
 		"thumbnail": "static/user_contributions_feed.png",
 		"description": "Fetches top 50 edits made by a user",
 		"modules": ["usercontribs"],
@@ -27,18 +45,9 @@
 		"url": "https://tools.wmflabs.org/user-contributions-feed/"
 	},
 	{
-		"title": "Article Ideas Generator",
-		"thumbnail": "static/article_ideas_generator.png",
-		"description": "Suggests articles from various categories that don't yet exist on Wikipedia",
-		"modules": ["parse", "links"],
-		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
-		"owner": "srish",
-		"url": "https://tools.wmflabs.org/article-ideas-generator/"
-	},
-	{
 		"title": "Account Creator",
 		"thumbnail": "static/create_account_with_captcha.png",
-		"description": "Creates account on a wiki with special authentication extension installed",
+		"description": "Creates account on a wiki",
 		"modules": ["tokens", "authmanagerinfo", "createaccount"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/create-account-with-captcha",
 		"owner": "srish",
@@ -54,27 +63,18 @@
 		"url": "http://tools.wmflabs.org"
 	},
 	{
-		"title": "QR Code Generator",
-		"thumbnail": "static/qrcode-generator.png",
-		"description": "Allows to generate and upload QR Code",
-		"modules": [ "tokens", "upload" ],
-		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/qrcode-generator",
-		"owner": "Jayprakash12345",
-		"url": "https://tools.wmflabs.org/qrcode-generator/"
-	},
-	{
-		"title": "Holidays Viewer",
-		"thumbnail": "static/holidays-viewer.png",
-		"description": "Lists holidays for a given date and allows logging in to add new holidays",
-		"modules": [ "tokens", "parse", "login", "edit" ],
-		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/holidays-viewer",
-		"owner": "brendajerop",
-		"url": "https://tools.wmflabs.org/holidays-viewer/"
+		"title": "Article Ideas",
+		"thumbnail": "static/article_ideas_generator.png",
+		"description": "Suggests articles from categories that don't yet exist on Wikipedia",
+		"modules": ["parse", "links"],
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"owner": "srish",
+		"url": "https://tools.wmflabs.org/article-ideas-generator/"
 	},
 	{
 		"title": "Quote Mashup",
 		"thumbnail": "static/quote-mashup.png",
-		"description": "Creates a quote mashup by searching for random quotes from two famous people.",
+		"description": "Creates a quote mashup from random quotes",
 		"modules": [ "opensearch", "parse" ],
 		"source": "https://github.com/natetyler/natetyler.github.io",
 		"owner": "natetyler",
@@ -99,7 +99,7 @@
 		"url": "https://tools.wmflabs.org/afdstats/"
 	},
 	{
-		"title": "MediaWiki Benchmarker",
+		"title": "Benchmarker",
 		"thumbnail": "static/mediawiki-benchmarker.png",
 		"description": "Benchmarks MediaWiki installations",
 		"modules": [ "purge", "parse" ],
@@ -108,13 +108,13 @@
 		"url": "http://fannon.github.io/MediaWiki-Benchmarker/"
 	},
 	{
-		"title": "OAuth Hello World!",
+		"title": "OAuth Hello World",
 		"thumbnail": "static/oauth-hello-world.png",
 		"description": "Edits your talk page using OAuth",
 		"modules": [ "userinfo", "tokens", "edit" ],
 		"source": "https://tools.wmflabs.org/oauth-hello-world/index.php?action=download",
 		"owner": "BradJorsch",
-		"url": "https://tools.wmflabs.org/oauth-hello-world/enduser.php"
+		"url": "https://tools.wmflabs.org/oauth-hello-world/"
 	},
 	{
 		"title": "Wikidata Addlingue",
@@ -162,34 +162,16 @@
 		"url": "https://tools.wmflabs.org/hay/wdskim/"
 	},
 	{
-		"title": "Wikidata VizQuery",
-		"thumbnail": "static/vizquery.png",
-		"description": "Queries Wikidata visually",
-		"modules": [ "wbsearchentities", "wbgetentities" ],
-		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/vizquery",
-		"owner": "hay",
-		"url": "https://tools.wmflabs.org/hay/vizquery/"
-	},
-	{
-		"title": "Wiki Search",
-		"thumbnail": "static/wiki-search.png",
-		"description": "Allows searching on Wikipedia",
-		"modules": [ "search", "pageimages", "extracts" ],
-		"source": "https://github.com/smallbrownbike/wikisearch",
-		"owner": "smallbrownbike",
-		"url": "http://wikisearch.surge.sh/"
-	},
-	{
-		"title": "Mass mailer",
+		"title": "MassMailer",
 		"thumbnail": "static/mass-mailer.png",
 		"description": "Emails wiki users en masse",
 		"modules": [ "emailuser", "tokens" ],
 		"source": "https://phabricator.wikimedia.org/source/tool-massmailer/",
-		"owner": "wikimedia",
+		"owner": "Urbanecm",
 		"url": "https://tools.wmflabs.org/massmailer/"
 	},
 	{
-		"title": "Parliament Diagram Generator",
+		"title": "Parliament Diagrams",
 		"thumbnail": "static/parliament-diagram-generator.png",
 		"description": "Returns details of memberships of parliaments",
 		"modules": [ "wbgetentities", "wbgetclaims" ],
@@ -205,5 +187,23 @@
 		"source": "https://github.com/hackerkid/Wikifeedia",
 		"owner": "hackerkid",
 		"url": "https://wikifeedia.vishnuks.com/"
+	},
+	{
+		"title": "Speed Patrolling",
+		"thumbnail": "static/speed-patrolling.png",
+		"description": "Wikidata tool that makes patrolling easier",
+		"modules": [ "patrol" ],
+		"source": "https://github.com/lucaswerkmeister/tool-speedpatrolling",
+		"owner": "lucaswerkmeister",
+		"url": "https://tools.wmflabs.org/speedpatrolling/"
+	},
+	{
+		"title": "Sightseer Map",
+		"thumbnail": "static/sightseer-map.png",
+		"description": "Features a map with interesting places to visit around Athens",
+		"modules": [ "query", "extracts" ],
+		"source": "https://github.com/desinas/sightseer-map",
+		"owner": "desinas",
+		"url": "https://desinas.github.io/sightseer-map/"
 	}
 ]
