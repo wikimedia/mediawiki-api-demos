@@ -1,5 +1,14 @@
 [
 	{
+		"title": "Search Starter",
+		"thumbnail": "static/wikipedia_search_starter.png",
+		"description": "Searches wikipedia and displays the first search result",
+		"modules": ["query"],
+		"source": "https://glitch.com/edit/#!/wikipedia-search-starter",
+		"owner": "ttseng",
+		"url": "https://wikipedia-search-starter.glitch.me/"
+	},
+	{
 		"title": "Nearby Places Viewer",
 		"thumbnail": "static/nearby_places_viewer.png",
 		"description": "Geo search for wiki pages near your location",
