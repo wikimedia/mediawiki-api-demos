@@ -4,7 +4,7 @@
     mergehistorytimestamp.py
 
     MediaWiki API Demos
-    Demo of `mergehistory` module: Merge the page revisions of Oldpage 
+    Demo of `mergehistory` module: Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
 
 """
@@ -51,7 +51,8 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 
-# Step 4: Send a POST request  to merge the page revisions of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
+# Step 4: Send a POST request  to merge the page revisions
+#  of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
 PARAMS_4 = {
     "action":"mergehistory",
     "from":"Oldpage",
@@ -61,11 +62,14 @@ PARAMS_4 = {
     "reason":"Reason"
     }
 
-payload = {"token" : CSRF_TOKEN}
-headers = {
+PAYLOAD = {"token" : CSRF_TOKEN}
+HEADERS = {
     'Content-Type': "application/x-www-form-urlencoded"
     }
 
-response = requests.request("POST", URL, data=payload, headers=headers, params=PARAMS_4)
+RESPONSE = requests.request("POST", URL, data=PAYLOAD, headers=HEADERS, params=PARAMS_4)
 
-print(response.text)
+print(RESPONSE.text)
+
+# To merge entire history of Oldpage to Newpage,
+# remove the "timestamp" parameter in step 4

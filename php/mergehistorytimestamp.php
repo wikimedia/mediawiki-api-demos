@@ -136,3 +136,9 @@ function mergehistorytimestamp( $csrftoken ) {
     echo $response;
   }
 }
+
+/*
+    To merge entire history of Oldpage to Newpage,
+    remove the "timestamp" parameter in step 4
+
+*/
