@@ -40,9 +40,11 @@ function getLoginToken() {
 	return $result["query"]["tokens"]["logintoken"];
 }
 
-// Step 2: POST request to log in. Use of main account for login is not
-// supported. Obtain credentials via Special:BotPasswords
-// (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
+// Step 2: Send a post request to log in using the clientlogin method.
+// import rights can't be granted using Special:BotPasswords
+// hence using bot passwords may not work.
+// See https://www.mediawiki.org/wiki/API:Login for more
+// information on log in methods.
 function loginRequest( $logintoken ) {
 	global $endPoint;
 
