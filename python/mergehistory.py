@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-    mergehistorytimestamp.py
+    mergehistory.py
 
     MediaWiki API Demos
     Demo of `mergehistory` module: Merge the page revisions of Oldpage
@@ -27,12 +27,17 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-# Step 2: Send a POST request to log in.
+# Step 2: Send a post request to log in using the clientlogin method.
+# import rights can't be granted using Special:BotPasswords
+# hence using bot passwords may not work.
+# See https://www.mediawiki.org/wiki/API:Login for more
+# information on log in methods.
 PARAMS_2 = {
     "action": "login",
     "lgname": "user_name",
     "lgpassword": "password",
     "format": "json",
+    "loginreturnurl": "http://127.0.0.1:5000/",
     "lgtoken": LOGIN_TOKEN
 }
 
@@ -59,17 +64,14 @@ PARAMS_4 = {
     "to":"Newpage",
     "format":"json",
     "timestamp":"2015-12-31T04:37:41Z",
-    "reason":"Reason"
+    "reason":"Reason",
+    "token" : CSRF_TOKEN
     }
 
-PAYLOAD = {"token" : CSRF_TOKEN}
-HEADERS = {
-    'Content-Type': "application/x-www-form-urlencoded"
-    }
+R = S.post(URL, data=PARAMS_4)
+DATA = R.text
 
-RESPONSE = requests.request("POST", URL, data=PAYLOAD, headers=HEADERS, params=PARAMS_4)
-
-print(RESPONSE.text)
+print(DATA)
 
 # To merge entire history of Oldpage to Newpage,
 # remove the "timestamp" parameter in step 4
