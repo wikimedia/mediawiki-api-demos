@@ -134,6 +134,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_allredirects.py](get_allredirects.py): get the first three unique pages containing redirects to the main namespace
 * [API:Alltransclusions](https://www.mediawiki.org/wiki/API:Alltransclusions)
   * [get_alltransclusions.py](get_alltransclusions.py): get three unique pages in the main namespace which contain transclusions
+* [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
+  * [mergehistory.py](mergehistory.py): Merge the page revisions of Oldpage
+    dating up to 2015-12-31T04:37:41Z into Newpage
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
