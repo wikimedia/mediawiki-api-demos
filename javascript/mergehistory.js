@@ -4,14 +4,11 @@
     MediaWiki API Demos
     Demo of `mergehistory` module: Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
-
+    
+    MIT license
 */
 var request = require("request").defaults({jar: true}),
 url = "https://test.wikipedia.org/w/api.php";
-login_token = getLoginToken(); // Step 1
-loginRequest( login_token ); // Step 2
-csrftoken = getCsrfToken(); // Step 3
-mergehistory( csrftoken ); // Step 4
 
 // Step 1: GET Request to fetch login token
 function getLoginToken() {
@@ -26,7 +23,7 @@ function getLoginToken() {
             return;
         }
         var data = JSON.parse(body);
-        return data.query.tokens.logintoken;
+        loginRequest(data.query.tokens.logintoken);
     });
 }
 
@@ -64,13 +61,13 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        return data.query.tokens.csrftoken;
+        mergehistory(data.query.tokens.csrftoken);
     });
 }
 
 // Step 4: Send a POST request  to merge the page revisions
 // of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
-function mergehistory(csrftoken) {
+function mergehistory(csrf_token) {
     var params_3 = {
             action: "mergehistory",
             from: "Oldpage",
@@ -78,7 +75,7 @@ function mergehistory(csrftoken) {
             reason: "Reason",
             format: "json",
             timestamp: "2015-12-31T04:37:41Z",
-            token: csrftoken
+            token: csrf_token
     };
     request.post({ url: url, form: params_3 }, function(error, res, body) {
         if (error) {

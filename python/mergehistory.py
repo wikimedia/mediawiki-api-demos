@@ -7,6 +7,7 @@
     Demo of `mergehistory` module: Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
 
+    MIT license
 """
 import requests
 
@@ -33,12 +34,12 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 # See https://www.mediawiki.org/wiki/API:Login for more
 # information on log in methods.
 PARAMS_2 = {
-    "action": "login",
-    "lgname": "user_name",
-    "lgpassword": "password",
+    "action": "clientlogin",
+    "username": "username",
+    "password": "password",
     "format": "json",
     "loginreturnurl": "http://127.0.0.1:5000/",
-    "lgtoken": LOGIN_TOKEN
+    "logintoken": LOGIN_TOKEN
 }
 
 R = S.post(URL, data=PARAMS_2)
