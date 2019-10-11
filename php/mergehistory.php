@@ -5,8 +5,9 @@
 
     MediaWiki API Demos
     Demo of `mergehistory` module: Merge the page revisions of Oldpage 
-    dating up to 2015-12-31T04:37:41Z into Newpage
-
+	dating up to 2015-12-31T04:37:41Z into Newpage
+	
+	MIT license
 */
 $endPoint = "https://test.wikipedia.org/w/api.php";
 
