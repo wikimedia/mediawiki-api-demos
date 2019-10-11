@@ -98,31 +98,31 @@ function getCSRFToken() {
 
 # Step 4: Send a POST request  to merge the page revisions of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
 function mergeHistory( $csrftoken ) {
-  global $endPoint;
-
-  $params4 = [
-	  "action"=>"mergehistory",
-	  "from"=>"Oldpage",
-	  "to"=>"Newpage",
-	  "format"=>"json",
-	  "timestamp"=>"2015-12-31T04:37:41Z",
-	  "reason"=>"Reason",
-	  "token" => $csrftoken
-  ];
+	global $endPoint;
+	
+	$params4 = [
+		"action"=>"mergehistory",
+		"from"=>"Oldpage",
+		"to"=>"Newpage",
+		"format"=>"json",
+		"timestamp"=>"2015-12-31T04:37:41Z",
+		"reason"=>"Reason",
+		"token" => $csrftoken
+	];
   
-  $ch = curl_init();
+	$ch = curl_init();
 
-  curl_setopt( $ch, CURLOPT_URL, $endPoint );
-  curl_setopt( $ch, CURLOPT_POST, true );
-  curl_setopt( $ch, CURLOPT_POSTFIELDS, http_build_query( $params4 ) );
-  curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-  curl_setopt( $ch, CURLOPT_COOKIEJAR, "cookie.txt" );
-  curl_setopt( $ch, CURLOPT_COOKIEFILE, "cookie.txt" );
+	curl_setopt( $ch, CURLOPT_URL, $endPoint );
+	curl_setopt( $ch, CURLOPT_POST, true );
+	curl_setopt( $ch, CURLOPT_POSTFIELDS, http_build_query( $params4 ) );
+	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
+	curl_setopt( $ch, CURLOPT_COOKIEJAR, "cookie.txt" );
+	curl_setopt( $ch, CURLOPT_COOKIEFILE, "cookie.txt" );
 
-  $response = curl_exec($ch);
-  curl_close($ch);
+	$response = curl_exec($ch);
+	curl_close($ch);
 
-  echo ($response);
+	echo ($response);
 }
 
 /*
