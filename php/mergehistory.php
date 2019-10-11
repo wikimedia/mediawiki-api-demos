@@ -97,17 +97,17 @@ function getCSRFToken() {
 }
 
 # Step 4: Send a POST request  to merge the page revisions of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
-function mergehistory( $csrftoken ) {
+function mergeHistory( $csrftoken ) {
   global $endPoint;
 
   $params4 = [
-		"action"=>"mergehistory",
-    "from"=>"Oldpage",
-    "to"=>"Newpage",
-    "format"=>"json",
-    "timestamp"=>"2015-12-31T04:37:41Z",
-    "reason"=>"Reason",
-    "token" => $csrftoken
+	  "action"=>"mergehistory",
+	  "from"=>"Oldpage",
+	  "to"=>"Newpage",
+	  "format"=>"json",
+	  "timestamp"=>"2015-12-31T04:37:41Z",
+	  "reason"=>"Reason",
+	  "token" => $csrftoken
   ];
   
   $ch = curl_init();

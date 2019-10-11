@@ -4,7 +4,7 @@
     MediaWiki API Demos
     Demo of `mergehistory` module: Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
-    
+
     MIT license
 */
 var request = require("request").defaults({jar: true}),
@@ -61,13 +61,13 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        mergehistory(data.query.tokens.csrftoken);
+        mergeHistory(data.query.tokens.csrftoken);
     });
 }
 
 // Step 4: Send a POST request  to merge the page revisions
 // of Oldpage dating up to 2015-12-31T04:37:41Z into Newpage
-function mergehistory(csrf_token) {
+function mergeHistory(csrf_token) {
     var params_3 = {
             action: "mergehistory",
             from: "Oldpage",
