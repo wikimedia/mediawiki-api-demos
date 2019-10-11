@@ -60,6 +60,9 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [get_alllinks.js](get_alllinks.js): list links to a namespace
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
   * [get_embedded_pages.js](get_embedded_pages.js): get all page(s) that embed a page
+* [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
+  * [mergehistory.js](mergehistory.js): Merge the page revisions of Oldpage
+    dating up to 2015-12-31T04:37:41Z into Newpage
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
