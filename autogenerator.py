@@ -4,7 +4,7 @@
     autogenerator.py
 
     MediaWiki API Demos
-    Generates python and javascript files for all demos of MediaWiki API supported
+    Generates python, javascript, and php files for all demos of MediaWiki API supported
     actions that support GET Requests only and can be easily built
     from a JSON Schema.
 
