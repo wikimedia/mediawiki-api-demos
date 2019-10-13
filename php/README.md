@@ -57,7 +57,9 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   *  [get_pages_revisions.php](get_pages_revisions.php): get revision data of multiple pages
   *  [get_filtered_page_revisions.php](get_filtered_page_revisions.php): get revision data of a page filtered by date and user
 * [API:Allrevisions](https://www.mediawiki.org/wiki/API:Allrevisions)
-  *  [get_allrevisions.php](python/get_allrevisions.php): get revision data of multiple pages and users
+  *  [get_allrevisions.php](get_allrevisions.php): get revision data of multiple pages and users
+* [API:Alldeletedrevisions](https://www.mediawiki.org/wiki/API:Alldeletedrevisions)
+  *  [get_alldeletedrevs.php](get_alldeletedrevs.php): get all deleted revision data by a user or in a namespace.
 * [API:Links](https://www.mediawiki.org/wiki/API:Links)
   *  [get_links.php](get_links.php): get links embedded on a page
   *  [get_red_links.php](get_red_links.php): get the first twenty red links in a page
