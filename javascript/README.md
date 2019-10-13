@@ -31,6 +31,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.js](get_pages_revisions.js): get revision data of multiple pages
   *  [get_filtered_page_revisions.js](get_filtered_page_revisions.js): get revision data of a page filtered by date and user
+* [API:Alldeletedrevisions](https://www.mediawiki.org/wiki/API:Alldeletedrevisions)
+  *  [get_alldeletedrevs.js](get_alldeletedrevs.js): get all deleted revision data by a user or in a namespace.
 * [API:Links](https://www.mediawiki.org/wiki/API:Links)
   *  [get_links.js](get_links.js): get links embedded on a page
   *  [get_red_links.js](get_red_links.js): get the first twenty red links in a page
