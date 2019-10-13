@@ -63,6 +63,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.js](mergehistory.js): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
+* [API:Contributors](https://www.mediawiki.org/wiki/API:Contributors)
+  * [contributors.js](contributors.js): get request to list all logged-in contributors and count of anonymous contributors to a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
