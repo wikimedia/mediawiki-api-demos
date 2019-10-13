@@ -3,7 +3,7 @@
 #!/usr/bin/python3
 
 """
-    get_contributors.py
+    contributors.py
 
     MediaWiki API Demos
     Demo of `Contributors` module: Get request to list all logged-in contributors and count of anonymous contributors to a page.
@@ -27,8 +27,4 @@ PARAMS = {
 R = S.get(url=URL, params=PARAMS)
 DATA = R.json()
 
-PAGES = DATA["query"]["pages"]
-
-for page in PAGES:
-    print(DATA)
-
+print(DATA)

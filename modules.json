@@ -570,5 +570,16 @@
 			"usprop": "blockinfo|groups|editcount|registration|emailable|gender",
 			"format": "json"
         }
+    },
+    {
+        "filename": "contributors",
+        "docstring": "Demo of `Contributors` module: Get request to list all logged-in contributors and count of anonymous contributors to a page.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+            "titles": "MediaWiki",
+            "prop": "contributors",
+			"format": "json"
+        }
     }
 ]
