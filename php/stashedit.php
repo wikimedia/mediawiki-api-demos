@@ -1,7 +1,7 @@
 <?php
 
 /*
-    stashedit.js
+    stashedit.php
 
     MediaWiki API Demos
     Demo of `stashedit` module: prepare an edit in shared cache
