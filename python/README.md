@@ -141,6 +141,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
     dating up to 2015-12-31T04:37:41Z into Newpage
 * [API:Contributors](https://www.mediawiki.org/wiki/API:Contributors)
   * [get_contributors.js](get_contributors.py): get request to list all logged-in contributors and count of anonymous contributors to a page
+* [API:Stashedit](https://www.mediawiki.org/wiki/API:Stashedit)
+  * [stashedit.py](stashedit.py): Prepare an edit in shared cache
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
