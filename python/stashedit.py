@@ -27,7 +27,6 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-# Step 2: Send a POST request to log in. For this login
 # method, obtain credentials by first visiting
 # https://www.test.wikipedia.org/wiki/Manual:Bot_passwords
 # See https://www.mediawiki.org/wiki/API:Login for more
@@ -39,20 +38,6 @@ PARAMS_2 = {
     "format": "json",
     "lgtoken": LOGIN_TOKEN
 }
-
-R = S.post(URL, data=PARAMS_2)
-DATA = R.json()
-
-# Step 3: While logged in, retrieve a CSRF token
-PARAMS_3 = {
-    "action": "query",
-    "meta": "tokens",
-    "format": "json"
-}
-
-R = S.get(url=URL, params=PARAMS_3)
-DATA = R.json()
-
 CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 
 # Step 4: Send a POST request to prepare an edit in shared cache
@@ -60,7 +45,6 @@ CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 PARAMS_4 = {
     "token":CSRF_TOKEN,
     "action":"stashedit",
-    "title":"Sandbox",
     "section":"new",
     "sectiontitle":"testing stashedit",
     "text":"testing stashedit API",
@@ -68,9 +52,3 @@ PARAMS_4 = {
     "contentformat":"text/x-wiki",
     "baserevid":"",
     "format":"json"
-    }
-
-R = S.post(URL, data=PARAMS_4)
-DATA = R.text
-
-print(DATA)
