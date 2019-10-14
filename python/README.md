@@ -137,6 +137,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.py](mergehistory.py): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
+* [API:Stashedit](https://www.mediawiki.org/wiki/API:Stashedit)
+  * [stashedit.py](stashedit.py): Prepare an edit in shared cache
+
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

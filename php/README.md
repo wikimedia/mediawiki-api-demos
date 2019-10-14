@@ -131,6 +131,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.php](mergehistory.php): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
+* [API:Stashedit](https://www.mediawiki.org/wiki/API:Stashedit)
+  * [stashedit.php](stashedit.php): Prepare an edit in shared cache
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

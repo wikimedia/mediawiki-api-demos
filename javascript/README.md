@@ -63,6 +63,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.js](mergehistory.js): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
+* [API:Stashedit](https://www.mediawiki.org/wiki/API:Stashedit)
+  * [stashedit.js](stashedit.js): Prepare an edit in shared cache
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
