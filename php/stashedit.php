@@ -97,14 +97,14 @@ function stashEdit( $csrftoken ) {
 	global $endPoint;
 	
 	$params4 = [
-		"action" => "stashedit",
-		"title" => "Sandbox",
-		"section" => "new",
-		"sectiontitle" => "testing stashedit",
-		"text" => "testing stashedit API",
-		"contentmodel" => "wikitext",
-		"contentformat" => "text/x-wiki",
-		"baserevid" => "",
+        "action" => "stashedit",
+        "title" => "Sandbox",
+        "section" => "new",
+        "sectiontitle" => "testing stashedit",
+        "text" => "testing stashedit API",
+        "contentmodel" => "wikitext",
+        "contentformat" => "text/x-wiki",
+        "baserevid" => "",
 		"format" => "json",
 		"token" => $csrftoken
 	];
