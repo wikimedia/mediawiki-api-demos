@@ -60,12 +60,12 @@ CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 PARAMS_4 = {
     "token":CSRF_TOKEN,
     "action":"stashedit",
-    "title":"PageTitle",
+    "title":"Sandbox",
     "section":"new",
     "sectiontitle":"testing stashedit",
     "text":"testing stashedit API",
-    "contentmodel":"text",
-    "contentformat":"text/plain",
+    "contentmodel":"wikitext",
+    "contentformat":"text/x-wiki",
     "baserevid":"",
     "format":"json"
     }
