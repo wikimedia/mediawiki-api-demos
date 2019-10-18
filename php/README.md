@@ -132,7 +132,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [mergehistory.php](mergehistory.php): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
 * [API:Contributors](https://www.mediawiki.org/wiki/API:Contributors)
-  * [contributors.js](contributors.php): get request to list all logged-in contributors and count of anonymous contributors to a page
+  * [get_contributors.js](get_contributors.php): get request to list all logged-in contributors and count of anonymous contributors to a page
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

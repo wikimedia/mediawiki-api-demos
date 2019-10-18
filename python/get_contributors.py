@@ -3,7 +3,7 @@
 #!/usr/bin/python3
 
 """
-    contributors.py
+    get_contributors.py
 
     MediaWiki API Demos
     Demo of `Contributors` module: Get request to list all logged-in contributors and count of anonymous contributors to a page.
