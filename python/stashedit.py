@@ -27,18 +27,17 @@ DATA = R.json()
 
 LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 
-# Step 2: Send a post request to log in using the clientlogin method.
-# import rights can't be granted using Special:BotPasswords
-# hence using bot passwords may not work.
+# Step 2: Send a POST request to log in. For this login
+# method, obtain credentials by first visiting
+# https://www.test.wikipedia.org/wiki/Manual:Bot_passwords
 # See https://www.mediawiki.org/wiki/API:Login for more
 # information on log in methods.
 PARAMS_2 = {
-    "action": "clientlogin",
-    "username": "username",
-    "password": "password",
+    "action": "login",
+    "lgname": "user_name",
+    "lgpassword": "password",
     "format": "json",
-    "loginreturnurl": "http://127.0.0.1:5000/",
-    "logintoken": LOGIN_TOKEN
+    "lgtoken": LOGIN_TOKEN
 }
 
 R = S.post(URL, data=PARAMS_2)
@@ -61,13 +60,13 @@ CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 PARAMS_4 = {
     "token":CSRF_TOKEN,
     "action":"stashedit",
-    "title":"User:Zaycodes/Sandbox/API:Mergehistory",
+    "title":"PageTitle",
     "section":"new",
     "sectiontitle":"testing stashedit",
     "text":"testing stashedit API",
     "contentmodel":"text",
     "contentformat":"text/plain",
-    "baserevid":1,
+    "baserevid":"",
     "format":"json"
     }
 

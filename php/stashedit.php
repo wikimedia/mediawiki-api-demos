@@ -40,20 +40,17 @@ function getLoginToken() {
 	return $result["query"]["tokens"]["logintoken"];
 }
 
-// Step 2: Send a post request to log in using the clientlogin method.
-// import rights can't be granted using Special:BotPasswords
-// hence using bot passwords may not work.
-// See https://www.mediawiki.org/wiki/API:Login for more
-// information on log in methods.
+// Step 2: POST request to log in. Use of main account for login is not
+// supported. Obtain credentials via Special:BotPasswords
+// (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
 function loginRequest( $logintoken ) {
 	global $endPoint;
 
 	$params2 = [
-		"action" => "clientlogin",
-		"username" => "username",
-		"password" => "password",
-		'loginreturnurl' => 'http://127.0.0.1:5000/',
-		"logintoken" => $logintoken,
+		"action" => "login",
+		"lgname" => "bot_user_name",
+		"lgpassword" => "bot_password",
+		"lgtoken" => $logintoken,
 		"format" => "json"
 	];
 
