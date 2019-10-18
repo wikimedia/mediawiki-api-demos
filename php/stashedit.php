@@ -105,7 +105,7 @@ function stashEdit( $csrftoken ) {
         "contentmodel" => "wikitext",
         "contentformat" => "text/x-wiki",
         "baserevid" => "",
-        "format" => "json",
+		"format" => "json",
 		"token" => $csrftoken
 	];
   
