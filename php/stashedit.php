@@ -98,13 +98,13 @@ function stashEdit( $csrftoken ) {
 	
 	$params4 = [
         "action" => "stashedit",
-        "title" => "User:Zaycodes/Sandbox/API:Mergehistory",
+        "title" => "Sandbox",
         "section" => "new",
         "sectiontitle" => "testing stashedit",
         "text" => "testing stashedit API",
-        "contentmodel" => "text",
-        "contentformat" => "text/plain",
-        "baserevid" => 1,
+        "contentmodel" => "wikitext",
+        "contentformat" => "text/x-wiki",
+        "baserevid" => "",
         "format" => "json",
 		"token" => $csrftoken
 	];
