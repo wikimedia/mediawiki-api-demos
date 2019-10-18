@@ -570,5 +570,17 @@
 			"usprop": "blockinfo|groups|editcount|registration|emailable|gender",
 			"format": "json"
         }
+	},
+	{
+        "filename": "filearchive",
+        "docstring": "Enumerate 3 deleted files from filearchive table in descending order.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "query",
+			"format": "json",
+			"list": "filearchive",
+			"fadir":"descending",
+			"falimit":"3"
+        }
     }
 ]
