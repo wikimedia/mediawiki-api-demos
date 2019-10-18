@@ -45,6 +45,7 @@ CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 PARAMS_4 = {
     "token":CSRF_TOKEN,
     "action":"stashedit",
+    "title":"Sandbox",
     "section":"new",
     "sectiontitle":"testing stashedit",
     "text":"testing stashedit API",
