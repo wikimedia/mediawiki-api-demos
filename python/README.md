@@ -138,7 +138,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [mergehistory.py](mergehistory.py): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
 * [API:FileArchive](https://www.mediawiki.org/wiki/API:Mergehistory)
-  * [mergehistory.js](filearchive.py): Enumerate all deleted files sequentially.
+  * [filearchive.py](filearchive.py): Enumerate all deleted files sequentially.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

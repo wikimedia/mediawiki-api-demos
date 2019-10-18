@@ -132,7 +132,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [mergehistory.php](mergehistory.php): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
 * [API:FileArchive](https://www.mediawiki.org/wiki/API:Mergehistory)
-  * [mergehistory.js](filearchive.php): Enumerate all deleted files sequentially.
+  * [filearchive.php](filearchive.php): Enumerate all deleted files sequentially.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
