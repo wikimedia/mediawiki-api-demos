@@ -32,6 +32,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [get_watchlist.php](get_watchlist.php): get the currently logged-in user's watchlist
 * [API:Watchlistraw](https://www.mediawiki.org/wiki/API:Watchlistraw)
   * [get_watchlistraw.php](get_watchlistraw.php): get three pages on the logged-in user's watchlist from the main namespace
+* [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
+  * [rsd.php](rsd.php): export an RSD schema
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
