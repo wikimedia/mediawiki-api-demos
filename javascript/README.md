@@ -13,6 +13,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
   * [get_my_watchlist_feed.js](get_my_watchlist_feed.js): access an RSS feed of your own watchlist
   * [get_user_watchlist_feed.js](get_user_watchlist_feed.js): access an RSS feed of another user's watchlist
+* [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
+  *  [rsd.js](rsd.js): export an RSD schema
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)

@@ -7,3 +7,7 @@ These code snippets are usefull to create Userscripts and Gadgets.
 ### Authentication
 * [API:Tokens](https://www.mediawiki.org/wiki/API:Tokens)
   * [tokens.js](tokens.js): get tokens for data modifying operations
+
+### Accounts and users 
+* [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
+  *  [rsd.js](rsd.js): export an RSD schema
