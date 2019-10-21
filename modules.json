@@ -592,6 +592,15 @@
             "adruser": "Mahesh",
 			"adrprop": "ids|user|comment",
 			"format": "json"
+		}
+	},
+	{
+        "filename": "rsd",
+        "docstring": "Demo of `Rsd` module: Get request to export an RSD schema.",
+        "endpoint": "https://en.wikipedia.org/w/api.php",
+        "params": {
+            "action": "rsd",
+			"format": "json"
         }
     }
 ]
