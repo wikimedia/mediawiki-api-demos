@@ -7,7 +7,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.js](logout.js): logout
 
-### Accounts and users 
+### Accounts and users
 * [API:User contributions](https://www.mediawiki.org/wiki/API:User_contributions)
   *  [get_usercontribs.js](get_usercontribs.js): list user contributions
 * [API:Watchlist feed](https://www.mediawiki.org/wiki/API:Watchlist_feed)
@@ -41,7 +41,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit)
   * [edit.js](edit.js): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages)
-  * [get_allimages_by_date.js](get_allimages_by_date.js): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_date.js](get_allimages_by_date.js): list all images in a namespace, starting from a certain timestamp
   * [get_allimages_by_name.js](get_allimages_by_name.js): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo)
   * [get_imageinfo.js](get_imageinfo.js) get information about an image file
@@ -55,7 +55,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Backlinks](https://www.mediawiki.org/wiki/API:Backlinks)
   * [get_backlinks.js](get_backlinks.js): list pages which link to a certain page
 * [API:Random](https://www.mediawiki.org/wiki/API:Backlinks)
-  * [get_random.js](get_random.js): get a list of random pages 
+  * [get_random.js](get_random.js): get a list of random pages
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.js](get_alllinks.js): list links to a namespace
 * [API:Embeddedin](https://www.mediawiki.org/wiki/API:Embeddedin)
@@ -63,10 +63,10 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.js](mergehistory.js): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
-* [API:FileArchive](https://www.mediawiki.org/wiki/API:Mergehistory)
+* [API:FileArchive](https://www.mediawiki.org/wiki/User:Liz_Kariuki/Sandbox/API:Filearchive)
   * [filearchive.js](filearchive.js): Enumerate all deleted files sequentially.
 
-### Search 
+### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.js](search.js): search for a title or a text
 * [API:Geosearch](https://www.mediawiki.org/wiki/API:Geosearch)
@@ -78,7 +78,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Prefixsearch](https://www.mediawiki.org/wiki/API:Prefixsearch)
   * [prefixsearch.js](prefixsearch.js): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
-  * [languagesearch.js](languagesearch.js): search for a language 
+  * [languagesearch.js](languagesearch.js): search for a language
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)

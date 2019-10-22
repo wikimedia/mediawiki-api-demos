@@ -9,7 +9,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.php](logout.php): logout
 
-### Accounts and users 
+### Accounts and users
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.php](create_account.php): create an account on a wiki without any special authentication extensions
 * [API:Block](https://www.mediawiki.org/wiki/API:Block)
@@ -42,7 +42,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   *  [get_subcategories.php](get_subcategories.php): get ten subcategories of a category
 * [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
   *  [get_category_info.php](get_category_info.php): get info about few categories
-* [API:Images](https://www.mediawiki.org/wiki/API:Images) 
+* [API:Images](https://www.mediawiki.org/wiki/API:Images)
   * [get_page_images.php](get_page_images.php): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
   *  [purge_two_pages.php](purge_two_pages.php): purge cache of two or more pages
@@ -68,7 +68,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit)
   * [edit.php](edit.php): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages)
-  * [get_allimages_by_date.php](get_allimages_by_date.php): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_date.php](get_allimages_by_date.php): list all images in a namespace, starting from a certain timestamp
   * [get_allimages_by_name.php](get_allimages_by_name.php): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo)
   * [get_imageinfo.php](get_imageinfo.php) get information about an image file
@@ -85,7 +85,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Move](https://www.mediawiki.org/wiki/API:Move)
   * [move.php](move.php): move a page
 * [API:Watch](https://www.mediawiki.org/wiki/API:Watch)
-  * [watch.php](watch.php): add a page to your watchlist 
+  * [watch.php](watch.php): add a page to your watchlist
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.php](get_alllinks.php): list links to a namespace
 * [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
@@ -131,10 +131,10 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Mergehistory](https://www.mediawiki.org/wiki/API:Mergehistory)
   * [mergehistory.php](mergehistory.php): Merge the page revisions of Oldpage
     dating up to 2015-12-31T04:37:41Z into Newpage
-* [API:FileArchive](https://www.mediawiki.org/wiki/API:Mergehistory)
+* [API:FileArchive](https://www.mediawiki.org/wiki/User:Liz_Kariuki/Sandbox/API:Filearchive)
   * [filearchive.php](filearchive.php): Enumerate all deleted files sequentially.
 
-### Search 
+### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.php](search.php): search for a title or a text
 * [API:Geosearch](https://www.mediawiki.org/wiki/API:Geosearch)
@@ -146,7 +146,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Prefixsearch](https://www.mediawiki.org/wiki/API:Prefixsearch)
   * [prefixsearch.php](prefixsearch.php): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
-  * [languagesearch.php](languagesearch.php): search for a language 
+  * [languagesearch.php](languagesearch.php): search for a language
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
