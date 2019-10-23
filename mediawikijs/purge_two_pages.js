@@ -1,10 +1,10 @@
-/*
-	purge_namespace_pages.js
+/*  
+    purge_two_pages.js
+ 
+    MediaWiki API Demos
+    Demo of `purge` module: Sending post request to purge two or more pages
 
-	MediaWiki API Demos
-	Demo of `purge` module: Sending post request to purge first 10 pages in the main namespace
-
-	MIT License
+    MIT license
 */
 
 var params = {
