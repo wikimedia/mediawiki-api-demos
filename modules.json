@@ -149,17 +149,17 @@
 			"format": "json"
 		}
 	},
-  {
-  	"filename": "get_category_info",
-    "docstring": "Demo of `Categoryinfo` module: Get information about a few categories",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "titles": "Category:Foo|Category:Infobox templates",
-      "prop": "categoryinfo"
-    }
-  },
+	{
+		"filename": "get_category_info",
+		"docstring": "Demo of `Categoryinfo` module: Get information about a few categories",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"titles": "Category:Foo|Category:Infobox templates",
+			"prop": "categoryinfo"
+		}
+	},
 	{
 		"filename": "parse",
 		"docstring": "Demo of `Parse` module: Parse content of a page",
@@ -369,237 +369,237 @@
 			"ucuser": "Jimbo Wales"
 		}
 	},
-  {
+	{
 		"filename": "get_allfileusages",
-	  "docstring": "Demo of `allfileusage` module: List all file usages, including non-existing.",
+		"docstring": "Demo of `allfileusage` module: List all file usages, including non-existing.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
-	  "params": {
+		"params": {
 			"action": "query",
-	    "format": "json",
-		  "list": "allfileusages",
- 	    "afprefix": "Icon",
+			"format": "json",
+			"list": "allfileusages",
+			"afprefix": "Icon",
 			"afprop": "ids|title"
 		}
 	},
-  {
-  	"filename": "get_embedded_pages",
-    "docstring": "Demo of `Embeddedin` module: Get all page(s) that embed a given page",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "embeddedin",
-      "eititle": "Computer",
-      "eilimit": "20"
-  	}
-  },
 	{
-  	"filename": "get_exturlusage",
-    "docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "exturlusage",
-      "euquery": "slashdot.org"
-    }
-  },
-  {
-  	"filename": "get_allrevisions",
-    "docstring": "Demo of `Allrevisions` module: get revision data of multiple pages and users",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-	   	"action": "query",
-		  "format": "json",
-		  "list": "allrevisions",
-		  "arvprop": "ids|flags|timestamp",
-		  "arvuser": "Place holder"
-    }
-  },
-  {
-    "filename": "get_pagepropnames",
-    "docstring": "Demo of `Pagepropnames` module: List page property names on the given wiki.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "list": "pagepropnames",
-      "format": "json"
-    }
-  },
-  {
-  	"filename": "get_protectedtitles",
-    "docstring": "Demo of `Protectedtitles` module: Get the first 2 titles which only sysops can create",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "protectedtitles",
-      "ptlevel": "sysop",
-      "ptlimit": "2"
-    }
-  },
-  {
-  	"filename": "get_imageusage",
-    "docstring": "Demo of `Imageusage` module: List the first 3 pages that use a given image title",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "imageusage",
-      "iutitle": "File:Wiki_logo_Nupedia.jpg",
-      "iulimit": "3"
-    }
-  },
-  {
-    "filename": "get_iwlinks",
-    "docstring": "Demo of `Iwlinks` module: Get the interwiki links from a given page.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "prop": "iwlinks",
-      "titles": "Albert Einstein"
-    }
-  },
-  {
-  	"filename": "get_logevents",
-    "docstring": "Demo of `Logevents` module: Get the three most recent logevents.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "logevents",
-      "lelimit": "3"
-		}
-	},
-  {
-    "filename": "get_tags",
-    "docstring": "Demo of `Tags` module: Get the first three change tags and their hitcounts.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "tags",
-      "tgprop":"hitcount",
-      "tglimit": "3"
-    }
-  },
-  {
-  	"filename": "get_allredirects",
-    "docstring": "Demo of `Allredirects` module: Get the first three unique pages containing redirects to the main namespace.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "allredirects",
-      "arunique": "1",
-      "arnamespace": "0",
-      "arlimit": "3"
-    }
-  },
-  {
-    "filename": "get_alltransclusions",
-    "docstring": "Demo of `Alltransclusions` module: Get three unique pages in the main namespace which contain transclusions.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "format": "json",
-      "list": "alltransclusions",
-      "atunique": "1",
-      "atnamespace": "0",
-      "atlimit": "3"
-		}
-	},
-  {
-  	"filename": "get_blocked_users",
-    "docstring": "Demo of `Blocks` module: GET request to list recent blocked users.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
+		"filename": "get_embedded_pages",
+		"docstring": "Demo of `Embeddedin` module: Get all page(s) that embed a given page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
-    	"action": "query",
-      "list": "blocks",
-      "bklimit": "3",
+			"action": "query",
+			"format": "json",
+			"list": "embeddedin",
+			"eititle": "Computer",
+			"eilimit": "20"
+		}
+	},
+	{
+		"filename": "get_exturlusage",
+		"docstring": "Demo of `Exturlusage` module: Enumerate pages that contain a given URL.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "exturlusage",
+			"euquery": "slashdot.org"
+		}
+	},
+	{
+		"filename": "get_allrevisions",
+		"docstring": "Demo of `Allrevisions` module: get revision data of multiple pages and users",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allrevisions",
+			"arvprop": "ids|flags|timestamp",
+			"arvuser": "Place holder"
+		}
+	},
+	{
+		"filename": "get_pagepropnames",
+		"docstring": "Demo of `Pagepropnames` module: List page property names on the given wiki.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "pagepropnames",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_protectedtitles",
+		"docstring": "Demo of `Protectedtitles` module: Get the first 2 titles which only sysops can create",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "protectedtitles",
+			"ptlevel": "sysop",
+			"ptlimit": "2"
+		}
+	},
+	{
+		"filename": "get_imageusage",
+		"docstring": "Demo of `Imageusage` module: List the first 3 pages that use a given image title",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "imageusage",
+			"iutitle": "File:Wiki_logo_Nupedia.jpg",
+			"iulimit": "3"
+		}
+	},
+	{
+		"filename": "get_iwlinks",
+		"docstring": "Demo of `Iwlinks` module: Get the interwiki links from a given page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"prop": "iwlinks",
+			"titles": "Albert Einstein"
+		}
+	},
+	{
+		"filename": "get_logevents",
+		"docstring": "Demo of `Logevents` module: Get the three most recent logevents.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "logevents",
+			"lelimit": "3"
+		}
+	},
+	{
+		"filename": "get_tags",
+		"docstring": "Demo of `Tags` module: Get the first three change tags and their hitcounts.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "tags",
+			"tgprop":"hitcount",
+			"tglimit": "3"
+		}
+	},
+	{
+		"filename": "get_allredirects",
+		"docstring": "Demo of `Allredirects` module: Get the first three unique pages containing redirects to the main namespace.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "allredirects",
+			"arunique": "1",
+			"arnamespace": "0",
+			"arlimit": "3"
+		}
+	},
+	{
+		"filename": "get_alltransclusions",
+		"docstring": "Demo of `Alltransclusions` module: Get three unique pages in the main namespace which contain transclusions.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"format": "json",
+			"list": "alltransclusions",
+			"atunique": "1",
+			"atnamespace": "0",
+			"atlimit": "3"
+		}
+	},
+	{
+		"filename": "get_blocked_users",
+		"docstring": "Demo of `Blocks` module: GET request to list recent blocked users.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "blocks",
+			"bklimit": "3",
 			"bkprop": "id|user|by|timestamp|expiry|reason|range|flags",
 			"format": "json"
-    }
+		}
 	},
-  {
-  	"filename": "get_querypage_list",
-    "docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "list": "querypage",
-      "qppage": "Uncategorizedpages",
+	{
+		"filename": "get_querypage_list",
+		"docstring": "Demo of `Querypage` module: List first 10 pages which are uncategorized",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "querypage",
+			"qppage": "Uncategorizedpages",
 			"qplimit": "10",
 			"format": "json"
-    }
+		}
 	},
 	{
-  	"filename": "get_recent_changes",
-    "docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "list": "recentchanges",
-      "rcprop": "title|ids|sizes|flags|user",
+		"filename": "get_recent_changes",
+		"docstring": "Demo of `RecentChanges` module: Get the three most recent changes with sizes and flags",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "recentchanges",
+			"rcprop": "title|ids|sizes|flags|user",
 			"rclimit": "3",
 			"format": "json"
-    }
+		}
 	},
 	{
-  	"filename": "get_red_links",
-    "docstring": "Demo of `Links` module to identify red or missing links on a page.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "generator": "links",
-      "titles": "Wikipedia:Most-wanted_articles",
+		"filename": "get_red_links",
+		"docstring": "Demo of `Links` module to identify red or missing links on a page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"generator": "links",
+			"titles": "Wikipedia:Most-wanted_articles",
 			"gpllimit": "20",
 			"format": "json"
-    }
+		}
 	},
-  {
-  	"filename": "get_users",
-    "docstring": "Demo of `Users` module: Get information about several users: [[1.2.3.4]], [[Catrope]], [[Vandal01]], and [[Bob]]",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "list": "users",
-      "ususers": "Catrope|Bob",
+	{
+		"filename": "get_users",
+		"docstring": "Demo of `Users` module: Get information about several users: [[1.2.3.4]], [[Catrope]], [[Vandal01]], and [[Bob]]",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "users",
+			"ususers": "Catrope|Bob",
 			"usprop": "blockinfo|groups|editcount|registration|emailable|gender",
 			"format": "json"
-    }
-  },
-  {
-  	"filename": "get_contributors",
-    "docstring": "Demo of `Contributors` module: Get request to list all logged-in contributors and count of anonymous contributors to a page.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "titles": "MediaWiki",
-      "prop": "contributors",
-      "format": "json"
-    }
-  },
+		}
+	},
 	{
-  	"filename": "get_alldeletedrevs",
-    "docstring": "Demo of `alldeletedrevisions` module: List the all deleted revisions from User",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "query",
-      "list": "alldeletedrevisions",
-      "adruser": "Mahesh",
+		"filename": "get_contributors",
+		"docstring": "Demo of `Contributors` module: Get request to list all logged-in contributors and count of anonymous contributors to a page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "MediaWiki",
+			"prop": "contributors",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_alldeletedrevs",
+		"docstring": "Demo of `alldeletedrevisions` module: List the all deleted revisions from User",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "alldeletedrevisions",
+			"adruser": "Mahesh",
 			"adrprop": "ids|user|comment",
 			"format": "json"
 		}
 	},
 	{
-  	"filename": "rsd",
-    "docstring": "Demo of `Rsd` module: Get request to export an RSD schema.",
-    "endpoint": "https://en.wikipedia.org/w/api.php",
-    "params": {
-    	"action": "rsd",
+		"filename": "rsd",
+		"docstring": "Demo of `Rsd` module: Get request to export an RSD schema.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "rsd",
 			"format": "json"
-    }
-  }
+		}
+	}
 ]
