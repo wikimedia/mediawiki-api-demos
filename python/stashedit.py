@@ -52,3 +52,4 @@ PARAMS_4 = {
     "contentformat":"text/x-wiki",
     "baserevid":"",
     "format":"json"
+}
