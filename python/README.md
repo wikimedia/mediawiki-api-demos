@@ -9,7 +9,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.py](logout.py): logout
 
-### Accounts and users 
+### Accounts and users
 * [API:Account creation](https://www.mediawiki.org/wiki/API:Account_creation)
   *  [create_account.py](create_account.py): create an account on a wiki without any special authentication extensions
 * [API:Block](https://www.mediawiki.org/wiki/API:Block)
@@ -46,7 +46,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   *  [get_subcategories.py](get_subcategories.py): get ten subcategories of a category
 * [API:Categoryinfo](https://www.mediawiki.org/wiki/API:Categoryinfo)
   *  [get_category_info.py](get_category_info.py): get info about few categories
-* [API:Images](https://www.mediawiki.org/wiki/API:Images) 
+* [API:Images](https://www.mediawiki.org/wiki/API:Images)
   * [get_page_images.py](get_page_images.py): get page images embedded on a page
 * [API:Purge](https://www.mediawiki.org/wiki/API:Purge)
   *  [purge_two_pages.py](purge_two_pages.py): purge cache of two or more pages
@@ -74,7 +74,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Edit](https://www.mediawiki.org/wiki/API:Edit)
   * [edit.py](edit.py): edit a page
 * [API:Allimages](https://www.mediawiki.org/wiki/API:Allimages)
-  * [get_allimages_by_date.py](get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp 
+  * [get_allimages_by_date.py](get_allimages_by_date.py): list all images in a namespace, starting from a certain timestamp
   * [get_allimages_by_name.py](get_allimages_by_name.py): list all images in a namespace, starting from a certain filename
 * [API:Imageinfo](https://www.mediawiki.org/wiki/API:Imageinfo)
   * [get_imageinfo.py](get_imageinfo.py) get information about an image file
@@ -92,7 +92,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Move](https://www.mediawiki.org/wiki/API:Move)
   * [move.py](move.py): move a page
 * [API:Watch](https://www.mediawiki.org/wiki/API:Watch)
-  * [watch.py](watch.py): add a page to your watchlist 
+  * [watch.py](watch.py): add a page to your watchlist
 * [API:Alllinks](https://www.mediawiki.org/wiki/API:Alllinks)
   * [get_alllinks.py](get_alllinks.py): list links to a namespace
 * [API:Exturlusage](https://www.mediawiki.org/wiki/API:Exturlusage)
@@ -113,7 +113,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [protect.py](protect.py): Change the protection level of a given page
 * [API:Upload](https://www.mediawiki.org/wiki/API:Upload)
   * [upload_file_directly.py](upload_file_directly.py): upload a file directly from the system
-  * [upload_file_from_url.py](upload_file_from_url.py): upload a file from a URL 
+  * [upload_file_from_url.py](upload_file_from_url.py): upload a file from a URL
   * [upload_file_in_chunks.py](upload_file_in_chunks.py): upload a file in chunks
 * [API:Pagepropnames](https://www.mediawiki.org/wiki/API:Pagepropnames)
   * [get_pagepropnames.py](get_pagepropnames.py): List all page property names in use on the wiki
@@ -145,8 +145,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_contributors.js](get_contributors.py): get request to list all logged-in contributors and count of anonymous contributors to a page
 * [API:Stashedit](https://www.mediawiki.org/wiki/API:Stashedit)
   * [stashedit.py](stashedit.py): Prepare an edit in shared cache
+* [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
+  * [filearchive.py](filearchive.py): Enumerate all deleted files from filearchive table sequentially
 
-### Search 
+### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](search.py): search for a title or a text
 * [API:Geosearch](https://www.mediawiki.org/wiki/API:Geosearch)
@@ -158,7 +160,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Prefixsearch](https://www.mediawiki.org/wiki/API:Prefixsearch)
   * [prefixsearch.py](prefixsearch.py): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
-  * [languagesearch.py](languagesearch.py): search for a language 
+  * [languagesearch.py](languagesearch.py): search for a language
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)

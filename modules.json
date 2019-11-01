@@ -601,5 +601,17 @@
 			"action": "rsd",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "filearchive",
+		"docstring": "Enumerate 3 deleted files from filearchive table in descending order.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"falimit": "3",
+			"list": "filearchive",
+			"fadir": "descending",
+			"format": "json"
+		}
 	}
 ]

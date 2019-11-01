@@ -1,5 +1,5 @@
 # MediaWiki Javascript
-Code snippets in MediaWiki native Javascript demonstrating how to use various modules of the [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page). These code snippets are vaild within MediaWiki Sites. And works in MediaWiki Javascript wikipages like MediaWiki:Common.js, User:ABC/common.js 
+Code snippets in MediaWiki native Javascript demonstrating how to use various modules of the [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page). These code snippets are vaild within MediaWiki Sites. And works in MediaWiki Javascript wikipages like MediaWiki:Common.js, User:ABC/common.js
 and User:ABC/global.js
 
 These code snippets are usefull to create Userscripts and Gadgets.
@@ -7,10 +7,6 @@ These code snippets are usefull to create Userscripts and Gadgets.
 ### Authentication
 * [API:Tokens](https://www.mediawiki.org/wiki/API:Tokens)
   * [tokens.js](tokens.js): get tokens for data modifying operations
-
-### Accounts and users 
-* [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
-  *  [rsd.js](rsd.js): export an RSD schema
 * [API:Logout](https://www.mediawiki.org/wiki/API:Logout)
   * [logout.js](logout.js): logout
 * [API:Login](https://www.mediawiki.org/wiki/API:Login)
@@ -33,6 +29,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [send_email.js](send_email.js): post request to send email to wiki user
 * [API:Userrights](https://www.mediawiki.org/wiki/API:Userrights)
   * [userrights.js](userrights.js): add and remove user rights by changing the user's group membership
+* [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
+  *  [rsd.js](rsd.js): export an RSD schema
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -139,6 +137,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [upload_file_in_chunks.js](upload_file_in_chunks.js): step-by-step process to upload a file in chunks
 * [API:Watch](https://www.mediawiki.org/wiki/API:Watch)
   * [watch.js](watch.js): add a page to your watchlist
+* [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
+  * [filearchive.js](filearchive.js): Enumerate all deleted files from filearchive table sequentially
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -152,9 +152,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
 * [API:Prefixsearch](https://www.mediawiki.org/wiki/API:Prefixsearch)
   * [prefixsearch.js](prefixsearch.js): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
-  * [languagesearch.js](languagesearch.js): search for a language 
+  * [languagesearch.js](languagesearch.js): search for a language
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.js](paraminfo.js): get information about another action API module and its parameters
-
