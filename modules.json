@@ -425,6 +425,17 @@
 			"list": "pagepropnames",
 			"format": "json"
 		}
+	},	
+	{	
+		"filename": "get_pageswithprop",
+		"docstring": "Demo of `Pageswithprop` module: List all pages using a given page property.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "pageswithprop",
+			"pwppropname": "displaytitle",
+			"format": "json"
+		}
 	},
 	{
 		"filename": "get_protectedtitles",

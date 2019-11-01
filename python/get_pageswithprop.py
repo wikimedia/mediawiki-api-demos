@@ -6,7 +6,7 @@
     get_pageswithprop.py
 
     MediaWiki API Demos
-    Demo of `Pageswithprop` module:List all pages using a given page property..
+    Demo of `Pageswithprop` module: List all pages using a given page property.
 
     MIT License
 """

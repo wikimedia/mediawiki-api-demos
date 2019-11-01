@@ -38,6 +38,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
   *  [parse.php](parse.php): parse content of a page
+* [API:Pageswithprop](https://www.mediawiki.org/wiki/API:Pageswithprop)
+  *  [get_pageswithprop.php](get_pageswithprop.php): list all pages using a given page property
 * [API:Categorymembers](https://www.mediawiki.org/wiki/API:Categorymembers)
   *  [get_category_items.php](get_category_items.php): list twenty items in a category
   *  [get_recent_category_items.php](get_recent_category_items.php): get the ten articles most recently added to a category
