@@ -153,7 +153,10 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [prefixsearch.js](prefixsearch.js): perform a prefix search for page titles
 * [API:Languagesearch](https://www.mediawiki.org/wiki/API:Languagesearch)
   * [languagesearch.js](languagesearch.js): search for a language
+* [API:Pageswithprop](https://www.mediawiki.org/wiki/API:Pageswithprop)
+  *  [get_pageswithprop.js](get_pageswithprop.js): list all pages using a given page property
 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.js](paraminfo.js): get information about another action API module and its parameters
+

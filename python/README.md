@@ -40,6 +40,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
   *  [parse.py](parse.py): parse content of a page
   *  [parse_wikitable.py](search.py): parse a section of its page and fetch its table data
+* [API:Pageswithprop](https://www.mediawiki.org/wiki/API:Pageswithprop)
+  * [get_pageswithprop.py](get_pageswithprop.py): list all pages using a given page property
 * [API:Categorymembers](https://www.mediawiki.org/wiki/API:Categorymembers)
   *  [get_category_items.py](get_category_items.py): list twenty items in a category
   *  [get_recent_category_items.py](get_recent_category_items.py): get the ten articles most recently added to a category
