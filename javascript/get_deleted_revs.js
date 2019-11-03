@@ -51,7 +51,7 @@ function loginRequest(login_token) {
     });
 }
 
-// Step 3: GET request to get the deleted revisions
+// Step 3: GET request to get a list of deleted revisions
 
 var url = "https://en.wikipedia.org/w/api.php"; 
 
