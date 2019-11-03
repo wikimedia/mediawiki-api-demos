@@ -32,6 +32,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   *  [redirects.js](get_redirects.js): return redirects to the given page(s)
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
   *  [get_deleted_revisions.js](get_deleted_revisions.js): list deleted revisions from a user
+* [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
+| *  [get_deleted_revs.js](get_deleted_revs.js): list deleted revisions for Talk:Main Page 
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.js](get_pages_revisions.js): get revision data of multiple pages
   *  [get_filtered_page_revisions.js](get_filtered_page_revisions.js): get revision data of a page filtered by date and user
