@@ -35,6 +35,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_watchlistraw.py](get_watchlistraw.py): get three pages on the logged-in user's watchlist from the main namespace
 * [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
   * [rsd.py](rsd.py): export an RSD schema
+* [API:Validatepassword](https://www.mediawiki.org/wiki/API:Validatepassword)
+  * [validatepassword.py](validatepassword.py): validate a password against the wiki's password policies
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)

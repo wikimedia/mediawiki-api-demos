@@ -15,6 +15,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [get_user_watchlist_feed.js](get_user_watchlist_feed.js): access an RSS feed of another user's watchlist
 * [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
   *  [rsd.js](rsd.js): export an RSD schema
+* [API:Validatepassword](https://www.mediawiki.org/wiki/API:validatepassword)
+  *  [validatepassword.js](validatepassword.js): validate a password against the wiki's password policies
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)

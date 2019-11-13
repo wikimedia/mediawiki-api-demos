@@ -31,6 +31,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [userrights.js](userrights.js): add and remove user rights by changing the user's group membership
 * [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
   *  [rsd.js](rsd.js): export an RSD schema
+* [API:Validatepassword](https://www.mediawiki.org/wiki/API:validatepassword)
+  *  [validatepassword.js](validatepassword.js): validate a password against the wiki's password policies
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
