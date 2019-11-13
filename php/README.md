@@ -34,6 +34,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [get_watchlistraw.php](get_watchlistraw.php): get three pages on the logged-in user's watchlist from the main namespace
 * [API:Rsd](https://www.mediawiki.org/wiki/API:Rsd)
   * [rsd.php](rsd.php): export an RSD schema
+* [API:Validatepassword](https://www.mediawiki.org/wiki/API:Validatepassword)
+  * [validatepassword.php](validatepassword.php): validate a password against the wiki's password policies
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
