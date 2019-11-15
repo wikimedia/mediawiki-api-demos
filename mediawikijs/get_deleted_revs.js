@@ -19,7 +19,7 @@ var params = {
     	format: "json",
     	titles: "Talk:MainPage",
     	prop:   "deletedrevisions",
-    	drv:    "prop"
+    	drprop:  "user|comment|content"
 	},
 	api = new mw.Api();
 
