@@ -60,7 +60,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
   *  [get_deleted_revisions.php](get_deleted_revisions.php): list deleted revisions from a user
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
-| *  [get_deleted_revs.php](get_deleted_revs.php): list deleted revisions for Talk:Main Page 
+| *  [get_deleted_revs.php](get_deleted_revs.php): list deleted revisions for a page 
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.php](get_pages_revisions.php): get revision data of multiple pages
   *  [get_filtered_page_revisions.php](get_filtered_page_revisions.php): get revision data of a page filtered by date and user
