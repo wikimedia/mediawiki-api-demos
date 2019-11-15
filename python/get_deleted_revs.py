@@ -2,7 +2,7 @@
 	get_deleted_revs.py
 
     MediaWiki Action API Code Samples
-    Demo of `Deleted Revisions:Get a list of deleted revision for Talk:Main Page` module
+    Demo of `Deleted Revisions module:Get a list of deleted revision for a page` module
     MIT license
 """
 
