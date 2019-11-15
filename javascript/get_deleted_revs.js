@@ -60,7 +60,7 @@ var params_2 = {
     format: "json",
     titles: "Talk:MainPage",
     prop:   "deletedrevisions",
-    drv:    "prop"
+    drprop:  "user|comment|content"
 };
 
 url = url + "?origin=*";
