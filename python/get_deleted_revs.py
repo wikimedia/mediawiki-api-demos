@@ -14,7 +14,6 @@ S = requests.Session()
 URL = "https://en.wikipedia.org/w/api.php"
 
 # Retrieve login token
-
 PARAMS_0 = {
     'action':"query",
     'meta':"tokens",
@@ -30,7 +29,6 @@ LOGIN_TOKEN = DATA['query']['tokens']['logintoken']
 # Send a post request to login. Using the main account for login is not
 # supported. Obtain credentials via Special:BotPasswords
 # (https://www.mediawiki.org/wiki/Special:BotPasswords) for lgname & lgpassword
-
 PARAMS_1 = {
     'action':"login",
     'lgname':"your_bot_username",
@@ -42,8 +40,6 @@ PARAMS_1 = {
 R = S.post(URL, data=PARAMS_1)
 
 #Send a get request to get the list of deleted revisions
-
-
 PARAMS_2 = {
     'action':"query",
     'format':"json",
