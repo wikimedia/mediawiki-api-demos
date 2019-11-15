@@ -2,7 +2,7 @@
 	get_deleted_revs.js
 
 	MediaWiki API Demos
-	Demo of `Deleted revisions:Get a list of deleted revision for Talk:Main Page` module
+	Demo of `Deleted Revisions module:Get a list of deleted revision for a page` module
 
 	MIT License
 */
