@@ -78,7 +78,7 @@ $params3 = [
     "format" => "json",
     "titles" => "Talk:MainPage",
     "prop"   => "deletedrevisions",
-    "drv"    => "prop"
+    "drprop" => "user|comment|content"
 ];
 
 $url = $endPoint . "?" . http_build_query( $params3 );
