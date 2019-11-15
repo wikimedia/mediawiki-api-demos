@@ -45,7 +45,7 @@ PARAMS_2 = {
     'format':"json",
     'titles':"Talk:MainPage",
     'prop':"deletedrevisions",
-    'drv':"prop"
+    drprop: "user|comment|content"
 }
 
 R = S.get(url=URL, params=PARAMS_2)
