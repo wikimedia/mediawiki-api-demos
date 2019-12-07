@@ -154,8 +154,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Siteinfo](https://www.mediawiki.org/wiki/API:Siteinfo)
   * [general_site_info.py](general_site_info.py): obtain general site info
   * [namespaces_and_aliases_site_info.py](namespaces_and_aliases_site_info.py): list namespaces and aliases site info.
-* [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
-  * [expand_templates.py](expand_templates.py): expand the Project:Sandbox template
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
