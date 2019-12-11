@@ -146,6 +146,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [namespaces_and_aliases_site_info.js](namespaces_and_aliases_site_info.js): list namespaces and aliases site info.
 * [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
   * [expand_templates.js](expand_templates.js): expand the Project:Sandbox template
+* [API:ClearHasMsg](https://www.mediawiki.org/wiki/API:ClearHasMsg)
+  * [clear_has_msg.js](clear_has_msg.js): clear the hasmsg flag for the current user
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
