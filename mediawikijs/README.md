@@ -144,6 +144,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
 * [API:Siteinfo](https://www.mediawiki.org/wiki/API:Siteinfo)
   * [general_site_info.js](general_site_info.js): obtain general site info
   * [namespaces_and_aliases_site_info.js](namespaces_and_aliases_site_info.js): list namespaces and aliases site info.
+* [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
+  * [expand_templates.js](expand_templates.js): expand the Project:Sandbox template
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
