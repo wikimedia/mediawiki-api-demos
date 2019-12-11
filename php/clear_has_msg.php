@@ -1,7 +1,7 @@
 <?php
 
 /*
-    clear_has_msg.py
+    clear_has_msg.php
 
     MediaWiki API Demos
     Demo of `ClearHasMsg` module: Clear the hasmsg flag for the current user.
