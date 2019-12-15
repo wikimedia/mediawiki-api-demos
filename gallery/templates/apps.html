@@ -16,12 +16,12 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
   <title>MediaWiki Apps Gallery</title>
-    <header>
+    <header class="header">
       <div class="navbar navbar-dark bg-light">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="../static/logo.png" width="36px">
-            <strong>&nbsp; Apps Gallery</strong>
+            <img src="../static/logo2.png" width="36px">
+            <strong class="website__title">&nbsp; Apps Gallery</strong>
           </a>
         </div>
       </div>
@@ -49,7 +49,7 @@
                 <span class="badge badge-primary bg-dark">{{ module }}</span>
                 {% endfor %}
 
-                <br><span class="card-text grayed-text">Built by <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
+                <br><span class="card-text grayed-text owner">Built by <a href="//github.com/{{ app.owner }}">@{{ app.owner }}</a></span><br>
               </div>
               <div class="card-buttons">
                 <a href="{{ app.url }}" target="_blank">

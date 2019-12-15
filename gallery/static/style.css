@@ -1,6 +1,17 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+:root {
+  --primary-blue: #36c;
+}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #333;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar {
@@ -8,16 +19,12 @@ body {
 }
 
 .navbar-dark .navbar-brand {
-  color: #54595D;
+  color: #fff;
   font-size: 18px;
 }
-
-.navbar-dark .navbar-brand:hover {
-  color: #54595D;
-}
-
-.container {
-  max-width: 960px;
+.navbar-dark .navbar-brand:hover .website__title, .navbar-dark .navbar-brand:focus .website__title {
+  transition: color .3s;
+  color: #ccc;
 }
 
 .album {
@@ -28,11 +35,12 @@ body {
   font-size: 18px;
   font-weight: 400;
   margin: 20px;
+  color: var(--primary-blue);
 }
 
 .gradient-image {
   margin: 5px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--primary-blue);
   background-color: white;
   display: flex;
   justify-content: center;
@@ -40,16 +48,28 @@ body {
 }
 
 .card {
-  height: 384px;
-  background-color: #fef6e7;
+  height: 410px;
+  background-color: #fff;
   border-radius: 4px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--primary-blue);
+  overflow: hidden;
 }
 
 .card-body {
   text-align: center;
 }
-
+.card-body > .description {
+  color: #111;
+}
+.card-body > h4 {
+  font-weight: 600;
+}
+.card-body > .owner {
+  color: var(--primary-blue);
+}
+.owner > a {
+  font-weight: 600;
+}
 .card-thumbnail {
   align-items: center; 
   background-clip: border-box;
@@ -59,6 +79,7 @@ body {
 
 .card-buttons {
   margin-top: 0px;
+  height: 40px;
 }
 
 .card-buttons .btn-card {
@@ -66,6 +87,7 @@ body {
   float: right;
   border: 0px;
   border-radius: 0px;
+  height: 100%;
 }
 
 .img-responsive {
@@ -73,25 +95,28 @@ body {
 }
 
 .bg-light {
-  background-color: #fc3 !important;
+  background-color: var(--primary-blue) !important;
 }
 
 .bg-dark {
-  background-color: #ac6600 !important;
+  background-color: var(--primary-blue) !important;
 }
 
 .grayed-text {
-  color: #54595D !important;
+  color: #fff;
+}
+.row .lead {
+  color: #111;
 }
 
 .grayed-text a {
-  color: #ac6600;
+  color: var(--primary-blue);
 }
 
 .card-buttons 
 .btn-card:hover {
-  background-color: #ac6600 !important;
-  color: white !important;
+  background-color: #fff !important;
+  color: var(--primary-blue)!important;
 }
 
 footer {
@@ -102,4 +127,12 @@ footer {
 
 footer p {
   margin-bottom: .25rem;
+}
+
+.container {
+  max-width: 960px;
+}
+footer.grayed-text a {
+  color: #fff;
+  font-weight: 600;
 }
