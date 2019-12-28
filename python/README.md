@@ -153,6 +153,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [filearchive.py](filearchive.py): Enumerate all deleted files from filearchive table sequentially
 * [API:Siteinfo](https://www.mediawiki.org/wiki/API:Siteinfo)
   * [general_site_info.py](general_site_info.py): obtain general site info
+* [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
+  * [expand_templates.py](expand_templates.py): expand the Project:Sandbox template
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

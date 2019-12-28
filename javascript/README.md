@@ -79,6 +79,9 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [filearchive.js](filearchive.js): Enumerate all deleted files from filearchive table sequentially
 * [API:Siteinfo](https://www.mediawiki.org/wiki/API:Siteinfo)
   * [general_site_info.js](general_site_info.js): obtain general site info
+* [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
+  * [expand_templates.js](expand_templates.js): expand the Project:Sandbox template
+
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.js](search.js): search for a title or a text
