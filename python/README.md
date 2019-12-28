@@ -155,6 +155,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [general_site_info.py](general_site_info.py): obtain general site info
 * [API:Expandtemplates](https://www.mediawiki.org/wiki/API:Expandtemplates)
   * [expand_templates.py](expand_templates.py): expand the Project:Sandbox template
+* [API:ClearHasMsg](https://www.mediawiki.org/wiki/API:ClearHasMsg)
+  * [clear_has_msg.py](clear_has_msg.py): clear the hasmsg flag for the current user
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
