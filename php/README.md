@@ -147,8 +147,6 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [filearchive.php](filearchive.php): Enumerate all deleted files from filearchive table sequentially
 * [API:Siteinfo](https://www.mediawiki.org/wiki/API:Siteinfo)
   * [general_site_info.php](general_site_info.php): obtain general site info
-  * [namespaces_and_aliases_site_info.php](namespaces_and_aliases_site_info.php): list namespaces and aliases site info.
-
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.php](search.php): search for a title or a text
