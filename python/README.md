@@ -161,6 +161,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [clear_has_msg.py](clear_has_msg.py): clear the hasmsg flag for the current user
 * [API:Compare](https://www.mediawiki.org/wiki/API:Compare)
   * [compare.py](compare.py): Compare the current revisions of two different pages
+* [API:Tag](https://www.mediawiki.org/wiki/API:Tag)
+  * [tag.py](tag.py): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

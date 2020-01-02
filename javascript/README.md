@@ -87,6 +87,10 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [clear_has_msg.js](clear_has_msg.js): clear the hasmsg flag for the current user
 * [API:Compare](https://www.mediawiki.org/wiki/API:Compare)
   * [compare.js](compare.js): Compare the current revisions of two different pages
+* [API:Tag](https://www.mediawiki.org/wiki/API:Tag)
+  * [tag.js](tag.js): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
+
+
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
