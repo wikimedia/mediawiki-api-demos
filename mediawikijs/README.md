@@ -147,6 +147,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [expand_templates.js](expand_templates.js): expand the Project:Sandbox template
 * [API:ClearHasMsg](https://www.mediawiki.org/wiki/API:ClearHasMsg)
   * [clear_has_msg.js](clear_has_msg.js): clear the hasmsg flag for the current user
+* [API:Compare](https://www.mediawiki.org/wiki/API:Compare)
+  * [compare.js](compare.js): Compare the current revisions of two different pages
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
