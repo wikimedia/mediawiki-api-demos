@@ -157,6 +157,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [compare.php](compare.php): Compare the current revisions of two different pages
 * [API:Tag](https://www.mediawiki.org/wiki/API:Tag)
   * [tag.php](tag.php): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
+* [API:Duplicatefiles](https://www.mediawiki.org/wiki/API:Duplicatefiles)
+  * [duplicate_files.php](duplicate_files.php): list duplicates of the given files
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
