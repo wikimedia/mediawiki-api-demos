@@ -153,7 +153,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [compare.js](compare.js): Compare the current revisions of two different pages
 * [API:Tag](https://www.mediawiki.org/wiki/API:Tag)
   * [tag.js](tag.js): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
-
+* [API:Duplicatefiles](https://www.mediawiki.org/wiki/API:Duplicatefiles)
+  * [duplicate_files.js](duplicate_files.js): list duplicates of the given files
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

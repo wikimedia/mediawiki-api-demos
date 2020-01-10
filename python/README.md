@@ -163,6 +163,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [compare.py](compare.py): Compare the current revisions of two different pages
 * [API:Tag](https://www.mediawiki.org/wiki/API:Tag)
   * [tag.py](tag.py): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
+* [API:Duplicatefiles](https://www.mediawiki.org/wiki/API:Duplicatefiles)
+  * [duplicate_files.py](duplicate_files.py): list duplicates of the given files
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
