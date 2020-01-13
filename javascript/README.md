@@ -91,6 +91,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [tag.js](tag.js): Remove the spam tag from log entry ID 123 with the reason Wrongly applied
 * [API:Duplicatefiles](https://www.mediawiki.org/wiki/API:Duplicatefiles)
   * [duplicate_files.js](duplicate_files.js): list duplicates of the given files
+* [API:Filerepoinfo](https://www.mediawiki.org/wiki/API:Filerepoinfo)
+  * [file_repo_info.js](file_repo_info.js): get information about file repositories
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
