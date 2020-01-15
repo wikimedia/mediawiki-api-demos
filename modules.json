@@ -633,6 +633,13 @@
 			"action": "query",
 			"titles": "Image:1995.jpg|Image:Welcome.gif",
 			"prop": "duplicatefiles",
+		"filename": "file_repo_info",
+		"docstring": "Demo of `Filerepoinfo` module: Get information about file repositories.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"meta": "filerepoinfo",
+			"friprop": "url|name|displayname",
 			"format": "json"
 		}
 	}
