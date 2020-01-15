@@ -624,5 +624,16 @@
 			"fadir": "descending",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "duplicate_files",
+		"docstring": "List duplicates of the given files.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Image:1995.jpg|Image:Welcome.gif",
+			"prop": "duplicatefiles",
+			"format": "json"
+		}
 	}
 ]
