@@ -1,3 +1,5 @@
+#This file is auto-generated. See modules.json and autogenerator.py for details
+
 #!/usr/bin/python3
 
 """

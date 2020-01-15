@@ -1,10 +1,12 @@
+#This file is auto-generated. See modules.json and autogenerator.py for details
+
 #!/usr/bin/python3
 
 """
     expand_templates.py
 
     MediaWiki API Demos
-    Demo of `Expandtemplates` module: Expand the Project:Sandbox template.
+    Demo of `Expandtemplates` module: Obtain general site info.
 
     MIT License
 """
