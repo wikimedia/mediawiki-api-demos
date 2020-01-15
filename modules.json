@@ -642,5 +642,38 @@
 			"friprop": "url|name|displayname",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "general_site_info",
+		"docstring": "Demo of `Siteinfo` module: Obtain general site info.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"meta": "siteinfo",
+			"formatversion": "2",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "expand_templates",
+		"docstring": "Demo of `Expandtemplates` module: Obtain general site info.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "expandtemplates",
+			"text": "{{Project:Sandbox}}",
+			"prop": "wikitext",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "compare",
+		"docstring": "Demo of `Compare` module: Compare the current revisions of two different pages.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action":"compare",
+			"fromtitle":"Template:Unsigned",
+			"totitle":"Template:UnsignedIP",
+			"format":"json"
+		}
 	}
 ]
