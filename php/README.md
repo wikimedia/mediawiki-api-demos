@@ -167,6 +167,9 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [check_token.php](check_token.php): Check a CSRF token
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
   * [deleted_revisions.php](deleted_revisions.php): Get a list of deleted revisions for Talk:Main Page.
+* [API:Revisiondelete](https://www.mediawiki.org/wiki/API:Revisiondelete)
+  * [revision_delete.php](revision_delete.php): Hide all information about revision ID 71. 
+  (The target, Sample Page, is unnecessary in this case.)
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
