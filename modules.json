@@ -690,5 +690,16 @@
 			"iwbltitle": "Main_Page",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "check_token",
+		"docstring": "Demo of `Checktoken` module: Get request to check a CSRF token.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "checktoken",
+			"token": "123ABC",
+			"type": "csrf",
+			"format": "json"
+		}
 	}
 ]
