@@ -173,7 +173,10 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [check_token.py](check_token.py): Check a CSRF token
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
   * [deleted_revisions.py](deleted_revisions.py): Get a list of deleted revisions for Talk:Main Page.
-  
+* [API:Revisiondelete](https://www.mediawiki.org/wiki/API:Revisiondelete)
+  * [revision_delete.py](revision_delete.py): Hide all information about revision ID 71. 
+  (The target, Sample Page, is unnecessary in this case.)
+
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](search.py): search for a title or a text
