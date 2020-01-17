@@ -165,6 +165,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [iwbacklinks.php](iwbacklinks.php): Get pages that link to a given interwiki link.
 * [API:Checktoken](https://www.mediawiki.org/wiki/API:Checktoken)
   * [check_token.php](check_token.php): Check a CSRF token
+* [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
+  * [deleted_revisions.php](deleted_revisions.php): Get a list of deleted revisions for Talk:Main Page.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
