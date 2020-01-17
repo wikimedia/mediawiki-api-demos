@@ -161,6 +161,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [duplicate_files.php](duplicate_files.php): list duplicates of the given files
 * [API:Filerepoinfo](https://www.mediawiki.org/wiki/API:Filerepoinfo)
   * [file_repo_info.php](file_repo_info.php): get information about file repositories
+* [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
+  * [iwbacklinks.php](iwbacklinks.php): Get pages linking to wikibooks:Main_Page.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

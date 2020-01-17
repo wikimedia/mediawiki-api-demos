@@ -157,6 +157,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [duplicate_files.js](duplicate_files.js): list duplicates of the given files
 * [API:Filerepoinfo](https://www.mediawiki.org/wiki/API:Filerepoinfo)
   * [file_repo_info.js](file_repo_info.js): get information about file repositories
+* [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
+  * [iwbacklinks.js](iwbacklinks.js): Get pages linking to wikibooks:Main_Page.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

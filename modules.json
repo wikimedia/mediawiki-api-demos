@@ -633,6 +633,9 @@
 			"action": "query",
 			"titles": "Image:1995.jpg|Image:Welcome.gif",
 			"prop": "duplicatefiles",
+		}
+	},
+	{
 		"filename": "file_repo_info",
 		"docstring": "Demo of `Filerepoinfo` module: Get information about file repositories.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
@@ -674,6 +677,18 @@
 			"fromtitle":"Template:Unsigned",
 			"totitle":"Template:UnsignedIP",
 			"format":"json"
+		}
+	},
+	{
+		"filename": "iwbacklinks",
+		"docstring": "Demo of `Iwbacklinks` module: Get pages linking to wikibooks:Main_Page.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "iwbacklinks",
+			"iwblprefix": "wikibooks",
+			"iwbltitle": "Main_Page",
+			"format": "json"
 		}
 	}
 ]
