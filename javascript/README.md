@@ -97,6 +97,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [iwbacklinks.js](iwbacklinks.js): Get pages that link to a given interwiki link.
 * [API:Checktoken](https://www.mediawiki.org/wiki/API:Checktoken)
   * [check_token.js](check_token.js): Check a CSRF token
+* [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
+  * [deleted_revisions.js](deleted_revisions.js): Get a list of deleted revisions for Talk:Main Page.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
