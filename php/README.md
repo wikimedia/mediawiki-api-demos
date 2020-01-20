@@ -168,7 +168,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
   * [deleted_revisions.php](deleted_revisions.php): Get a list of deleted revisions for Talk:Main Page.
 * [API:Revisiondelete](https://www.mediawiki.org/wiki/API:Revisiondelete)
-  * [revision_delete.php](revision_delete.php): Hide all information about revision ID 71. 
+  * [revision_delete.php](revision_delete.php): Hide all information about a certain revision ID. 
   (The target, Sample Page, is unnecessary in this case.)
 
 ### Search
