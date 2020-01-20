@@ -94,7 +94,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Filerepoinfo](https://www.mediawiki.org/wiki/API:Filerepoinfo)
   * [file_repo_info.js](file_repo_info.js): get information about file repositories
 * [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
-  * [iwbacklinks.js](iwbacklinks.js): Get pages linking to wikibooks:Main_Page.
+  * [iwbacklinks.js](iwbacklinks.js): Get pages that link to a given interwiki link.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
