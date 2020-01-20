@@ -162,7 +162,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Filerepoinfo](https://www.mediawiki.org/wiki/API:Filerepoinfo)
   * [file_repo_info.php](file_repo_info.php): get information about file repositories
 * [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
-  * [iwbacklinks.php](iwbacklinks.php): Get pages linking to wikibooks:Main_Page.
+  * [iwbacklinks.php](iwbacklinks.php): Get pages that link to a given interwiki link.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

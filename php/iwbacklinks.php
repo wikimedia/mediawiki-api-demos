@@ -6,7 +6,7 @@
     iwbacklinks.php
 
     MediaWiki API Demos
-    Demo of `Iwbacklinks` module: Get pages linking to wikibooks:Main_Page.
+    Demo of `Iwbacklinks` module: Get pages that link to a given interwiki link.
 
     MIT License
 */
