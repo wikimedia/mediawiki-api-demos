@@ -2,7 +2,7 @@
     revision_delete.js
 
     MediaWiki API Demos
-    Demo of `Revisiondelete` module: Hide all information about revision ID 71. 
+    Demo of `Revisiondelete` module: Hide all information about a certain revision ID. 
     (The target, Sample Page, is unnecessary in this case.)
 
     MIT license
@@ -27,18 +27,17 @@ function getLoginToken() {
     });
 }
 
-// Step 2: Send a post request to log in using the clientlogin method.
-// import rights can't be granted using Special:BotPasswords
-// hence using bot passwords may not work.
+// Step 2: Send a POST request to log in. For this login
+// method, obtain credentials by first visiting
+// https://www.test.wikipedia.org/wiki/Manual:Bot_passwords
 // See https://www.mediawiki.org/wiki/API:Login for more
 // information on log in methods.
 function loginRequest(login_token) {
     var params_1 = {
-        action: "clientlogin",
-        username: "username",
-        password: "password",
-        loginreturnurl: "http://127.0.0.1:5000/",
-        logintoken: login_token,
+        action: "login",
+        lgname: "bot_username",
+        lgpassword: "bot_password",
+        lgtoken: login_token,
         format: "json"
     };
     request.post({ url: url, form: params_1 }, function (error, res, body) {
@@ -65,7 +64,7 @@ function getCsrfToken() {
     });
 }
 
-// Step 4: Send a POST request to hide all information about revision ID 71. 
+// Step 4: Send a POST request to hide all information about a certain revision ID. 
 // (The target, Sample Page, is unnecessary in this case.)
 function mergeHistory(csrf_token) {
     var params_3 = {
