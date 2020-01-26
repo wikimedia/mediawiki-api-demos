@@ -4,8 +4,7 @@
     revision_delete.py
 
     MediaWiki API Demos
-    Demo of `Revisiondelete` module: Hide all information about a certain revision ID. 
-    (The target, Sample Page, is unnecessary in this case.)
+    Demo of `Revisiondelete` module: Hide all information about a certain revision ID.
 
     MIT license
 """
@@ -56,8 +55,7 @@ DATA = R.json()
 
 CSRF_TOKEN = DATA["query"]["tokens"]["csrftoken"]
 
-# Step 4: Send a POST request to hide all information about a certain revision ID. 
-# (The target, Sample Page, is unnecessary in this case.)
+# Step 4: Send a POST request to hide all information about a certain revision ID.
 PARAMS_4 = {
     "action":"revisiondelete",
     "type":"revision",

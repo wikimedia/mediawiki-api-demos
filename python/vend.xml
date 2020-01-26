@@ -1,0 +1,13 @@
+<Envelope xmlns:ns2="http://webservices.ems.momas.com/" xmlns:ns3="http://schemas.xmlsoap.org/soap/envelope/">
+	<Body>
+		<Vend>
+			<Amount>10</Amount>
+			<Msg>Virtual Top Up</Msg>
+			<SequenceNo>397098</SequenceNo>
+			<DealerNo>ISW</DealerNo>
+			<Password>ISW</Password>
+			<DestAccount>0101170003368</DestAccount>
+			<ProductCode>12122234</ProductCode>
+		</Vend>
+	</Body>
+</Envelope>
