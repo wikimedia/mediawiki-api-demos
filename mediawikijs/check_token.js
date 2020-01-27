@@ -4,7 +4,7 @@
 	check_token.js
 
 	MediaWiki API Demos
-	Demo of `Checktoken` module: Get request to Check a CSRF token.
+	Demo of `Checktoken` module: Check a CSRF token.
 
 	MIT License
 */

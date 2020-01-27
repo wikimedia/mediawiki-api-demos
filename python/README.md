@@ -170,7 +170,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
   * [iwbacklinks.py](iwbacklinks.py): Get pages that link to a given interwiki link.
 * [API:Checktoken](https://www.mediawiki.org/wiki/API:Checktoken)
-  * [check_token.py](check_token.py): Get request to Check a CSRF token
+  * [check_token.py](check_token.py): Check a CSRF token
 
 
 ### Search
