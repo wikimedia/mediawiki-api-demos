@@ -693,7 +693,7 @@
 	},
 	{
 		"filename": "check_token",
-		"docstring": "Demo of `Checktoken` module: Get request to Check a CSRF token.",
+		"docstring": "Demo of `Checktoken` module: Check a CSRF token.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "checktoken",

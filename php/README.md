@@ -164,7 +164,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
   * [iwbacklinks.php](iwbacklinks.php): Get pages that link to a given interwiki link.
 * [API:Checktoken](https://www.mediawiki.org/wiki/API:Checktoken)
-  * [check_token.php](check_token.php): Get request to Check a CSRF token
+  * [check_token.php](check_token.php): Check a CSRF token
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

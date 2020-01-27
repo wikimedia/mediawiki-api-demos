@@ -160,7 +160,7 @@ These code snippets are usefull to create Userscripts and Gadgets.
 * [API:Iwbacklinks](https://www.mediawiki.org/wiki/API:Iwbacklinks)
   * [iwbacklinks.js](iwbacklinks.js): Get pages that link to a given interwiki link.
 * [API:Checktoken](https://www.mediawiki.org/wiki/API:Checktoken)
-  * [check_token.js](check_token.js): Get request to Check a CSRF token
+  * [check_token.js](check_token.js): Check a CSRF token
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
