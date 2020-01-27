@@ -2,8 +2,7 @@
 	revision_delete.js
 
     MediaWiki API Demos
-    Demo of `Revisiondelete` module: Hide all information about a certain revision ID. 
-    (The target, Sample Page, is unnecessary in this case.)
+    Demo of `Revisiondelete` module: Hide all information about a certain revision ID.
 
     MIT license
 */

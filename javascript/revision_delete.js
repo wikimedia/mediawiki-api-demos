@@ -2,8 +2,7 @@
     revision_delete.js
 
     MediaWiki API Demos
-    Demo of `Revisiondelete` module: Hide all information about a certain revision ID. 
-    (The target, Sample Page, is unnecessary in this case.)
+    Demo of `Revisiondelete` module: Hide all information about a certain revision ID.
 
     MIT license
 */
@@ -64,8 +63,7 @@ function getCsrfToken() {
     });
 }
 
-// Step 4: Send a POST request to hide all information about a certain revision ID. 
-// (The target, Sample Page, is unnecessary in this case.)
+// Step 4: Send a POST request to hide all information about a certain revision ID.
 function mergeHistory(csrf_token) {
     var params_3 = {
         action:"revisiondelete",

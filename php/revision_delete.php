@@ -4,8 +4,7 @@
     revision_delete.php
 
     MediaWiki API Demos
-    Demo of `Revisiondelete` module: Hide all information about a certain revision ID. 
-    (The target, Sample Page, is unnecessary in this case.)
+    Demo of `Revisiondelete` module: Hide all information about a certain revision ID.
 
     MIT license
 */
@@ -95,8 +94,7 @@ function getCSRFToken() {
 	return $result["query"]["tokens"]["csrftoken"];
 }
 
-# Step 4: Send a POST request to hide all information about a certain revision ID. 
-# (The target, Sample Page, is unnecessary in this case.)
+# Step 4: Send a POST request to hide all information about a certain revision ID.
 function mergeHistory( $csrftoken ) {
 	global $endPoint;
 	
