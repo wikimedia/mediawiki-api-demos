@@ -173,6 +173,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [check_token.py](check_token.py): Check a CSRF token
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
   * [deleted_revisions.py](deleted_revisions.py): Get a list of deleted revisions for Talk:Main Page.
+* [API:Userinfo](https://www.mediawiki.org/wiki/API:Userinfo)
+  * [user_info.py](user_info.py): Get general user info and user rights.
   
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
