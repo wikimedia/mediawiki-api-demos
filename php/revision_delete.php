@@ -13,7 +13,7 @@ $endPoint = "https://test.wikipedia.org/w/api.php";
 $login_Token = getLoginToken(); // Step 1
 loginRequest( $login_Token ); // Step 2
 $csrf_Token = getCSRFToken(); // Step 3
-mergehistory( $csrf_Token ); // Step 4
+revisionDelete( $csrf_Token ); // Step 4
 
 // Step 1: GET request to fetch login token
 function getLoginToken() {
@@ -95,7 +95,7 @@ function getCSRFToken() {
 }
 
 # Step 4: Send a POST request to hide all information about a certain revision ID.
-function mergeHistory( $csrftoken ) {
+function revisionDelete( $csrftoken ) {
 	global $endPoint;
 	
 	$params4 = [
