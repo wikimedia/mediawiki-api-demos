@@ -59,12 +59,12 @@ function getCsrfToken() {
             return;
         }
         var data = JSON.parse(body);
-        mergeHistory(data.query.tokens.csrftoken);
+        revisionDelete(data.query.tokens.csrftoken);
     });
 }
 
 // Step 4: Send a POST request to hide all information about a certain revision ID.
-function mergeHistory(csrf_token) {
+function revisionDelete(csrf_token) {
     var params_3 = {
         action:"revisiondelete",
         type:"revision",
