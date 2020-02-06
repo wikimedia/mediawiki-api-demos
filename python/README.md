@@ -175,6 +175,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [deleted_revisions.py](deleted_revisions.py): Get a list of deleted revisions for Talk:Main Page.
 * [API:Revisiondelete](https://www.mediawiki.org/wiki/API:Revisiondelete)
   * [revision_delete.py](revision_delete.py): Hide all information about a certain revision ID.
+* [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
+  * [file_archive.py](file_archive.py): Get a list of all deleted files.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

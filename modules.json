@@ -633,6 +633,7 @@
 			"action": "query",
 			"titles": "Image:1995.jpg|Image:Welcome.gif",
 			"prop": "duplicatefiles",
+			"format": "json"
 		}
 	},
 	{
@@ -699,6 +700,16 @@
 			"action": "checktoken",
 			"token": "123ABC",
 			"type": "csrf",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "file_archive",
+		"docstring": "Demo of `Filearchive` module: Get a list of all deleted files.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "filearchive",
 			"format": "json"
 		}
 	}
