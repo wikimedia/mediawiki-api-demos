@@ -35,6 +35,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   *  [validatepassword.js](validatepassword.js): validate a password against the wiki's password policies
 * [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
   * [reset_password.py](reset_password.py): Reset password for all users with an email address.
+* [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
+  * [get_user_contributions_feed.js](get_user_contributions_feed.js): Show contributions of a user as an RSS feed.
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -175,8 +177,6 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
-* [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
-  * [get_user_contributions_feed.js](get_user_contributions_feed.js): Show contributions of a user as an RSS feed.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -197,4 +197,6 @@ These code snippets are usefull to create Userscripts and Gadgets.
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.js](paraminfo.js): get information about another action API module and its parameters
+* [API:Main_module](https://www.mediawiki.org/wiki/API:Main_module)
+  * [main_module.js](main_module.js): Get help for the main module.
 

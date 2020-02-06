@@ -199,3 +199,5 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.php](paraminfo.php): get information about another action API module and its parameters
+* [API:Main_module](https://www.mediawiki.org/wiki/API:Main_module)
+  * [main_module.php](main_module.php): Get help for the main module.

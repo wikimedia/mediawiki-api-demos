@@ -39,6 +39,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [validatepassword.py](validatepassword.py): validate a password against the wiki's password policies
 * [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
   * [reset_password.py](reset_password.py): Reset password for all users with an email address.
+* [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
+  * [get_user_contributions_feed.py](get_user_contributions_feed.py): Show contributions of a user as an RSS feed.
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -185,8 +187,6 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_feed_recent_changes.py](get_feed_recent_changes.py): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.py](set_notification_timestamp.py): Reset the notification status for the entire watchlist.
-* [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
-  * [get_user_contributions_feed.py](get_user_contributions_feed.py): Show contributions of a user as an RSS feed.
   
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
@@ -205,3 +205,5 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 ### Basics
 * [API:Parameter information](https://www.mediawiki.org/wiki/API:Parameter_information)
   * [paraminfo.py](paraminfo.py): get information about another action API module and its parameters
+* [API:Main_module](https://www.mediawiki.org/wiki/API:Main_module)
+  * [main_module.py](main_module.py): Get help for the main module.
