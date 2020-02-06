@@ -177,7 +177,9 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [revision_delete.py](revision_delete.py): Hide all information about a certain revision ID.
 * [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
   * [file_archive.py](file_archive.py): Get a list of all deleted files.
-
+* [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
+  * [get_file_usage.py](get_file_usage.py): Get a list of pages using a given file.
+  
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](search.py): search for a title or a text

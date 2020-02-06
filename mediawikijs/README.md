@@ -167,6 +167,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [revision_delete.js](revision_delete.js): Hide all information about a certain revision ID.
 * [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
   * [file_archive.js](file_archive.js): Get a list of all deleted files.
+* [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
+  * [get_file_usage.js](get_file_usage.js): Get a list of pages using a given file.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
