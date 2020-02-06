@@ -704,12 +704,22 @@
 		}
 	},
 	{
+<<<<<<< HEAD
 		"filename": "file_archive",
 		"docstring": "Demo of `Filearchive` module: Get a list of all deleted files.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "query",
 			"list": "filearchive",
+=======
+		"filename": "get_file_usage",
+		"docstring": "Demo of `Fileusage` module: Get a list of pages using a given file.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "File:Example.jpg",
+			"prop": "fileusage",
+>>>>>>> Added Sample codes for API:Fileusage
 			"format": "json"
 		}
 	}

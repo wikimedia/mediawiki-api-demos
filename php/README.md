@@ -171,6 +171,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [revision_delete.php](revision_delete.php): Hide all information about a certain revision ID.
 * [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
   * [file_archive.php](file_archive.php): Get a list of all deleted files.
+* [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
+  * [get_file_usage.php](get_file_usage.php): Get a list of pages using a given file.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
