@@ -101,6 +101,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [deleted_revisions.js](deleted_revisions.js): Get a list of deleted revisions for Talk:Main Page.
 * [API:Revisiondelete](https://www.mediawiki.org/wiki/API:Revisiondelete)
   * [revision_delete.js](revision_delete.js): Hide all information about a certain revision ID.
+* [API:Filearchive](https://www.mediawiki.org/wiki/API:Filearchive)
+  * [file_archive.js](file_archive.js): Get a list of all deleted files.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
