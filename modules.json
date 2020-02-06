@@ -742,5 +742,14 @@
 			"user": "Jimbo Wales",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "main_module",
+		"docstring": "Demo of `Main module` module: Get help for the main module.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "help",
+			"format": "json"
+		}
 	}
 ]
