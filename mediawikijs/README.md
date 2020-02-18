@@ -169,6 +169,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [file_archive.js](file_archive.js): Get a list of all deleted files.
 * [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
   * [get_file_usage.js](get_file_usage.js): Get a list of pages using a given file.
+* [API:Feedrecentchanges](https://www.mediawiki.org/wiki/API:Feedrecentchanges)
+  * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

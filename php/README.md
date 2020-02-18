@@ -173,6 +173,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [file_archive.php](file_archive.php): Get a list of all deleted files.
 * [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
   * [get_file_usage.php](get_file_usage.php): Get a list of pages using a given file.
+* [API:Feedrecentchanges](https://www.mediawiki.org/wiki/API:Feedrecentchanges)
+  * [get_feed_recent_changes.php](get_feed_recent_changes.php): Show recent changes as an RSS feed.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
