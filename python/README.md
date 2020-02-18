@@ -179,6 +179,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [file_archive.py](file_archive.py): Get a list of all deleted files.
 * [API:Fileusage](https://www.mediawiki.org/wiki/API:Fileusage)
   * [get_file_usage.py](get_file_usage.py): Get a list of pages using a given file.
+* [API:Feedrecentchanges](https://www.mediawiki.org/wiki/API:Feedrecentchanges)
+  * [get_feed_recent_changes.py](get_feed_recent_changes.py): Show recent changes as an RSS feed.
   
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
