@@ -171,6 +171,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [get_file_usage.js](get_file_usage.js): Get a list of pages using a given file.
 * [API:Feedrecentchanges](https://www.mediawiki.org/wiki/API:Feedrecentchanges)
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
+* [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
+  * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
