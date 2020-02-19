@@ -175,6 +175,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [get_file_usage.php](get_file_usage.php): Get a list of pages using a given file.
 * [API:Feedrecentchanges](https://www.mediawiki.org/wiki/API:Feedrecentchanges)
   * [get_feed_recent_changes.php](get_feed_recent_changes.php): Show recent changes as an RSS feed.
+* [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
+  * [set_notification_timestamp.php](set_notification_timestamp.php): Reset the notification status for the entire watchlist.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
