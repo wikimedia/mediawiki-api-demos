@@ -175,6 +175,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
+* [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
+  * [get_user_contributions_feed.js](get_user_contributions_feed.js): Show contributions of a user as an RSS feed.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

@@ -732,5 +732,15 @@
 			"action": "feedrecentchanges",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "get_user_contributions_feed",
+		"docstring": "Demo of `Feedcontributions` module: Show contributions of a user as an RSS feed.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "feedcontributions",
+			"user": "Jimbo Wales",
+			"format": "json"
+		}
 	}
 ]
