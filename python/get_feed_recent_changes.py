@@ -23,6 +23,6 @@ PARAMS = {
 }
 
 R = S.get(url=URL, params=PARAMS)
-DATA = R.json()
+DATA = R.content
 
 print(DATA)
