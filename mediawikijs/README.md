@@ -173,6 +173,8 @@ These code snippets are usefull to create Userscripts and Gadgets.
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
+* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
+  * [reset_password.py](reset_password.py): Reset password for all users with an email address.
 
 ### Search 
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

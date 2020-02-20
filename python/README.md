@@ -183,6 +183,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_feed_recent_changes.py](get_feed_recent_changes.py): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.py](set_notification_timestamp.py): Reset the notification status for the entire watchlist.
+* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
+  * [reset_password.py](reset_password.py): Reset password for all users with an email address.
   
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
