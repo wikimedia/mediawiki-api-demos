@@ -24,5 +24,4 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $output = curl_exec( $ch );
 curl_close( $ch );
 
-$result = json_decode( $output, true );
-var_dump( $result );
+var_dump( $output );
