@@ -5,22 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="//tools-static.wmflabs.org/cdnjs/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 
   <!-- Custom Font -->
-  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link href="//tools-static.wmflabs.org/fontcdn/css?family=Permanent+Marker" rel="stylesheet">
+  <link href="//tools-static.wmflabs.org/fontcdn/css?family=Noto+Sans" rel="stylesheet">
+  <link href="//tools-static.wmflabs.org/cdnjs/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 
   <title>MediaWiki Apps Gallery</title>
     <header>
       <div class="navbar navbar-dark bg-light">
         <div class="container d-flex justify-content-between">
           <a href="#" class="navbar-brand d-flex align-items-center">
-            <img src="../static/logo.png" width="36px">
+            <img src="{{ url_for('static', filename='logo.png') }}" width="36px">
             <strong>&nbsp; Apps Gallery</strong>
           </a>
         </div>
@@ -54,12 +54,12 @@
               <div class="card-buttons">
                 <a href="{{ app.url }}" target="_blank">
                   <button type="button" class="btn btn-sm btn-outline-secondary btn-card bg-light grayed-text col-lg-6 h-100">
-                    <i class="fas fa-external-link-alt"></i> Try it out
+                    <i class="fa fa-external-link"></i> Try it out
                   </button>
                 </a>
                 <a href="{{ app.source }}" target="_blank">
                   <button type="button" class="btn btn-sm btn-outline-secondary btn-card bg-light grayed-text col-lg-6">
-                    <i class="fab fa-github"></i> View on GitHub
+                    <i class="fa fa-github"></i> View on GitHub
                   </button>
                 </a>
               </div>
@@ -74,7 +74,7 @@
 
   <footer class="grayed-text bg-light">
     <div class="container">
-      <p class="float-right"><a href="#"><i class="fas fa-chevron-circle-up"></i> Back to top</a>
+      <p class="float-right"><a href="#"><i class="fa fa-chevron-circle-up"></i> Back to top</a>
       <p>Demo apps are curated by <a href="https://github.com/srish" target="_blank">@srish</a> and <a href="https://github.com/tuxology" target="_blank">@tuxology</a>.
       <p>Source code and more information about the demo apps showcased here are <a href="https://github.com/wikimedia/mediawiki-api-demos" target="_blank">available on Github</a>.
     </div>
