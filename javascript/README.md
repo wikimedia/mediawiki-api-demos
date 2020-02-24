@@ -17,6 +17,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   *  [rsd.js](rsd.js): export an RSD schema
 * [API:Validatepassword](https://www.mediawiki.org/wiki/API:validatepassword)
   *  [validatepassword.js](validatepassword.js): validate a password against the wiki's password policies
+* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
+  * [reset_password.js](reset_password.js): Reset password for all users with an email address.
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -109,8 +111,6 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
-* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
-  * [reset_password.js](reset_password.js): Reset password for all users with an email address.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
