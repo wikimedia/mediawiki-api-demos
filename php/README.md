@@ -36,6 +36,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [rsd.php](rsd.php): export an RSD schema
 * [API:Validatepassword](https://www.mediawiki.org/wiki/API:Validatepassword)
   * [validatepassword.php](validatepassword.php): validate a password against the wiki's password policies
+* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
+  * [reset_password.py](reset_password.py): Reset password for all users with an email address.
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -177,8 +179,6 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [get_feed_recent_changes.php](get_feed_recent_changes.php): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.php](set_notification_timestamp.php): Reset the notification status for the entire watchlist.
-* [API:Resetpassword](https://www.mediawiki.org/wiki/API:Resetpassword)
-  * [reset_password.py](reset_password.py): Reset password for all users with an email address.
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
