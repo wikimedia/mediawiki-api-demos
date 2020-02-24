@@ -4,7 +4,7 @@
     reset_password.py
 
     MediaWiki API Demos
-    Demo of `Resetpassword` module: RReset password for all users with an email address.
+    Demo of `Resetpassword` module: Reset password for all users with an email address.
 
     MIT license
 """
