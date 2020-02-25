@@ -11,6 +11,7 @@
 
 var params = {
 		action: 'help',
+		wrap: '',
 		format: 'json'
 	},
 	api = new mw.Api();

@@ -13,6 +13,7 @@ var url = "https://en.wikipedia.org/w/api.php";
 
 var params = {
     action: "help",
+    wrap: "",
     format: "json"
 };
 

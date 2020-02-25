@@ -14,6 +14,7 @@
 $endPoint = "https://en.wikipedia.org/w/api.php";
 $params = [
     "action" => "help",
+    "wrap" => "",
     "format" => "json"
 ];
 
@@ -24,4 +25,5 @@ curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 $output = curl_exec( $ch );
 curl_close( $ch );
 
-var_dump( $output );
+$result = json_decode( $output, true );
+var_dump( $result );
