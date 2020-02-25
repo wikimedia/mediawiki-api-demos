@@ -749,6 +749,7 @@
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "help",
+			"wrap":"",
 			"format": "json"
 		}
 	}

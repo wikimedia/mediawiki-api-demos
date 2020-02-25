@@ -19,10 +19,11 @@ URL = "https://en.wikipedia.org/w/api.php"
 
 PARAMS = {
     "action": "help",
+    "wrap": "",
     "format": "json"
 }
 
 R = S.get(url=URL, params=PARAMS)
-DATA = R.content
+DATA = R.json()
 
 print(DATA)
