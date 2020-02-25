@@ -752,5 +752,16 @@
 			"wrap":"",
 			"format": "json"
 		}
+	},
+	{
+		"filename": "get_help",
+		"docstring": "Demo of `Help` module: Get help for a specified module.",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "help",
+			"modules":"query+tokens",
+			"wrap":"",
+			"format": "json"
+		}
 	}
 ]
