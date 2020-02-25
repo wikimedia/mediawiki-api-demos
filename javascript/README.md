@@ -133,3 +133,5 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [paraminfo.js](paraminfo.js): get information about another action API module and its parameters
 * [API:Main_module](https://www.mediawiki.org/wiki/API:Main_module)
   * [main_module.js](main_module.js): Get help for the main module.
+* [API:Help](https://www.mediawiki.org/wiki/API:Help)
+  * [get_help.js](get_help.js): Get help for a specified module.

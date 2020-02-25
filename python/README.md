@@ -207,3 +207,5 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [paraminfo.py](paraminfo.py): get information about another action API module and its parameters
 * [API:Main_module](https://www.mediawiki.org/wiki/API:Main_module)
   * [main_module.py](main_module.py): Get help for the main module.
+* [API:Help](https://www.mediawiki.org/wiki/API:Help)
+  * [get_help.py](get_help.py): Get help for a specified module.
