@@ -40,6 +40,8 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [reset_password.py](reset_password.py): Reset password for all users with an email address.
 * [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
   * [get_user_contributions_feed.php](get_user_contributions_feed.php): Show contributions of a user as an RSS feed.
+* [API:Userinfo](https://www.mediawiki.org/wiki/API:Userinfo)
+  * [userinfo.php](userinfo.php): get general user info and user rights
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -64,7 +66,7 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
   *  [get_deleted_revisions.php](get_deleted_revisions.php): list deleted revisions from a user
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
-| *  [get_deleted_revs.php](get_deleted_revs.php): list deleted revisions for a page 
+  *  [get_deleted_revs.php](get_deleted_revs.php): list deleted revisions for a page 
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.php](get_pages_revisions.php): get revision data of multiple pages
   *  [get_filtered_page_revisions.php](get_filtered_page_revisions.php): get revision data of a page filtered by date and user
@@ -181,6 +183,24 @@ Code snippets in PHP demonstrating how to use various modules of the [MediaWiki 
   * [get_feed_recent_changes.php](get_feed_recent_changes.php): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.php](set_notification_timestamp.php): Reset the notification status for the entire watchlist.
+* [API:Langbacklinks](https://www.mediawiki.org/wiki/Langbacklinks)
+  * [langbacklinks.php](langbacklinks.php): get pages linking to a given language link
+* [API:Templates](https://www.mediawiki.org/wiki/Templates)
+  * [templates.php](templates.php): get a list of templates used on a page
+* [API:Pageprops](https://www.mediawiki.org/wiki/Pageprops)
+  * [pageprops.php](pageprops.php): get various properties defined in the page content
+* [API:Extlinks](https://www.mediawiki.org/wiki/Extlinks)
+  * [get_extlinks.php](get_extlinks.php): get a list of external links on a page
+* [API:Linkshere](https://www.mediawiki.org/wiki/Linkshere)
+  * [linkshere.php](linkshere.php): get a list of pages linking to a given page
+* [API:Allmessages](https://www.mediawiki.org/wiki/Allmessages)
+  * [all_messages.php](all_messages.php): get the Dutch translations of some messages
+* [API:Transcludedin](https://www.mediawiki.org/wiki/Transcludedin)
+  * [get_transcluded_in.php](get_transcluded_in.php): get a list of pages which transclude a given page
+* [API:Langlinks](https://www.mediawiki.org/wiki/Langlinks)
+  * [langlinks.php](langlinks.php): get a list of language links that a given page has
+* [API:Stashimageinfo](https://www.mediawiki.org/wiki/Stashimageinfo)
+  * [stash_image_info.php](stash_image_info.php): return information for a stashed file
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)

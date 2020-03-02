@@ -41,6 +41,8 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [reset_password.py](reset_password.py): Reset password for all users with an email address.
 * [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
   * [get_user_contributions_feed.py](get_user_contributions_feed.py): Show contributions of a user as an RSS feed.
+* [API:Userinfo](https://www.mediawiki.org/wiki/API:Userinfo)
+  * [userinfo.py](userinfo.py): get general user info and user rights
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -66,7 +68,7 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
   *  [get_deleted_revisions.py](get_deleted_revisions.py): list deleted revisions from a user
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
-| *  [get_deleted_revs.py](get_deleted_revs.py): list deleted revisions for a page 
+  *  [get_deleted_revs.py](get_deleted_revs.py): list deleted revisions for a page 
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.py](get_pages_revisions.py): get revision data of multiple pages
   *  [get_filtered_page_revisions.py](get_filtered_page_revisions.py): get revision data of a page filtered by date and user
@@ -187,7 +189,25 @@ Code snippets in Python demonstrating how to use various modules of the [MediaWi
   * [get_feed_recent_changes.py](get_feed_recent_changes.py): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.py](set_notification_timestamp.py): Reset the notification status for the entire watchlist.
-  
+  * [API:Langbacklinks](https://www.mediawiki.org/wiki/Langbacklinks)
+  * [langbacklinks.py](langbacklinks.py): get pages linking to a given language link
+* [API:Templates](https://www.mediawiki.org/wiki/Templates)
+  * [templates.py](templates.py): get a list of templates used on a page
+* [API:Pageprops](https://www.mediawiki.org/wiki/Pageprops)
+  * [pageprops.py](pageprops.py): get various properties defined in the page content
+* [API:Extlinks](https://www.mediawiki.org/wiki/Extlinks)
+  * [get_extlinks.py](get_extlinks.py): get a list of external links on a page
+* [API:Linkshere](https://www.mediawiki.org/wiki/Linkshere)
+  * [linkshere.py](linkshere.py): get a list of pages linking to a given page,
+* [API:Allmessages](https://www.mediawiki.org/wiki/Allmessages)
+  * [all_messages.py](all_messages.py): get the Dutch translations of some messages
+* [API:Transcludedin](https://www.mediawiki.org/wiki/Transcludedin)
+  * [get_transcluded_in.py](get_transcluded_in.py): get a list of pages which transclude a given page
+* [API:Langlinks](https://www.mediawiki.org/wiki/Langlinks)
+  * [langlinks.py](langlinks.py): get a list of language links that a given page has
+* [API:Stashimageinfo](https://www.mediawiki.org/wiki/Stashimageinfo)
+  * [stash_image_info.py](stash_image_info.py): return information for a stashed file
+
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
   * [search.py](search.py): search for a title or a text

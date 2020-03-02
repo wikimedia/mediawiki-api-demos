@@ -714,6 +714,18 @@
 		}
 	},
 	{
+		"filename": "langbacklinks",
+		"docstring": "Demo of `Langbacklinks` module: Get pages linking to a given language link",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"list": "langbacklinks",
+			"lbltitle": "Test",
+			"lbllang": "fr",
+			"format": "json"
+		}
+	},
+	{
 		"filename": "get_file_usage",
 		"docstring": "Demo of `Fileusage` module: Get a list of pages using a given file.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
@@ -725,11 +737,33 @@
 		}
 	},
 	{
+		"filename": "userinfo",
+		"docstring": "Demo of `Userinfo` module: Get general user info and user rights",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"meta": "userinfo",
+			"uiprop": "rights",
+			"format": "json"
+		}
+	},
+	{
 		"filename": "get_feed_recent_changes",
 		"docstring": "Demo of `Feedrecentchanges` module: Show recent changes as an RSS feed.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "feedrecentchanges",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "templates",
+		"docstring": "Demo of `Templates` module: Get a list of templates used on a page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Albert Einstein",
+			"prop": "templates",
 			"format": "json"
 		}
 	},
@@ -744,12 +778,34 @@
 		}
 	},
 	{
+		"filename": "pageprops",
+		"docstring": "Demo of `Pageprops` module: Get various properties defined in the page content",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Albert Einstein",
+			"prop": "pageprops",
+			"format": "json"
+		}
+	},
+	{
 		"filename": "main_module",
 		"docstring": "Demo of `Main module` module: Get help for the main module.",
 		"endpoint": "https://en.wikipedia.org/w/api.php",
 		"params": {
 			"action": "help",
 			"wrap":"",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_extlinks",
+		"docstring": "Demo of `Extlinks` module: Get a list of external links on a page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Albert Einstein",
+			"prop": "extlinks",
 			"format": "json"
 		}
 	},
@@ -761,6 +817,51 @@
 			"action": "help",
 			"modules":"query+tokens",
 			"wrap":"",
+			"format": "json"
+		}
+	},		
+	{		
+		"filename": "linkshere",
+		"docstring": "Demo of `Linkshere` module: Get a list of pages linking to a given page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Main Page",
+			"prop": "linkshere",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "all_messages",
+		"docstring": "Demo of `Allmessages` module: Get the Dutch translations of some messages",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"meta": "allmessages",
+			"ammessages": "august|mainpage|edit|rollback-success",
+			"amlang": "nl",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "get_transcluded_in",
+		"docstring": "Demo of `Transcludedin` module: Get a list of pages which transclude a given page",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Main Page",
+			"prop": "transcludedin",
+			"format": "json"
+		}
+	},
+	{
+		"filename": "langlinks",
+		"docstring": "Demo of `Langlinks` module: Get a list of language links that a given page has",
+		"endpoint": "https://en.wikipedia.org/w/api.php",
+		"params": {
+			"action": "query",
+			"titles": "Albert Einstein",
+			"prop": "langlinks",
 			"format": "json"
 		}
 	}
