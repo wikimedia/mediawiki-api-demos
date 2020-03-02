@@ -21,6 +21,8 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [reset_password.js](reset_password.js): Reset password for all users with an email address.
 * [API:Feedcontributions](https://www.mediawiki.org/wiki/API:Feedcontributions)
   * [get_user_contributions_feed.js](get_user_contributions_feed.js): Show contributions of a user as an RSS feed.
+* [API:Userinfo](https://www.mediawiki.org/wiki/API:Userinfo)
+  * [userinfo.js](userinfo.js): get general user info and user rights
 
 ### Page Operations
 * [API:Parse](https://www.mediawiki.org/wiki/API:Parse)
@@ -39,7 +41,7 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
 * [API:Deletedrevs](https://www.mediawiki.org/wiki/API:Deletedrevs)
   *  [get_deleted_revisions.js](get_deleted_revisions.js): list deleted revisions from a user
 * [API:Deletedrevisions](https://www.mediawiki.org/wiki/API:Deletedrevisions)
-| *  [get_deleted_revs.js](get_deleted_revs.js): list deleted revisions for a page 
+  *  [get_deleted_revs.js](get_deleted_revs.js): list deleted revisions for a page 
 * [API:Revisions](https://www.mediawiki.org/wiki/API:Revisions)
   *  [get_pages_revisions.js](get_pages_revisions.js): get revision data of multiple pages
   *  [get_filtered_page_revisions.js](get_filtered_page_revisions.js): get revision data of a page filtered by date and user
@@ -113,6 +115,24 @@ Code snippets in Javascript demonstrating how to use various modules of the [Med
   * [get_feed_recent_changes.js](get_feed_recent_changes.js): Show recent changes as an RSS feed.
 * [API:Setnotificationtimestamp](https://www.mediawiki.org/wiki/API:Setnotificationtimestamp)
   * [set_notification_timestamp.js](set_notification_timestamp.js): Reset the notification status for the entire watchlist.
+* [API:Langbacklinks](https://www.mediawiki.org/wiki/Langbacklinks)
+  * [langbacklinks.js](langbacklinks.js): get pages linking to a given language link
+* [API:Templates](https://www.mediawiki.org/wiki/Templates)
+  * [templates.js](templates.js): get a list of templates used on a page
+* [API:Pageprops](https://www.mediawiki.org/wiki/Pageprops)
+  * [pageprops.js](pageprops.js): get various properties defined in the page content
+* [API:Extlinks](https://www.mediawiki.org/wiki/Extlinks)
+  * [get_extlinks.js](get_extlinks.js): get a list of external links on a page
+* [API:Linkshere](https://www.mediawiki.org/wiki/Linkshere)
+  * [linkshere.js](linkshere.js): get a list of pages linking to a given page
+* [API:Allmessages](https://www.mediawiki.org/wiki/Allmessages)
+  * [all_messages.js](all_messages.js): get the Dutch translations of some messages
+* [API:Transcludedin](https://www.mediawiki.org/wiki/Transcludedin)
+  * [get_transcluded_in.js](get_transcluded_in.js): get a list of pages which transclude a given page
+* [API:Langlinks](https://www.mediawiki.org/wiki/Langlinks)
+  * [langlinks.js](langlinks.js): get a list of language links that a given page has
+* [API:Stashimageinfo](https://www.mediawiki.org/wiki/Stashimageinfo)
+  * [stash_image_info.js](stash_image_info.js): return information for a stashed file
 
 ### Search
 * [API:Search](https://www.mediawiki.org/wiki/API:Search)
