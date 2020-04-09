@@ -19,7 +19,7 @@ Demo of geo search for wiki pages near a location using the [Geolocation API](ht
 * [Picture of the day viewer](apps/picture-of-the-day-viewer):
 Demo app that uses [prop=images](https://www.mediawiki.org/wiki/API:Images) module to fetch Wikipedia's Picture of the Day (POTD) from a template page and displays it on a webpage. The app also allows users to go backward or forward a date to view other POTD.
 * [User contributions feed](apps/user-contributions-feed):
-Demp app that uses [list=usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) module to fetch the top 50 edits made by a user.
+Demo app that uses [list=usercontribs](https://www.mediawiki.org/wiki/API:Usercontribs) module to fetch the top 50 edits made by a user.
 * [View more demo apps](apps/)
 
 ### Installation
