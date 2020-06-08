@@ -49,7 +49,7 @@
 		"thumbnail": "static/user_contributions_feed.png",
 		"description": "Fetches top 50 edits made by a user",
 		"modules": ["usercontribs"],
-		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/article-ideas-generator",
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/user-contributions-feed",
 		"owner": "Jayprakash-SE",
 		"url": "https://tools.wmflabs.org/user-contributions-feed/"
 	},
