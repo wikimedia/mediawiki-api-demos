@@ -58,7 +58,7 @@
 		"thumbnail": "static/create_account_with_captcha.png",
 		"description": "Creates account on a wiki",
 		"modules": ["tokens", "authmanagerinfo", "createaccount"],
-		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/create-account-with-captcha",
+		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/account-creator",
 		"owner": "srish",
 		"url": "https://tools.wmflabs.org/account-creator/"
 	},
@@ -126,15 +126,6 @@
 		"url": "https://tools.wmflabs.org/oauth-hello-world/"
 	},
 	{
-		"title": "Wikidata Addlingue",
-		"thumbnail": "static/addlingue.png",
-		"description": "Converts Wikidata string claims to monolingual claims",
-		"modules": [ "backlinks", "wbgetentities" ],
-		"source": "https://github.com/Pascalco/addlingue",
-		"owner": "Pascalco",
-		"url": "https://tools.wmflabs.org/pltools/addlingue/"
-	},
-	{
 		"title": "Recent Acquisitions",
 		"thumbnail": "static/reccat.png",
 		"description": "Shows the newest pages in a category",
@@ -151,15 +142,6 @@
 		"source": "https://github.com/hay/wiki-tools/tree/master/public_html/wdtranslate",
 		"owner": "hay",
 		"url": "https://tools.wmflabs.org/hay/wdtranslate/"
-	},
-	{
-		"title": "Recent Deaths",
-		"thumbnail": "static/recent-deaths.png",
-		"description": "Adds missing dates of deaths",
-		"modules": [ "parse", "wbgetentities" ],
-		"source": "https://github.com/Pascalco/recentdeaths",
-		"owner": "Pascalco",
-		"url": "https://tools.wmflabs.org/pltools/recentdeaths/"
 	},
 	{
 		"title": "Wikidata Skim",
