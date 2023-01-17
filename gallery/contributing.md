@@ -12,8 +12,8 @@ Learn below the criteria for a demo app we are looking to integrate into the gal
 - Optionally, the app is hosted on Toolforge and the source code in the apps folder of [mediawiki-api-demos repository](https://github.com/wikimedia/mediawiki-api-demos). If you wish to add your app to this repository, make sure you comply with the MIT license that the repo uses.
 
 ## Submitting your app
-  - If you would like to host the source code of your demo app in this repository, see more instructions on sending a pull request [here](https://github.com/wikimedia/mediawiki-api-demos#contributing-code-samples-or-demo-apps). 
-  - Add your app details to the `apps.json` file in the `gallery` folder in the following  format:
+  - If you would like to host the source code of your demo app in this repository, send a pull request.
+  - Add your app details to the `apps.json` file in the `gallery` folder in the following format:
   ```
      {
       "title": "name of the app in < 20 chars", 
