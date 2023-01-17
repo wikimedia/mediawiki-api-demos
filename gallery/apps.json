@@ -2,7 +2,7 @@
 	{
 		"title": "Search Starter",
 		"thumbnail": "static/wikipedia_search_starter.png",
-		"description": "Searches wikipedia and displays the first search result",
+		"description": "Searches English Wikipedia and displays the first search result",
 		"modules": ["query"],
 		"source": "https://glitch.com/edit/#!/wikipedia-search-starter",
 		"owner": "ttseng",
@@ -92,7 +92,7 @@
 	{
 		"title": "Wikipedia Viewer",
 		"thumbnail": "static/wikipedia-viewer.png",
-		"description": "Allows searching on Wikipedia",
+		"description": "Allows searching on English Wikipedia",
 		"modules": [ "search", "info" ],
 		"source": "https://github.com/sunilsj99/WikipediaViewer",
 		"owner": "sunilsj99",
