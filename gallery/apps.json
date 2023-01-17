@@ -69,7 +69,7 @@
 		"modules": ["tokens", "login"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
 		"owner": "srish",
-		"url": "http://tools.wmflabs.org"
+		"url": ""
 	},
 	{
 		"title": "Article Ideas",
