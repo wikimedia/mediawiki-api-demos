@@ -157,7 +157,7 @@
 		"thumbnail": "static/mass-mailer.png",
 		"description": "Emails wiki users en masse",
 		"modules": [ "emailuser", "tokens" ],
-		"source": "https://phabricator.wikimedia.org/source/tool-massmailer/",
+		"source": "https://gerrit.wikimedia.org/g/labs/tools/massmailer",
 		"owner": "Urbanecm",
 		"url": "https://tools.wmflabs.org/massmailer/"
 	},
