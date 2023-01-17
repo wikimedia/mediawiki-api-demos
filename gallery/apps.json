@@ -87,7 +87,7 @@
 		"modules": [ "opensearch", "parse" ],
 		"source": "https://github.com/natetyler/natetyler.github.io",
 		"owner": "natetyler",
-		"url": "http://natetyler.github.io/"
+		"url": "https://natetyler.github.io/"
 	},
 	{
 		"title": "Wikipedia Viewer",
@@ -114,7 +114,7 @@
 		"modules": [ "purge", "parse" ],
 		"source": "https://github.com/Fannon/MediaWiki-Benchmarker",
 		"owner": "Fannon",
-		"url": "http://fannon.github.io/MediaWiki-Benchmarker/"
+		"url": "https://fannon.github.io/MediaWiki-Benchmarker/"
 	},
 	{
 		"title": "OAuth Hello World",
