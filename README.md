@@ -1,5 +1,7 @@
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/MediaWiki-2020-logo.svg/220px-MediaWiki-2020-logo.svg.png" height="200px" alt="MediaWiki"/>
 
+> This repository has being archived. Are you interested in maintaining it? Contact: ssethi@wikimedia.org.
+
 # MediaWiki API Demos
 The [MediaWiki Action API](https://www.mediawiki.org/wiki/API:Main_page) is a web service that allows access to some wiki-features like authentication, page operations, and search. It can provide meta information about the wiki and the logged-in user. This repository contains code snippets and demo apps in various programming languages to assist developers for easy use of various modules of the API. 
 
