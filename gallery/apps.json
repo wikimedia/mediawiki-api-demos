@@ -60,7 +60,7 @@
 		"modules": ["tokens", "login"],
 		"source": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login",
 		"owner": "srish",
-		"url": ""
+		"url": "https://github.com/wikimedia/mediawiki-api-demos/tree/master/apps/client-login"
 	},
 	{
 		"title": "Article Ideas",
