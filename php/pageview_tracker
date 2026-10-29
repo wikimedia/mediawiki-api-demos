@@ -1,0 +1,57 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $article = urlencode($_POST["article"]);
+    $start = str_replace("-", "", $_POST["start"]);
+    $end = str_replace("-", "", $_POST["end"]);
+
+    $url = "https://wikimedia.org/api/rest_v1/metrics/pageviews/per-article/en.wikipedia.org/all-access/all-agents/$article/daily/$start/$end";
+
+    // Use cURL instead of file_get_contents
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, $url);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, [
+        "User-Agent: PageviewTracker/1.0 (your_email@example.com)" // required
+    ]);
+
+    $response = curl_exec($ch);
+    curl_close($ch);
+
+    if ($response) {
+        $data = json_decode($response, true);
+
+        if (isset($data["items"])) {
+            echo "<h3>Pageviews for {$_POST["article"]}</h3>";
+            echo "<ul>";
+            foreach ($data["items"] as $item) {
+                $date = $item["timestamp"];
+                $views = $item["views"];
+                echo "<li>$date : $views views</li>";
+            }
+            echo "</ul>";
+        } else {
+            echo "No data found.";
+        }
+    } else {
+        echo "Error fetching data.";
+    }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Wikipedia Pageview Tracker</title>
+</head>
+<body>
+    <h1>📊 Wikipedia Pageview Tracker</h1>
+    <form method="post">
+        Article: <input type="text" name="article" required>
+        <br><br>
+        Start Date: <input type="date" name="start" required>
+        End Date: <input type="date" name="end" required>
+        <br><br>
+        <input type="submit" value="Get Pageviews">
+    </form>
+</body>
+</html>
